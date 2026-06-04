@@ -111,10 +111,9 @@ function StatCard({ stat, index }) {
           }}
           transition={{ duration: 0.3 }}
         >
-          <Icon
-            size={window?.innerWidth < 640 ? 22 : 28}
-            className="text-[#C8972B]"
-          />
+          
+          <Icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-[#C8972B]"
+           />
         </motion.div>
       </motion.div>
 
