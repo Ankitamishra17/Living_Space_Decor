@@ -72,7 +72,7 @@ export default function Navbar() {
             </span> */}
             <div className="justify-self-start">
               <span className="tracking-widest text-[10px] lg:text-[12px] text-[#C8972B]/80 font-medium whitespace-nowrap">
-                livingdecor@gmail.com
+                info@livingspacedecor.com
               </span>
             </div>
             {/* Animated Search Bar */}
@@ -82,12 +82,12 @@ export default function Navbar() {
             {/* contact links */}
             <div className="flex items-center gap-1 ml-auto flex-shrink-0">
               <a
-                href="tel:+919999999999"
+                href="tel:+918826606869"
                 className="flex items-center gap-1.5 ml-8 px-3 py-1 rounded hover:bg-white/10 transition-colors duration-200 text-[#C8972B]"
               >
                 <Phone size={10} className="text-[#C8972B]" />
                 <span className=" lg:inline text-[8px] lg:text-[12px]">
-                  +91 99999 99999
+                  +91 8826606869
                 </span>
               </a>
 
@@ -96,13 +96,13 @@ export default function Navbar() {
               </span>
 
               <a
-                href="https://wa.me/919999999999"
+                href="https://wa.me/+918826606869"
                 target="_blank"
                 rel="noreferrer"
                 className=" hidden sm:flex  items-center gap-1.5 px-3 py-1 rounded hover:bg-white/10 transition-colors duration-200 text-[#25D366]"
               >
                 <MessageCircle size={13} />
-                <span className="hidden lg:inline">WhatsApp</span>
+                <span className="lg:inline text-[8px] lg:text-[12px]">+91 8826606869</span>
               </a>
             </div>
           </div>
@@ -278,15 +278,15 @@ export default function Navbar() {
 
                 {/* contact actions */}
                 <a
-                  href="tel:+919999999999"
+                  href="tel:+918826606869"
                   className="flex items-center gap-2.5 px-3 py-2.5 rounded-[4px] text-[#3D1F0D]/75 text-sm hover:bg-[#F5EBE0] transition-colors"
                 >
                   <Phone size={16} className="text-[#C8972B]" />
-                  +91 99999 99999
+                  +918826606869
                 </a>
 
                 <a
-                  href="https://wa.me/919999999999"
+                  href="https://wa.me/+918826606869"
                   target="_blank"
                   rel="noreferrer"
                   className="flex items-center gap-2.5 px-3 py-2.5 rounded-[4px] text-[#25D366] text-sm hover:bg-[#F5EBE0] transition-colors"

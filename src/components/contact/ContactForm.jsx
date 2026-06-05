@@ -202,7 +202,7 @@ export default function ContactSection() {
                         Phone
                       </p>
                       <p className="text-[#6E6258] text-base mt-1 group-hover/card:text-[#C8972B] transition-colors duration-300">
-                        +91 98765 43210
+                        +91 88266 06869
                       </p>
                     </div>
                     <ArrowRight
@@ -230,7 +230,7 @@ export default function ContactSection() {
                         WhatsApp
                       </p>
                       <a
-                        href="https://wa.me/919876543210"
+                        href="https://wa.me/918826606869"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-[#6E6258] text-base mt-1 group-hover/card:text-[#C8972B] transition-colors duration-300 font-medium"
@@ -263,7 +263,8 @@ export default function ContactSection() {
                         Address
                       </p>
                       <p className="text-[#6E6258] text-base mt-1 group-hover/card:text-[#C8972B] transition-colors duration-300">
-                        Noida, Uttar Pradesh, India
+                        Shop-LGB 28, Galaxy Diamond Plaza Sector 4 Greater Noida
+                        West, Greater Noida, Uttar Pradesh 201009
                       </p>
                     </div>
                     <ArrowRight

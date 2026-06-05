@@ -65,7 +65,7 @@ const processSteps = [
 export default function OurProcess() {
   return (
     <section
-      className="relative py-24 lg:py-32 overflow-hidden"
+      className="relative py-10 lg:py-10 overflow-hidden"
       style={{ backgroundColor: "#F5EBE0" }}
     >
       {/* Background Accent */}
@@ -188,9 +188,64 @@ export default function OurProcess() {
           padding-bottom: 70px;
         }
 
+        /* Hide navigation buttons on mobile */
         .swiper-button-next,
         .swiper-button-prev {
+          display: none;
           color: #c8972b !important;
+        }
+
+        /* Show navigation buttons on desktop (768px+) */
+        @media (min-width: 768px) {
+          .swiper-button-next,
+          .swiper-button-prev {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        /* Style navigation buttons for desktop */
+        @media (min-width: 768px) {
+          .swiper-button-next::after,
+          .swiper-button-prev::after {
+            font-size: 24px;
+            font-weight: 700;
+            color: #c8972b !important;
+            transition: all 0.3s ease;
+          }
+
+          .swiper-button-next:hover::after,
+          .swiper-button-prev:hover::after {
+            color: #3d1f0d !important;
+            transform: scale(1.1);
+          }
+
+          .swiper-button-next,
+          .swiper-button-prev {
+            width: 45px;
+            height: 45px;
+           
+            border-radius: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            transition: all 0.3s ease;
+          }
+
+          
+
+          .swiper-button-next:hover::after,
+          .swiper-button-prev:hover::after {
+            color: white !important;
+          }
+
+          .swiper-button-prev {
+            left: -60px;
+          }
+
+          .swiper-button-next {
+            right: -60px;
+          }
         }
 
         .swiper-pagination-bullet {

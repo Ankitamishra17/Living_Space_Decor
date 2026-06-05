@@ -6,11 +6,11 @@ export default function GoogleMap() {
       <div className="max-w-7xl mx-auto px-6 lg:px-14">
         {/* Heading */}
         <div className="text-center mb-10">
-          <p className="uppercase tracking-[0.3em] text-[#C8972B] text-xs mb-3">
+          <p className="uppercase tracking-[0.3em] text-[#C8972B] text-xs mb-4">
             Visit Our Studio
           </p>
 
-          <h2 className="font-[Playfair,serif] text-[36px] sm:text-[44px] md:text-5xl text-[#2A1506]">
+          <h2 className="font-[Playfair,poppins] text-[36px] sm:text-[44px] md:text-5xl text-[#2A1506]">
             Find Us On The Map
           </h2>
 

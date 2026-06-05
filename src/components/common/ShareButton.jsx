@@ -4,7 +4,7 @@ import { MessageCircle } from "lucide-react";
 import { motion } from "framer-motion";
 
 export default function WhatsAppFloat() {
-  const phoneNumber = "919999999999";
+  const phoneNumber = "918826606869";
 
   const message =
     "Hi, I am interested in interior design services. Please share details about consultation, pricing, and project timelines.";

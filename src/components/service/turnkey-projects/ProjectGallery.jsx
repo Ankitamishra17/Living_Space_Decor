@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 
 const projects = [
@@ -112,9 +113,9 @@ export default function ProjectGallery() {
 
         {/* Bottom CTA */}
         <div className="text-center mt-20">
-          <button className="bg-[#3D1F0D] text-white px-10 py-5 rounded-md uppercase tracking-[0.25em] text-sm hover:bg-[#C8972B] transition duration-300">
+          <Link href="/portfolio" className="bg-[#3D1F0D] text-white px-10 py-5 rounded-md uppercase tracking-[0.25em] text-sm hover:bg-[#C8972B] transition duration-300">
             View All Projects
-          </button>
+          </Link>
         </div>
       </div>
     </section>

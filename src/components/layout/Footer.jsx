@@ -3,13 +3,18 @@
 import Link from "next/link";
 import Image from "next/image";
 
-const NAV_LINKS = ["Home", "Portfolio", "Blog", "Contact"];
+const NAV_LINKS = [
+  { name: "Home", href: "/" },
+  { name: "About", href: "/about" },
+  { name: "Portfolio", href: "/portfolio" },
+  { name: "Contact", href: "/contact" },
+];
 
 const SERVICE_LINKS = [
-  { label: "Interior Design", href: "/interior-design" },
-  { label: "Modular Kitchen", href: "/modular-kitchen" },
-  { label: "Turnkey Projects", href: "/turnkey-projects" },
-  { label: "Architecture", href: "/architecture" },
+  { label: "Interior Design", href: "/services/interior-design" },
+  { label: "Modular Kitchen", href: "/services/modular-kitchen" },
+  { label: "Turnkey Projects", href: "/services/turnkey-projects" },
+  { label: "Architecture", href: "/services/architecture" },
 ];
 
 const SOCIAL_ICONS = [
@@ -337,8 +342,6 @@ export default function Footer() {
               />
             </Link>
 
-            
-
             <p
               style={{
                 fontFamily: "'Inter', system-ui, sans-serif",
@@ -393,7 +396,7 @@ export default function Footer() {
             <ColTitle>Navigate</ColTitle>
             <ul style={{ padding: 0, margin: 0 }}>
               {NAV_LINKS.map((item) => (
-                <LinkRow key={item} label={item} href="/" />
+                <LinkRow key={item.name} label={item.name} href={item.href} />
               ))}
             </ul>
           </div>
@@ -414,7 +417,7 @@ export default function Footer() {
 
             <ContactRow
               label="Studio"
-              value="Sector 18, Noida, UP 201301"
+              value="Shop-LGB 28, Galaxy Diamond Plaza Sector 4 Greater Noida West, Greater Noida, Uttar Pradesh 201009"
               icon={
                 <svg
                   width="16"
@@ -434,8 +437,8 @@ export default function Footer() {
 
             <ContactRow
               label="Call"
-              value="+91 99999 99999"
-              href="tel:+919999999999"
+              value="+91 8826606869"
+              href="tel:+918826606869"
               icon={
                 <svg
                   width="16"
