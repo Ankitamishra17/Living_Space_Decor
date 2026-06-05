@@ -42,7 +42,9 @@ export default function TeamSection() {
           <h2 className="font-[Playfair_Display] text-5xl text-[#2A1506] leading-tight">
             Meet The Team That Makes
             <br />
-            <span className="font-playfair text-[#C8972B]">The Magic Happen</span>
+            <span className="font-playfair text-[#C8972B]">
+              The Magic Happen
+            </span>
           </h2>
         </div>
 
@@ -54,7 +56,7 @@ export default function TeamSection() {
               className="group relative overflow-hidden rounded-tl-[70px] rounded-tr-none rounded-bl-none rounded-br-[70px] bg-white"
             >
               {/* Image */}
-              <div className="relative h-[450px] overflow-hidden">
+              <div className="relative h-[320px] sm:h-[380px] md:h-[420px] lg:h-[450px] overflow-hidden">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -66,25 +68,31 @@ export default function TeamSection() {
               {/* Hover Card */}
               <div
                 className="
-                  absolute
-                  left-4
-                  right-4
-                  bottom-7
-                  bg-white
-                  rounded-2xl
-                  py-1
-                  px-4
-                  text-center
-                  shadow-xl
-                  translate-y-24
-                  opacity-0
-                  group-hover:translate-y-0
-                  group-hover:opacity-100
-                  transition-all
-                  duration-500
-                "
+    absolute
+    left-3
+    right-6
+    bottom-4
+
+    bg-white
+    rounded-2xl
+    py-2
+    px-4
+    text-center
+    shadow-xl
+
+    opacity-100
+    translate-y-0
+
+    lg:opacity-0
+    lg:translate-y-24
+    lg:group-hover:translate-y-0
+    lg:group-hover:opacity-100
+
+    transition-all
+    duration-500
+  "
               >
-                <h3 className="text-xl font-semibold text-[#2A1506]">
+                <h3 className="text-lg md:text-xl font-semibold text-[#2A1506]">
                   {member.name}
                 </h3>
 

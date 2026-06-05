@@ -56,6 +56,7 @@ export default function ContactHeroSection() {
               text-[#C8972B]
               text-[10px]
               sm:text-xs
+              font-heading
             "
           >
             Get In Touch
@@ -72,7 +73,7 @@ export default function ContactHeroSection() {
         {/* Heading */}
         <motion.h1
           className="
-            font-[Cormorant_Garamond,serif]
+            font-heading
             text-white
             leading-[1.05]
             font-medium
@@ -91,7 +92,7 @@ export default function ContactHeroSection() {
         >
           Let's Create Your
           <br />
-          <span className="text-[#C8972B]">Dream Space</span>
+          <span className="text-[#C8972B] font-heading">Dream Space</span>
         </motion.h1>
 
         {/* Divider */}

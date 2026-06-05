@@ -56,10 +56,15 @@ function StatCard({ stat, index }) {
         bg-white/5
         border
         border-[#C8972B]/20
-        rounded-tl-full
-        rounded-tr-full
+        rounded-tr-[50px]
+        rounded-br-[50px]
+        rounded-bl-[50px]
         rounded-br-none
-        rounded-bl-full
+        
+        lg:rounded-tl-full
+        lg:rounded-tr-full
+        lg:rounded-br-none
+        lg:rounded-bl-full
         p-6
         sm:p-8
         md:p-10

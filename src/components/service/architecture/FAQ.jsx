@@ -1,6 +1,7 @@
 "use client";
 
 import FaqItem from "./FaqItem";
+
 const tags = ["Process", "Timelines", "Approvals"];
 
 const faqs = [
@@ -21,63 +22,65 @@ const faqs = [
   },
   {
     q: "Do you take on projects outside major cities?",
-    a: "Yes, we work across India and internationally. We've completed projects in remote hill stations, coastal towns, and metropolitan centres alike.",
+    a: "Yes, we work across India and internationally.",
     tags: ["Location", "Remote"],
   },
   {
     q: "What sustainability practices do you follow?",
-    a: "Sustainability is integral to our design philosophy. We prioritize passive cooling, natural lighting, locally sourced materials, and energy-efficient solutions.",
+    a: "We prioritize passive cooling, natural lighting, locally sourced materials, and energy-efficient solutions.",
     tags: ["Sustainability", "Green Design"],
   },
   {
     q: "How do you ensure the quality of construction?",
-    a: "We have a rigorous quality assurance process that includes regular site inspections, detailed documentation, and close collaboration with trusted contractors.",
+    a: "We maintain strict quality control through inspections and detailed documentation.",
     tags: ["Quality", "Construction"],
   },
   {
     q: "Can you work within a specific budget?",
-    a: "Yes, we tailor our design solutions to meet your budgetary requirements while maintaining quality, functionality, and aesthetics.",
+    a: "Yes, we tailor solutions to suit your budget while maintaining quality.",
     tags: ["Budget", "Cost Management"],
   },
 ];
 
 export default function FAQ() {
   return (
-    <section className="bg-[#FAFAF8] py-24 px-6 ">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-[1fr_1.6fr] gap-20">
-        <div className="lg:sticky lg:top-24 h-fit">
-          <span className="text-[11px] tracking-[0.4em] uppercase text-[#B8882A]">
+    <section className="bg-[#FAFAF8] py-16 md:py-20 lg:py-24 px-5 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-[380px_1fr] gap-12 lg:gap-20">
+        {/* Left Side */}
+        <div className="lg:sticky lg:top-24 h-fit text-center lg:text-left">
+          <span className="text-[10px] sm:text-[11px] tracking-[0.35em] uppercase text-[#B8882A]">
             Got Questions
           </span>
 
-          <h2 className="mt-5 text-5xl font-light leading-tight">
+          <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight">
             Frequently <br />
             <span className="italic text-[#B8882A]">Asked</span>
           </h2>
 
-          <p className="mt-6 text-[#888] leading-8">
+          <p className="mt-5 text-sm sm:text-base text-[#888] leading-7">
             Everything you need to know about working with us — from timelines
             to approvals.
           </p>
 
-          <div className="mt-10 border border-[#B8882A]/20 bg-[#C9A96E]/10 p-6">
-            <div className="text-5xl text-[#B8882A]">7</div>
+          <div className="mt-8 border border-[#B8882A]/20 bg-[#C9A96E]/10 p-5 sm:p-6">
+            <div className="text-4xl sm:text-5xl text-[#B8882A]">7</div>
 
-            <div className="mt-2 text-xs tracking-[0.25em] uppercase text-[#9a7840]">
+            <div className="mt-2 text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#9a7840]">
               Common Questions
             </div>
 
             <div className="my-4 h-px bg-[#B8882A]/20" />
 
-            <p className="text-sm text-[#9a7840]">
+            <p className="text-sm text-[#9a7840] leading-7">
               Can't find an answer? Reach out directly — our team responds
               within one business day.
             </p>
-            <div className="flex flex-wrap gap-2 mt-3">
+
+            <div className="flex flex-wrap justify-center lg:justify-start gap-2 mt-4">
               {tags.map((tag) => (
                 <span
                   key={tag}
-                  className="border border-[#B4915A]/30 px-2 py-1 text-[10px] uppercase tracking-[0.15em] text-[#9a7840] font-normal"
+                  className="border border-[#B4915A]/30 px-3 py-1 text-[10px] uppercase tracking-[0.15em] text-[#9a7840]"
                 >
                   {tag}
                 </span>
@@ -86,6 +89,7 @@ export default function FAQ() {
           </div>
         </div>
 
+        {/* Right Side */}
         <div>
           {faqs.map((faq, i) => (
             <FaqItem

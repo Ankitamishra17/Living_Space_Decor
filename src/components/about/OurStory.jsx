@@ -9,20 +9,22 @@ export default function OurStory() {
   return (
     <section className="bg-[#F6F0E8] py-16 md:py-20 lg:py-24 overflow-hidden">
       <div className="max-w-[1280px] mx-auto px-5 sm:px-6 lg:px-14">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2  gap-12 lg:gap-20 items-center">
           {/* IMAGE SIDE */}
           <motion.div
             className="
-              relative
-              w-full
-              max-w-[320px]
-              sm:max-w-[380px]
-              md:max-w-[420px]
-              h-[400px]
-              sm:h-[470px]
-              md:h-[520px]
-              mx-auto
-            "
+    order-2
+    lg:order-1
+    relative
+    w-full
+    max-w-[280px]
+    sm:max-w-[360px]
+    md:max-w-[420px]
+    h-[340px]
+    sm:h-[420px]
+    md:h-[520px]
+    mx-auto
+  "
             initial={{ opacity: 0, x: -80 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -83,6 +85,7 @@ export default function OurStory() {
 
           {/* CONTENT SIDE */}
           <motion.div
+            className="order-1 lg:order-2 text-center lg:text-left"
             initial={{ opacity: 0, x: 80 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true, margin: "-100px" }}
@@ -118,7 +121,7 @@ export default function OurStory() {
             </motion.h2>
 
             <motion.div
-              className="h-px bg-[#B68D40] mt-6 origin-left"
+              className=" h-px bg-[#B68D40] mt-6 mx-auto lg:mx-0 origin-center lg:origin-left"
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
               viewport={{ once: true }}
@@ -127,7 +130,17 @@ export default function OurStory() {
             />
 
             <motion.p
-              className="mt-8 text-[#5E5347] leading-7 md:leading-8 max-w-xl text-sm md:text-base"
+              className="
+  mt-8
+  text-[#5E5347]
+  leading-7
+  md:leading-8
+  max-w-xl
+  mx-auto
+  lg:mx-0
+  text-sm
+  md:text-base
+"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -159,7 +172,13 @@ export default function OurStory() {
               ].map((point, i) => (
                 <motion.div
                   key={point}
-                  className="flex items-center gap-3"
+                  className="
+                    flex
+                    items-center
+                    justify-center
+                    lg:justify-start
+                    gap-3
+                  "
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -173,6 +192,7 @@ export default function OurStory() {
 
             {/* CTA */}
             <motion.div
+              className="flex justify-center lg:justify-start"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}

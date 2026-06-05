@@ -1,138 +1,276 @@
 "use client";
 
-import { Phone, MapPin, MessageCircle } from "lucide-react";
+import { useState } from "react";
+import { Phone, MapPin, MessageCircle, ArrowRight } from "lucide-react";
 
 export default function ContactSection() {
+  const [hoveredCard, setHoveredCard] = useState(null);
+  const [focusedField, setFocusedField] = useState(null);
+
   return (
-    <section className="bg-[#F7F2EB] py-16 md:py-20 lg:py-24">
+    <section className="bg-gradient-to-b from-[#F7F2EB] to-[#F0EAE0] py-20 md:py-28 lg:py-32 relative overflow-hidden">
+      {/* Decorative Elements */}
+      <div className="absolute top-0 right-0 w-96 h-96 bg-[#C8972B] opacity-5 rounded-full blur-3xl -z-10" />
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#2A1506] opacity-3 rounded-full blur-3xl -z-10" />
+
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-14">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-          {/* FORM */}
-          <div className="bg-white p-6 sm:p-8 lg:p-12 shadow-sm">
-            <p className="uppercase tracking-[0.25em] md:tracking-[0.3em] text-[#C8972B] text-[11px] md:text-xs mb-3">
-              Contact Us
-            </p>
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-stretch">
+          {/* FORM - LEFT SIDE */}
+          <div className="group relative">
+            {/* Premium Shadow Background */}
+            <div className="absolute inset-0 bg-white rounded-lg shadow-2xl opacity-0 group-hover:opacity-100 transition-all duration-500 blur-xl -z-10" />
 
-            <h2 className="font-[Cormorant_Garamond,serif] text-[38px] sm:text-[44px] md:text-5xl text-[#2A1506] mb-8 leading-tight">
-              Start Your Project
-            </h2>
+            <div className="bg-white p-8 sm:p-10 lg:p-12 shadow-xl hover:shadow-2xl transition-all duration-500 rounded-lg border border-[#E8DCC8]/50">
+              {/* Label */}
+              <div className="inline-block mb-4">
+                <p className="uppercase tracking-[0.3em] text-[#C8972B] text-[10px] font-semibold letter-spacing-wide">
+                  ✦ Contact Us
+                </p>
+              </div>
 
-            <form className="space-y-5">
-              <input
-                type="text"
-                placeholder="Your Name"
-                className="w-full border border-[#D9CBB8] px-4 sm:px-5 py-3 sm:py-4 outline-none focus:border-[#C8972B] text-sm"
-              />
+              {/* Heading */}
+              <h2 className="font-[Cormorant_Garamond,serif] text-3xl sm:text-4xl lg:text-5xl text-[#2A1506] mb-2 leading-tight font-light">
+                Start Your
+              </h2>
+              <h2 className="font-[Cormorant_Garamond,serif] text-3xl sm:text-4xl lg:text-5xl text-[#C8972B] mb-10 leading-tight font-light">
+                Project
+              </h2>
 
-              <input
-                type="tel"
-                placeholder="Phone Number"
-                className="w-full border border-[#D9CBB8] px-4 sm:px-5 py-3 sm:py-4 outline-none focus:border-[#C8972B] text-sm"
-              />
+              {/* Form */}
+              <form className="space-y-5">
+                {/* Name Input */}
+                <div className="relative group/input">
+                  <input
+                    type="text"
+                    placeholder="Your Name"
+                    onFocus={() => setFocusedField("name")}
+                    onBlur={() => setFocusedField(null)}
+                    className="w-full bg-gradient-to-b from-white to-[#FAFAF8] border-2 border-[#E8DCC8] px-5 py-4 outline-none focus:border-[#C8972B] text-sm text-[#2A1506] placeholder-[#B8A89C] transition-all duration-300 rounded-sm"
+                  />
+                  <div
+                    className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#C8972B] via-[#D4A852] to-transparent transition-all duration-500 ${
+                      focusedField === "name" ? "w-full" : "w-0"
+                    }`}
+                  />
+                </div>
 
-              <input
-                type="text"
-                placeholder="City"
-                className="w-full border border-[#D9CBB8] px-4 sm:px-5 py-3 sm:py-4 outline-none focus:border-[#C8972B] text-sm"
-              />
+                {/* Phone Input */}
+                <div className="relative group/input">
+                  <input
+                    type="tel"
+                    placeholder="Phone Number"
+                    onFocus={() => setFocusedField("phone")}
+                    onBlur={() => setFocusedField(null)}
+                    className="w-full bg-gradient-to-b from-white to-[#FAFAF8] border-2 border-[#E8DCC8] px-5 py-4 outline-none focus:border-[#C8972B] text-sm text-[#2A1506] placeholder-[#B8A89C] transition-all duration-300 rounded-sm"
+                  />
+                  <div
+                    className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#C8972B] via-[#D4A852] to-transparent transition-all duration-500 ${
+                      focusedField === "phone" ? "w-full" : "w-0"
+                    }`}
+                  />
+                </div>
 
-              <select className="w-full border border-[#D9CBB8] px-4 sm:px-5 py-3 sm:py-4 outline-none focus:border-[#C8972B] text-sm">
-                <option>Select Project Type</option>
-                <option>Interior Design</option>
-                <option>Modular Kitchen</option>
-                <option>Turnkey Project</option>
-                <option>Architecture</option>
-              </select>
+                {/* City Input */}
+                <div className="relative group/input">
+                  <input
+                    type="text"
+                    placeholder="City"
+                    onFocus={() => setFocusedField("city")}
+                    onBlur={() => setFocusedField(null)}
+                    className="w-full bg-gradient-to-b from-white to-[#FAFAF8] border-2 border-[#E8DCC8] px-5 py-4 outline-none focus:border-[#C8972B] text-sm text-[#2A1506] placeholder-[#B8A89C] transition-all duration-300 rounded-sm"
+                  />
+                  <div
+                    className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#C8972B] via-[#D4A852] to-transparent transition-all duration-500 ${
+                      focusedField === "city" ? "w-full" : "w-0"
+                    }`}
+                  />
+                </div>
 
-              <textarea
-                rows={5}
-                placeholder="Tell us about your project..."
-                className="w-full border border-[#D9CBB8] px-4 sm:px-5 py-3 sm:py-4 outline-none resize-none focus:border-[#C8972B] text-sm"
-              />
+                {/* Project Type Select */}
+                <div className="relative group/input">
+                  <select
+                    onFocus={() => setFocusedField("project")}
+                    onBlur={() => setFocusedField(null)}
+                    className="w-full bg-gradient-to-b from-white to-[#FAFAF8] border-2 border-[#E8DCC8] px-5 py-4 outline-none focus:border-[#C8972B] text-sm text-[#2A1506] transition-all duration-300 rounded-sm appearance-none cursor-pointer"
+                  >
+                    <option>Select Project Type</option>
+                    <option>Interior Design</option>
+                    <option>Modular Kitchen</option>
+                    <option>Turnkey Project</option>
+                    <option>Architecture</option>
+                  </select>
+                  <div
+                    className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#C8972B] via-[#D4A852] to-transparent transition-all duration-500 ${
+                      focusedField === "project" ? "w-full" : "w-0"
+                    }`}
+                  />
+                  <ArrowRight
+                    size={16}
+                    className="absolute right-4 top-1/2 -translate-y-1/2 text-[#C8972B] pointer-events-none rotate-90"
+                  />
+                </div>
 
-              <button
-                type="submit"
-                className="
-                  bg-[#C8972B]
-                  hover:bg-[#3D1F0D]
-                  text-white
-                  px-6 sm:px-8
-                  py-3 sm:py-4
-                  uppercase
-                  tracking-[0.15em]
-                  text-xs sm:text-sm
-                  transition-colors
-                  duration-300
-                "
-              >
-                Send Inquiry
-              </button>
-            </form>
+                {/* Message Textarea */}
+                <div className="relative group/input">
+                  <textarea
+                    rows={5}
+                    placeholder="Tell us about your project..."
+                    onFocus={() => setFocusedField("message")}
+                    onBlur={() => setFocusedField(null)}
+                    className="w-full bg-gradient-to-b from-white to-[#FAFAF8] border-2 border-[#E8DCC8] px-5 py-4 outline-none focus:border-[#C8972B] text-sm text-[#2A1506] placeholder-[#B8A89C] transition-all duration-300 resize-none rounded-sm"
+                  />
+                  <div
+                    className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#C8972B] via-[#D4A852] to-transparent transition-all duration-500 ${
+                      focusedField === "message" ? "w-full" : "w-0"
+                    }`}
+                  />
+                </div>
+
+                {/* Premium Button */}
+                <button
+                  type="submit"
+                  className="w-full relative group/btn mt-8"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-[#C8972B] to-[#A8752A] rounded-sm opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 blur-lg" />
+                  <div className="relative bg-gradient-to-r from-[#C8972B] to-[#B38530] hover:from-[#3D1F0D] hover:to-[#2A1506] text-white px-2 py-4 uppercase tracking-[0.1em] text-xs sm:text-sm font-semibold transition-all duration-500 rounded-sm flex items-center justify-center gap-3 group/btn-inner">
+                    Book Consultation
+                    <ArrowRight
+                      size={16}
+                      className="group-hover/btn-inner:translate-x-2 transition-transform duration-300"
+                    />
+                  </div>
+                </button>
+              </form>
+            </div>
           </div>
 
-          {/* CONTACT INFO */}
-          <div className="flex flex-col justify-center lg:pl-8">
-            <p className="uppercase tracking-[0.25em] md:tracking-[0.3em] text-[#C8972B] text-[11px] md:text-xs mb-3">
-              Contact Details
-            </p>
-
-            <h2 className="font-[Cormorant_Garamond,serif] text-[38px] sm:text-[44px] md:text-5xl text-[#2A1506] mb-8 leading-tight">
-              Let's Talk
-            </h2>
-
-            <p className="text-[#6E6258] leading-7 md:leading-8 mb-10 text-sm md:text-base max-w-lg">
-              Ready to transform your space? Contact us today for a free
-              consultation and let's create something beautiful together.
-            </p>
-
-            <div className="space-y-6">
-              {/* Phone */}
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-[#C8972B]/10 flex items-center justify-center flex-shrink-0">
-                  <Phone size={22} className="text-[#C8972B]" />
-                </div>
-
-                <div>
-                  <p className="font-semibold text-[#2A1506] mb-1">Phone</p>
-
-                  <p className="text-[#6E6258] text-sm md:text-base">
-                    +91 98765 43210
+          {/* RIGHT SIDE - CONTENT + CONTACTS */}
+          <div className="flex flex-col gap-10">
+            {/* Image with Premium Styling */}
+            <div className="group relative overflow-hidden rounded-lg">
+              <div className="absolute inset-0 bg-gradient-to-b from-[#C8972B] via-transparent to-[#3D1F0D] opacity-20 z-10 group-hover:opacity-40 transition-all duration-500" />
+              <img
+                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=700&auto=format&fit=crop"
+                alt="Interior Design Showcase"
+                className="w-full h-[230px] md:h-[260px] object-cover group-hover:scale-105 transition-transform duration-700"
+              />
+              <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+                <div className="text-white text-center">
+                  <p className="text-sm uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-all duration-700 delay-100">
+                    Transforming Spaces
                   </p>
                 </div>
               </div>
+            </div>
 
-              {/* WhatsApp */}
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-[#C8972B]/10 flex items-center justify-center flex-shrink-0">
-                  <MessageCircle size={22} className="text-[#C8972B]" />
-                </div>
+            {/* Content */}
+            <div>
+              <p className="uppercase tracking-[0.3em] text-[#C8972B] text-[10px] font-semibold mb-4">
+                ✦ Contact Details
+              </p>
 
-                <div>
-                  <p className="font-semibold text-[#2A1506] mb-1">WhatsApp</p>
+              <h3 className="font-[Cormorant_Garamond,serif] text-4xl sm:text-4xl text-[#2A1506] mb-2 leading-tight font-light">
+                Let's Create
+              </h3>
+              <h3 className="font-[Cormorant_Garamond,serif] text-3xl sm:text-3xl text-[#C8972B] mb-4 leading-tight font-light">
+                Something Beautiful
+              </h3>
 
-                  <a
-                    href="https://wa.me/919876543210"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-[#6E6258] text-sm md:text-base hover:text-[#C8972B] transition-colors"
-                  >
-                    Chat on WhatsApp
-                  </a>
+              <p className="text-[#6E6258] leading-8 mt-2 text-sm md:text-base font-light">
+                Ready to transform your space into something extraordinary? Our
+                team of expert designers is here to bring your vision to life
+                with precision, creativity, and luxury.
+              </p>
+            </div>
+
+            {/* Premium Contact Cards */}
+            <div className="space-y-4">
+              {/* Phone Card */}
+              <div
+                onMouseEnter={() => setHoveredCard("phone")}
+                onMouseLeave={() => setHoveredCard(null)}
+                className="group/card relative overflow-hidden rounded-lg transition-all duration-500"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-[#C8972B]/10 via-[#C8972B]/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
+                <div className="relative p-2 border-2 border-[#E8DCC8]/50 hover:border-[#C8972B]/30 transition-all duration-500 backdrop-blur-sm rounded-lg">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#C8972B]/20 to-[#C8972B]/5 flex items-center justify-center flex-shrink-0 rounded-lg group-hover/card:from-[#C8972B]/30 group-hover/card:to-[#C8972B]/15 transition-all duration-500">
+                      <Phone size={22} className="text-[#C8972B]" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold text-[#2A1506] text-sm uppercase tracking-wider">
+                        Phone
+                      </p>
+                      <p className="text-[#6E6258] text-base mt-1 group-hover/card:text-[#C8972B] transition-colors duration-300">
+                        +91 98765 43210
+                      </p>
+                    </div>
+                    <ArrowRight
+                      size={18}
+                      className="text-[#C8972B] opacity-0 group-hover/card:opacity-100 transition-all duration-500 group-hover/card:translate-x-2"
+                    />
+                  </div>
                 </div>
               </div>
 
-              {/* Address */}
-              <div className="flex gap-4">
-                <div className="w-12 h-12 bg-[#C8972B]/10 flex items-center justify-center flex-shrink-0">
-                  <MapPin size={22} className="text-[#C8972B]" />
+              {/* WhatsApp Card */}
+              <div
+                onMouseEnter={() => setHoveredCard("whatsapp")}
+                onMouseLeave={() => setHoveredCard(null)}
+                className="group/card relative overflow-hidden rounded-lg transition-all duration-500"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-[#C8972B]/10 via-[#C8972B]/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
+                <div className="relative p-2 border-2 border-[#E8DCC8]/50 hover:border-[#C8972B]/30 transition-all duration-500 backdrop-blur-sm rounded-lg">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#C8972B]/20 to-[#C8972B]/5 flex items-center justify-center flex-shrink-0 rounded-lg group-hover/card:from-[#C8972B]/30 group-hover/card:to-[#C8972B]/15 transition-all duration-500">
+                      <MessageCircle size={22} className="text-[#C8972B]" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold text-[#2A1506] text-sm uppercase tracking-wider">
+                        WhatsApp
+                      </p>
+                      <a
+                        href="https://wa.me/919876543210"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-[#6E6258] text-base mt-1 group-hover/card:text-[#C8972B] transition-colors duration-300 font-medium"
+                      >
+                        Chat on WhatsApp
+                      </a>
+                    </div>
+                    <ArrowRight
+                      size={18}
+                      className="text-[#C8972B] opacity-0 group-hover/card:opacity-100 transition-all duration-500 group-hover/card:translate-x-2"
+                    />
+                  </div>
                 </div>
+              </div>
 
-                <div>
-                  <p className="font-semibold text-[#2A1506] mb-1">Address</p>
-
-                  <p className="text-[#6E6258] text-sm md:text-base">
-                    Noida, Uttar Pradesh, India
-                  </p>
+              {/* Address Card */}
+              <div
+                onMouseEnter={() => setHoveredCard("address")}
+                onMouseLeave={() => setHoveredCard(null)}
+                className="group/card relative overflow-hidden rounded-lg transition-all duration-500"
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-[#C8972B]/10 via-[#C8972B]/5 to-transparent opacity-0 group-hover/card:opacity-100 transition-opacity duration-500" />
+                <div className="relative p-2 border-2 border-[#E8DCC8]/50 hover:border-[#C8972B]/30 transition-all duration-500 backdrop-blur-sm rounded-lg">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 bg-gradient-to-br from-[#C8972B]/20 to-[#C8972B]/5 flex items-center justify-center flex-shrink-0 rounded-lg group-hover/card:from-[#C8972B]/30 group-hover/card:to-[#C8972B]/15 transition-all duration-500">
+                      <MapPin size={22} className="text-[#C8972B]" />
+                    </div>
+                    <div className="flex-1">
+                      <p className="font-semibold text-[#2A1506] text-sm uppercase tracking-wider">
+                        Address
+                      </p>
+                      <p className="text-[#6E6258] text-base mt-1 group-hover/card:text-[#C8972B] transition-colors duration-300">
+                        Noida, Uttar Pradesh, India
+                      </p>
+                    </div>
+                    <ArrowRight
+                      size={18}
+                      className="text-[#C8972B] opacity-0 group-hover/card:opacity-100 transition-all duration-500 group-hover/card:translate-x-2"
+                    />
+                  </div>
                 </div>
               </div>
             </div>

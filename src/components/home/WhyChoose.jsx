@@ -20,20 +20,33 @@ export default function TrustSection() {
   return (
     <section className="bg-[#F7F2EB] overflow-hidden">
       {/* ── Container ── */}
-      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-10 lg:px-16 py-16 md:py-24 flex flex-col lg:flex-row items-center gap-12 lg:gap-24">
+      <div
+        className="
+  max-w-7xl mx-auto
+  px-5 sm:px-6 md:px-10 lg:px-16
+  py-16 md:py-24
+  flex
+  flex-col-reverse
+  lg:flex-row
+  items-center
+  gap-12 lg:gap-24
+"
+      >
         {/* ── IMAGE SIDE ── */}
         <motion.div
           className="
-            relative flex-shrink-0
-            w-full
-            max-w-[320px]
-            sm:max-w-[380px]
-            md:max-w-[500px]
-            h-[320px]
-            sm:h-[420px]
-            md:h-[550px]
-            mx-auto
-          "
+              relative
+              flex-shrink-0
+              w-full
+              max-w-[320px]
+              sm:max-w-[420px]
+              md:max-w-[500px]
+              aspect-square
+              lg:w-[500px]
+              lg:h-[550px]
+              lg:max-w-none
+              mx-auto
+            "
           initial={{ opacity: 0, x: -40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
@@ -43,26 +56,72 @@ export default function TrustSection() {
           }}
         >
           {/* Back Outline Frame */}
-          <div className="absolute top-3 left-3 md:top-5 md:left-5 w-full h-full border-2 border-[#C8972B]/40 rounded-t-full rounded-br-full rounded-bl-none" />
+          <div
+            className="
+            absolute
+            top-3
+            left-3
+            lg:top-5
+            lg:left-5
+            w-full
+            h-full
+            border-2
+            border-[#C8972B]/40
 
-          {/* Image */}
-          <div className="relative w-full h-full overflow-hidden rounded-t-full rounded-br-full rounded-bl-none">
+          rounded-t-[50px]
+          rounded-bl-[50px]
+          rounded-br-none
+          rounded-tr-[50px]
+
+          lg:rounded-t-full
+          lg:rounded-br-full
+          lg:rounded-bl-none
+          "
+          />
+
+          {/* Main Image */}
+          <div
+            className="
+      relative
+      w-full
+      h-full
+      overflow-hidden
+
+      rounded-t-[50px]
+      rounded-bl-[50px]
+      rounded-br-none
+      rounded-tr-[50px]
+
+      lg:rounded-t-full
+      lg:rounded-br-full
+      lg:rounded-bl-none
+    "
+          >
             <Image
               src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&q=80"
               alt="Luxury Interior"
               fill
-              sizes="(max-width: 768px) 100vw, 500px"
-              className="object-cover"
               priority
+              sizes="(max-width:1024px) 100vw, 500px"
+              className="object-cover"
             />
 
-            {/* Warm Overlay */}
+            {/* Overlay */}
             <div className="absolute inset-0 bg-[#3D1F0D]/10" />
           </div>
 
           {/* Decorative Stars */}
           <motion.span
-            className="absolute -right-8 top-16 text-[#C8972B] text-4xl select-none hidden lg:block"
+            className="
+              absolute
+              -right-8
+              top-16
+              text-[#C8972B]
+              text-4xl
+              select-none
+              hidden
+              lg:block
+            "
             animate={{
               rotate: [0, 180],
               scale: [1, 1.1, 1],
@@ -77,7 +136,16 @@ export default function TrustSection() {
           </motion.span>
 
           <motion.span
-            className="absolute -right-4 top-32 text-[#3D1F0D] text-xl select-none hidden lg:block"
+            className="
+      absolute
+      -right-4
+      top-32
+      text-[#3D1F0D]
+      text-xl
+      select-none
+      hidden
+      lg:block
+    "
             animate={{
               rotate: [180, 0],
               scale: [1, 1.2, 1],

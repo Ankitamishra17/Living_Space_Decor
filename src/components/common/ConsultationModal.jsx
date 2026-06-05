@@ -66,29 +66,7 @@ export default function ConsultationModal({ isOpen, onClose }) {
                 />
               </div>
 
-              {/* Stats */}
-              {/* <div className="mt-8 grid grid-cols-3 gap-3">
-                <div className="bg-white rounded-xl p-3 text-center shadow-sm">
-                  <h3 className="text-[#C8972B] font-bold text-lg md:text-2xl">
-                    500+
-                  </h3>
-                  <p className="text-xs text-[#6E5E4E]">Projects</p>
-                </div>
-
-                <div className="bg-white rounded-xl p-3 text-center shadow-sm">
-                  <h3 className="text-[#C8972B] font-bold text-lg md:text-2xl">
-                    10+
-                  </h3>
-                  <p className="text-xs text-[#6E5E4E]">Years</p>
-                </div>
-
-                <div className="bg-white rounded-xl p-3 text-center shadow-sm">
-                  <h3 className="text-[#C8972B] font-bold text-lg md:text-2xl">
-                    4.9★
-                  </h3>
-                  <p className="text-xs text-[#6E5E4E]">Rating</p>
-                </div>
-              </div> */}
+             
             </div>
 
             {/* Right Section */}

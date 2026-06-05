@@ -66,7 +66,7 @@ export default function InteriorHero() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center justify-center gap-2 text-[10px] sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] text-[#C8972B] mb-6 md:mb-8"
+            className="flex items-center justify-center gap-2 text-[10px] -mt-20 sm:text-xs uppercase tracking-[0.15em] sm:tracking-[0.2em] text-[#C8972B] mb-6 md:mb-8"
           >
             <span>Service</span>
             <span className="text-white/40">/</span>

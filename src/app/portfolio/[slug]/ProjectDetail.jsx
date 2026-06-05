@@ -192,7 +192,8 @@ export default function ProjectDetail({ project }) {
 
       <main className="bg-gradient-to-b from-[#F5EBE0] via-[#FAF7F2] to-white text-[#3D1F0D] min-h-screen">
         {/* ── Hero ── */}
-        <section className="relative h-[75vh] min-h-[520px] overflow-hidden bg-white">
+        <section className="relative h-[60vh] sm:h-[70vh] md:h-[75vh] min-h-[420px] md:min-h-[520px] overflow-hidden bg-white">
+          {" "}
           <Image
             src={project.image}
             alt={project.name}
@@ -204,7 +205,6 @@ export default function ProjectDetail({ project }) {
           {/* refined gradient overlays */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#F5EBE0] via-[#3D1F0D]/20 to-transparent" />
           <div className="absolute inset-0 bg-gradient-to-r from-[#F5EBE0]/40 via-transparent to-transparent" />
-
           {/* Breadcrumb */}
           <motion.nav
             className="absolute top-8 left-8 md:left-16 flex items-center gap-3 text-xs tracking-[0.25em] uppercase text-[#3D1F0D]/60"
@@ -222,7 +222,6 @@ export default function ProjectDetail({ project }) {
             <span>/</span>
             <span className="text-[#C8972B] font-semibold">{project.name}</span>
           </motion.nav>
-
           {/* Hero text */}
           <motion.div
             className="absolute bottom-0 left-0 right-0 px-8 md:px-16 pb-14 bg-gradient-to-t from-[#F5EBE0] via-[#F5EBE0]/80 to-transparent pt-16"
@@ -479,15 +478,14 @@ export default function ProjectDetail({ project }) {
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-3 bg-[#3D1F0D] text-white px-8 py-4 text-sm tracking-[0.2em] uppercase font-medium transition-all duration-300 active:scale-95 shadow-lg shadow-[#25D366]/20 hover:shadow-[0_0_40px_rgba(37,211,102,0.4)]"
+            className="inline-flex items-center rounded-md gap-3 bg-[#3D1F0D] text-white px-4 py-4 text-sm tracking-[0.2em] uppercase font-medium transition-all duration-300 active:scale-95 shadow-lg shadow-[#25D366]/20 hover:shadow-[0_0_40px_rgba(37,211,102,0.4)]"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
             viewport={{ once: true }}
             whileHover={{ y: -2 }}
           >
-            
-           Book Consultation
+            Book Consultation
           </motion.a>
 
           {/* secondary: back to portfolio */}

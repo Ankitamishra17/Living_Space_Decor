@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -48,6 +47,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [showConsultationModal, setShowConsultationModal] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
+  const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 10);
@@ -64,23 +64,31 @@ export default function Navbar() {
       {/* ── TOP CONTACT BAR WITH ANIMATED SEARCH ── */}
       <div className="w-full bg-[#2c2c2c] border-b border-[#F5EBE0]/5">
         <div className="max-w-[1280px] mx-auto px-4 lg:px-8">
-          <div className="flex items-center justify-between gap-4 h-10 text-xs text-[#F5EBE0]/80">
+          <div className="grid grid-cols-[1fr_auto_1fr] items-center h-10 text-xs text-[#F5EBE0]/80">
+            {" "}
             {/* tagline */}
-            <span className="hidden sm:block tracking-widest uppercase text-[10px] text-[#C8972B]/80 font-medium whitespace-nowrap flex-shrink-0">
-              Luxury Interior Studio — Est. 2012
-            </span>
-
+            {/* <span className="sm:block tracking-widest  text-[10px] lg:text-[12px] text-[#C8972B]/80 font-medium whitespace-nowrap flex-shrink-0">
+              livingdecor@gmail.com
+            </span> */}
+            <div className="justify-self-start">
+              <span className="tracking-widest text-[10px] lg:text-[12px] text-[#C8972B]/80 font-medium whitespace-nowrap">
+                livingdecor@gmail.com
+              </span>
+            </div>
             {/* Animated Search Bar */}
-            <AnimatedSearchBar onSearch={handleSearch} />
-
+            <div className="justify-self-center">
+              <AnimatedSearchBar onSearch={handleSearch} />
+            </div>
             {/* contact links */}
             <div className="flex items-center gap-1 ml-auto flex-shrink-0">
               <a
                 href="tel:+919999999999"
-                className="hidden sm:flex items-center gap-1.5 px-3 py-1 rounded hover:bg-white/10 transition-colors duration-200"
+                className="flex items-center gap-1.5 ml-8 px-3 py-1 rounded hover:bg-white/10 transition-colors duration-200 text-[#C8972B]"
               >
-                <Phone size={13} className="text-[#C8972B]" />
-                <span className="hidden lg:inline">+91 99999 99999</span>
+                <Phone size={10} className="text-[#C8972B]" />
+                <span className=" lg:inline text-[8px] lg:text-[12px]">
+                  +91 99999 99999
+                </span>
               </a>
 
               <span className="hidden sm:block text-white/20 select-none">
@@ -91,7 +99,7 @@ export default function Navbar() {
                 href="https://wa.me/919999999999"
                 target="_blank"
                 rel="noreferrer"
-                className="flex items-center gap-1.5 px-3 py-1 rounded hover:bg-white/10 transition-colors duration-200 text-[#25D366]"
+                className=" hidden sm:flex  items-center gap-1.5 px-3 py-1 rounded hover:bg-white/10 transition-colors duration-200 text-[#25D366]"
               >
                 <MessageCircle size={13} />
                 <span className="hidden lg:inline">WhatsApp</span>
@@ -163,8 +171,7 @@ export default function Navbar() {
             </nav>
 
             {/* ── DESKTOP SEARCH + CTA ── */}
-            <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
-
+            <div className="hidden lg:flex items-center  gap-3 flex-shrink-0">
               {/* CTA Button */}
               <button
                 onClick={() => setShowConsultationModal(true)}
@@ -194,8 +201,6 @@ export default function Navbar() {
               </button>
             </div>
           </div>
-
-         
         </div>
 
         {/* ── MOBILE MENU ── */}
@@ -213,29 +218,55 @@ export default function Navbar() {
                     {!item.submenu ? (
                       <Link
                         href={item.href}
-                        onClick={() => setIsOpen(false)}
+                        onClick={() => {
+                          setIsOpen(false);
+                          setMobileServicesOpen(false);
+                        }}
                         className="flex items-center justify-between px-3 py-3 rounded-[4px] text-[#3D1F0D] font-medium text-[14px] hover:bg-[#F5EBE0] hover:text-[#C8972B] transition-colors duration-150"
                       >
                         {item.name}
                       </Link>
                     ) : (
                       <div className="px-3 py-3">
-                        <div className="flex items-center justify-between text-[#3D1F0D] font-medium text-[14px] mb-2">
-                          {item.name}
-                          <ChevronDown size={14} />
-                        </div>
+                        <button
+                          type="button"
+                          onClick={() =>
+                            setMobileServicesOpen(!mobileServicesOpen)
+                          }
+                          className="w-full flex items-center justify-between text-[#3D1F0D] font-medium text-[14px]"
+                        >
+                          <span>{item.name}</span>
 
-                        <div className="ml-3 flex flex-col">
-                          {item.submenu.map((subItem) => (
-                            <Link
-                              key={subItem.name}
-                              href={subItem.href}
-                              onClick={() => setIsOpen(false)}
-                              className="py-2 text-[13px] text-[#3D1F0D]/70 hover:text-[#C8972B]"
-                            >
-                              {subItem.name}
-                            </Link>
-                          ))}
+                          <ChevronDown
+                            size={14}
+                            className={`transition-transform duration-300 ${
+                              mobileServicesOpen ? "rotate-180" : ""
+                            }`}
+                          />
+                        </button>
+
+                        <div
+                          className={`overflow-hidden transition-all duration-300 ${
+                            mobileServicesOpen
+                              ? "max-h-[300px] opacity-100 mt-3"
+                              : "max-h-0 opacity-0"
+                          }`}
+                        >
+                          <div className="ml-3 flex flex-col">
+                            {item.submenu.map((subItem) => (
+                              <Link
+                                key={subItem.name}
+                                href={subItem.href}
+                                onClick={() => {
+                                  setIsOpen(false);
+                                  setMobileServicesOpen(false);
+                                }}
+                                className="py-2 text-[13px] text-[#3D1F0D]/70 hover:text-[#C8972B]"
+                              >
+                                {subItem.name}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       </div>
                     )}
