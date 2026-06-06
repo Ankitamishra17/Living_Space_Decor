@@ -60,7 +60,7 @@ export default function SurfaceCard({ item }) {
               text-[10px]
               sm:text-xs
               md:text-sm
-              italic
+              font-body
               text-black/50
               bg-white/60
               backdrop-blur-sm
@@ -91,7 +91,7 @@ export default function SurfaceCard({ item }) {
             group-hover:text-[#C8972B]
           "
           style={{
-            fontFamily: "'Cormorant Garamond', serif",
+            fontFamily: "'Marcellus', poppins",
           }}
         >
           {item.title}

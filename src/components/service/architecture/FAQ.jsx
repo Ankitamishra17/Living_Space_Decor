@@ -54,7 +54,7 @@ export default function FAQ() {
 
           <h2 className="mt-4 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light leading-tight">
             Frequently <br />
-            <span className="italic text-[#B8882A]">Asked</span>
+            <span className="font-heading text-[#B8882A]">Asked</span>
           </h2>
 
           <p className="mt-5 text-sm sm:text-base text-[#888] leading-7">

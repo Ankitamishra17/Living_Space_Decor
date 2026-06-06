@@ -63,7 +63,11 @@ export default function AwardsSection() {
                   border
                   border-[#C8972B]/15
                   p-8
-                  rounded-tl-full rounded-tr-full rounded-br-none rounded-bl-full
+                  lg:rounded-tl-full lg:rounded-tr-full lg:rounded-br-none lg:rounded-bl-full
+                  rounded-t-[50px]
+          rounded-bl-[50px]
+          rounded-br-none
+          rounded-tr-[50px]
                   text-center
                   group
                   hover:border-[#C8972B]/50

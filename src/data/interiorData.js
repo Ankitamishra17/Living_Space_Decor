@@ -3,13 +3,13 @@ export const steps = [
     num: "01",
     title: "Consultation",
     desc: "Understanding your vision, lifestyle, and aspirations through in-depth discovery sessions.",
-    img: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=75",
+    img: "https://images.pexels.com/photos/37178208/pexels-photo-37178208.jpeg",
   },
   {
     num: "02",
     title: "Concept Design",
     desc: "Mood boards, material palettes, and spatial layouts crafted to tell your unique story.",
-    img: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=75",
+    img: "https://images.pexels.com/photos/28456460/pexels-photo-28456460.jpeg",
   },
   {
     num: "03",
@@ -21,7 +21,7 @@ export const steps = [
     num: "04",
     title: "Execution",
     desc: "Master craftsmen and curated vendors bring every detail to flawless life.",
-    img: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=75",
+    img: "https://images.pexels.com/photos/35203644/pexels-photo-35203644.jpeg",
   },
 ];
 

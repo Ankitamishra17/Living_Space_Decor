@@ -42,20 +42,20 @@ export default function Process() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="text-xs tracking-widest text-[#C8972B] font-medium mb-6"
+            className=" font-heading text-xs tracking-widest text-[#C8972B] font-medium mb-6"
           >
             HOW WE WORK
           </motion.div>
 
           {/* Main Title */}
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-5xl md:text-7xl lg:text-6xl font-light text-black mb-8 tracking-tight">
+            <h2 className=" font-heading text-5xl md:text-7xl lg:text-6xl font-light text-black mb-8 tracking-tight">
               Our Design{" "}
               <motion.span
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="italic text-[#C8972B] font-light"
+                className="font-heading text-[#C8972B] font-light"
               >
                 Process
               </motion.span>
@@ -91,7 +91,7 @@ export default function Process() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-100px" }}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6"
+          className=" font-heading grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-6"
         >
           {steps.map((step, i) => (
             <motion.div key={step.num} variants={itemVariants}>

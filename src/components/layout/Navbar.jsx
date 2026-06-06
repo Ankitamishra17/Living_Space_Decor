@@ -184,13 +184,13 @@ export default function Navbar() {
             {/* ── MOBILE RIGHT ── */}
             <div className="flex lg:hidden items-center gap-2">
               {/* Mobile Search Icon */}
-              <button
+              {/* <button
                 onClick={() => setIsSearchOpen(!isSearchOpen)}
                 className="w-9 h-9 flex items-center justify-center rounded-[3px] bg-[#3D1F0D]/8 hover:bg-[#3D1F0D]/15 text-[#3D1F0D] transition-colors"
                 aria-label="Search"
               >
                 <Search size={18} />
-              </button>
+              </button> */}
 
               <button
                 onClick={() => setIsOpen(!isOpen)}

@@ -43,8 +43,7 @@ const projects = [
   {
     title: "Dining Area",
     category: "Luxury",
-    image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200",
+    image:"https://images.pexels.com/photos/10148453/pexels-photo-10148453.jpeg",
     height: "h-[320px]",
   },
 ];
@@ -54,16 +53,16 @@ export default function ProjectGallery() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <div className="text-center mb-20">
-          <span className="uppercase tracking-[0.35em] text-xs text-[#C8972B]">
+          <span className=" font-heading uppercase tracking-[0.35em] text-xs text-[#C8972B]">
             Our Portfolio
           </span>
 
           <h2 className="mt-6 text-5xl md:text-6xl font-serif text-[#3D1F0D]">
             Featured
-            <span className="italic text-[#C8972B]"> Projects</span>
+            <span className="font-heading text-[#C8972B]"> Projects</span>
           </h2>
 
-          <p className="max-w-2xl mx-auto mt-6 text-[#6B5A4A] leading-8">
+          <p className=" font-body max-w-2xl mx-auto mt-6 text-[#6B5A4A] leading-8">
             Explore our collection of bespoke interiors, luxury residences and
             turnkey transformations crafted with timeless elegance.
           </p>

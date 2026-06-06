@@ -75,7 +75,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto w-full px-5 sm:px-8 md:px-10 lg:px-16">
             <div className="max-w-3xl">
               {/* Tag */}
-              <p className="flex items-center gap-3 text-[10px] sm:text-xs tracking-[0.25em] sm:tracking-[0.35em] uppercase text-[#C8972B] font-medium mb-5">
+              <p className=" font-body flex items-center gap-3 text-[10px] sm:text-xs tracking-[0.25em] sm:tracking-[0.35em] uppercase text-[#C8972B] font-medium mb-5">
                 <span className="w-8 sm:w-10 h-px bg-[#C8972B]" />
                 Luxury Interior Studio
               </p>
@@ -85,6 +85,7 @@ export default function HomePage() {
                 className="
                   text-white
                   font-medium
+                  font-heading
                   leading-[1.05]
                   mb-6
                   text-[32px]
@@ -104,6 +105,7 @@ export default function HomePage() {
               {/* Description */}
               <p
                 className="
+                font-body
                   text-[#F5EBE0]/85
                   text-xs
                   sm:text-base

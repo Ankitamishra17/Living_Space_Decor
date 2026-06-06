@@ -32,7 +32,10 @@ export default function OurStory() {
           >
             {/* Back outline */}
             <motion.div
-              className="absolute top-4 left-4 md:top-6 md:left-6 w-full h-full border-2 border-[#3D1F0D] rounded-t-full rounded-br-full rounded-bl-none"
+              className="absolute top-4 left-4 md:top-6 md:left-6 w-full h-full border-2 border-[#3D1F0D] lg:rounded-t-full lg:rounded-br-full lg:rounded-bl-none rounded-t-[50px]
+          rounded-bl-[50px]
+          rounded-br-none
+          rounded-tr-[50px]"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -44,7 +47,10 @@ export default function OurStory() {
             />
 
             {/* Image */}
-            <div className="relative w-full h-full overflow-hidden rounded-t-full rounded-br-full rounded-bl-none">
+            <div className="relative w-full h-full overflow-hidden lg:rounded-t-full lg:rounded-br-full lg:rounded-bl-none rounded-t-[50px]
+          rounded-bl-[50px]
+          rounded-br-none
+          rounded-tr-[50px]">
               <Image
                 src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&q=80"
                 alt="Luxury Interior"

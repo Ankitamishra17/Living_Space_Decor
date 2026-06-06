@@ -1,4 +1,3 @@
-
 "use client";
 
 import { motion } from "framer-motion";
@@ -56,42 +55,42 @@ export default function ProcessCard({ num, title, desc, img }) {
           "
         />
 
-        {/* Explore Text */}
-        <div
+      
+        {/* Explore Text - Desktop Only */}
+        {/* <div
           className="
-            absolute
-            inset-0
-            flex
-            items-center
-            justify-center
+    hidden
+    lg:flex
+    absolute
+    inset-0
+    items-center
+    justify-center
 
-            opacity-100
-            lg:opacity-0
-            lg:group-hover:opacity-100
+    opacity-0
+    group-hover:opacity-100
 
-            transition-all
-            duration-500
-          "
+    transition-all
+    duration-500
+  "
         >
           <span
             className="
-              px-5
-              py-2
-              rounded-full
-              bg-white/10
-              backdrop-blur-md
-              border
-              border-white/20
-              text-white
-              uppercase
-              tracking-[0.25em]
-              text-[10px]
-              sm:text-xs
-            "
+      px-5
+      py-2
+      rounded-full
+      bg-white/10
+      backdrop-blur-md
+      border
+      border-white/20
+      text-white
+      uppercase
+      tracking-[0.25em]
+      text-xs
+    "
           >
             Explore →
           </span>
-        </div>
+        </div> */}
 
         {/* Step Number */}
         <motion.div

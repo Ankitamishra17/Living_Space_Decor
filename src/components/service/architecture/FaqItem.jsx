@@ -28,7 +28,7 @@ export default function FaqItem({ question, answer, tags, index }) {
           className={`
             flex-shrink-0
             text-xs sm:text-sm
-            italic
+            font-body
             transition
             ${open ? "text-white" : "text-[#B8882A]"}
           `}

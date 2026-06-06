@@ -46,10 +46,10 @@ export default function PortfolioPage() {
       {/* ── Filter + Grid Section ── */}
       <section className="bg-[#F5EBE0] min-h-screen">
         {/* ── Filter Bar ── */}
-        <div className="max-w-7xl mx-auto px-6 md:px-16 pt-16 pb-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-16 pt-8 sm:pt-12 md:pt-16 pb-6 sm:pb-8 md:pb-10">
           {/* label */}
           <motion.p
-            className="text-[10px] tracking-[0.4em] uppercase text-[#C8972B] mb-8"
+            className="text-[9px] sm:text-[10px] tracking-[0.3em] sm:tracking-[0.4em] uppercase text-[#C8972B] mb-4 sm:mb-6 md:mb-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
@@ -57,9 +57,10 @@ export default function PortfolioPage() {
             Filter by Category
           </motion.p>
 
-          {/* pills */}
+          {/* pills - single line on mobile, wrap on large */}
           <motion.div
-            className="flex flex-wrap gap-3"
+            className="flex flex-nowrap lg:flex-wrap gap-2 sm:gap-2.5 md:gap-3 overflow-x-auto lg:overflow-visible pb-2 lg:pb-0"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
@@ -72,7 +73,7 @@ export default function PortfolioPage() {
                   href={f.value ? `/portfolio?type=${f.value}` : "/portfolio"}
                 >
                   <motion.div
-                    className={`relative flex items-center gap-2 px-6 py-2.5 text-xs tracking-[0.2em] uppercase cursor-pointer transition-all duration-300 overflow-hidden backdrop-blur-sm
+                    className={`relative flex flex-shrink-0 items-center gap-1.5 sm:gap-2 px-3 sm:px-4 md:px-6 py-2 sm:py-2.5 text-[9px] sm:text-xs md:text-xs tracking-[0.15em] sm:tracking-[0.2em] md:tracking-[0.2em] uppercase cursor-pointer transition-all duration-300 overflow-hidden backdrop-blur-sm
                       ${
                         isActive
                           ? "bg-[#C8972B]/95 text-white border border-[#C8972B] shadow-lg shadow-[#C8972B]/20"
@@ -97,10 +98,12 @@ export default function PortfolioPage() {
                         }}
                       />
                     )}
-                    <span className="relative z-10 font-medium">{f.label}</span>
+                    <span className="relative z-10 font-medium whitespace-nowrap">
+                      {f.label}
+                    </span>
                     {/* count badge */}
                     <span
-                      className={`relative z-10 text-[9px] px-2 py-1 font-semibold
+                      className={`relative z-10 text-[8px] sm:text-[9px] px-1.5 sm:px-2 py-0.5 sm:py-1 font-semibold flex-shrink-0
                       ${isActive ? "bg-white/25 text-white" : "bg-[#3D1F0D]/15 text-[#3D1F0D]"}`}
                     >
                       {f.count}
@@ -113,7 +116,7 @@ export default function PortfolioPage() {
 
           {/* result count */}
           <motion.p
-            className="mt-6 text-[#3D1F0D]/40 text-xs tracking-widest"
+            className="mt-4 sm:mt-5 md:mt-6 text-[#3D1F0D]/40 text-[9px] sm:text-xs tracking-widest"
             key={type}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -125,11 +128,11 @@ export default function PortfolioPage() {
         </div>
 
         {/* ── Project Grid ── */}
-        <div className="max-w-7xl mx-auto px-6 md:px-16 pb-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-16 pb-16 sm:pb-20 md:pb-24">
           <AnimatePresence mode="wait">
             <motion.div
               key={type ?? "all"}
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
+              className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
@@ -149,27 +152,27 @@ export default function PortfolioPage() {
                   <Link href={`/portfolio/${project.slug}`}>
                     <div className="group relative overflow-hidden bg-white/60 border border-[#3D1F0D]/10 hover:border-[#C8972B]/40 transition-all duration-500 shadow-sm hover:shadow-lg hover:shadow-[#C8972B]/10">
                       {/* image */}
-                      <div className="relative overflow-hidden h-[280px] md:h-[320px]">
+                      <div className="relative overflow-hidden h-[200px] sm:h-[240px] md:h-[280px] lg:h-[320px]">
                         <Image
                           src={project.image}
                           alt={project.name}
                           fill
                           className="object-cover transition-transform duration-700 group-hover:scale-110"
-                          sizes="(max-width: 768px) 100vw, 33vw"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                         />
 
                         {/* hover overlay - sophisticated brown instead of black */}
                         <div className="absolute inset-0 bg-[#3D1F0D]/0 group-hover:bg-[#3D1F0D]/35 transition-all duration-500 backdrop-blur-0 group-hover:backdrop-blur-sm" />
 
                         {/* type badge */}
-                        <div className="absolute top-4 left-4 px-3 py-1.5 bg-white/80 backdrop-blur-md border border-[#C8972B]/30 text-[9px] tracking-[0.3em] uppercase text-[#3D1F0D] font-semibold shadow-md">
+                        <div className="absolute top-2 sm:top-3 md:top-4 left-2 sm:left-3 md:left-4 px-2 sm:px-3 py-1 sm:py-1.5 bg-white/80 backdrop-blur-md border border-[#C8972B]/30 text-[8px] sm:text-[9px] md:text-[9px] tracking-[0.2em] sm:tracking-[0.3em] uppercase text-[#3D1F0D] font-semibold shadow-md">
                           {project.type}
                         </div>
 
                         {/* hover CTA */}
                         <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-400">
                           <motion.div
-                            className="border-2 border-[#C8972B] px-6 py-3 text-[#C8972B] text-xs tracking-[0.3em] uppercase font-semibold bg-white/10 backdrop-blur-sm"
+                            className="border-2 border-[#C8972B] px-4 sm:px-6 py-2 sm:py-3 text-[#C8972B] text-[9px] sm:text-xs tracking-[0.2em] sm:tracking-[0.3em] uppercase font-semibold bg-white/10 backdrop-blur-sm"
                             whileHover={{
                               backgroundColor: "rgba(200,151,43,0.2)",
                               boxShadow: "0 0 20px rgba(200,151,43,0.3)",
@@ -181,17 +184,17 @@ export default function PortfolioPage() {
                       </div>
 
                       {/* info */}
-                      <div className="px-5 py-5 flex items-start justify-between gap-4">
-                        <div>
+                      <div className="px-3 sm:px-4 md:px-5 py-3 sm:py-4 md:py-5 flex items-start justify-between gap-3 sm:gap-4">
+                        <div className="flex-1 min-w-0">
                           <h2
-                            className="text-[#3D1F0D] text-lg font-medium leading-snug group-hover:text-[#C8972B] transition-colors duration-300"
+                            className="text-[#3D1F0D] text-sm sm:text-base md:text-lg font-medium leading-snug group-hover:text-[#C8972B] transition-colors duration-300 truncate"
                             style={{
                               fontFamily: "'Cormorant Garamond', serif",
                             }}
                           >
                             {project.name}
                           </h2>
-                          <p className="text-[#3D1F0D]/50 text-xs tracking-wider mt-1">
+                          <p className="text-[#3D1F0D]/50 text-[8px] sm:text-xs tracking-wider mt-1">
                             {project.location} · {project.bhk}
                           </p>
                         </div>
@@ -203,10 +206,11 @@ export default function PortfolioPage() {
                           whileHover={{ x: 4 }}
                         >
                           <svg
-                            width="18"
-                            height="18"
+                            width="16"
+                            height="16"
                             viewBox="0 0 18 18"
                             fill="none"
+                            className="w-4 sm:w-[18px]"
                           >
                             <path
                               d="M3 9h12M10 4l5 5-5 5"
@@ -237,17 +241,17 @@ export default function PortfolioPage() {
           {/* empty state */}
           {filteredProjects.length === 0 && (
             <motion.div
-              className="text-center py-24 text-[#3D1F0D]/30"
+              className="text-center py-16 sm:py-20 md:py-24 text-[#3D1F0D]/30"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
               <p
-                className="text-4xl mb-4"
+                className="text-2xl sm:text-3xl md:text-4xl mb-2 sm:mb-4"
                 style={{ fontFamily: "'Cormorant Garamond', serif" }}
               >
                 No projects found
               </p>
-              <p className="text-xs tracking-widest uppercase">
+              <p className="text-[9px] sm:text-xs tracking-widest uppercase">
                 Try a different category
               </p>
             </motion.div>

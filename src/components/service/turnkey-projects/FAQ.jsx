@@ -38,7 +38,7 @@ const faqs = [
 ];
 
 export default function FAQs() {
-  const [open, setOpen] = useState(0);
+  const [open, setOpen] = useState();
 
   return (
     <section className="py-20 md:py-28 bg-[#F7F2EB] overflow-hidden">

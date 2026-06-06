@@ -66,7 +66,7 @@ export default function ServicesSection() {
           href="/portfolio"
           className="inline-flex items-center gap-2 border border-[#3D1F0D]/30 text-[#3D1F0D] px-6 py-3 text-[11px] font-semibold uppercase tracking-[.12em] hover:bg-[#3D1F0D] hover:text-white transition-colors"
         >
-          View All Services
+          View  Portfolio
         </Link>
       </div>
 

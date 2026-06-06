@@ -497,7 +497,7 @@ export default function Footer() {
           >
             <p
               style={{
-                fontFamily: "'Inter', system-ui, sans-serif",
+                fontFamily: "Poppins",
                 fontSize: 12,
                 fontWeight: 300,
                 color: "rgba(245,235,224,0.35)",
@@ -512,7 +512,7 @@ export default function Footer() {
               style={{
                 alignItems: "center",
                 gap: 8,
-                fontFamily: "'Inter', system-ui, sans-serif",
+                fontFamily: "Poppins",
                 fontSize: 11,
                 color: "rgba(245,235,224,0.3)",
                 letterSpacing: "0.06em",
@@ -541,7 +541,7 @@ export default function Footer() {
                   key={label}
                   href={href}
                   style={{
-                    fontFamily: "'Inter', system-ui, sans-serif",
+                    fontFamily: "poppins",
                     fontSize: 12,
                     fontWeight: 300,
                     color: "rgba(245,235,224,0.35)",

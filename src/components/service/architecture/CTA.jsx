@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CTA() {
   return (
@@ -45,11 +46,11 @@ export default function CTA() {
                 </div>
 
                 {/* Heading */}
-                <h2 className="font-serif text-[#231A14] leading-[1.05] text-3xl sm:text-4xl md:text-5xl lg:text-5xl">
+                <h2 className="font-heading text-[#231A14] leading-[1.05] text-3xl sm:text-4xl md:text-5xl lg:text-5xl">
                   Let's Build
                   <br />
                   Something{" "}
-                  <span className="italic text-[#C59A43]">Iconic</span>
+                  <span className="font-heading text-[#C59A43]">Iconic</span>
                 </h2>
 
                 {/* Description */}
@@ -94,41 +95,51 @@ export default function CTA() {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 mt-10 sm:mt-12">
-                  <button
+                <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 mt-10 md:mt-12">
+                  {/* Contact Button */}
+                  <Link
+                    href="/contact"
                     className="
-                      w-full sm:w-auto
-                      bg-[#2B1A0D]
-                      text-white
-                      px-4
-                      py-4
-                      uppercase
-                      tracking-[0.1em]
-                      text-xs
-                      transition
-                      hover:bg-[#3D2411]
-                    "
+      group
+      w-full sm:w-auto
+      bg-[#2B1A0D]
+      text-white
+      px-4 md:px-4
+      py-4
+      uppercase
+      tracking-[0.08em] md:tracking-[0.1em]
+      text-[11px] md:text-xs
+      transition
+      hover:bg-[#3A2412]
+      text-center
+    "
                   >
-                    Schedule Consultation →
-                  </button>
+                    Book Free Consultation
+                    <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">
+                      →
+                    </span>
+                  </Link>
 
-                  <button
+                  {/* Portfolio Button */}
+                  <Link
+                    href="/portfolio"
                     className="
-                      w-full sm:w-auto
-                      border
-                      border-[#D7C8A3]
-                      text-[#B8954A]
-                      px-8
-                      py-4
-                      uppercase
-                      tracking-[0.1em]
-                      text-xs
-                      transition
-                      hover:bg-white
-                    "
+      w-full sm:w-auto
+      border
+      border-[#D7C8A3]
+      text-[#B8954A]
+      px-6
+      py-4
+      uppercase
+      tracking-[0.08em] md:tracking-[0.1em]
+      text-[11px] md:text-sm
+      transition
+      hover:bg-white
+      text-center
+    "
                   >
                     View Portfolio
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>

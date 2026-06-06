@@ -1,173 +1,4 @@
-// "use client";
 
-// import { motion } from "framer-motion";
-// import ServiceCard from "./ServiceCard";
-
-// const services = [
-//   {
-//     id: "01",
-//     title: "Living Spaces",
-//     image:
-//       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200",
-//     description:
-//       "Curated living rooms blending comfort with timeless elegance, tailored to your lifestyle.",
-//   },
-//   {
-//     id: "02",
-//     title: "Bedroom Sanctuaries",
-//     image:"https://images.pexels.com/photos/19980080/pexels-photo-19980080.jpeg",
-//     description:
-//       "Restful retreats designed with layered textures, ambient lighting, and bespoke furniture.",
-//   },
-//   {
-//     id: "03",
-//     title: "Kitchen & Dining",
-//     image:
-//       "https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=1200",
-//     description:
-//       "Functional yet stunning culinary spaces that become the heart of your home.",
-//   },
-//   {
-//     id: "04",
-//     title: "Bespoke Furniture",
-//     image:
-//       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200",
-//     description:
-//       "Custom-crafted pieces designed exclusively for your space and sensibilities.",
-//   },
-//   {
-//     id: "05",
-//     title: "Lighting Design",
-//     image: "https://images.pexels.com/photos/3309197/pexels-photo-3309197.jpeg",
-//     description:
-//       "Atmospheric lighting schemes that sculpt mood and highlight architectural features.",
-//   },
-//   {
-//     id: "06",
-//     title: "Material Sourcing",
-//     image:
-//       "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200",
-//     description:
-//       "Premium materials sourced globally to elevate every surface in your home.",
-//   },
-//   {
-//     id: "07",
-//     title: "Space Planning",
-//     image:
-//       "https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=1200",
-//     description:
-//       "Intelligent layouts that optimize flow and functionality without sacrificing style.",
-//   },
-//   {
-//     id: "08",
-//     title: "Color Consultation",
-//     image:"https://images.pexels.com/photos/7490893/pexels-photo-7490893.jpeg",
-//     description:
-//       "Harmonious palettes that reflect your personality and enhance your space.",
-//   },
-// ];
-
-// export default function Services() {
-//   return (
-//     <section className="bg-gradient-to-b from-stone-50 to-white py-32">
-//       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-//         {/* Header Section */}
-//         <motion.div
-//           initial={{ opacity: 0, y: 20 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 0.8 }}
-//           viewport={{ once: true, margin: "-100px" }}
-//           className="text-center mb-24"
-//         >
-//           {/* Eyebrow */}
-//           <motion.p
-//             initial={{ opacity: 0, letterSpacing: "0.1em" }}
-//             whileInView={{ opacity: 1, letterSpacing: "0.35em" }}
-//             transition={{ duration: 0.8, delay: 0.1 }}
-//             viewport={{ once: true }}
-//             className="uppercase tracking-widest text-[#C8972B] text-xs font-medium mb-6"
-//           >
-//             What We Offer
-//           </motion.p>
-
-//           {/* Main Title */}
-//           <motion.div
-//             initial={{ opacity: 0 }}
-//             whileInView={{ opacity: 1 }}
-//             transition={{ duration: 0.8, delay: 0.2 }}
-//             viewport={{ once: true }}
-//           >
-//             <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl text-stone-950 leading-tight">
-//               Our Interior{" "}
-//               <motion.span
-//                 initial={{ opacity: 0, y: 10 }}
-//                 whileInView={{ opacity: 1, y: 0 }}
-//                 transition={{ duration: 0.8, delay: 0.3 }}
-//                 className="italic text-[#C8972B] block md:inline"
-//               >
-//                 Services
-//               </motion.span>
-//             </h2>
-//           </motion.div>
-
-//           {/* Decorative Divider */}
-//           <motion.div
-//             initial={{ opacity: 0, scaleX: 0 }}
-//             whileInView={{ opacity: 1, scaleX: 3 }}
-//             transition={{ duration: 0.8, delay: 0.4 }}
-//             viewport={{ once: true }}
-//             className="flex items-center justify-center gap-4 mt-10 origin-center"
-//           >
-//             <motion.div
-//               className="flex-1 h-px bg-gradient-to-r from-transparent to-amber-300/50"
-//               style={{ maxWidth: "60px" }}
-//             />
-//             <motion.div
-//               className="w-2 h-2 rotate-45 bg-[#C8972B]"
-//               whileInView={{ scale: [1, 1.2, 1] }}
-//               transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}
-//             />
-//             <motion.div
-//               className="flex-1 h-px bg-gradient-to-l from-transparent to-amber-300/50"
-//               style={{ maxWidth: "60px" }}
-//             />
-//           </motion.div>
-//         </motion.div>
-
-//         {/* Services Grid */}
-//         <motion.div
-//           initial="hidden"
-//           whileInView="visible"
-//           viewport={{ once: true, margin: "-100px" }}
-//           variants={{
-//             hidden: { opacity: 0 },
-//             visible: {
-//               opacity: 1,
-//               transition: {
-//                 staggerChildren: 0.12,
-//                 delayChildren: 0.2,
-//               },
-//             },
-//           }}
-//           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-y-20 gap-x-12"
-//         >
-//           {services.map((item, index) => (
-//             <ServiceCard key={item.id} item={item} index={index} />
-//           ))}
-//         </motion.div>
-
-//         {/* Bottom Accent */}
-//         <motion.div
-//           initial={{ opacity: 0, scaleX: 0 }}
-//           whileInView={{ opacity: 1, scaleX: 1 }}
-//           transition={{ duration: 1, delay: 1 }}
-//           viewport={{ once: true, margin: "-100px" }}
-//           className="mt-24 h-px bg-gradient-to-r from-transparent via-amber-200 to-transparent"
-//         />
-//       </div>
-//     </section>
-//   );
-// }
 
 "use client";
 
@@ -270,13 +101,13 @@ export default function Services() {
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}
           >
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-stone-950 leading-tight px-2">
+            <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-stone-950 leading-tight px-2">
               Our Interior{" "}
               <motion.span
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="italic text-[#C8972B] block md:inline"
+                className="font-heading text-[#C8972B] block md:inline"
               >
                 Services
               </motion.span>

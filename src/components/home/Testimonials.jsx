@@ -92,10 +92,10 @@ export default function Testimonials() {
           </div>
 
           <Link
-            href="/services"
+            href="/portfolio"
             className="inline-flex items-center justify-center gap-2 border border-[#3D1F0D]/30 text-[#3D1F0D] px-6 py-3 text-[11px] font-semibold uppercase tracking-[.12em] hover:bg-[#3D1F0D] hover:text-white transition-colors self-start lg:self-auto"
           >
-            View All Services
+            View Portfolio
           </Link>
         </div>
       </div>
@@ -135,7 +135,7 @@ export default function Testimonials() {
 
           {/* CENTER CIRCLE */}
           <div className="absolute inset-0 flex items-center justify-center">
-            <div className="w-24 h-24 sm:w-28 sm:h-28 lg:w-30 lg:h:10 rounded-full bg-[#C8972B]/10 border border-[#C8972B]/20 flex items-center justify-center">
+            <div className="w-20 h-22   lg:h:10 rounded-full bg-[#C8972B]/10 border border-[#C8972B]/20 flex items-center justify-center">
               <span className="text-[#C8972B] text-3xl">❝</span>
             </div>
           </div>
