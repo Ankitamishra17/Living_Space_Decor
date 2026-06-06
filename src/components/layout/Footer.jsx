@@ -229,6 +229,17 @@ export default function Footer() {
           display: flex;
           gap: 24px;
         }
+        .footer-developed {
+          font-family: Poppins;
+          font-size: 12px;
+          font-weight: 300;
+          color: rgba(245, 235, 224, 0.35);
+          text-decoration: none;
+          transition: color 0.2s;
+        }
+        .footer-developed:hover {
+          color: #C8972B;
+        }
 
         /* Tablet: 768px–1023px */
         @media (max-width: 1024px) {
@@ -272,6 +283,7 @@ export default function Footer() {
           }
           .footer-legal-links {
             gap: 16px;
+            flex-direction: column;
           }
         }
 
@@ -559,6 +571,15 @@ export default function Footer() {
                 </Link>
               ))}
             </div>
+
+            <a
+              href="https://deboxtechnology.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-developed"
+            >
+              Developed by Debox Technology
+            </a>
           </div>
         </div>
       </footer>
