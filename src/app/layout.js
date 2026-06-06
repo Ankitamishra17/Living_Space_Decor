@@ -20,6 +20,8 @@ const poppins = Poppins({
   weight: ["300", "400", "600", "700"],
 });
 
+
+
 export default function RootLayout({ children }) {
   const pathname = usePathname();
 
