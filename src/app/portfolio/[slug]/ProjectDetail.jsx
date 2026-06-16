@@ -5,13 +5,6 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-/* ─── WhatsApp CTA config ─── */
-const WHATSAPP_NUMBER = "919999999999"; // ← replace with real number
-const WHATSAPP_MESSAGE = (name) =>
-  encodeURIComponent(
-    `Hi! I'm interested in discussing a project similar to "${name}". Can we connect?`,
-  );
-
 /* ─── Lightbox ─── */
 function Lightbox({ images, current, onClose, onPrev, onNext }) {
   useEffect(() => {
@@ -168,7 +161,6 @@ export default function ProjectDetail({ project }) {
     [allImages.length],
   );
 
-  const whatsappHref = `https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE(project.name)}`;
 
   const stats = [
     { label: "Location", value: project.location },
@@ -190,9 +182,9 @@ export default function ProjectDetail({ project }) {
         />
       )}
 
-      <main className="bg-gradient-to-b from-[#F5EBE0] via-[#FAF7F2] to-white text-[#3D1F0D] min-h-screen">
+      <main className=" text-[#3D1F0D] min-h-screen">
         {/* ── Hero ── */}
-        <section className="relative h-[60vh] sm:h-[70vh] md:h-[75vh] min-h-[420px] md:min-h-[520px] overflow-hidden bg-white">
+        <section className="relative h-[60vh] sm:h-[70vh] md:h-[75vh] min-h-[420px] md:min-h-[520px] overflow-hidden ">
           {" "}
           <Image
             src={project.image}
@@ -202,9 +194,7 @@ export default function ProjectDetail({ project }) {
             className="object-cover object-center"
             sizes="100vw"
           />
-          {/* refined gradient overlays */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#F5EBE0] via-[#3D1F0D]/20 to-transparent" />
-          <div className="absolute inset-0 bg-gradient-to-r from-[#F5EBE0]/40 via-transparent to-transparent" />
+          
           {/* Breadcrumb */}
           <motion.nav
             className="absolute top-8 left-8 md:left-16 flex items-center gap-3 text-xs tracking-[0.25em] uppercase text-[#3D1F0D]/60"
@@ -474,19 +464,20 @@ export default function ProjectDetail({ project }) {
             uniquely yours — blending luxury, comfort, and timeless design.
           </motion.p>
 
-          <motion.a
-            href={whatsappHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center rounded-md gap-3 bg-[#3D1F0D] text-white px-4 py-4 text-sm tracking-[0.2em] uppercase font-medium transition-all duration-300 active:scale-95 shadow-lg shadow-[#25D366]/20 hover:shadow-[0_0_40px_rgba(37,211,102,0.4)]"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -2 }}
-          >
-            Book Consultation
-          </motion.a>
+        
+
+          <Link href="/contact">
+            <motion.div
+              className="inline-flex items-center rounded-md gap-3 bg-[#3D1F0D] text-white px-4 py-4 text-sm tracking-[0.2em] uppercase font-medium transition-all duration-300 active:scale-95 shadow-lg shadow-[#25D366]/20 hover:shadow-[0_0_40px_rgba(37,211,102,0.4)]"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -2 }}
+            >
+              Book Consultation
+            </motion.div>
+          </Link>
 
           {/* secondary: back to portfolio */}
           <motion.div

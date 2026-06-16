@@ -256,7 +256,7 @@ export default function LatestProjectsPremium() {
             style={{ originX: 0 }}
           />
           <motion.span
-            className="relative group-hover:text-white transition-colors"
+            className="relative group-hover:text-[#3D1F0D] transition-colors"
             whileHover={{ letterSpacing: "0.2em" }}
           >
             Explore Full Portfolio
@@ -266,7 +266,7 @@ export default function LatestProjectsPremium() {
             whileHover={{ x: 5 }}
             transition={{ type: "spring", stiffness: 400 }}
           >
-            <ArrowUpRight size={14} className="group-hover:text-white" />
+            <ArrowUpRight size={14} className="group-hover:text-[##3D1F0D]" />
           </motion.div>
         </Link>
       </motion.div>

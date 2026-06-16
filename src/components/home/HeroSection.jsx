@@ -12,18 +12,18 @@ import "swiper/css/pagination";
 const heroSlides = [
   {
     image:
-      "/lsd_images/24.jpg",
+      "/banner/1.png",
     alt: "Luxury living room design",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=1920&q=80&fit=crop",
+      "/banner/9.png",
     alt: "Premium modular kitchen",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1631679706909-1844bbd07221?w=1920&q=80&fit=crop",
-    alt: "Elegant bedroom suite",
+      "/banner/5.png",
+    alt: "Elegant  suite",
   },
 ];
 

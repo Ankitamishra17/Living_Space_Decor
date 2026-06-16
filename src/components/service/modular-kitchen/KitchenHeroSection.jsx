@@ -32,7 +32,7 @@ export default function KitchenHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=2000"
+          src="https://images.pexels.com/photos/32178145/pexels-photo-32178145.png"
           alt="Luxury Kitchen"
           fill
           priority

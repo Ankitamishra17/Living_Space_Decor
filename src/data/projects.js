@@ -43,9 +43,9 @@ const projects = [
     year: "2024",
     duration: "2 months",
     type: "kitchen",
-    image: "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1200&auto=format&fit=crop",
+    image: "https://images.pexels.com/photos/30857234/pexels-photo-30857234.jpeg",
     gallery: [
-      "https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?q=80&w=1200&auto=format&fit=crop",
+      "https://images.pexels.com/photos/32177980/pexels-photo-32177980.png",
       "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?q=80&w=1200&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?q=80&w=1200&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1588854337236-6889d631faa8?q=80&w=1200&auto=format&fit=crop",

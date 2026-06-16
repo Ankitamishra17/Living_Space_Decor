@@ -11,7 +11,7 @@ export default function HeroSection({
   title = "About",
   highlight = "Us",
   subtitle = "Creating timeless interiors that combine elegance, functionality, and exceptional craftsmanship since 2012.",
-  image = "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1600&q=80",
+  image = "/banner/3.png",
   breadcrumbs = [
     { label: "Home", href: "/" },
     { label: "About Us", href: null },
@@ -46,7 +46,7 @@ export default function HeroSection({
       </motion.div>
 
       {/* ── Overlays ── */}
-      <div className="absolute inset-0 bg-[#1F0E04]/70" />
+      <div className="absolute inset-0 bg-[#1F0E04]/60" />
       {/* <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" /> */}
 
       {/* ── Animated particles / decorative lines ── */}
@@ -149,3 +149,5 @@ export default function HeroSection({
     </section>
   );
 }
+
+
