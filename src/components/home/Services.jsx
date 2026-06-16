@@ -10,7 +10,7 @@ const services = [
     description:
       "Luxury residential interiors crafted with modern elegance and premium aesthetics.",
     image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200&auto=format&fit=crop",
+      "/lsd_images/13.jpg",
     icon: Sofa,
     link: "/services/interior-design",
   },

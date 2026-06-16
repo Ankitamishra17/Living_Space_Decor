@@ -10,7 +10,7 @@ const services = [
     id: "01",
     title: "Living Spaces",
     image:
-      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200",
+      "/lsd_images/31.jpg",
     description:
       "Curated living rooms blending comfort with timeless elegance, tailored to your lifestyle.",
   },
@@ -34,14 +34,14 @@ const services = [
     id: "04",
     title: "Bespoke Furniture",
     image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200",
+      "/lsd_images/45.jpg",
     description:
       "Custom-crafted pieces designed exclusively for your space and sensibilities.",
   },
   {
     id: "05",
     title: "Lighting Design",
-    image: "https://images.pexels.com/photos/3309197/pexels-photo-3309197.jpeg",
+    image: "/lsd_images/2.jpg",
     description:
       "Atmospheric lighting schemes that sculpt mood and highlight architectural features.",
   },
@@ -49,7 +49,7 @@ const services = [
     id: "06",
     title: "Material Sourcing",
     image:
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200",
+      "/lsd_images/32.jpg",
     description:
       "Premium materials sourced globally to elevate every surface in your home.",
   },
@@ -57,7 +57,7 @@ const services = [
     id: "07",
     title: "Space Planning",
     image:
-      "https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=1200",
+      "/lsd_images/42.jpg",
     description:
       "Intelligent layouts that optimize flow and functionality without sacrificing style.",
   },

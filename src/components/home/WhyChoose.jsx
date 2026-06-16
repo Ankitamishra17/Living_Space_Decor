@@ -43,7 +43,7 @@ export default function TrustSection() {
               md:max-w-[500px]
               aspect-square
               lg:w-[500px]
-              lg:h-[550px]
+              lg:h-[600px]
               lg:max-w-none
               mx-auto
             "
@@ -98,7 +98,7 @@ export default function TrustSection() {
     "
           >
             <Image
-              src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&q=80"
+              src="/lsd_images/18.jpg"
               alt="Luxury Interior"
               fill
               priority

@@ -5,19 +5,19 @@ import Image from "next/image";
 const styles = [
   {
     name: "Modern",
-    image: "/styles/modern.jpg",
+    image: "/lsd_images/40.jpg",
   },
   {
     name: "Contemporary",
-    image: "/styles/contemporary.jpg",
+    image: "/lsd_images/25.jpg",
   },
   {
     name: "Traditional",
-    image: "/styles/traditional.jpg",
+    image: "/lsd_images/34.jpg",
   },
   {
     name: "Luxury",
-    image: "/styles/luxury.jpg",
+    image: "/lsd_images/18.jpg",
   },
 ];
 
@@ -30,9 +30,7 @@ export default function Step3Style({ formData, setFormData, next, back }) {
           Cost Calculator
         </p>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#2A1506] leading-tight">
-          Select Your Design Style
-        </h2>
+       
 
         <p className="mt-3 text-sm md:text-base text-[#6E6258] max-w-xl mx-auto">
           Choose a style that best reflects your personality and lifestyle.
@@ -70,13 +68,13 @@ export default function Step3Style({ formData, setFormData, next, back }) {
               `}
             >
               {/* Image */}
-              <div className="relative h-[220px] sm:h-[250px] md:h-[280px] overflow-hidden">
+              <div className="relative h-[320px] sm:h-[250px] md:h-[350px] overflow-hidden">
                 <Image
                   src={style.image}
                   alt={style.name}
                   fill
                   sizes="(max-width:768px) 100vw, 50vw"
-                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  className="object-fit transition-transform duration-500 group-hover:scale-105"
                 />
 
                 <div

@@ -12,7 +12,7 @@ import "swiper/css/pagination";
 const heroSlides = [
   {
     image:
-      "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?w=1920&q=80&fit=crop",
+      "/lsd_images/24.jpg",
     alt: "Luxury living room design",
   },
   {
@@ -175,9 +175,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-
-        {/* Optional Luxury Bottom Fade */}
-        <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-[#F5EBE0] to-transparent z-10 pointer-events-none" />
       </section>
     </main>
   );

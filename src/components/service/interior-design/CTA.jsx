@@ -77,65 +77,65 @@ export default function CTA() {
 
                 {/* Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 mt-10 md:mt-12">
-  {/* Contact Button */}
-  <Link
-    href="/contact"
-    className="
-      group
-      w-full sm:w-auto
-      bg-[#2B1A0D]
-      text-white
-      px-4 md:px-4
-      py-4
-      uppercase
-      tracking-[0.08em] md:tracking-[0.1em]
-      text-[11px] md:text-xs
-      transition
-      hover:bg-[#3A2412]
-      text-center
-    "
-  >
-    Book Free Consultation
-    <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">
-      →
-    </span>
-  </Link>
+                  {/* Contact Button */}
+                  <Link
+                    href="/contact"
+                    className="
+                      group
+                      w-full sm:w-auto
+                      bg-[#2B1A0D]
+                      text-white
+                      px-4 md:px-4
+                      py-4
+                      uppercase
+                      tracking-[0.08em] md:tracking-[0.1em]
+                      text-[11px] md:text-xs
+                      transition
+                      hover:bg-[#3A2412]
+                      text-center
+                    "
+                  >
+                    Book Free Consultation
+                    <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">
+                      →
+                    </span>
+                  </Link>
 
-  {/* Portfolio Button */}
-  <Link
-    href="/portfolio"
-    className="
-      w-full sm:w-auto
-      border
-      border-[#D7C8A3]
-      text-[#B8954A]
-      px-6
-      py-4
-      uppercase
-      tracking-[0.08em] md:tracking-[0.1em]
-      text-[11px] md:text-sm
-      transition
-      hover:bg-white
-      text-center
-    "
-  >
-    View Portfolio
-  </Link>
-</div>
+                  {/* Portfolio Button */}
+                  <Link
+                    href="/portfolio"
+                    className="
+                      w-full sm:w-auto
+                      border
+                      border-[#D7C8A3]
+                      text-[#B8954A]
+                      px-6
+                      py-4
+                      uppercase
+                      tracking-[0.08em] md:tracking-[0.1em]
+                      text-[11px] md:text-sm
+                      transition
+                      hover:bg-white
+                      text-center
+                    "
+                  >
+                    View Portfolio
+                  </Link>
+                </div>
               </div>
             </div>
 
             {/* Image Side */}
             <div className="relative min-h-[320px] sm:min-h-[420px] md:min-h-[500px] lg:min-h-[700px] order-1 lg:order-2">
               <Image
-                src="https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=1800"
+                src="/lsd_images/27.jpg"
                 alt="Luxury Interior"
                 fill
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                sizes="(max-width: 1024px) 100vw, 150vw"
                 className="object-cover"
               />
 
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#F2EBD9]/70" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#F2EBD9]/20" />
 
               {/* Decorative Frame */}
               <div className="absolute inset-4 md:inset-8 border border-white/20" />

@@ -10,9 +10,9 @@ export default function CTA() {
         <div className="overflow-hidden rounded-2xl bg-[#F2EBD9] shadow-sm">
           <div className="grid lg:grid-cols-2">
             {/* Image Side */}
-            <div className="relative h-[320px] sm:h-[450px] md:h-[550px] lg:h-auto min-h-[320px]">
+            <div className="relative h-[350px] sm:h-[450px] md:h-[550px] lg:h-auto min-h-[320px]">
               <Image
-                src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1800"
+                src="/lsd_images/3.jpg"
                 alt="Luxury Interior"
                 fill
                 sizes="(max-width:1024px) 100vw, 50vw"
@@ -21,7 +21,7 @@ export default function CTA() {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#F2EBD9]/80" />
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#F2EBD9]/20" />
 
               {/* Year Badge */}
               <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 lg:bottom-8 lg:left-8 border border-[#D7C8A3] bg-[#F4EFE4]/90 backdrop-blur-sm px-4 py-2 sm:px-5 sm:py-3">

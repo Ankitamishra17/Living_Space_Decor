@@ -13,9 +13,7 @@ export default function Step1BHK({ formData, setFormData, next }) {
           Cost Calculator
         </p>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#2A1506] leading-tight">
-          Select Your Home Type
-        </h2>
+      
 
         <p className="mt-3 text-sm md:text-base text-[#6E6258] max-w-lg mx-auto">
           Choose the type of home to get a more accurate interior cost estimate.

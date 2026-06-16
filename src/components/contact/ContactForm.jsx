@@ -150,7 +150,7 @@ export default function ContactSection() {
             <div className="group relative overflow-hidden rounded-lg">
               <div className="absolute inset-0 bg-gradient-to-b from-[#C8972B] via-transparent to-[#3D1F0D] opacity-20 z-10 group-hover:opacity-40 transition-all duration-500" />
               <img
-                src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?q=80&w=700&auto=format&fit=crop"
+                src="/lsd_images/11.jpg"
                 alt="Interior Design Showcase"
                 className="w-full h-[230px] md:h-[260px] object-cover group-hover:scale-105 transition-transform duration-700"
               />

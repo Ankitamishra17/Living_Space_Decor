@@ -30,14 +30,14 @@ const projects = [
     title: "Living Lounge",
     category: "Interior",
     image:
-      "https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=1200",
+      "/lsd_images/33.jpg",
     height: "h-[380px]",
   },
   {
     title: "Office Space",
     category: "Commercial",
     image:
-      "https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=1200",
+      "/lsd_images/24.jpg",
     height: "h-[520px]",
   },
   {

@@ -7,7 +7,8 @@ const services = [
     title: "Interior Services",
     desc: "Bespoke interiors that blend luxury with livability, tailored to your unique lifestyle.",
     image:
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=600&q=80",
+     
+        "/lsd_images/10.jpg",
   },
   {
     title: "Architectural Design",
@@ -25,7 +26,7 @@ const services = [
     title: "Modern Heritage",
     desc: "Reimagining traditional aesthetics with contemporary design principles.",
     image:
-      "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&q=80",
+      "/lsd_images/18.jpg",
   },
 ];
 

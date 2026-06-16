@@ -24,9 +24,7 @@ export default function Step2Rooms({ formData, setFormData, next, back }) {
           Cost Calculator
         </p>
 
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#2A1506] leading-tight">
-          Select Required Rooms
-        </h2>
+        
 
         <p className="mt-3 text-sm md:text-base text-[#6E6258] max-w-xl mx-auto">
           Choose the rooms you want to include in your interior project.

@@ -11,7 +11,7 @@ const howWeHelp = [
     description:
       "Custom-designed homes that blend elegance, functionality, and comfort while reflecting your unique lifestyle.",
     image:
-    "https://images.pexels.com/photos/36878353/pexels-photo-36878353.png",
+    "/lsd_images/26.jpg",
   },
   {
     id: "02",
@@ -29,7 +29,7 @@ const howWeHelp = [
     description:
       "Strategic planning solutions that create sustainable communities, public spaces, and future-ready developments.",
     image:
-      "https://images.unsplash.com/photo-1600210492493-0946911123ea?q=80&w=800",
+      "/lsd_images/46.jpg",
   },
 ];
 

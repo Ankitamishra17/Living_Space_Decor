@@ -48,14 +48,14 @@ export default function OurStory() {
 
             {/* Image */}
             <div className="relative w-full h-full overflow-hidden lg:rounded-t-full lg:rounded-br-full lg:rounded-bl-none rounded-t-[50px]
-          rounded-bl-[50px]
-          rounded-br-none
-          rounded-tr-[50px]">
+              rounded-bl-[50px]
+              rounded-br-none
+              rounded-tr-[50px]">
               <Image
-                src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?w=1200&q=80"
+                src="/lsd_images/29.jpg"
                 alt="Luxury Interior"
                 fill
-                sizes="(max-width: 768px) 100vw, 420px"
+                sizes="(max-width: 868px) 100vw, 520px"
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-[#3D1F0D]/5" />
