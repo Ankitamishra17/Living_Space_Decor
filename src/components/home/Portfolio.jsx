@@ -3,45 +3,45 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
-
-const filters = ["All", "Living Room", "Bedroom", "Kitchen", "Office"];
 
 const portfolio = [
   {
     id: 1,
     title: "Luxury Living Room",
-    category: "Living Room",
     location: "Noida, Sector 150",
     image: "/lsd_images/38.jpg",
-    description: "Bespoke seating with custom millwork and ambient lighting",
+    featured: true,
   },
   {
     id: 2,
     title: "Modern Bedroom Suite",
-    category: "Bedroom",
     location: "Greater Noida",
     image: "/lsd_images/47.jpg",
-    description: "Minimalist design with luxury textures and finishes",
   },
   {
     id: 3,
     title: "Premium Kitchen",
-    category: "Kitchen",
     location: "Delhi NCR",
     image: "/lsd_images/13.jpg",
-    description: "State-of-the-art appliances seamlessly integrated",
+  },
+  {
+    id: 4,
+    title: "Executive Office",
+    location: "Gurugram",
+    image: "/lsd_images/38.jpg",
+  },
+  {
+    id: 5,
+    title: "Contemporary Dining",
+    location: "Noida",
+    image: "/lsd_images/47.jpg",
   },
 ];
 
-export default function LatestProjects() {
-  const [activeFilter, setActiveFilter] = useState("All");
+export default function LatestProjectsPremium() {
   const [hoveredId, setHoveredId] = useState(null);
-
-  const filtered = portfolio.filter(
-    (p) => activeFilter === "All" || p.category === activeFilter,
-  );
 
   return (
     <section className="px-6 lg:px-14 py-32 bg-gradient-to-b from-[#F5EBE0]/20 to-transparent">
@@ -69,150 +69,172 @@ export default function LatestProjects() {
         </div>
       </motion.div>
 
-      {/* Filter Buttons with Enhanced Styling */}
-      <motion.div
-        className="flex gap-2 mb-16 flex-wrap"
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 0.6, delay: 0.2 }}
-        viewport={{ once: true }}
-      >
-        {filters.map((filter, i) => (
-          <motion.button
-            key={filter}
-            onClick={() => setActiveFilter(filter)}
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.98 }}
-            className={`relative px-5 py-2.5 text-[10px] font-semibold uppercase tracking-[.16em] transition-all duration-400 ${
-              activeFilter === filter
-                ? "text-white"
-                : "text-[#3D1F0D] hover:text-[#C8972B]"
-            }`}
-          >
-            {/* Animated background with left-to-right reveal */}
-            <motion.div
-              className="absolute inset-0 bg-[#3D1F0D] -z-10 rounded-full"
-              initial={{ scaleX: 0 }}
-              animate={{ scaleX: activeFilter === filter ? 1 : 0 }}
-              transition={{ duration: 0.4, ease: "easeOut" }}
-              style={{ originX: 0 }}
-            />
-            {filter}
-          </motion.button>
-        ))}
-      </motion.div>
-
-      {/* Masonry-Style Portfolio Grid */}
-      <AnimatePresence mode="wait">
+      {/* Two Column Layout with Alternating */}
+      <div className="space-y-6">
+        {/* Featured Large Image - Row 1 */}
         <motion.div
-          className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-max"
-          layout
-          transition={{ duration: 0.5 }}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
         >
-          {filtered.map((p, i) => (
+          {/* Left - Large Featured Image */}
+          <motion.div
+            className="group relative overflow-hidden rounded-lg h-[380px] md:h-[440px] cursor-pointer md:col-span-2 md:row-span-1"
+            onMouseEnter={() => setHoveredId(portfolio[0].id)}
+            onMouseLeave={() => setHoveredId(null)}
+            whileHover={{ scale: 1.02 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Link href="/portfolio" className="block h-full">
+              <Image
+                src={portfolio[0].image}
+                alt={portfolio[0].title}
+                fill
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+
+              <motion.div
+                className="absolute inset-0 bg-gradient-to-t from-[#140802]/80 via-[#140802]/30 to-transparent"
+                initial={{ opacity: 0 }}
+                animate={{
+                  opacity: hoveredId === portfolio[0].id ? 1 : 0,
+                }}
+                transition={{ duration: 0.3 }}
+              />
+
+              <motion.div
+                className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{
+                  opacity: hoveredId === portfolio[0].id ? 1 : 0,
+                  y: hoveredId === portfolio[0].id ? 0 : 20,
+                }}
+                transition={{ duration: 0.3 }}
+              >
+                <div className="flex-1">
+                  <span className="inline-block px-3 py-1.5 bg-[#C8972B] text-white text-[9px] uppercase tracking-[.2em] font-semibold rounded-full mb-4">
+                    Featured
+                  </span>
+                  <p className="font-[Cormorant_Garamond,serif] text-[32px] md:text-[40px] font-medium text-white mb-2">
+                    {portfolio[0].title}
+                  </p>
+                  <p className="text-[11px] tracking-[.12em] uppercase text-[#C8972B]">
+                    {portfolio[0].location}
+                  </p>
+                </div>
+                <motion.div
+                  initial={{ scale: 0 }}
+                  animate={{
+                    scale: hoveredId === portfolio[0].id ? 1 : 0,
+                  }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                  className="w-12 h-12 rounded-full bg-[#C8972B] flex items-center justify-center flex-shrink-0 ml-4"
+                >
+                  <ArrowUpRight size={18} className="text-white" />
+                </motion.div>
+              </motion.div>
+
+              <motion.div
+                className="absolute top-6 right-6"
+                initial={{ scale: 0, rotate: -45 }}
+                animate={{
+                  scale: hoveredId === portfolio[0].id ? 1 : 0,
+                  rotate: hoveredId === portfolio[0].id ? 0 : -45,
+                }}
+                transition={{ type: "spring", stiffness: 200 }}
+              >
+                <div className="w-16 h-16 rounded-full border-2 border-[#C8972B] flex items-center justify-center">
+                  <span className="font-[Cormorant_Garamond,serif] text-[#C8972B] text-2xl font-semibold">
+                    01
+                  </span>
+                </div>
+              </motion.div>
+            </Link>
+          </motion.div>
+        </motion.div>
+
+        {/* Remaining 4 Images in 2x2 Grid */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          viewport={{ once: true }}
+        >
+          {portfolio.slice(1, 5).map((p, i) => (
             <motion.div
               key={p.id}
-              layout
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
+              className="group relative overflow-hidden rounded-lg h-[320px] cursor-pointer"
               onMouseEnter={() => setHoveredId(p.id)}
               onMouseLeave={() => setHoveredId(null)}
-              className={`group relative cursor-pointer ${
-                i === 0 ? "md:col-span-2 md:row-span-2" : ""
-              }`}
+              whileHover={{ scale: 1.05 }}
+              transition={{ duration: 0.5 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
             >
               <Link href="/portfolio" className="block h-full">
-                {/* Main Container */}
+                <Image
+                  src={p.image}
+                  alt={p.title}
+                  fill
+                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                />
+
                 <motion.div
-                  className="relative h-full overflow-hidden rounded-lg"
-                  whileHover={{ scale: 1.03 }}
-                  transition={{ duration: 0.5 }}
+                  className="absolute inset-0 bg-gradient-to-t from-[#140802]/80 via-[#140802]/20 to-transparent"
+                  initial={{ opacity: 0 }}
+                  animate={{
+                    opacity: hoveredId === p.id ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.3 }}
+                />
+
+                <motion.div
+                  className="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between"
+                  initial={{ opacity: 0, y: 15 }}
+                  animate={{
+                    opacity: hoveredId === p.id ? 1 : 0,
+                    y: hoveredId === p.id ? 0 : 15,
+                  }}
+                  transition={{ duration: 0.3 }}
                 >
-                  {/* Image with Clip Path on Hover */}
-                  <Image
-                    src={p.image}
-                    alt={p.title}
-                    width={800}
-                    height={i === 0 ? 600 : 400}
-                    className={`w-full object-cover transition-transform duration-700 group-hover:scale-[1.15] ${
-                      i === 0 ? "h-[400px] md:h-[500px]" : "h-[300px]"
-                    }`}
-                    style={{
-                      clipPath:
-                        hoveredId === p.id
-                          ? "polygon(0 0, 100% 0, 100% 100%, 0 90%)"
-                          : "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-                    }}
-                  />
-
-                  {/* Dark overlay with gradient direction */}
-                  <motion.div
-                    className="absolute inset-0 bg-gradient-to-tr from-[#140802]/80 via-[#140802]/40 to-transparent"
-                    initial={{ opacity: 0 }}
-                    whileHover={{ opacity: 1 }}
-                    transition={{ duration: 0.3 }}
-                  />
-
-                  {/* Content Wrapper - Bottom Section */}
-                  <motion.div
-                    className="absolute bottom-0 left-0 right-0 p-8"
-                    initial={{ y: 20, opacity: 0 }}
-                    whileHover={{ y: 0, opacity: 1 }}
-                    transition={{ duration: 0.4 }}
-                  >
-                    {/* Category Badge with Icon */}
-                    <div className="mb-4 flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-[#C8972B]" />
-                      <span className="text-[10px] font-semibold uppercase tracking-[.2em] text-[#C8972B]">
-                        {p.category}
-                      </span>
-                    </div>
-
-                    {/* Title */}
-                    <h3 className="font-[Cormorant_Garamond,serif] text-[28px] md:text-[32px] font-medium text-white leading-[1.2] mb-2">
+                  <div className="flex-1">
+                    <p className="font-[Cormorant_Garamond,serif] text-[22px] font-medium text-white mb-1">
                       {p.title}
-                    </h3>
-
-                    {/* Description */}
-                    <p className="text-[12px] text-[#F5EBE0]/80 mb-3 leading-relaxed">
-                      {p.description}
                     </p>
-
-                    {/* Location with decorative line */}
-                    <div className="flex items-center gap-3 pt-3 border-t border-[#C8972B]/30">
-                      <p className="text-[10px] tracking-[.12em] uppercase text-[#C8972B] flex-1">
-                        {p.location}
-                      </p>
-                      <motion.div
-                        initial={{ x: -5, opacity: 0 }}
-                        whileHover={{ x: 5, opacity: 1 }}
-                      >
-                        <ArrowUpRight size={16} className="text-white" />
-                      </motion.div>
-                    </div>
-                  </motion.div>
-
-                  {/* Project Number - Top Right Corner */}
+                    <p className="text-[10px] tracking-[.12em] uppercase text-[#C8972B]">
+                      {p.location}
+                    </p>
+                  </div>
                   <motion.div
-                    className="absolute top-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity"
-                    initial={{ scale: 0, rotate: -45 }}
-                    whileHover={{ scale: 1, rotate: 0 }}
-                    transition={{ type: "spring", stiffness: 200 }}
+                    initial={{ x: -5 }}
+                    animate={{
+                      x: hoveredId === p.id ? 5 : -5,
+                    }}
+                    className="flex-shrink-0"
                   >
-                    <div className="w-14 h-14 rounded-full border-2 border-[#C8972B] flex items-center justify-center">
-                      <span className="font-[Cormorant_Garamond,serif] text-[#C8972B] text-xl font-semibold">
-                        {String(p.id).padStart(2, "0")}
-                      </span>
-                    </div>
+                    <ArrowUpRight size={14} className="text-white" />
                   </motion.div>
+                </motion.div>
+
+                <motion.div
+                  className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#C8972B] flex items-center justify-center text-white font-semibold text-sm"
+                  initial={{ scale: 0 }}
+                  animate={{
+                    scale: hoveredId === p.id ? 1 : 0,
+                  }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  {String(p.id).padStart(2, "0")}
                 </motion.div>
               </Link>
             </motion.div>
           ))}
         </motion.div>
-      </AnimatePresence>
+      </div>
 
       {/* CTA Section */}
       <motion.div
