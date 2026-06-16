@@ -264,7 +264,7 @@ export default function ConsultationModal({ isOpen, onClose }) {
                 type="submit"
                 className="w-full h-10 bg-[#3D1F0D] text-white text-xs font-medium rounded-lg transition-all duration-300 mt-3"
               >
-                Request Consultation
+                 Book Consultation
               </motion.button>
             </motion.form>
 

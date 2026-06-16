@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function KitchenHero() {
   const containerVariants = {
@@ -152,87 +153,73 @@ export default function KitchenHero() {
             storage solutions, and luxury finishes that transform everyday
             cooking into an exceptional experience.
           </motion.p>
-
-          {/* Buttons */}
-          <motion.div
-            variants={itemVariants}
-            className="
-              flex
-              flex-col
-              sm:flex-row
-              justify-center
-              gap-4
-              sm:gap-5
-              pt-8
-              md:pt-10
-            "
-          >
-            <motion.button
-              whileHover={{
-                scale: 1.04,
-                backgroundColor: "#B8852F",
-              }}
-              whileTap={{ scale: 0.98 }}
-              className="
-                w-full
-                sm:w-auto
-                px-8
-                md:px-10
-                py-3.5
-                md:py-4
-                bg-[#C8972B]
-                rounded-md
-                text-white
-                uppercase
-                tracking-[0.12em]
-                md:tracking-[0.15em]
-                text-xs
-                md:text-sm
-                transition-all
-                duration-300
-              "
+           {/* Buttons */}
+            <motion.div
+              variants={itemVariants}
+              className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-5 pt-8 md:pt-10"
             >
-              <span className="flex items-center justify-center gap-2">
-                Explore Designs
-                <motion.span
-                  animate={{ x: [0, 4, 0] }}
-                  transition={{
-                    duration: 2,
-                    repeat: Infinity,
+              <Link href="/portfolio">
+                <motion.button
+                  whileHover={{
+                    scale: 1.04,
+                    backgroundColor: "#B8852F",
                   }}
+                  whileTap={{ scale: 0.98 }}
+                  className="
+                    w-full sm:w-auto
+                    px-8 md:px-10
+                    py-3.5 md:py-4
+                    bg-[#C8972B]
+                    rounded-md
+                    text-white
+                    uppercase
+                    tracking-[0.12em]
+                    md:tracking-[0.15em]
+                    text-xs md:text-sm
+                    transition-all
+                    duration-300
+                  "
                 >
-                  →
-                </motion.span>
-              </span>
-            </motion.button>
+                  <span className="flex items-center justify-center gap-2">
+                   Explore Designs
+                    <motion.span
+                      animate={{ x: [0, 4, 0] }}
+                      transition={{
+                        duration: 2,
+                        repeat: Infinity,
+                      }}
+                    >
+                      →
+                    </motion.span>
+                  </span>
+                </motion.button>
+              </Link>
 
-            <motion.button
-              whileHover={{ scale: 1.04 }}
-              whileTap={{ scale: 0.98 }}
-              className="
-                w-full
-                sm:w-auto
-                px-8
-                md:px-10
-                py-3.5
-                md:py-4
-                border-2
-                rounded-md
-                border-[#C8972B]
-                text-[#C8972B]
-                uppercase
-                tracking-[0.12em]
-                md:tracking-[0.15em]
-                text-xs
-                md:text-sm
-                hover:bg-[#C8972B]/10
-                transition-all
-                duration-300
-              "
-            >
-              Schedule Consultation
-            </motion.button>
-          </motion.div>
+              <Link href="/contact">
+                <motion.button
+                  whileHover={{ scale: 1.04 }}
+                  whileTap={{ scale: 0.98 }}
+                  className="
+                    w-full sm:w-auto
+                    px-8 md:px-10
+                    py-3 md:py-3.5
+                    border-2
+                    border-[#C8972B]
+                    rounded-md
+                    text-[#C8972B]
+                    uppercase
+                    tracking-[0.12em]
+                    md:tracking-[0.15em]
+                    text-xs md:text-sm
+                    hover:bg-[#C8972B]/10
+                    transition-all
+                    duration-300
+                  "
+                >
+                  Book Consultation
+                </motion.button>
+              </Link>
+            </motion.div>
         </motion.div>
 
         {/* Bottom Accent Line */}

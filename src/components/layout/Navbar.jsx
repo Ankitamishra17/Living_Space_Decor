@@ -7,10 +7,11 @@ import {
   Menu,
   X,
   Phone,
-  MessageCircle,
+  
   ChevronDown,
   Search,
 } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import ConsultationModal from "@/components/common/ConsultationModal";
 import { AnimatedSearchBar } from "@/components/common/AnimatedSearchBar";
 
@@ -101,7 +102,7 @@ export default function Navbar() {
                 rel="noreferrer"
                 className=" hidden sm:flex  items-center gap-1.5 px-3 py-1 rounded hover:bg-white/10 transition-colors duration-200 text-[#25D366]"
               >
-                <MessageCircle size={13} />
+                <FaWhatsapp  size={13} />
                 <span className="lg:inline text-[8px] lg:text-[12px]">+91 8826606869</span>
               </a>
             </div>
@@ -291,7 +292,7 @@ export default function Navbar() {
                   rel="noreferrer"
                   className="flex items-center gap-2.5 px-3 py-2.5 rounded-[4px] text-[#25D366] text-sm hover:bg-[#F5EBE0] transition-colors"
                 >
-                  <MessageCircle size={16} />
+                  <FaWhatsapp  size={16} />
                   Chat on WhatsApp
                 </a>
 
