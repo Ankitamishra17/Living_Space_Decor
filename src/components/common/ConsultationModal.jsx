@@ -1,147 +1,74 @@
-// "use client";
-
-// import { X } from "lucide-react";
-// import Image from "next/image";
-
-// export default function ConsultationModal({ isOpen, onClose }) {
-//   if (!isOpen) return null;
-
-//   return (
-//     <>
-//       {/* Overlay */}
-//       <div
-//         className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[9998]"
-//         onClick={onClose}
-//       />
-
-//       {/* Modal */}
-//       <div className="fixed inset-0 z-[9999] flex items-center justify-center p-3 sm:p-4">
-//         <div className="relative w-full max-w-5xl bg-[#F7F1E8] rounded-2xl md:rounded-3xl overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.15)] max-h-[95vh] overflow-y-auto">
-//           {/* Close Button */}
-//           <button
-//             onClick={onClose}
-//             className="absolute top-4 right-4 md:top-6 md:right-6 z-20 w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-[#C8972B] hover:text-white transition-all duration-300"
-//           >
-//             <X size={20} />
-//           </button>
-
-//           <div className="grid lg:grid-cols-2">
-//             {/* Left Section */}
-//             <div className="relative p-6 sm:p-8 md:p-10 lg:p-12 flex flex-col justify-center">
-//               {/* Badge */}
-//               <div className="inline-flex items-center gap-2 border border-[#C8972B]/30 bg-[#C8972B]/10 px-4 py-2 rounded-full w-fit">
-//                 <span className="text-[10px] sm:text-xs tracking-[0.25em] uppercase text-[#C8972B]">
-//                   Free Consultation
-//                 </span>
-//               </div>
-
-//               {/* Heading */}
-//               <h2
-//                 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-[#2A1506]"
-//                 style={{
-//                   fontFamily: "'Cormorant Garamond', serif",
-//                 }}
-//               >
-//                 One Place
-//                 <br />
-//                 For Every
-//                 <span className="block text-[#C8972B]">Space.</span>
-//               </h2>
-
-//               {/* Description */}
-//               <p className="mt-5 text-sm sm:text-base md:text-lg text-[#6E5E4E] leading-relaxed max-w-lg">
-//                 Everything your home needs — Kitchens, Wardrobes, Curtains &
-//                 Blinds, Doors & Windows, Lighting, Furniture and complete
-//                 Interior Solutions.
-//               </p>
-
-//               {/* Image */}
-//               <div className="mt-8 hidden md:block">
-//                 <Image
-//                   src="/images/interior-banner.png"
-//                   alt="Interior Design"
-//                   width={600}
-//                   height={450}
-//                   className="w-full max-w-md object-contain"
-//                 />
-//               </div>
-
-//             </div>
-
-//             {/* Right Section */}
-//             <div className="bg-white p-6 sm:p-8 md:p-10">
-//               <div className="mb-6">
-//                 <h3 className="text-2xl md:text-3xl text-[#2A1506] font-medium">
-//                   Book a Consultation
-//                 </h3>
-//                 <p className="mt-2 text-sm text-[#6E5E4E]">
-//                   Fill in your details and our design expert will contact you
-//                   shortly.
-//                 </p>
-//               </div>
-
-//               <form className="space-y-4">
-//                 <input
-//                   type="text"
-//                   placeholder="Enter Your Name"
-//                   className="w-full h-12 md:h-14 px-4 md:px-5 border border-[#E5DDD3] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#C8972B]"
-//                 />
-
-//                 <input
-//                   type="tel"
-//                   placeholder="Enter Your Number"
-//                   className="w-full h-12 md:h-14 px-4 md:px-5 border border-[#E5DDD3] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#C8972B]"
-//                 />
-
-//                 <input
-//                   type="text"
-//                   placeholder="Enter Your City"
-//                   className="w-full h-12 md:h-14 px-4 md:px-5 border border-[#E5DDD3] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#C8972B]"
-//                 />
-
-//                 <input
-//                   type="email"
-//                   placeholder="Enter Your Email"
-//                   className="w-full h-12 md:h-14 px-4 md:px-5 border border-[#E5DDD3] rounded-xl focus:outline-none focus:ring-2 focus:ring-[#C8972B]"
-//                 />
-
-//                 <textarea
-//                   rows={4}
-//                   placeholder="Tell us about your project"
-//                   className="w-full p-4 md:p-5 border border-[#E5DDD3] rounded-xl resize-none focus:outline-none focus:ring-2 focus:ring-[#C8972B]"
-//                 />
-
-//                 <label className="flex items-start gap-3">
-//                   <input type="checkbox" className="mt-1 accent-[#C8972B]" />
-//                   <span className="text-sm text-[#6E5E4E] leading-relaxed">
-//                     I would like to receive updates, offers and project
-//                     information via WhatsApp.
-//                   </span>
-//                 </label>
-
-//                 <button
-//                   type="submit"
-//                   className="w-full h-12 md:h-14 bg-[#3D1F0D] hover:bg-[#C8972B] text-white rounded-xl font-medium transition-all duration-300"
-//                 >
-//                   Book Consultation
-//                 </button>
-//               </form>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
 "use client";
 
 import { X } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState } from "react";
+
+// ─── CONFIG ────────────────────────────────────────────────────────────────────
+// Point this at your PHP backend URL (e.g. "https://yourdomain.com/api/send-consultation.php")
+const API_ENDPOINT = "https://livingspacedecor.in/send-consultation.php";
+// ───────────────────────────────────────────────────────────────────────────────
+
+const INITIAL_FORM = {
+  name: "",
+  phone: "",
+  city: "",
+  email: "",
+  message: "",
+  whatsapp: false,
+};
 
 export default function ConsultationModal({ isOpen, onClose }) {
+  const [form, setForm] = useState(INITIAL_FORM);
+  const [status, setStatus] = useState("idle"); // "idle" | "loading" | "success" | "error"
+  const [errorMsg, setErrorMsg] = useState("");
+
   if (!isOpen) return null;
 
+  // ── Handlers ────────────────────────────────────────────────────────────────
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setForm((prev) => ({
+      ...prev,
+      [name]: type === "checkbox" ? checked : value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("loading");
+    setErrorMsg("");
+
+    try {
+      const res = await fetch(API_ENDPOINT, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || data.status !== "success") {
+        throw new Error(
+          data.message || "Something went wrong. Please try again.",
+        );
+      }
+
+      setStatus("success");
+      setForm(INITIAL_FORM);
+    } catch (err) {
+      setStatus("error");
+      setErrorMsg(err.message);
+    }
+  };
+
+  const handleClose = () => {
+    setStatus("idle");
+    setErrorMsg("");
+    onClose();
+  };
+
+  // ── Render ──────────────────────────────────────────────────────────────────
   return (
     <>
       {/* Overlay */}
@@ -150,7 +77,7 @@ export default function ConsultationModal({ isOpen, onClose }) {
         animate={{ opacity: 1 }}
         exit={{ opacity: 0 }}
         className="fixed inset-0 bg-black/40 backdrop-blur-sm z-[9998]"
-        onClick={onClose}
+        onClick={handleClose}
       />
 
       {/* Modal */}
@@ -166,7 +93,7 @@ export default function ConsultationModal({ isOpen, onClose }) {
           <motion.button
             whileHover={{ scale: 1.1, rotate: 90 }}
             whileTap={{ scale: 0.95 }}
-            onClick={onClose}
+            onClick={handleClose}
             className="absolute top-4 right-4 z-20 w-8 h-8 rounded-full bg-[#F5EBE0] flex items-center justify-center hover:bg-[#C8972B] hover:text-white transition-all duration-300"
           >
             <X size={16} />
@@ -174,104 +101,179 @@ export default function ConsultationModal({ isOpen, onClose }) {
 
           {/* Content */}
           <div className="p-5">
-            {/* Header */}
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              className="mb-4"
-            >
-              <div className="inline-flex items-center gap-2 bg-[#C8972B]/8 px-3 py-1 rounded-full mb-2">
-                <span className="text-[9px] uppercase tracking-[0.3em] text-[#C8972B] font-medium">
-                  Complimentary
-                </span>
-              </div>
-
-              <h2 className="text-lg font-semibold text-[#3D1F0D] leading-tight">
-                Book Your Free Consultation
-              </h2>
-
-              <p className="mt-1 text-xs text-[#6E5E4E] leading-snug">
-                Our expert will contact you within 24 hours.
-              </p>
-            </motion.div>
-
-            {/* Form */}
-            <motion.form
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ delay: 0.2 }}
-              className="space-y-2"
-            >
-              {/* Name */}
-              <motion.input
-                whileFocus={{ scale: 1.01 }}
-                type="text"
-                placeholder="Your Name"
-                className="w-full h-10 px-3 text-xs border border-[#E5DDD3] rounded-lg bg-[#FAFAF8] focus:outline-none focus:ring-1 focus:ring-[#C8972B] transition-all"
-              />
-
-              {/* Phone */}
-              <motion.input
-                whileFocus={{ scale: 1.01 }}
-                type="tel"
-                placeholder="Phone Number"
-                className="w-full h-10 px-3 text-xs border border-[#E5DDD3] rounded-lg bg-[#FAFAF8] focus:outline-none focus:ring-1 focus:ring-[#C8972B] transition-all"
-              />
-
-              {/* City */}
-              <motion.input
-                whileFocus={{ scale: 1.01 }}
-                type="text"
-                placeholder="City"
-                className="w-full h-10 px-3 text-xs border border-[#E5DDD3] rounded-lg bg-[#FAFAF8] focus:outline-none focus:ring-1 focus:ring-[#C8972B] transition-all"
-              />
-
-              {/* Email */}
-              <motion.input
-                whileFocus={{ scale: 1.01 }}
-                type="email"
-                placeholder="Email"
-                className="w-full h-10 px-3 text-xs border border-[#E5DDD3] rounded-lg bg-[#FAFAF8] focus:outline-none focus:ring-1 focus:ring-[#C8972B] transition-all"
-              />
-
-              {/* Project Description */}
-              <motion.textarea
-                whileFocus={{ scale: 1.01 }}
-                rows={2}
-                placeholder="Tell us about your project"
-                className="w-full p-3 text-xs border border-[#E5DDD3] rounded-lg bg-[#FAFAF8] resize-none focus:outline-none focus:ring-1 focus:ring-[#C8972B] transition-all"
-              />
-
-              {/* Checkbox */}
-              <label className="flex items-start gap-2">
-                <input
-                  type="checkbox"
-                  className="mt-0.5 w-3.5 h-3.5 accent-[#C8972B] cursor-pointer"
-                />
-                <span className="text-xs text-[#6E5E4E] leading-tight">
-                  WhatsApp updates
-                </span>
-              </label>
-
-              {/* Submit Button */}
-              <motion.button
-                whileHover={{
-                  backgroundColor: "#C8972B",
-                  boxShadow: "0 8px 20px rgba(200, 151, 43, 0.2)",
-                }}
-                whileTap={{ scale: 0.98 }}
-                type="submit"
-                className="w-full h-10 bg-[#3D1F0D] text-white text-xs font-medium rounded-lg transition-all duration-300 mt-3"
+            {/* ── SUCCESS STATE ── */}
+            {status === "success" ? (
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="py-8 flex flex-col items-center text-center gap-3"
               >
-                 Book Consultation
-              </motion.button>
-            </motion.form>
+                <div className="w-14 h-14 rounded-full bg-[#C8972B]/10 flex items-center justify-center text-2xl">
+                  ✓
+                </div>
+                <h3 className="text-base font-semibold text-[#3D1F0D]">
+                  Consultation Booked!
+                </h3>
+                <p className="text-xs text-[#6E5E4E] leading-relaxed">
+                  Thank you! Our design expert will reach out within 24 hours.
+                </p>
+                <motion.button
+                  whileTap={{ scale: 0.97 }}
+                  onClick={handleClose}
+                  className="mt-2 h-9 px-6 bg-[#3D1F0D] text-white text-xs font-medium rounded-lg hover:bg-[#C8972B] transition-all duration-300"
+                >
+                  Close
+                </motion.button>
+              </motion.div>
+            ) : (
+              <>
+                {/* Header */}
+                <motion.div
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 }}
+                  className="mb-4"
+                >
+                  <div className="inline-flex items-center gap-2 bg-[#C8972B]/8 px-3 py-1 rounded-full mb-2">
+                    <span className="text-[9px] uppercase tracking-[0.3em] text-[#C8972B] font-medium">
+                      Complimentary
+                    </span>
+                  </div>
+                  <h2 className="text-lg font-semibold text-[#3D1F0D] leading-tight">
+                    Book Your Free Consultation
+                  </h2>
+                  <p className="mt-1 text-xs text-[#6E5E4E] leading-snug">
+                    Our expert will contact you within 24 hours.
+                  </p>
+                </motion.div>
 
-            {/* Footer Text */}
-            <p className="mt-2 text-center text-xs text-[#A89B8F]">
-              Your details are secure
-            </p>
+                {/* Form */}
+                <motion.form
+                  onSubmit={handleSubmit}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.2 }}
+                  className="space-y-2"
+                >
+                  <motion.input
+                    whileFocus={{ scale: 1.01 }}
+                    type="text"
+                    name="name"
+                    value={form.name}
+                    onChange={handleChange}
+                    placeholder="Your Name"
+                    required
+                    className="w-full h-10 px-3 text-xs border border-[#E5DDD3] rounded-lg bg-[#FAFAF8] focus:outline-none focus:ring-1 focus:ring-[#C8972B] transition-all"
+                  />
+
+                  <motion.input
+                    whileFocus={{ scale: 1.01 }}
+                    type="tel"
+                    name="phone"
+                    value={form.phone}
+                    onChange={handleChange}
+                    placeholder="Phone Number"
+                    required
+                    className="w-full h-10 px-3 text-xs border border-[#E5DDD3] rounded-lg bg-[#FAFAF8] focus:outline-none focus:ring-1 focus:ring-[#C8972B] transition-all"
+                  />
+
+                  <motion.input
+                    whileFocus={{ scale: 1.01 }}
+                    type="text"
+                    name="city"
+                    value={form.city}
+                    onChange={handleChange}
+                    placeholder="City"
+                    required
+                    className="w-full h-10 px-3 text-xs border border-[#E5DDD3] rounded-lg bg-[#FAFAF8] focus:outline-none focus:ring-1 focus:ring-[#C8972B] transition-all"
+                  />
+
+                  <motion.input
+                    whileFocus={{ scale: 1.01 }}
+                    type="email"
+                    name="email"
+                    value={form.email}
+                    onChange={handleChange}
+                    placeholder="Email"
+                    required
+                    className="w-full h-10 px-3 text-xs border border-[#E5DDD3] rounded-lg bg-[#FAFAF8] focus:outline-none focus:ring-1 focus:ring-[#C8972B] transition-all"
+                  />
+
+                  <motion.textarea
+                    whileFocus={{ scale: 1.01 }}
+                    rows={2}
+                    name="message"
+                    value={form.message}
+                    onChange={handleChange}
+                    placeholder="Tell us about your project"
+                    className="w-full p-3 text-xs border border-[#E5DDD3] rounded-lg bg-[#FAFAF8] resize-none focus:outline-none focus:ring-1 focus:ring-[#C8972B] transition-all"
+                  />
+
+                  <label className="flex items-start gap-2 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      name="whatsapp"
+                      checked={form.whatsapp}
+                      onChange={handleChange}
+                      className="mt-0.5 w-3.5 h-3.5 accent-[#C8972B] cursor-pointer"
+                    />
+                    <span className="text-xs text-[#6E5E4E] leading-tight">
+                      WhatsApp updates
+                    </span>
+                  </label>
+
+                  {/* Error Message */}
+                  {status === "error" && (
+                    <p className="text-xs text-red-500 bg-red-50 px-3 py-2 rounded-lg">
+                      {errorMsg}
+                    </p>
+                  )}
+
+                  {/* Submit Button */}
+                  <motion.button
+                    whileHover={{
+                      backgroundColor: "#C8972B",
+                      boxShadow: "0 8px 20px rgba(200, 151, 43, 0.2)",
+                    }}
+                    whileTap={{ scale: 0.98 }}
+                    type="submit"
+                    disabled={status === "loading"}
+                    className="w-full h-10 bg-[#3D1F0D] text-white text-xs font-medium rounded-lg transition-all duration-300 mt-3 disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  >
+                    {status === "loading" ? (
+                      <>
+                        <svg
+                          className="animate-spin w-3.5 h-3.5"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                        >
+                          <circle
+                            className="opacity-25"
+                            cx="12"
+                            cy="12"
+                            r="10"
+                            stroke="currentColor"
+                            strokeWidth="4"
+                          />
+                          <path
+                            className="opacity-75"
+                            fill="currentColor"
+                            d="M4 12a8 8 0 018-8v8z"
+                          />
+                        </svg>
+                        Sending…
+                      </>
+                    ) : (
+                      "Book Consultation"
+                    )}
+                  </motion.button>
+                </motion.form>
+
+                <p className="mt-2 text-center text-xs text-[#A89B8F]">
+                  Your details are secure
+                </p>
+              </>
+            )}
           </div>
         </motion.div>
       </div>

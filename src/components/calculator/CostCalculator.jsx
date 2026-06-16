@@ -181,7 +181,7 @@ export default function QuoteCalculator() {
   const handleSubmit = async () => {
     setIsSubmitting(true);
     try {
-      const res = await fetch("https://yourdomain.com/api/send-quote.php", {
+      const res = await fetch("https://livingspacedecor.in/send-quote.php", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

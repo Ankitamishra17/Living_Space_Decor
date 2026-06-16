@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  output: "export",
+
   images: {
+    unoptimized: true,
+
     remotePatterns: [
       {
         protocol: "https",
@@ -10,16 +14,15 @@ const nextConfig = {
         protocol: "https",
         hostname: "randomuser.me",
       },
-       {
-        protocol: 'https',
-        hostname: 'images.unsplash.com',
+      {
+        protocol: "https",
+        hostname: "images.unsplash.com",
       },
 
       {
         protocol: "https",
         hostname: "images.pexels.com",
       },
-      
     ],
   },
 };
