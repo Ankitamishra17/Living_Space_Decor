@@ -10,10 +10,11 @@ export default function TurnkeyPage() {
   return (
     <>
       <TurnkeyHero />
-      <ServicesIncluded />
       <OurProcess />
-      <ProjectGallery />
+      <ServicesIncluded />
       <Pricing />
+      <ProjectGallery />
+      
       <FAQ />
       <ServiceConsultation />
     </>

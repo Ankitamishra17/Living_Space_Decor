@@ -4,7 +4,7 @@ import ServiceCard from "./ServiceCard";
 
 const services = [
   {
-    title: "Interior Services",
+    title: "Design Ideas",
     desc: "Bespoke interiors that blend luxury with livability, tailored to your unique lifestyle.",
     image:
      

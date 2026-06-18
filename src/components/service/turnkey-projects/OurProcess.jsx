@@ -1,262 +1,126 @@
-"use client";
-
-import { motion } from "framer-motion";
 import {
-  ClipboardCheck,
-  MapPinned,
   PencilRuler,
-  Wallet,
+  Package,
+  Factory,
   Hammer,
   ShieldCheck,
-  Home,
+  KeyRound,
 } from "lucide-react";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination, Autoplay } from "swiper/modules";
-
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 
 const processSteps = [
   {
-    icon: ClipboardCheck,
-    title: "Consultation",
-    description:
-      "Understand your requirements, preferences, budget, and project goals.",
-  },
-  {
-    icon: MapPinned,
-    title: "Site Visit",
-    description:
-      "Our team visits the site to assess dimensions, layout, and project scope.",
-  },
-  {
     icon: PencilRuler,
-    title: "Design & Planning",
-    description:
-      "Create layouts, 3D visualizations, material selections, and design concepts.",
+    title: "Design",
   },
   {
-    icon: Wallet,
-    title: "Quotation & Approval",
-    description:
-      "Present transparent pricing and project timelines for approval.",
+    icon: Package,
+    title: "Material Procurement",
+  },
+  {
+    icon: Factory,
+    title: "Manufacturing",
   },
   {
     icon: Hammer,
-    title: "Execution",
-    description:
-      "Begin civil work, carpentry, electrical, plumbing, and installations.",
+    title: "Site Execution",
   },
   {
     icon: ShieldCheck,
-    title: "Quality Inspection",
-    description:
-      "Perform detailed quality checks to ensure everything meets standards.",
+    title: "Quality Checks",
   },
   {
-    icon: Home,
+    icon: KeyRound,
     title: "Final Handover",
-    description: "Deliver a fully completed, ready-to-use interior space.",
   },
 ];
 
-export default function OurProcess() {
+export default function TurnkeyOverview() {
   return (
-    <section
-      className="relative py-10 lg:py-10 overflow-hidden"
-      style={{ backgroundColor: "#F5EBE0" }}
-    >
-      {/* Background Accent */}
-      <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[#C8972B]/5 blur-3xl" />
-        <div className="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-[#C8972B]/5 blur-3xl" />
-      </div>
+    <section className="bg-[#F5EBE0] py-20 lg:py-28">
+      <div className="container mx-auto px-4 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
+          {/* Left Side - Process Graphic */}
+          <div className="relative">
+            <div className="bg-white rounded-3xl p-8 shadow-xl">
+              <h3 className="text-2xl font-bold text-[#3D1F0D] mb-8 text-center">
+                Turnkey Process
+              </h3>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        {/* Heading */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center max-w-4xl mx-auto mb-16"
-        >
-          <span className="inline-block text-xs uppercase tracking-[0.4em] text-[#C8972B] mb-5">
-            Our Process
-          </span>
+              <div className="space-y-4">
+                {processSteps.map((step, index) => {
+                  const Icon = step.icon;
 
-          <h2 className="text-4xl md:text-6xl font-bold text-[#3D1F0D] leading-tight">
-            How We Deliver Your
-            <span className="block text-[#C8972B]">Dream Interior</span>
-          </h2>
+                  return (
+                    <div key={index}>
+                      <div className="flex items-center gap-4">
+                        <div className="w-14 h-14 rounded-full bg-[#C8972B]/10 flex items-center justify-center">
+                          <Icon size={24} className="text-[#C8972B]" />
+                        </div>
 
-          <p className="mt-6 text-[#6B6B6B] text-lg leading-relaxed">
-            A transparent, streamlined journey from concept to completion. Every
-            step is carefully managed to ensure exceptional quality and a
-            seamless experience.
-          </p>
-        </motion.div>
+                        <div>
+                          <h4 className="font-semibold text-[#3D1F0D]">
+                            {step.title}
+                          </h4>
+                        </div>
+                      </div>
 
-        {/* Carousel */}
-        <Swiper
-          modules={[Navigation, Pagination, Autoplay]}
-          spaceBetween={30}
-          slidesPerView={1}
-          navigation
-          pagination={{
-            clickable: true,
-          }}
-          autoplay={{
-            delay: 3500,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            768: {
-              slidesPerView: 2,
-            },
-            1200: {
-              slidesPerView: 3,
-            },
-          }}
-          className="process-swiper"
-        >
-          {processSteps.map((step, index) => {
-            const Icon = step.icon;
-
-            return (
-              <SwiperSlide key={index}>
-                <motion.div
-                  whileHover={{ y: -10 }}
-                  transition={{ duration: 0.3 }}
-                  className="group bg-white rounded-tl-[80px] rounded-tr-[80px] rounded-bl-[80px] rounded-br-none p-8 border border-[#C8972B]/10 shadow-sm hover:shadow-2xl transition-all duration-500 h-[380px] flex flex-col"
-                >
-                  {/* Number */}
-                  <div className="flex items-center justify-between mb-8">
-                    <span
-                      className="text-6xl font-bold text-[#3D1F0D]/10"
-                      style={{
-                        fontFamily: "'Cormorant Garamond', serif",
-                      }}
-                    >
-                      0{index + 1}
-                    </span>
-
-                    <div className="w-16 h-16 rounded-full bg-[#F5EBE0] flex items-center justify-center group-hover:bg-[#C8972B]/10 transition-all duration-300">
-                      <Icon size={30} className="text-[#C8972B]" />
+                      {index !== processSteps.length - 1 && (
+                        <div className="ml-7 h-8 border-l-2 border-dashed border-[#C8972B]"></div>
+                      )}
                     </div>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Right Side - Content */}
+          <div>
+            <span className="inline-block bg-[#C8972B]/10 text-[#C8972B] px-4 py-2 rounded-full text-sm font-semibold mb-5">
+              End-to-End Interior Solutions
+            </span>
+
+            <h2 className="text-4xl lg:text-5xl font-bold text-[#3D1F0D] leading-tight mb-6">
+              What is a Turnkey Project?
+            </h2>
+
+            <p className="text-gray-700 text-lg leading-relaxed mb-8">
+              A turnkey interior project is a complete solution where a single
+              team manages everything from planning and design to execution and
+              final handover. You receive a fully finished, move-in-ready home
+              without coordinating multiple vendors or contractors.
+            </p>
+
+            <div className="grid sm:grid-cols-2 gap-4">
+              {[
+                "Design",
+                "Material Procurement",
+                "Manufacturing",
+                "Site Execution",
+                "Quality Checks",
+                "Final Handover",
+              ].map((item) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-3 bg-white rounded-xl p-4 shadow-sm hover:shadow-md transition-all"
+                >
+                  <div className="w-7 h-7 rounded-full bg-[#C8972B] flex items-center justify-center text-white text-sm">
+                    ✓
                   </div>
 
-                  {/* Step Label */}
-                  <span className="text-[11px] uppercase tracking-[0.3em] text-[#C8972B] mb-3">
-                    Step {index + 1}
-                  </span>
+                  <span className="font-medium text-[#3D1F0D]">{item}</span>
+                </div>
+              ))}
+            </div>
 
-                  {/* Title */}
-                  <h3 className="text-3xl font-semibold text-[#3D1F0D] mb-4">
-                    {step.title}
-                  </h3>
-
-                  {/* Description */}
-                  <p className="text-[#6B6B6B] leading-relaxed flex-grow">
-                    {step.description}
-                  </p>
-
-                  {/* Bottom Line */}
-                  <div className="mt-8 h-px bg-gradient-to-r from-[#C8972B] to-transparent opacity-40" />
-                </motion.div>
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
-
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="text-center mt-20"
-        >
-          <button className="px-10 py-4 bg-[#3D1F0D] hover:bg-[#C8972B] text-white rounded-lg font-medium transition-all duration-300">
-            Start Your Project
-          </button>
-        </motion.div>
+            <div className="mt-10">
+              <button className="bg-[#3D1F0D] hover:bg-[#C8972B] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300">
+                Book Free Consultation
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
-
-      <style jsx global>{`
-        .process-swiper {
-          padding-bottom: 70px;
-        }
-
-        /* Hide navigation buttons on mobile */
-        .swiper-button-next,
-        .swiper-button-prev {
-          display: none;
-          color: #c8972b !important;
-        }
-
-        /* Show navigation buttons on desktop (768px+) */
-        @media (min-width: 768px) {
-          .swiper-button-next,
-          .swiper-button-prev {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-          }
-        }
-
-        /* Style navigation buttons for desktop */
-        @media (min-width: 768px) {
-          .swiper-button-next::after,
-          .swiper-button-prev::after {
-            font-size: 24px;
-            font-weight: 700;
-            color: #c8972b !important;
-            transition: all 0.3s ease;
-          }
-
-          .swiper-button-next:hover::after,
-          .swiper-button-prev:hover::after {
-            color: #3d1f0d !important;
-            transform: scale(1.1);
-          }
-
-          .swiper-button-next,
-          .swiper-button-prev {
-            width: 45px;
-            height: 45px;
-           
-            border-radius: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            transition: all 0.3s ease;
-          }
-
-          
-
-          .swiper-button-next:hover::after,
-          .swiper-button-prev:hover::after {
-            color: white !important;
-          }
-
-          .swiper-button-prev {
-            left: -60px;
-          }
-
-          .swiper-button-next {
-            right: -60px;
-          }
-        }
-
-        .swiper-pagination-bullet {
-          background: #c8972b !important;
-          opacity: 0.4;
-        }
-
-        .swiper-pagination-bullet-active {
-          opacity: 1;
-        }
-      `}</style>
     </section>
   );
 }

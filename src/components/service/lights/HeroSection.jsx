@@ -1,10 +1,81 @@
+// "use client";
+
+// import Link from "next/link";
+
+// export default function LightingHero() {
+//   return (
+//     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+//       {/* Background Image */}
+//       <div
+//         className="absolute inset-0 bg-cover bg-center"
+//         style={{
+//           backgroundImage:
+//             "url('https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=2000&auto=format&fit=crop')",
+//         }}
+//       />
+
+//       {/* Dark Overlay */}
+//       <div className="absolute inset-0 bg-black/65" />
+
+//       {/* Glow Effects */}
+//       <div className="absolute top-20 left-10 h-40 w-40 rounded-full bg-yellow-500/20 blur-3xl" />
+//       <div className="absolute bottom-20 right-10 h-52 w-52 rounded-full bg-amber-400/20 blur-3xl" />
+
+//       {/* Content */}
+//       <div className="relative z-10 container mx-auto px-6 text-center">
+//         {/* Badge */}
+//         <div className="inline-flex items-center rounded-full border border-[#C8972B]/40 bg-[#C8972B]/10 px-5 py-2 text-sm font-medium text-[#F5D27A] backdrop-blur-sm">
+//           ✨ Smart Lighting & Electrical Solutions
+//         </div>
+
+//         {/* Heading */}
+//         <h1 className="mt-6 text-2xl font-bold leading-tight text-white md:text-4xl lg:text-4xl">
+//           Illuminate Every Corner with
+//           <span className="block text-[#C8972B]">
+//             Thoughtfully Designed Lighting
+//           </span>
+//         </h1>
+
+//         {/* Description */}
+//         <p className="mx-auto mt-6 max-w-2xl text-sm leading-relaxed text-gray-300 md:text-sm">
+//           From elegant cove and profile lighting to complete electrical
+//           planning, we create lighting solutions that transform spaces,
+//           improve comfort, and bring your interiors to life.
+//         </p>
+
+//         {/* Buttons */}
+//         <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+//           <Link
+//             href="/contact"
+//             className="rounded-md bg-[#C8972B] px-8 py-4 text-sm font-semibold text-black transition-all duration-300 hover:scale-105 hover:bg-[#D6A93A]"
+//           >
+//             Get Free Consultation
+//           </Link>
+
+//           <Link
+//             href="/portfolio"
+//             className="rounded-md border border-white/30 bg-white/10 px-8 py-4 text-sm font-semibold text-white backdrop-blur-sm transition-all duration-300 hover:bg-white hover:text-black"
+//           >
+//             View Our Projects
+//           </Link>
+//         </div>
+
+        
+
+       
+//       </div>
+//     </section>
+//   );
+// }
+
+
 "use client";
 
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 
-export default function TrunkeyHero() {
+export default function HeroSection() {
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -33,8 +104,8 @@ export default function TrunkeyHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.pexels.com/photos/6032398/pexels-photo-6032398.jpeg"
-          alt="Turnkey Interior Project"
+          src="https://images.pexels.com/photos/1668860/pexels-photo-1668860.jpeg"
+          alt="Interior Light"
           fill
           priority
           sizes="100vw"
@@ -43,7 +114,7 @@ export default function TrunkeyHero() {
       </div>
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-[#1F0E04]/70" />
+      <div className="absolute inset-0 bg-[#1F0E04]/60" />
 
       {/* Decorative Line */}
       <motion.div
@@ -71,7 +142,7 @@ export default function TrunkeyHero() {
           >
             <span>Service</span>
             <span className="text-white/40">/</span>
-            <span className="text-white">Turnkey Project</span>
+            <span className="text-white">Lights</span>
           </motion.div>
 
           {/* Heading */}
@@ -90,7 +161,7 @@ export default function TrunkeyHero() {
                   lg:text-[52px]
                 "
               >
-                Turnkey Interior Projects
+                 Illuminate Every Corner with
               </motion.span>
 
               <motion.span
@@ -108,7 +179,7 @@ export default function TrunkeyHero() {
                   mt-2
                 "
               >
-                Designed, Executed & Delivered
+               Thoughtfully Designed Lighting
               </motion.span>
             </h1>
           </motion.div>
@@ -150,8 +221,8 @@ export default function TrunkeyHero() {
               font-light
             "
           >
-            From Design Concept to Final Handover — Everything Managed Under One
-            Roof..
+           From elegant cove and profile lighting to complete electrical
+           planning..
           </motion.p>
 
           {/* Buttons */}

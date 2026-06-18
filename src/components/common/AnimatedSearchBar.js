@@ -124,12 +124,12 @@ export const AnimatedSearchBar = ({
         pb-2
         bg-transparent
         border-b
-        border-[#F5EBE0]/30
+        border-[#3D1F0D]/20
         focus:border-[#C8972B]
         outline-none
-        text-[#F5EBE0]
+        text-[#3D1F0D]/75
         text-sm
-        placeholder:text-[#F5EBE0]/40
+        placeholder:text-[#3D1F0D]/75
         transition-all
         duration-300
       "
@@ -137,9 +137,9 @@ export const AnimatedSearchBar = ({
 
         {/* Animated Text */}
         {!searchQuery && (
-          <div className="absolute left-[100px] bottom-[9px] pointer-events-none">
+          <div className="absolute left-[105px] bottom-[7px] pointer-events-none">
             <span
-              className={`text-sm text-[#F5EBE0]/60 whitespace-nowrap transition-all duration-300 ${
+              className={`text-sm text-[#3D1F0D]/75 whitespace-nowrap transition-all duration-300 ${
                 isAnimating ? "opacity-100" : "opacity-0"
               }`}
               style={{

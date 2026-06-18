@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -9,169 +10,130 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 
-const heroSlides = [
+const categories = [
   {
+    title: "Modular Kitchen",
     image:
-      "/banner/1.png",
-    alt: "Luxury living room design",
+      "https://images.pexels.com/photos/35618203/pexels-photo-35618203.jpeg",
+    href: "/services/modular-kitchen",
+    desc: "Elegant modular kitchens designed for functionality, comfort, and modern living.",
   },
   {
+    title: "Modular Wardrobes",
     image:
-      "/banner/9.png",
-    alt: "Premium modular kitchen",
+      "https://images.pexels.com/photos/27562185/pexels-photo-27562185.png",
+    href: "/services/wardrobe",
+    desc: "Smart storage solutions with premium finishes tailored to your lifestyle.",
   },
   {
+    title: "Stylish Lighting",
     image:
-      "/banner/5.png",
-    alt: "Elegant  suite",
+      "https://images.pexels.com/photos/19343357/pexels-photo-19343357.jpeg",
+    href: "/services/lighting",
+    desc: "Transform your interiors with ambient, decorative, and modern lighting designs.",
+  },
+  {
+    title: "Furnishings",
+    image:
+      "https://images.pexels.com/photos/36601409/pexels-photo-36601409.jpeg",
+    href: "/services/furnishing",
+    desc: "Luxury furnishings that add warmth, elegance, and personality to every space.",
   },
 ];
 
 export default function HomePage() {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const activeSlide = categories[activeIndex];
+
   return (
-    <main className="bg-[#F5EBE0] overflow-x-hidden">
-      {/* HERO */}
-      <section className="relative min-h-[100svh]">
+    <main className="overflow-x-hidden">
+      <section className="relative h-screen min-h-[700px]">
         <Swiper
           modules={[Autoplay, Pagination]}
           autoplay={{
             delay: 4500,
             disableOnInteraction: false,
           }}
-          loop
           pagination={{
             clickable: true,
           }}
+          loop
+          onSlideChange={(swiper) => setActiveIndex(swiper.realIndex)}
           className="
-            h-[100svh]
-            [&_.swiper-pagination]:!bottom-6
+            h-full
+            [&_.swiper-pagination]:!bottom-8
             [&_.swiper-pagination-bullet]:bg-white/40
-            [&_.swiper-pagination-bullet]:transition-all
             [&_.swiper-pagination-bullet-active]:bg-[#C8972B]
             [&_.swiper-pagination-bullet-active]:w-8
           "
         >
-          {heroSlides.map((slide, i) => (
-            <SwiperSlide key={i}>
-              <div className="relative h-[100svh] min-h-[650px]">
+          {categories.map((slide, index) => (
+            <SwiperSlide key={index}>
+              <div className="relative h-screen min-h-[700px]">
                 <Image
                   src={slide.image}
-                  alt={slide.alt}
+                  alt={slide.title}
                   fill
-                  priority={i === 0}
+                  priority={index === 0}
                   sizes="100vw"
                   className="object-cover"
                 />
 
-                {/* Overlay */}
                 <div className="absolute inset-0 bg-gradient-to-r from-[#3D1F0D]/85 via-[#3D1F0D]/55 to-[#3D1F0D]/20" />
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        {/* CONTENT */}
-        <div className="absolute inset-0 z-10 flex items-center">
-          <div className="max-w-7xl mx-auto w-full px-5 sm:px-8 md:px-10 lg:px-16">
-            <div className="max-w-3xl">
-              {/* Tag */}
-              <p className=" font-body flex items-center gap-3 text-[10px] sm:text-xs tracking-[0.25em] sm:tracking-[0.35em] uppercase text-[#C8972B] font-medium mb-5">
-                <span className="w-8 sm:w-10 h-px bg-[#C8972B]" />
-                Luxury Interior Studio
-              </p>
-
-              {/* Heading */}
-              <h1
-                className="
+        {/* Content */}
+        <div className="absolute inset-0 z-10 flex items-center justify-center">
+          <div className="max-w-4xl mx-auto px-5 text-center">
+            {/* Heading */}
+            <h1
+              className="
                   text-white
-                  font-medium
                   font-heading
+                  font-medium
                   leading-[1.05]
                   mb-6
-                  text-[32px]
-                  sm:text-[46px]
-                  md:text-[72px]
-                  lg:text-[92px]
+                  text-[38px]
+                  sm:text-[32px]
+                  md:text-[52px]
+                  lg:text-[62px]
+                
                 "
-              >
-                Crafting{" "}
-                <span className="text-[#C8972B]">
-                  Spaces
-                </span>
-                <br />
-                That Inspire
-              </h1>
-
-              {/* Description */}
-              <p
+            >
+              {activeSlide.title}
+            </h1>
+            {/* Tag */}
+            <p className="text-[#ffffff] text-xs md:text-sm  tracking-[0.1em]  mb-5">
+              {activeSlide.desc}
+            </p>
+            {/* Button */}
+            <div className="flex justify-center">
+              <Link
+                href={activeSlide.href}
                 className="
-                font-body
-                  text-[#F5EBE0]/85
-                  text-xs
-                  sm:text-base
-                  md:text-lg
-                  leading-relaxed
-                  max-w-xl
-                  mb-8
-                "
+      inline-flex
+      items-center
+      gap-2
+      bg-[#C8972B]
+      hover:bg-[#3D1F0D]
+      text-white
+      px-8
+      py-4
+      text-sm
+      font-semibold
+      uppercase
+      tracking-[0.12em]
+      transition-all
+      duration-300
+    "
               >
-                Premium home interiors, modular kitchens, turnkey projects
-                and luxury spaces crafted with elegance and functionality
-                across Noida & Delhi NCR.
-              </p>
-
-              {/* Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4">
-                <Link
-                  href="/contact"
-                  className="
-                    inline-flex
-                    items-center
-                    justify-center
-                    gap-2
-                    bg-[#C8972B]
-                    hover:bg-[#3D1F0D]
-                    text-white
-                    px-6
-                    sm:px-8
-                    py-4
-                    text-xs
-                    font-semibold
-                    uppercase
-                    tracking-[0.12em]
-                    transition-all
-                    duration-300
-                  "
-                >
-                  Book Free Consultation
-                  <ArrowRight size={16} />
-                </Link>
-
-                <Link
-                  href="/portfolio"
-                  className="
-                    inline-flex
-                    items-center
-                    justify-center
-                    border
-                    border-white/40
-                    hover:border-white
-                    text-white
-                    px-6
-                    sm:px-8
-                    py-4
-                    text-xs
-                    font-semibold
-                    uppercase
-                    tracking-[0.12em]
-                    transition-all
-                    duration-300
-                    hover:bg-white/10
-                  "
-                >
-                  View Portfolio
-                </Link>
-              </div>
+                Explore
+                <ArrowRight size={18} />
+              </Link>
             </div>
           </div>
         </div>

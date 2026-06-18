@@ -1,322 +1,324 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import Image from "next/image";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-const plans = [
+import { Autoplay, EffectCoverflow } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+
+const processSteps = [
   {
-    name: "Basic",
-    price: "₹1,200",
-    unit: "/sq.ft",
-    description: "Perfect for smaller spaces and quick refreshes",
-    features: [
-      "Design Consultation",
-      "Execution",
-      "Standard Materials",
-      "Project Supervision",
-    ],
+    title: "Consultation",
+    image:
+      "https://images.pexels.com/photos/8837733/pexels-photo-8837733.jpeg",
+    description:
+      "Discuss requirements, lifestyle, budget, and design vision with our experts.",
   },
   {
-    name: "Premium",
-    price: "₹2,000",
-    unit: "/sq.ft",
-    description: "Our most popular choice for beautiful transformations",
-    featured: true,
-    badge: "MOST POPULAR",
-    features: [
-      "3D Design",
-      "Premium Materials",
-      "Custom Furniture",
-      "Dedicated Manager",
-    ],
+    title: "Design",
+    image:
+      "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+    description:
+      "Space planning, layouts, mood boards, and concept development.",
   },
   {
-    name: "Luxury",
-    price: "Custom",
-    unit: "",
-    description: "Bespoke solutions for discerning clientele",
-    features: [
-      "Luxury Finishes",
-      "Imported Materials",
-      "Bespoke Furniture",
-      "End-to-End Turnkey",
-    ],
+    title: "3D Visualization",
+    image:
+      "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg",
+    description:
+      "Photorealistic 3D renders to visualize your future home before execution.",
+  },
+  {
+    title: "Material Selection",
+    image:
+      "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+    description:
+      "Choose laminates, finishes, fabrics, lighting, and décor elements.",
+  },
+  {
+    title: "Manufacturing",
+    image:
+      "https://images.pexels.com/photos/5691626/pexels-photo-5691626.jpeg",
+    description:
+      "Precision manufacturing of furniture and modular components.",
+  },
+  {
+    title: "Execution",
+    image:
+      "https://images.pexels.com/photos/6474475/pexels-photo-6474475.jpeg",
+    description:
+      "On-site installation and execution managed by experienced professionals.",
+  },
+  {
+    title: "Quality Check",
+    image:
+      "https://images.pexels.com/photos/8961300/pexels-photo-8961300.jpeg",
+    description:
+      "Multiple quality inspections ensure flawless finishing and durability.",
+  },
+  {
+    title: "Handover",
+    image:
+      "https://images.pexels.com/photos/7578860/pexels-photo-7578860.jpeg",
+    description:
+      "Final walkthrough and delivery of your fully completed dream home.",
   },
 ];
 
-const containerVariants = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.2,
-    },
-  },
-};
-
-const cardVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.6,
-      ease: "easeOut",
-    },
-  },
-};
-
-export default function PricingPlans() {
+export default function TurnkeyProcess() {
   return (
-    <section
-      className="relative py-24 lg:py-32 overflow-hidden"
-      style={{ backgroundColor: "#F5EBE0" }}
-    >
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div
-          className="absolute -top-40 -right-40 w-80 h-80 rounded-full opacity-8"
-          style={{ backgroundColor: "#C8972B" }}
-        />
-        <div
-          className="absolute -bottom-40 -left-40 w-80 h-80 rounded-full opacity-8"
-          style={{ backgroundColor: "#C8972B" }}
-        />
-      </div>
+    <section className="bg-[#F5EBE0] py-24">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-14">
+          <span className="bg-[#C8972B]/10 font-body text-[#C8972B] px-4 py-2 rounded-full text-sm font-semibold">
+            End-to-End Turnkey Solutions
+          </span>
 
-      <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
-        {/* Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16 lg:mb-24"
-        >
-          <motion.span
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="inline-block text-xs font-semibold uppercase tracking-widest mb-4"
-            style={{ color: "#C8972B" }}
-          >
-            ✦ Transparent Pricing
-          </motion.span>
-
-          <h2
-            className="mt-4 text-4xl lg:text-5xl font-bold"
-            style={{ color: "#2C2C2C" }}
-          >
-            Choose Your Perfect Plan
+          <h2 className="text-4xl lg:text-5xl font-heading font-bold text-[#3D1F0D] mt-4">
+            From Concept to Handover
           </h2>
-
-          <p
-            className="mt-6 text-lg max-w-2xl mx-auto"
-            style={{ color: "#6B6B6B" }}
-          >
-            Quality interior design at every budget. Flexible pricing tailored
-            to your needs and vision.
-          </p>
-        </motion.div>
-
-        {/* Pricing Cards Grid */}
-        <motion.div
-          variants={containerVariants}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="grid gap-6 lg:gap-8 lg:grid-cols-3 items-center"
-        >
-          {plans.map((plan, index) => (
-            <motion.div
+        </div>
+         {/* Timeline */}
+        <div className="hidden lg:flex justify-center mt-12 mb-8 flex-wrap gap-4">
+          {processSteps.map((item, index) => (
+            <div
               key={index}
-              variants={cardVariants}
-              className={`relative group h-full`}
-              whileHover={plan.featured ? { y: -12 } : { y: -8 }}
-              transition={{ duration: 0.3 }}
+              className="flex items-center"
             >
-              {/* Card Container */}
-              <div
-                className={`relative h-full rounded-3xl overflow-hidden transition-all duration-500 ${
-                  plan.featured
-                    ? "shadow-2xl hover:shadow-3xl"
-                    : "shadow-lg hover:shadow-xl"
-                }`}
-                style={{
-                  backgroundColor: plan.featured ? "#2C2C2C" : "#FFFFFF",
-                }}
-              >
-                {/* Gradient border for featured card */}
-                {plan.featured && (
-                  <div
-                    className="absolute inset-0 rounded-3xl p-1 pointer-events-none"
-                    style={{
-                      background: `linear-gradient(135deg, #C8972B, #F0E6D8)`,
-                    }}
-                  >
-                    <div
-                      className="w-full h-full rounded-3xl"
-                      style={{ backgroundColor: "#2C2C2C" }}
-                    />
-                  </div>
-                )}
+              <span className="text-[#3D1F0D] text-sm">
+                {item.title}
+              </span>
 
-                {/* Border accent on non-featured cards */}
-                {!plan.featured && (
-                  <div
-                    className="absolute inset-0 rounded-3xl border-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-                    style={{ borderColor: "#C8972B" }}
-                  />
-                )}
+              {index !== processSteps.length - 1 && (
+                <span className="mx-3 text-[#C8972B] text-xl">
+                  →
+                </span>
+              )}
+            </div>
+          ))}
+        </div>
 
-                {/* Content */}
-                <div className="relative p-8 lg:p-10 h-full flex flex-col">
-                  {/* Badge */}
-                  {plan.badge && (
-                    <motion.div
-                      initial={{ opacity: 0, scale: 0.8 }}
-                      whileInView={{ opacity: 1, scale: 1 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.3 }}
-                      className="inline-flex w-fit mb-6 px-4 py-2 rounded-full"
-                      style={{
-                        backgroundColor: "#C8972B",
-                        color: "#FFFFFF",
-                      }}
-                    >
-                      <span className="text-xs font-semibold tracking-widest">
-                        {plan.badge}
-                      </span>
-                    </motion.div>
-                  )}
-
-                  {/* Plan Name */}
-                  <h3
-                    className="text-3xl font-bold"
-                    style={{ color: plan.featured ? "#FFFFFF" : "#2C2C2C" }}
-                  >
-                    {plan.name}
-                  </h3>
-
-                  {/* Description */}
-                  <p
-                    className="mt-2 text-sm leading-relaxed"
-                    style={{ color: plan.featured ? "#B0B0B0" : "#6B6B6B" }}
-                  >
-                    {plan.description}
-                  </p>
-
-                  {/* Price */}
-                  <div className="mt-8 mb-8">
-                    <div className="flex items-baseline gap-1">
-                      <span
-                        className="text-4xl lg:text-4xl font-semibold"
-                        style={{ color: plan.featured ? "#C8972B" : "#C8972B" }}
-                      >
-                        {plan.price}
-                      </span>
-                      {plan.unit && (
-                        <span
-                          className="text-base"
-                          style={{
-                            color: plan.featured ? "#B0B0B0" : "#6B6B6B",
-                          }}
-                        >
-                          {plan.unit}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  {/* Features List */}
-                  <ul className="space-y-4 flex-grow">
-                    {plan.features.map((feature, idx) => (
-                      <motion.li
-                        key={feature}
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ delay: idx * 0.1 + 0.2 }}
-                        className="flex items-center gap-4"
-                      >
-                        <div
-                          className="flex-shrink-0 flex h-6 w-6 items-center justify-center rounded-full"
-                          style={{
-                            backgroundColor: plan.featured
-                              ? "#C8972B"
-                              : "#F0E6D8",
-                          }}
-                        >
-                          <Check
-                            className="h-4 w-4"
-                            style={{
-                              color: plan.featured ? "#2C2C2C" : "#C8972B",
-                            }}
-                          />
-                        </div>
-                        <span
-                          className="text-base font-medium"
-                          style={{
-                            color: plan.featured ? "#FFFFFF" : "#2C2C2C",
-                          }}
-                        >
-                          {feature}
-                        </span>
-                      </motion.li>
-                    ))}
-                  </ul>
-
-                  {/* CTA Button */}
-                  <motion.button
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    className={`mt-8 w-full py-4 rounded-xl font-semibold text-base transition-all duration-300 ${
-                      plan.featured ? "hover:shadow-2xl" : "hover:shadow-lg"
-                    }`}
-                    style={{
-                      backgroundColor: plan.featured ? "#C8972B" : "#3D1F0D",
-                      color: plan.featured ? "#2C2C2C" : "#FFFFFF",
-                    }}
-                  >
-                    {plan.price === "Custom" ? "Get In Touch" : "Get Quote"}
-                  </motion.button>
-
-                  {/* Subtle hover gradient overlay */}
-                  <div
-                    className="absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity duration-500 pointer-events-none rounded-3xl"
-                    style={{
-                      background: `linear-gradient(135deg, #C8972B, transparent)`,
-                    }}
+        <Swiper
+          modules={[Autoplay, EffectCoverflow]}
+          effect="coverflow"
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          loop={true}
+          speed={1000}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 150,
+            modifier: 2,
+            scale: 0.9,
+            slideShadows: false,
+          }}
+          className="py-10"
+        >
+          {processSteps.map((step, index) => (
+            <SwiperSlide
+              key={index}
+              className="!w-[300px] md:!w-[400px]"
+            >
+              <div className="overflow-hidden rounded-3xl bg-white shadow-xl">
+                <div className="relative h-[300px]">
+                  <Image
+                    src={step.image}
+                    alt={step.title}
+                    fill
+                    className="object-cover"
                   />
                 </div>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
 
-        {/* FAQ / Support Text */}
-        <motion.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          className="mt-16 text-center"
-        >
-          <p className="text-base" style={{ color: "#6B6B6B" }}>
-            Not sure which plan is right for you?{" "}
-            <motion.a
-              href="#"
-              className="font-semibold transition-colors duration-300 hover:opacity-80"
-              style={{ color: "#C8972B" }}
-              whileHover={{ scale: 1.05 }}
-            >
-              Schedule a consultation →
-            </motion.a>
-          </p>
-        </motion.div>
+                <div className="p-6 flex ">
+                  <div className="w-8 h-8 mx-auto mb-4 rounded-full bg-[#C8972B] text-white flex items-center justify-center font-bold">
+                    {index + 1}
+                  </div>
+
+                  <h3 className="text-xl  font-bold text-[#3D1F0D]">
+                    {step.title}
+                  </h3>
+                </div>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+
+       
       </div>
     </section>
   );
 }
+
+// "use client";
+
+// import { useState, useEffect } from "react";
+// import Image from "next/image";
+
+// const processSteps = [
+//   {
+//     title: "Consultation",
+//     image:
+//       "https://images.pexels.com/photos/8837733/pexels-photo-8837733.jpeg",
+//     description:
+//       "Discuss requirements, lifestyle, budget, and design vision with our experts.",
+//   },
+//   {
+//     title: "Design",
+//     image:
+//       "https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg",
+//     description:
+//       "Space planning, layouts, mood boards, and concept development.",
+//   },
+//   {
+//     title: "3D Visualization",
+//     image:
+//       "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg",
+//     description:
+//       "Photorealistic 3D renders to visualize your future home before execution.",
+//   },
+//   {
+//     title: "Material Selection",
+//     image:
+//       "https://images.pexels.com/photos/276724/pexels-photo-276724.jpeg",
+//     description:
+//       "Choose laminates, finishes, fabrics, lighting, and décor elements.",
+//   },
+//   {
+//     title: "Manufacturing",
+//     image:
+//       "https://images.pexels.com/photos/5691626/pexels-photo-5691626.jpeg",
+//     description:
+//       "Precision manufacturing of furniture and modular components.",
+//   },
+//   {
+//     title: "Execution",
+//     image:
+//       "https://images.pexels.com/photos/6474475/pexels-photo-6474475.jpeg",
+//     description:
+//       "On-site installation and execution managed by experienced professionals.",
+//   },
+//   {
+//     title: "Quality Check",
+//     image:
+//       "https://images.pexels.com/photos/8961300/pexels-photo-8961300.jpeg",
+//     description:
+//       "Multiple quality inspections ensure flawless finishing and durability.",
+//   },
+//   {
+//     title: "Handover",
+//     image:
+//       "https://images.pexels.com/photos/7578860/pexels-photo-7578860.jpeg",
+//     description:
+//       "Final walkthrough and delivery of your fully completed dream home.",
+//   },
+// ];
+
+// export default function TurnkeyProcess() {
+//   const [activeIndex, setActiveIndex] = useState(0);
+
+//   useEffect(() => {
+//     const timer = setInterval(() => {
+//       setActiveIndex((prev) =>
+//         prev === processSteps.length - 1 ? 0 : prev + 1
+//       );
+//     }, 4000);
+
+//     return () => clearInterval(timer);
+//   }, []);
+
+//   return (
+//     <section className="relative overflow-hidden bg-[#F5EBE0] py-20 lg:py-28">
+//       {/* Background Blur */}
+//       <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#C8972B]/10 rounded-full blur-3xl" />
+//       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#3D1F0D]/10 rounded-full blur-3xl" />
+
+//       <div className="container relative z-10 mx-auto px-4">
+//         {/* Header */}
+//         <div className="max-w-4xl mx-auto text-center mb-12">
+//           <span className="inline-flex rounded-full bg-[#C8972B]/10 px-4 py-2 text-sm font-semibold text-[#C8972B]">
+//             End-to-End Turnkey Solutions
+//           </span>
+
+//           <div className="mt-6 text-[#C8972B] font-medium tracking-[0.2em]">
+//             {String(activeIndex + 1).padStart(2, "0")} / 08
+//           </div>
+
+//           <h2 className="mt-4 text-4xl md:text-6xl lg:text-7xl font-bold text-[#3D1F0D]">
+//             {processSteps[activeIndex].title}
+//           </h2>
+
+//           <p className="mt-6 max-w-2xl mx-auto text-gray-600 text-lg leading-relaxed">
+//             {processSteps[activeIndex].description}
+//           </p>
+//         </div>
+
+//         {/* Progress */}
+//         <div className="max-w-3xl mx-auto mb-12">
+//           <div className="h-[3px] rounded-full bg-[#C8972B]/20">
+//             <div
+//               className="h-full rounded-full bg-[#C8972B] transition-all duration-700"
+//               style={{
+//                 width: `${
+//                   ((activeIndex + 1) / processSteps.length) * 100
+//                 }%`,
+//               }}
+//             />
+//           </div>
+//         </div>
+
+//         {/* Image */}
+//         <div className="relative mx-auto max-w-6xl">
+//           <div className="relative h-[350px] md:h-[500px] lg:h-[650px] overflow-hidden rounded-[32px] lg:rounded-[48px] shadow-[0_30px_80px_rgba(61,31,13,0.18)]">
+//             <Image
+//               key={processSteps[activeIndex].image}
+//               src={processSteps[activeIndex].image}
+//               alt={processSteps[activeIndex].title}
+//               fill
+//               priority
+//               className="object-cover transition-all duration-1000"
+//             />
+
+//             <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-black/10 to-transparent" />
+
+//             <div className="absolute bottom-8 left-8">
+//               <div className="inline-flex items-center gap-3 rounded-full bg-white/90 px-5 py-3 backdrop-blur">
+//                 <div className="w-10 h-10 rounded-full bg-[#C8972B] text-white flex items-center justify-center font-bold">
+//                   {String(activeIndex + 1).padStart(2, "0")}
+//                 </div>
+
+//                 <span className="font-semibold text-[#3D1F0D]">
+//                   {processSteps[activeIndex].title}
+//                 </span>
+//               </div>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Navigation */}
+//         <div className="mt-12 flex gap-3 overflow-x-auto pb-3 scrollbar-hide">
+//           {processSteps.map((step, index) => (
+//             <button
+//               key={step.title}
+//               onClick={() => setActiveIndex(index)}
+//               className={`whitespace-nowrap rounded-full px-5 py-3 text-sm font-medium transition-all duration-300
+//                 ${
+//                   activeIndex === index
+//                     ? "bg-[#3D1F0D] text-white shadow-lg"
+//                     : "bg-white text-[#3D1F0D] hover:bg-[#C8972B] hover:text-white"
+//                 }`}
+//             >
+//               {step.title}
+//             </button>
+//           ))}
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }

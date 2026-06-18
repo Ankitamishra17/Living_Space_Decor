@@ -10,33 +10,33 @@ const portfolio = [
   {
     id: 1,
     title: "Luxury Living Room",
-    location: "Noida, Sector 150",
-    image: "/lsd_images/38.jpg",
+   
+    image: "https://images.pexels.com/photos/8584020/pexels-photo-8584020.jpeg",
     featured: true,
   },
   {
     id: 2,
     title: "Modern Bedroom Suite",
-    location: "Greater Noida",
-    image: "/lsd_images/47.jpg",
+   
+    image: "https://images.pexels.com/photos/6934170/pexels-photo-6934170.jpeg",
   },
   {
     id: 3,
     title: "Premium Kitchen",
-    location: "Delhi NCR",
-    image: "/lsd_images/13.jpg",
+   
+    image: "https://images.pexels.com/photos/19966809/pexels-photo-19966809.jpeg",
   },
   {
     id: 4,
-    title: "Executive Office",
-    location: "Gurugram",
-    image: "/lsd_images/38.jpg",
+    title: "Kids Room",
+   
+    image: "https://images.pexels.com/photos/6835137/pexels-photo-6835137.jpeg",
   },
   {
     id: 5,
     title: "Contemporary Dining",
-    location: "Noida",
-    image: "/lsd_images/47.jpg",
+   
+    image: "https://images.pexels.com/photos/7195598/pexels-photo-7195598.jpeg",
   },
 ];
 
@@ -205,9 +205,7 @@ export default function LatestProjectsPremium() {
                     <p className="font-[Cormorant_Garamond,serif] text-[22px] font-medium text-white mb-1">
                       {p.title}
                     </p>
-                    <p className="text-[10px] tracking-[.12em] uppercase text-[#C8972B]">
-                      {p.location}
-                    </p>
+                   
                   </div>
                   <motion.div
                     initial={{ x: -5 }}

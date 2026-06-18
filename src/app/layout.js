@@ -20,8 +20,6 @@ const poppins = Poppins({
   weight: ["300", "400", "600", "700"],
 });
 
-
-
 export default function RootLayout({ children }) {
   const pathname = usePathname();
 
@@ -32,6 +30,9 @@ export default function RootLayout({ children }) {
       lang="en"
       className={`${marcellus.variable} ${poppins.variable} h-full antialiased`}
     >
+      <head>
+        <link rel="icon" href="/favicon.png" />
+      </head>
       <body className="min-h-screen flex flex-col">
         {!isAdmin && <Navbar />}
 

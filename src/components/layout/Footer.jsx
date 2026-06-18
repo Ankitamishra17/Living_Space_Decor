@@ -306,7 +306,7 @@ export default function Footer() {
         }}
       >
         {/* Watermark wordmark — moved to bottom, responsive via class */}
-        <div
+        {/* <div
           className="footer-wordmark"
           style={{
             position: "absolute",
@@ -325,7 +325,7 @@ export default function Footer() {
           }}
         >
           Living Space Decor
-        </div>
+        </div> */}
 
         {/* Main grid */}
         <div

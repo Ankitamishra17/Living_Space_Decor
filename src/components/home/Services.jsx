@@ -6,7 +6,7 @@ import { ArrowRight, Sofa, Building2, ChefHat, Compass } from "lucide-react";
 
 const services = [
   {
-    title: "Interior Design",
+    title: "Design Ideas",
     description:
       "Luxury residential interiors crafted with modern elegance and premium aesthetics.",
     image:
