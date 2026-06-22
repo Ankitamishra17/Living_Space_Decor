@@ -2,58 +2,88 @@
 
 import ServiceCard from "./ServiceCard";
 
+import {
+  MdArchitecture,
+} from "react-icons/md";
+
+import {
+  FaBuilding,
+} from "react-icons/fa";
+
+import {
+  GiHouse,
+  GiCrane,
+} from "react-icons/gi";
+
 const services = [
   {
-    title: "Design Ideas",
-    desc: "Bespoke interiors that blend luxury with livability, tailored to your unique lifestyle.",
-    image:
-     
-        "/lsd_images/10.jpg",
+    title: "Architecture & Planning",
+    desc: "Strategic planning and architectural solutions that balance aesthetics, functionality, and sustainability.",
+    image: "/lsd_images/10.jpg",
+    icon: MdArchitecture,
   },
   {
-    title: "Architectural Design",
-    desc: "Innovative architectural solutions that harmonize form, function, and sustainability.",
-    image:
-      "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80",
+    title: "Elevation Design",
+    desc: "Modern and elegant elevation concepts that enhance the visual identity of your property.",
+    image: "/lsd_images/11.jpg",
+    icon: FaBuilding,
   },
   {
-    title: "Turnkey Projects",
-    desc: "End-to-end project management delivering seamless execution from concept to completion.",
-    image:
-      "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=600&q=80",
+    title: "Residential Design",
+    desc: "Personalized residential spaces crafted for comfort, luxury, and everyday living.",
+    image: "/lsd_images/12.jpg",
+    icon: GiHouse,
   },
   {
-    title: "Modern Heritage",
-    desc: "Reimagining traditional aesthetics with contemporary design principles.",
-    image:
-      "/lsd_images/18.jpg",
+    title: "Civil Work",
+    desc: "Reliable construction and structural solutions delivered with precision and quality.",
+    image: "/lsd_images/18.jpg",
+    icon: GiCrane,
   },
 ];
 
-export default function Services() {
+export default function ArchitectureServices() {
   return (
-    <section className="py-24 bg-[#FAFAF8]">
+    <section className="bg-[#F8F5F0] py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-20">
-          <span className="text-[#C8972B] uppercase tracking-[0.4em] text-xs">
-            WHAT WE BUILD
+
+        {/* Heading */}
+        <div className="text-center max-w-3xl mx-auto">
+
+          <span className="uppercase tracking-[8px] text-[#C8972B] text-sm">
+            What We Build
           </span>
 
-          <h2 className="text-5xl mt-4">Architecture Services</h2>
+          <h2 className="mt-6 text-5xl md:text-6xl font-serif text-[#2D1A0B]">
+            Architecture Services
+          </h2>
 
-          <div className="w-16 h-[1px] bg-[#C8972B] mx-auto mt-5" />
+          <div className="flex items-center justify-center gap-4 mt-6">
+            <div className="w-16 h-[1px] bg-[#C8972B]" />
+            <div className="w-3 h-3 border border-[#C8972B] rotate-45" />
+            <div className="w-16 h-[1px] bg-[#C8972B]" />
+          </div>
+
+          <p className="mt-8 text-[#6B6B6B] leading-8">
+            We create exceptional spaces through innovative design,
+            meticulous planning, and flawless execution.
+          </p>
         </div>
 
-        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-10">
+        {/* Cards */}
+        <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8 mt-20">
           {services.map((service) => (
             <ServiceCard
               key={service.title}
               title={service.title}
               desc={service.desc}
               image={service.image}
+              Icon={service.icon}
             />
           ))}
         </div>
+
+        
       </div>
     </section>
   );

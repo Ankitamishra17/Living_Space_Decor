@@ -41,20 +41,20 @@ export default function TurnkeyOverview() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Side - Process Graphic */}
           <div className="relative">
-            <div className="bg-white rounded-3xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-[#3D1F0D] mb-8 text-center">
+            <div className="bg-white rounded-md p-8 shadow-xl">
+              <h3 className="text-xl font-bold text-[#3D1F0D] mb-8 text-center">
                 Turnkey Process
               </h3>
 
-              <div className="space-y-4">
+              <div className="space-y-2">
                 {processSteps.map((step, index) => {
                   const Icon = step.icon;
 
                   return (
                     <div key={index}>
                       <div className="flex items-center gap-4">
-                        <div className="w-14 h-14 rounded-full bg-[#C8972B]/10 flex items-center justify-center">
-                          <Icon size={24} className="text-[#C8972B]" />
+                        <div className="w-12 h-12 rounded-full bg-[#C8972B]/10 flex items-center justify-center">
+                          <Icon size={18} className="text-[#C8972B]" />
                         </div>
 
                         <div>
@@ -80,11 +80,11 @@ export default function TurnkeyOverview() {
               End-to-End Interior Solutions
             </span>
 
-            <h2 className="text-4xl lg:text-5xl font-bold text-[#3D1F0D] leading-tight mb-6">
+            <h2 className="text-3xl lg:text-4xl font-bold text-[#3D1F0D] leading-tight mb-6">
               What is a Turnkey Project?
             </h2>
 
-            <p className="text-gray-700 text-lg leading-relaxed mb-8">
+            <p className="text-gray-700 text-base leading-relaxed mb-8">
               A turnkey interior project is a complete solution where a single
               team manages everything from planning and design to execution and
               final handover. You receive a fully finished, move-in-ready home
@@ -114,7 +114,7 @@ export default function TurnkeyOverview() {
             </div>
 
             <div className="mt-10">
-              <button className="bg-[#3D1F0D] hover:bg-[#C8972B] text-white px-8 py-4 rounded-full font-semibold transition-all duration-300">
+              <button className="bg-[#3D1F0D] hover:bg-[#C8972B] text-white px-8 py-4 rounded-md font-semibold transition-all duration-300">
                 Book Free Consultation
               </button>
             </div>

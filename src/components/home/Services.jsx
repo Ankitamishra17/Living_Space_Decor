@@ -45,7 +45,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="px-6 lg:px-14 py-24">
+    <section className="px-6 lg:px-14 -py-10">
       {/* ── Heading ── */}
       <div className="flex items-end justify-between mb-14 flex-wrap gap-5">
         <div>

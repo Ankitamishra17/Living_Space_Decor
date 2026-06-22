@@ -6,7 +6,7 @@ import { ArrowRight } from "lucide-react";
 export default function DesignHero({ data }) {
   return (
     <section>
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto">
         {/* Hero Image */}
         <div className="relative h-[60vh] md:h-[75vh] lg:h-[85vh] overflow-hidden">
           <Image

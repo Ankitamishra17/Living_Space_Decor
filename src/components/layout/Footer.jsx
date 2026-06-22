@@ -345,12 +345,12 @@ export default function Footer() {
               className="flex items-center gap-3 group flex-shrink-0"
             >
               <Image
-                src="/logo.png"
+                src="/footer-logo.png"
                 alt="Living Space Decor"
                 width={300}
                 height={80}
                 priority
-                className="h-40 w-auto object-contain -mt-17"
+                className="h-30 w-auto object-contain -mt-15"
               />
             </Link>
 

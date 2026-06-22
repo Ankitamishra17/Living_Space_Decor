@@ -247,14 +247,14 @@ export default function LatestProjectsPremium() {
           className="group relative inline-flex items-center gap-3 px-8 py-3.5 border-2 border-[#3D1F0D] text-[#3D1F0D] text-[11px] font-semibold uppercase tracking-[.12em] transition-all duration-300 overflow-hidden"
         >
           <motion.div
-            className="absolute inset-0 bg-[#3D1F0D] -z-10"
+            className="absolute inset-0 bg-[#3D1F0D] "
             initial={{ scaleX: 0 }}
             whileHover={{ scaleX: 1 }}
             transition={{ duration: 0.4 }}
             style={{ originX: 0 }}
           />
           <motion.span
-            className="relative group-hover:text-[#3D1F0D] transition-colors"
+            className="relative group-hover:text-[#C8972B] transition-colors"
             whileHover={{ letterSpacing: "0.2em" }}
           >
             Explore Full Portfolio
