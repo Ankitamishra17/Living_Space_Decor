@@ -8,8 +8,6 @@
 // import ConsultationModal from "@/components/common/ConsultationModal";
 // import { AnimatedSearchBar } from "@/components/common/AnimatedSearchBar";
 
-
-
 // const navLinks = [
 //   { name: "Home", href: "/" },
 
@@ -34,8 +32,7 @@
 //             name: "Kids Room Interior Designs",
 //             href: "/interior-design-ideas/kids-room",
 //           },
-          
-         
+
 //           {
 //             name: "Pooja Room Designs",
 //             href: "/interior-design-ideas/pooja-room",
@@ -444,9 +441,6 @@
 //   );
 // }
 
-
-
-
 "use client";
 
 import Link from "next/link";
@@ -462,33 +456,51 @@ const navLinks = [
   // { name: "About", href: "/about" },
   {
     name: "Design Ideas",
-    href: "/services/interior-design",
+    href: "/services/design-ideas",
     submenu: [
-      { name: "Living Room Designs", href: "/modular-kitchen" },
-      { name: "Kids Room Designs", href: "/modular-kitchen-ideas" },
-      { name: "Modular Kitchen Designs", href: "/kitchen-cost-calculator" },
-      { name: "Mandir Designs", href: "/modular-kitchen" },
-      { name: "Dining Room Designs", href: "/kitchen-cost-calculator" },
-      { name: "Bedroom Design", href: "/modular-kitchen" },
-      { name: "Bathroom Designs", href: "/modular-kitchen-ideas" },
-      { name: "Home Office Design", href: "/kitchen-cost-calculator" },
-      { name: "Balcony & Terrace Designs", href: "/modular-kitchen-ideas" },
+      {
+        name: "Living Room Designs",
+        href: "/services/design-ideas/living-room-design",
+      },
+      {
+        name: "Kids Room Designs",
+        href: "/services/design-ideas/kids-room-design",
+      },
+      { name: "Modular Kitchen Designs", href: "/services/modular-kitchen" },
+      { name: "Mandir Designs", href: "/services/design-ideas/mandir-design" },
+      {
+        name: "Dining Room Designs",
+        href: "/services/design-ideas/dining-room-design",
+      },
+      { name: "Bedroom Design", href: "/services/design-ideas/bedroom-design" },
+      {
+        name: "Bathroom Designs",
+        href: "/services/design-ideas/bathroom-design",
+      },
+      {
+        name: "Home Office Design",
+        href: "/services/design-ideas/home-office-design",
+      },
+      {
+        name: "Balcony & Terrace Designs",
+        href: "/services/design-ideas/balcony-terrace-design",
+      },
     ],
   },
   {
     name: "Modular Kitchen",
     href: "/services/modular-kitchen",
     submenu: [
-      { name: "Modular Kitchens", href: "/modular-kitchen" },
-      { name: "Kitchen Cost Calculator", href: "/kitchen-cost-calculator" },
-      { name: "Modular Kitchen Design Ideas", href: "/modular-kitchen-ideas" },
+      { name: "Modular Kitchens", href: "/services/modular-kitchen" },
+      { name: "Kitchen Cost Calculator", href: "/kitchen-calculator" },
+      { name: "Modular Kitchen Design Ideas", href: "/kitchen-design" },
     ],
   },
   {
     name: "Wardrobes",
     href: "/services/wardrobes",
     submenu: [
-      { name: "Custom Wardrobe", href: "/custom-wardrobe" },
+      { name: "Custom Wardrobe", href: "/services/wardrobes" },
       { name: "Wardrobe-Cost Calculator", href: "/wardrobe-cost-calculator" },
     ],
   },
@@ -524,7 +536,7 @@ export default function Navbar() {
     }));
   };
 
-  return (
+  return (  
     <>
       {/* ── TOP CONTACT BAR ── */}
       <div className="w-full bg-[#F5EBE0]">
@@ -584,7 +596,9 @@ export default function Navbar() {
                 <div
                   key={item.name}
                   className="relative group"
-                  onMouseEnter={() => item.submenu && setActiveDropdown(item.name)}
+                  onMouseEnter={() =>
+                    item.submenu && setActiveDropdown(item.name)
+                  }
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
                   {!item.submenu ? (
@@ -598,7 +612,10 @@ export default function Navbar() {
                   ) : (
                     <>
                       {/* DROPDOWN BUTTON */}
-                      <button className="flex items-center gap-1.5 px-4 py-2.5 text-[13px] font-medium text-[#3D1F0D]/75 hover:text-[#C8972B] transition-colors duration-200 whitespace-nowrap group">
+                      <Link
+                        href={item.href}
+                        className="flex items-center gap-1.5 px-4 py-2.5 text-[13px] font-medium text-[#3D1F0D]/75 hover:text-[#C8972B] transition-colors duration-200 whitespace-nowrap group"
+                      >
                         {item.name}
                         <motion.div
                           animate={{
@@ -608,7 +625,7 @@ export default function Navbar() {
                         >
                           <ChevronDown size={14} />
                         </motion.div>
-                      </button>
+                      </Link>
 
                       {/* DROPDOWN MENU */}
                       <AnimatePresence>
@@ -625,7 +642,10 @@ export default function Navbar() {
                                 key={subItem.name}
                                 initial={{ opacity: 0, x: -4 }}
                                 animate={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 0.2, delay: idx * 0.04 }}
+                                transition={{
+                                  duration: 0.2,
+                                  delay: idx * 0.04,
+                                }}
                               >
                                 <Link
                                   href={subItem.href}
@@ -763,7 +783,9 @@ export default function Navbar() {
                     className="flex items-center gap-3 px-4 py-3 rounded-sm text-[#25D366] text-[13px] hover:bg-[#F5EBE0] transition-colors"
                   >
                     <FaWhatsapp size={18} className="flex-shrink-0" />
-                    <span className="truncate font-medium">Chat on WhatsApp</span>
+                    <span className="truncate font-medium">
+                      Chat on WhatsApp
+                    </span>
                   </a>
 
                   {/* CTA */}

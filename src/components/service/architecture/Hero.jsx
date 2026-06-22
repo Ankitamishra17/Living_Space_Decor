@@ -121,10 +121,10 @@ export default function ArchitectureHero() {
                 leading-[1.1]
                 tracking-tight
 
-                text-[32px]
-                sm:text-[46px]
-                md:text-[72px]
-                lg:text-[88px]
+                text-[22px]
+                sm:text-[30px]
+                md:text-[42px]
+                lg:text-[48px]
               "
             >
               <motion.span
@@ -172,13 +172,13 @@ export default function ArchitectureHero() {
           <motion.p
             variants={itemVariants}
             className="
-              max-w-3xl
+              max-w-2xl
               mx-auto
               mt-8
 
               text-sm
               sm:text-base
-              md:text-lg
+              md:text-md
 
               leading-relaxed
               text-white/75

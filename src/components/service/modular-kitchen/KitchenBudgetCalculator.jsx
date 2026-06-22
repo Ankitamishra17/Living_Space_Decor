@@ -120,45 +120,45 @@ export default function KitchenBudgetCalculator() {
             </p>
 
             <Link
-  href="/cost-calculator"
-  className="
-    group
-    mt-8 md:mt-10
-    inline-flex
-    items-center
-    gap-3 md:gap-4
-    bg-white
-    px-5 md:px-8
-    py-4 md:py-5
-    rounded-full
-    shadow-md
-    hover:shadow-xl
-    transition-all
-    duration-300
-  "
->
-  <span className="text-base md:text-xl font-medium">
-    Calculate Now
-  </span>
+              href="/kitchen-calculator"
+              className="
+                group
+                mt-8 md:mt-10
+                inline-flex
+                items-center
+                gap-3 md:gap-4
+                bg-white
+                px-5 md:px-8
+                py-4 md:py-5
+                rounded-full
+                shadow-md
+                hover:shadow-xl
+                transition-all
+                duration-300
+              "
+            >
+          <span className="text-base md:text-xl font-medium">
+            Calculate Now
+          </span>
 
-  <span
-    className="
-      w-10 h-10
-      md:w-12 md:h-12
-      rounded-full
-      border
-      border-zinc-300
-      flex
-      items-center
-      justify-center
-      group-hover:bg-black
-      group-hover:text-white
-      transition-all
-    "
-  >
-    <ArrowRight size={18} />
-  </span>
-</Link>
+        <span
+          className="
+            w-10 h-10
+            md:w-12 md:h-12
+            rounded-full
+            border
+            border-zinc-300
+            flex
+            items-center
+            justify-center
+            group-hover:bg-black
+            group-hover:text-white
+            transition-all
+          "
+        >
+      <ArrowRight size={18} />
+    </span>
+  </Link>
           </div>
         </div>
       </div>

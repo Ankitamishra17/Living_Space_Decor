@@ -22,21 +22,21 @@ const categories = [
     title: "Modular Wardrobes",
     image:
       "https://images.pexels.com/photos/27562185/pexels-photo-27562185.png",
-    href: "/services/wardrobe",
+    href: "/services/wardrobes",
     desc: "Smart storage solutions with premium finishes tailored to your lifestyle.",
   },
   {
     title: "Stylish Lighting",
     image:
       "https://images.pexels.com/photos/19343357/pexels-photo-19343357.jpeg",
-    href: "/services/lighting",
+    href: "/services/lights",
     desc: "Transform your interiors with ambient, decorative, and modern lighting designs.",
   },
   {
     title: "Furnishings",
     image:
       "https://images.pexels.com/photos/36601409/pexels-photo-36601409.jpeg",
-    href: "/services/furnishing",
+    href: "/services/furnitures",
     desc: "Luxury furnishings that add warmth, elegance, and personality to every space.",
   },
 ];

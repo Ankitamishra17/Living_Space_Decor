@@ -85,9 +85,9 @@ export default function KitchenHero() {
                 className="
                   block
                   text-[36px]
-                  sm:text-[48px]
-                  md:text-[60px]
-                  lg:text-[72px]
+                  sm:text-[28px]
+                  md:text-[40px]
+                  lg:text-[52px]
                 "
               >
                 Premium Modular Kitchen
@@ -102,9 +102,9 @@ export default function KitchenHero() {
                   block
                   text-[#C8972B]
                   text-[36px]
-                  sm:text-[48px]
-                  md:text-[60px]
-                  lg:text-[72px]
+                  sm:text-[28px]
+                  md:text-[40px]
+                  lg:text-[52px]
                 "
               >
                 Design In Noida
@@ -135,14 +135,14 @@ export default function KitchenHero() {
           <motion.p
             variants={itemVariants}
             className="
-              max-w-3xl
+              max-w-2xl
               mx-auto
-              mt-6
+              mt-4
               md:mt-8
               px-2
               text-sm
               sm:text-base
-              md:text-lg
+              md:text-sm
               leading-7
               md:leading-8
               text-[#acaaaa]
@@ -153,19 +153,19 @@ export default function KitchenHero() {
             storage solutions, and luxury finishes that transform everyday
             cooking into an exceptional experience.
           </motion.p>
-           {/* Buttons */}
-            <motion.div
-              variants={itemVariants}
-              className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-5 pt-8 md:pt-10"
-            >
-              <Link href="/portfolio">
-                <motion.button
-                  whileHover={{
-                    scale: 1.04,
-                    backgroundColor: "#B8852F",
-                  }}
-                  whileTap={{ scale: 0.98 }}
-                  className="
+          {/* Buttons */}
+          <motion.div
+            variants={itemVariants}
+            className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-5 pt-8 md:pt-10"
+          >
+            <Link href="/portfolio">
+              <motion.button
+                whileHover={{
+                  scale: 1.04,
+                  backgroundColor: "#B8852F",
+                }}
+                whileTap={{ scale: 0.98 }}
+                className="
                     w-full sm:w-auto
                     px-8 md:px-10
                     py-3.5 md:py-4
@@ -179,27 +179,27 @@ export default function KitchenHero() {
                     transition-all
                     duration-300
                   "
-                >
-                  <span className="flex items-center justify-center gap-2">
-                   Explore Designs
-                    <motion.span
-                      animate={{ x: [0, 4, 0] }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                      }}
-                    >
-                      →
-                    </motion.span>
-                  </span>
-                </motion.button>
-              </Link>
+              >
+                <span className="flex items-center justify-center gap-2">
+                  Explore Designs
+                  <motion.span
+                    animate={{ x: [0, 4, 0] }}
+                    transition={{
+                      duration: 2,
+                      repeat: Infinity,
+                    }}
+                  >
+                    →
+                  </motion.span>
+                </span>
+              </motion.button>
+            </Link>
 
-              <Link href="/contact">
-                <motion.button
-                  whileHover={{ scale: 1.04 }}
-                  whileTap={{ scale: 0.98 }}
-                  className="
+            <Link href="/contact">
+              <motion.button
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.98 }}
+                className="
                     w-full sm:w-auto
                     px-8 md:px-10
                     py-3 md:py-3.5
@@ -215,11 +215,11 @@ export default function KitchenHero() {
                     transition-all
                     duration-300
                   "
-                >
-                  Book Consultation
-                </motion.button>
-              </Link>
-            </motion.div>
+              >
+                Book Consultation
+              </motion.button>
+            </Link>
+          </motion.div>
         </motion.div>
 
         {/* Bottom Accent Line */}

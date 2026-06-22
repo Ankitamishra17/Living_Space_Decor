@@ -5,7 +5,7 @@ import { ArrowRight, Phone } from "lucide-react";
 
 export default function ServiceConsultation() {
   return (
-    <section className="px-4 md:px-8 py-10 md:py-16">
+    <section className="px-4 md:px-8 py-6 md:py-10">
       <div className="relative overflow-hidden rounded-[24px] md:rounded-[32px]">
         {/* Video */}
         <video
@@ -26,30 +26,29 @@ export default function ServiceConsultation() {
         <div className="absolute bottom-0 left-0 h-40 w-40 md:h-72 md:w-72 rounded-full bg-[#C8972B]/10 blur-3xl" />
 
         {/* Content */}
-        <div className="relative z-10 min-h-[520px] md:min-h-[650px] flex items-center">
-          <div className="max-w-4xl px-6 py-16 md:px-16 md:py-24">
+        <div className="relative z-10 min-h-[300px] md:min-h-[340px] flex items-center">
+          <div className="max-w-4xl px-6 py-10 md:px-12 md:py-14">
+            {" "}
             {/* Badge */}
             <div className="inline-flex items-center gap-2 rounded-full border border-[#C8972B]/30 bg-[#C8972B]/10 px-4 py-2 backdrop-blur-md">
-              <span className="text-[10px] md:text-xs tracking-[0.25em] uppercase text-[#F5EBE0]">
+              <span className="text-[8px] md:text-xs tracking-[0.25em] uppercase text-[#F5EBE0]">
                 Premium Interior Solutions
               </span>
             </div>
-
             {/* Heading */}
-            <h2 className="mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] text-white">
+            <h2 className="mt-4 text-2xl sm:text-3xl md:text-4xl font-bold leading-[1.1] text-white">
+              {" "}
               Let's Create a Space
               <br />
               That Reflects
               <span className="block text-[#C8972B]">Your Lifestyle</span>
             </h2>
-
             {/* Description */}
-            <p className="mt-5 max-w-2xl text-sm sm:text-base md:text-lg leading-relaxed text-[#F5EBE0]/90">
+            <p className="mt-5 max-w-2xl text-[12px] sm:text-base md:text-sm leading-relaxed text-[#F5EBE0]/90">
               From concept to completion, we design beautiful interiors,
               architectural spaces, turnkey projects and modular kitchens
               tailored to your vision, lifestyle and budget.
             </p>
-
             {/* Trust Points */}
             <div className="mt-8 flex flex-wrap gap-3 md:gap-4">
               {[
@@ -65,7 +64,6 @@ export default function ServiceConsultation() {
                 </div>
               ))}
             </div>
-
             {/* CTA */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
@@ -87,7 +85,6 @@ export default function ServiceConsultation() {
                 Book Consultation
               </Link>
             </div>
-
             {/* Mobile Stats */}
             <div className="mt-10 grid grid-cols-3 gap-4 md:hidden">
               <div className="rounded-xl bg-white/10 backdrop-blur-md p-3 text-center">
@@ -110,7 +107,7 @@ export default function ServiceConsultation() {
 
         {/* Desktop Stats */}
         <div className="absolute bottom-8 right-8 hidden lg:block">
-          <div className="rounded-3xl border border-white/15 bg-white/10 p-8 backdrop-blur-xl">
+          <div className="rounded-3xl border border-white/15 bg-white/10 p-5 backdrop-blur-xl">
             <div className="grid grid-cols-3 gap-8">
               <div>
                 <h3 className="text-3xl font-bold text-[#C8972B]">500+</h3>

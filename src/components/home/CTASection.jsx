@@ -91,7 +91,7 @@ export default function CTABanner() {
               </h3>
 
               <Link
-                href="/cost-calculator"
+                href="/kitchen-calculator"
                 className="
                   group
                   flex items-center justify-center gap-3
