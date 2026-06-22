@@ -121,7 +121,7 @@ export default function WhyLightingMatters() {
             {/* Heading */}
             <motion.h2
               variants={itemVariants}
-              className="mt-2 sm:mt-8 text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight text-[#3D1F0D]"
+              className="mt-2 sm:mt-8 text-3xl sm:text-xl lg:text-4xl font-semibold leading-tight text-[#3D1F0D]"
             >
               Lighting is More Than
               <span className="block text-[#C8972B] mt-2">Illumination</span>
@@ -130,7 +130,7 @@ export default function WhyLightingMatters() {
             {/* Description */}
             <motion.p
               variants={itemVariants}
-              className="mt-2 sm:mt-6 text-[#3D1F0D]/70 text-sm sm:text-base leading-relaxed max-w-sm"
+              className="mt-2 sm:mt-6 text-[#3D1F0D]/70 text-sm sm:text-sm leading-relaxed max-w-sm"
             >
               Transform your spaces with strategic lighting design that combines aesthetics, functionality, and innovation.
             </motion.p>
@@ -187,7 +187,7 @@ export default function WhyLightingMatters() {
               <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.98 }}
-                className="group inline-flex items-center gap-2.5 rounded-full bg-[#C8972B] hover:bg-[#B8851F] text-white font-semibold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-3.5 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="group inline-flex items-center gap-2.5 rounded-md bg-[#3D1F0D] hover:bg-[#3D1F0D] text-white font-semibold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-3.5 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Explore Lighting Solutions
                 <motion.div
@@ -195,7 +195,7 @@ export default function WhyLightingMatters() {
                   transition={{ duration: 1.5, repeat: Infinity }}
                   className="transition-transform duration-300 group-hover:translate-x-1"
                 >
-                  <ArrowRight size={18} />
+                  <ArrowRight size={16} />
                 </motion.div>
               </motion.button>
             </motion.div>

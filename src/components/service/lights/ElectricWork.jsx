@@ -4,16 +4,16 @@ import { ArrowRight } from "lucide-react";
 
 export default function LightingShowcase() {
   return (
-    <section className="bg-[#F5EBE0] py-24">
+    <section className="bg-[#F5EBE0] py-15">
       <div className="container mx-auto px-4">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Content */}
-          <div className="ml-[100px]">
+          <div className="ml-[40px]">
             <span className="text-[#B8893D] uppercase tracking-[0.3em] text-sm font-medium">
              Lighting
             </span>
 
-            <h2 className="mt-4 text-3xl lg:text-4xl font-light text-[#3D1F0D] leading-tight">
+            <h2 className="mt-4 text-xl  lg:text-4xl font-light text-[#3D1F0D] leading-tight">
               We Provide Complete
               <span className="block font-normal">Electric Work</span>
             </h2>
@@ -42,23 +42,36 @@ export default function LightingShowcase() {
               <ArrowRight className="transition-transform group-hover:translate-x-1" />
             </button>
           </div>
-
-          {/* Right Video */}
+        
+          {/* Right Video with Frame */}
           <div className="relative">
-            <div className="overflow-hidden rounded-none shadow-2xl">
-              <video
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-[400px] object-cover"
-              >
-                <source
-                  src="https://www.pexels.com/download/video/17211925/"
-                  type="video/mp4"
-                />
-              </video>
+            {/* Decorative frame background */}
+            <div className="absolute -inset-4 md:-inset-6 bg-gradient-to-br from-[#B8851F]/20 to-transparent rounded-lg" />
+
+            {/* Frame border */}
+            <div className="relative bg-[#3D1F0D] p-4 md:p-6 border border-[#B8851F]/30">
+              <div className="relative overflow-hidden bg-black aspect-video md:aspect-auto md:h-[450px]">
+                <video
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source
+                    src= "https://www.pexels.com/download/video/17211925/"
+                    type="video/mp4"
+                  />
+                </video>
+
+                {/* Subtle overlay */}
+                <div className="absolute inset-0 bg-black/10" />
+              </div>
             </div>
+
+            {/* Accent corner elements */}
+            <div className="absolute -top-2 -right-2 w-8 h-8 border-t-2 border-r-2 border-[#B8851F]/40" />
+            <div className="absolute -bottom-2 -left-2 w-8 h-8 border-b-2 border-l-2 border-[#B8851F]/40" />
           </div>
         </div>
       </div>

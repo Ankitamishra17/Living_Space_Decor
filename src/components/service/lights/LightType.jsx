@@ -59,14 +59,14 @@ export default function LightingTypes() {
               <button
                 key={index}
                 onClick={() => setActive(index)}
-                className={`group w-full text-left rounded-3xl border p-6 transition-all duration-500 ${
+                className={`group w-full text-left rounded-md border p-6 transition-all duration-500 ${
                   active === index
                     ? "bg-[#3D1F0D] border-[#3D1F0D] text-white"
-                    : "bg-white border-gray-200 hover:border-[#C8972B]"
+                    : "bg-white border-gray-200 text-[#3D1F0D] hover:border-[#C8972B]"
                 }`}
               >
                 <div className="flex items-center justify-between">
-                  <h3 className="text-2xl font-semibold">{item.title}</h3>
+                  <h3 className="text-xl font-semibold">{item.title}</h3>
 
                   <ArrowRight
                     className={`transition-transform duration-300 ${
@@ -78,7 +78,7 @@ export default function LightingTypes() {
                 </div>
 
                 <p
-                  className={`mt-4 ${
+                  className={`mt-4 text-[12px] ${
                     active === index ? "text-gray-300" : "text-gray-400"
                   }`}
                 >
