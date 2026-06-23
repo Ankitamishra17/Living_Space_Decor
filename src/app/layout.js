@@ -3,6 +3,8 @@
 import { usePathname } from "next/navigation";
 import { Marcellus, Poppins } from "next/font/google";
 import "./globals.css";
+import ScrollToTop from "@/components/ScrollToTop";
+import BackToTop from "@/components/common/BackToTop";
 
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
@@ -34,12 +36,14 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.png" />
       </head>
       <body className="min-h-screen flex flex-col">
-        {!isAdmin && <Navbar />}
+       <ScrollToTop />
+        { <Navbar />}
 
         <main className="flex-1">{children}</main>
 
-        {!isAdmin && <Footer />}
-        {!isAdmin && <ShareButton />}
+        {  <Footer />}
+        {<ShareButton />}
+         <BackToTop />
       </body>
     </html>
   );
