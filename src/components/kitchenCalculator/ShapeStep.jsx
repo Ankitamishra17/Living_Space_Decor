@@ -169,13 +169,13 @@ export default function ShapeStep({
           Step 2 of 4
         </p>
 
-        <h2 className="text-4xl md:text-5xl font-bold text-[#3D1F0D] mb-4">
+        <h2 className="text-4xl md:text-5xl font-heading text-[#3D1F0D] mb-4">
           Choose Your Kitchen
           <br />
           <span className="text-[#C8972B]">Layout</span>
         </h2>
 
-        <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+        <p className="text-gray-600 text-sm max-w-2xl mx-auto leading-relaxed">
           Select the kitchen shape that matches your space and workflow needs
         </p>
       </motion.div>
@@ -189,7 +189,7 @@ export default function ShapeStep({
           transition={{ delay: 0.2, duration: 0.5 }}
           className="space-y-4 order-2 lg:order-1"
         >
-          <p className="text-sm font-semibold text-gray-600 uppercase tracking-wide mb-6">
+          <p className="text-sm font-heading text-gray-600 uppercase tracking-wide mb-6">
             Available Layouts
           </p>
 
@@ -231,7 +231,7 @@ export default function ShapeStep({
                     <motion.div
                       animate={isSelected ? { scale: 1.2 } : { scale: 1 }}
                       transition={{ duration: 0.2 }}
-                      className={`flex-shrink-0 w-6 h-6 rounded-full border-2 flex items-center justify-center mt-1
+                      className={`flex-shrink-0 w-4 h-4 rounded-full border-2 flex items-center justify-center mt-1
                         ${
                           isSelected
                             ? "border-[#C8972B]"
@@ -268,7 +268,7 @@ export default function ShapeStep({
                           }}
                         >
                           <ShapeIcon
-                            size={20}
+                            size={16}
                             strokeWidth={2}
                             style={{
                               color: shapeIcon?.color || "#3D1F0D",
@@ -276,7 +276,7 @@ export default function ShapeStep({
                           />
                         </motion.div>
 
-                        <h3 className="font-semibold text-[#3D1F0D] text-lg">
+                        <h3 className="font-heading text-nowrap text-[#3D1F0D] text-[11px] lg:text[14px]">
                           {shape.title}
                         </h3>
                       </div>
@@ -341,7 +341,7 @@ export default function ShapeStep({
                 </div>
 
                 {/* Shape Info */}
-                <div className="space-y-4">
+                <div className="space-y-2 -mt-16">
                   <div className="flex items-center gap-3 pb-4 border-b border-[#C8972B]/20">
                     <motion.div
                       animate={{ rotate: 360 }}
@@ -353,14 +353,14 @@ export default function ShapeStep({
                       className="flex-shrink-0 p-2.5 rounded-lg"
                       style={{
                         backgroundColor:
-                          metadata?.color + "20",
+                         "#3D1F0D"  + "20",
                       }}
                     >
                       <Icon
                         size={24}
                         strokeWidth={2}
                         style={{
-                          color: metadata?.color || "#3D1F0D",
+                          color:  "#3D1F0D",
                         }}
                       />
                     </motion.div>
@@ -396,10 +396,10 @@ export default function ShapeStep({
                         key={idx}
                         className="p-3 rounded-xl bg-white/60 backdrop-blur-sm"
                       >
-                        <p className="text-xs font-semibold uppercase tracking-wide text-gray-600 mb-1">
+                        <p className="text-xs font-body uppercase tracking-wide text-gray-600 mb-1">
                           {item.label}
                         </p>
-                        <p className="text-sm font-semibold text-[#3D1F0D]">
+                        <p className="text-sm font-body text-[#3D1F0D]">
                           {item.value}
                         </p>
                       </div>
@@ -422,20 +422,7 @@ export default function ShapeStep({
         </motion.div>
       </div>
 
-      {/* Info Box */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.5 }}
-        className="max-w-4xl mx-auto mt-12 p-5 md:p-6 bg-blue-50 rounded-2xl border border-blue-200"
-      >
-        <p className="text-sm md:text-base text-blue-900 text-center">
-          <span className="font-semibold">💡 Did you know?</span> The kitchen work
-          triangle (sink, stove, refrigerator) affects efficiency. We optimize
-          this for your chosen layout.
-        </p>
-      </motion.div>
-
+      
       {/* Action Buttons */}
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -445,7 +432,7 @@ export default function ShapeStep({
       >
         <button
           onClick={onBack}
-          className="px-8 py-4 border-2 border-[#3D1F0D] text-[#3D1F0D] rounded-full font-semibold hover:bg-[#3D1F0D]/5 transition-all duration-300 w-full sm:w-auto"
+          className="px-8 py-3 border-2 border-[#3D1F0D] text-[#3D1F0D] rounded-md font-body hover:bg-[#3D1F0D]/5 transition-all duration-300 w-full sm:w-auto"
         >
           Back
         </button>
@@ -455,7 +442,7 @@ export default function ShapeStep({
           whileTap={selected ? { scale: 0.95 } : {}}
           disabled={!selected}
           onClick={onNext}
-          className={`px-12 py-4 rounded-full font-semibold text-lg transition-all duration-300 flex items-center justify-center gap-2 w-full sm:w-auto
+          className={`px-12 py-4 rounded-md font-body text-nowrap text-md transition-all duration-300 flex items-center justify-center gap-2 w-full sm:w-auto
             ${
               selected
                 ? "bg-[#3D1F0D] text-white hover:bg-[#2A1408] shadow-lg shadow-[#3D1F0D]/20 hover:shadow-xl hover:shadow-[#3D1F0D]/30"

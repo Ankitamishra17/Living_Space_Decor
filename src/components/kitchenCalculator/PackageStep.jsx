@@ -16,7 +16,7 @@ export default function PackageStep({
           Step 3 of 4
         </p>
 
-        <h2 className="text-3xl md:text-4xl font-bold text-[#3D1F0D]">
+        <h2 className="text-3xl md:text-4xl font-heading text-[#3D1F0D]">
           Select Your Package
         </h2>
 
@@ -26,7 +26,7 @@ export default function PackageStep({
       </div>
 
       {/* Package Cards */}
-      <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-6">
+      <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-6">
         {packages.map((pkg) => (
           <div
             key={pkg.id}
@@ -35,7 +35,7 @@ export default function PackageStep({
               
               ${
                 selected === pkg.id
-                  ? "border-[#C8972B] shadow-xl"
+                  ? "border-gray-400 shadow-xl"
                   : "border-gray-200"
               }`}
           >
@@ -97,7 +97,7 @@ export default function PackageStep({
       <div className="flex justify-center gap-4 mt-12">
         <button
           onClick={onBack}
-          className="px-8 py-3 border border-[#3D1F0D] text-[#3D1F0D] rounded-full"
+          className="px-8 py-3 border border-[#3D1F0D] text-[#3D1F0D] rounded-md"
         >
           Back
         </button>
@@ -105,7 +105,7 @@ export default function PackageStep({
         <button
           disabled={!selected}
           onClick={onNext}
-          className={`px-10 py-3 rounded-full font-medium transition
+          className={`px-10 py-3 rounded-md font-medium transition
             ${
               selected
                 ? "bg-[#3D1F0D] text-white"

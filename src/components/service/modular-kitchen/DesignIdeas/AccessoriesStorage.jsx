@@ -98,8 +98,8 @@ export default function AccessoriesStorage() {
                 that optimize storage and improve everyday convenience.
               </p>
 
-              <button className="mt-6 rounded-xl bg-[#B8851F] px-6 py-3 text-white font-medium">
-                Get Free Design Consultation
+              <button className="mt-6 rounded-md text-nowrap bg-[#B8851F] px-6 py-3 text-white font-sm">
+                Get Free  Consultation
               </button>
             </div>
 

@@ -157,11 +157,11 @@ export default function DesignGallery({ data }) {
       <div className="max-w-7xl mx-auto px-4 md:px-8">
         {/* Header */}
         <div className="mb-20">
-          <h2 className="text-4xl md:text-5xl font-serif text-white leading-tight mb-4">
+          <h2 className="text-3xl md:text-5xl sm:text-xl lg:text-5xl font-serif text-white leading-tight mb-4">
             {heading}
           </h2>
 
-          <p className="text-sm text-[#C8972B] mb-8 max-w-xl leading-relaxed">
+          <p className="text-sm text-[#ddd8ce] mb-8 max-w-xl leading-relaxed">
             {description}
           </p>
 

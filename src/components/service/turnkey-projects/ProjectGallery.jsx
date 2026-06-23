@@ -13,7 +13,7 @@ const projects = [
     height: "h-[520px]",
   },
   {
-    title: "Master Bedroom",
+    title: " Bedroom",
     category: "Bedroom",
     image:
       "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200",
@@ -37,7 +37,7 @@ const projects = [
     title: "Office Space",
     category: "Commercial",
     image:
-      "/lsd_images/24.jpg",
+      "https://images.pexels.com/photos/9300768/pexels-photo-9300768.jpeg",
     height: "h-[520px]",
   },
   {

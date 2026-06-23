@@ -31,7 +31,7 @@ export default function CategorySection() {
         {/* Heading */}
         <div className="flex items-center justify-center gap-4 mb-12">
           <span className="w-12 h-[1px] bg-[#B88A5A]" />
-          <h2 className="text-xs tracking-[4px] font-medium text-[#3D1F0D] uppercase">
+          <h2 className="text-xs tracking-[2px] text-nowrap font-heading text-[#3D1F0D] uppercase">
             Browse By Category
           </h2>
           <span className="w-12 h-[1px] bg-[#B88A5A]" />
@@ -57,11 +57,11 @@ export default function CategorySection() {
               {/* Content */}
               <div className="relative text-center py-8">
                 {/* Icon Circle */}
-                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#B88A5A] border-4 border-white flex items-center justify-center shadow-lg">
+                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-12 h-12 rounded-full bg-[#B88A5A] border-2 border-white flex items-center justify-center shadow-lg">
                   <span className="text-white text-lg">⌂</span>
                 </div>
 
-                <h3 className="text-[#3D1F0D] font-semibold text-lg mt-2">
+                <h3 className="text-[#3D1F0D] font-heading text-lg mt-2">
                   {item.title}
                 </h3>
 

@@ -23,15 +23,15 @@ export default function DesignHero({ data }) {
           {/* Content */}
           <div className="absolute inset-0 flex items-center justify-center text-center px-4">
             <div>
-              <p className="text-[#F5EBE0] uppercase tracking-[6px] text-xs md:text-sm mb-4">
+              <p className="text-[#F5EBE0] uppercase tracking-[2px] text-xs md:text-sm mb-4">
                 Interior Design Studio
               </p>
 
-              <h1 className="text-[#F5EBE0] font-serif text-3xl md:text-4xl lg:text-5xl leading-tight">
+              <h1 className="text-[#F5EBE0] font-heading text-3xl md:text-4xl lg:text-5xl leading-tight">
                 {data.title}
               </h1>
 
-              <p className="text-[#F5EBE0]/90 mt-4 text-sm md:text-lg italic">
+              <p className="text-[#F5EBE0]/90 mt-4 text-sm md:text-lg font-serif  tracking-[1.5px]">
                 {data.subtitle}
               </p>
             </div>

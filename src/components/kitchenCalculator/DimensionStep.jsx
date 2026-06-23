@@ -153,13 +153,13 @@ export default function DimensionStep({ selected, onSelect, onNext }) {
             Step 1 of 4
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-[#3D1F0D] mb-4 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-heading text-[#3D1F0D] mb-4 leading-tight">
             What's Your
             <br />
             <span className="text-[#C8972B]">Kitchen Size?</span>
           </h2>
 
-          <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+          <p className="text-gray-600 text-sm max-w-2xl mx-auto leading-relaxed">
             Select the dimensions that best match your kitchen to get accurate
             estimates for your dream space.
           </p>
@@ -218,16 +218,16 @@ export default function DimensionStep({ selected, onSelect, onNext }) {
                         transition={{ duration: 0.2 }}
                         className={`p-3.5 rounded-2xl transition-all duration-300 ${
                           isSelected
-                            ? "bg-[#C8972B] text-white shadow-lg shadow-[#C8972B]/30"
+                            ? "bg-[#C8972B] text-white shadow-md shadow-[#C8972B]/30"
                             : "bg-gray-100 text-gray-600 group-hover:bg-[#F5EBE0]"
                         }`}
                       >
-                        <Icon size={24} strokeWidth={1.5} />
+                        <Icon size={18} strokeWidth={1} />
                       </motion.div>
 
                       {/* Custom Radio Circle */}
                       <motion.div
-                        className={`w-6 h-6 rounded-full border-2 flex items-center justify-center transition-all duration-300 flex-shrink-0 ${
+                        className={`w-4 h-4 rounded-full border-2 flex items-center justify-center transition-all duration-300 flex-shrink-0 ${
                           isSelected
                             ? "border-[#C8972B] bg-[#C8972B]"
                             : "border-gray-300 group-hover:border-[#C8972B]/40"
@@ -278,7 +278,7 @@ export default function DimensionStep({ selected, onSelect, onNext }) {
           className="max-w-4xl mx-auto mb-12 p-5 bg-gradient-to-r from-[#F5EBE0] to-transparent rounded-2xl border border-[#C8972B]/10"
         >
           <p className="text-sm text-gray-700 text-center">
-            💡 <span className="font-medium">Tip:</span> These dimensions represent the
+           <span className="font-medium">Tip:</span> These dimensions represent the
             total kitchen floor space. Final cost will depend on your selections in the
             next steps.
           </p>
@@ -294,14 +294,14 @@ export default function DimensionStep({ selected, onSelect, onNext }) {
           <button
             onClick={handleNext}
             disabled={!selected}
-            className={`flex-1 sm:flex-none px-12 py-4 rounded-full font-semibold text-lg transition-all duration-300 relative group
+            className={`flex-1 sm:flex-none px-6 py-4 rounded-md font-body text-md transition-all duration-300 relative group
               ${
                 selected
                   ? "bg-[#3D1F0D] text-white hover:bg-[#2a1408] shadow-lg shadow-[#3D1F0D]/20 hover:shadow-xl hover:shadow-[#3D1F0D]/30"
                   : "bg-gray-200 text-gray-500 cursor-not-allowed"
               }`}
           >
-            <span className="relative z-10 flex items-center justify-center gap-2">
+            <span className="relative  text-nowrap z-10 flex items-center justify-center gap-2">
               Continue to Materials
               <motion.span
                 animate={selected ? { x: [0, 4, 0] } : {}}

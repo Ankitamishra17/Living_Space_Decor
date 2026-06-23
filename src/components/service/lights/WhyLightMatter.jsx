@@ -121,7 +121,7 @@ export default function WhyLightingMatters() {
             {/* Heading */}
             <motion.h2
               variants={itemVariants}
-              className="mt-2 sm:mt-8 text-3xl sm:text-xl lg:text-4xl font-semibold leading-tight text-[#3D1F0D]"
+              className="mt-2 sm:mt-8 text-3xl sm:text-xl lg:text-4xl font-heading leading-tight text-[#3D1F0D]"
             >
               Lighting is More Than
               <span className="block text-[#C8972B] mt-2">Illumination</span>
@@ -159,18 +159,18 @@ export default function WhyLightingMatters() {
                       <motion.div
                         whileHover={{ scale: 1.12, rotate: 5 }}
                         transition={{ duration: 0.3 }}
-                        className="mb-4 inline-flex h-11 w-11 items-center justify-center rounded-lg bg-[#C8972B]/12 text-[#C8972B] group-hover:bg-[#C8972B]/20 transition-colors duration-300"
+                        className="mb-4 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-[#C8972B]/12 text-[#C8972B] group-hover:bg-[#C8972B]/20 transition-colors duration-300"
                       >
                         <Icon size={20} strokeWidth={1.8} />
                       </motion.div>
 
                       {/* Title */}
-                      <h3 className="mb-3 text-sm sm:text-sm font-semibold text-[#3D1F0D]">
+                      <h3 className="mb-3 text-sm sm:text-sm font-heading text-[#3D1F0D]">
                         {item.title}
                       </h3>
 
                       {/* Description */}
-                      <p className="text-xs sm:text-sm leading-relaxed text-[#3D1F0D]/65">
+                      <p className="text-xs font-body sm:text-sm leading-relaxed text-[#3D1F0D]/65">
                         {item.description}
                       </p>
                     </div>
@@ -187,7 +187,7 @@ export default function WhyLightingMatters() {
               <motion.button
                 whileHover={{ scale: 1.04 }}
                 whileTap={{ scale: 0.98 }}
-                className="group inline-flex items-center gap-2.5 rounded-md bg-[#3D1F0D] hover:bg-[#3D1F0D] text-white font-semibold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-3.5 transition-all duration-300 shadow-lg hover:shadow-xl"
+                className="group inline-flex items-center gap-2.5 rounded-md bg-[#3D1F0D] hover:bg-[#3D1F0D] text-white font-body text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-3.5 transition-all duration-300 shadow-lg hover:shadow-xl"
               >
                 Explore Lighting Solutions
                 <motion.div

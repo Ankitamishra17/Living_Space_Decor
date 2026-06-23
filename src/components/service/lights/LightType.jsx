@@ -47,7 +47,7 @@ export default function LightingTypes() {
             Lighting Solutions
           </span>
 
-          <h2 className="mt-6 text-4xl md:text-5xl font-bold text-[#3D1F0D]">
+          <h2 className="mt-6 text-4xl md:text-5xl font-heading text-[#3D1F0D]">
             Types of Lighting We Design
           </h2>
         </div>
@@ -66,7 +66,7 @@ export default function LightingTypes() {
                 }`}
               >
                 <div className="flex items-center justify-between">
-                  <h3 className="text-xl font-semibold">{item.title}</h3>
+                  <h3 className="text-xl font-heading">{item.title}</h3>
 
                   <ArrowRight
                     className={`transition-transform duration-300 ${

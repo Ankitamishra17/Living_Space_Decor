@@ -145,10 +145,7 @@ export default function MaterialsFinishes() {
                   {item.description}
                 </p>
 
-                <button className="mt-5 inline-flex items-center gap-2 text-[#B8851F] font-semibold hover:gap-3 transition-all">
-                  Explore
-                  <ArrowRight size={16} />
-                </button>
+                
               </div>
             </div>
           ))}

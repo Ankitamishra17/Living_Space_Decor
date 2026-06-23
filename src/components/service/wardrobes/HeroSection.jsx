@@ -41,11 +41,11 @@ export default function HeroSection() {
               </p>
 
               <div className="mt-10 flex flex-wrap justify-center gap-4">
-                <button className="rounded-lg bg-[#B8851F] px-8 py-4 font-semibold text-white transition hover:opacity-90">
+                <button className="rounded-md bg-[#B8851F] px-8 py-4 font-body text-white transition hover:opacity-90">
                   Explore Designs
                 </button>
 
-                <button className="rounded-lg border border-white/30 bg-white/10 px-8 py-4 font-semibold text-white backdrop-blur transition hover:bg-white/20">
+                <button className="rounded-md border border-[#B8851F] bg-white/10 px-8 py-4 font-body text-white backdrop-blur transition hover:bg-white/20">
                   Book Free Consultation
                 </button>
               </div>
@@ -55,9 +55,9 @@ export default function HeroSection() {
       </div>
 
       {/* Floating Cards */}
-      <div className=" bg-[#F5EBE0] relative z-20 -mt-32">
-        <div className="container mx-auto px-4">
-          <div className="grid gap-6 md:grid-cols-3">
+      <div className=" bg-[#F5EBE0] relative z-20 ">
+        <div className="container mx-auto px-4 ">
+          <div className="grid gap-6 md:grid-cols-3 mt-2">
             {wardrobeTypes.map((item, index) => {
               const Icon = icons[index];
 

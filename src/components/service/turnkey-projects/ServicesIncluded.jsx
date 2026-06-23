@@ -73,11 +73,7 @@ export default function TurnkeyBenefits() {
                   {benefit.description}
                 </p>
 
-                {/* Learn More */}
-                <div className="flex items-center gap-2 font-semibold text-[#C8972B] transition-all duration-300 group-hover:gap-4">
-                  Learn More
-                  <ArrowRight size={18} />
-                </div>
+              
 
                 {/* Decorative Background */}
                 <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-[#C8972B]/5 transition-all duration-500 group-hover:scale-150"></div>

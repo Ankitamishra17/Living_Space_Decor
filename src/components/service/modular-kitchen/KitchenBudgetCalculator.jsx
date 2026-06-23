@@ -108,7 +108,7 @@ export default function KitchenBudgetCalculator() {
 
           {/* Right Side Content */}
           <div className="text-center lg:ml-34 ">
-            <h2 className="text-[36px] sm:text-[44px] md:text-[56px] lg:text-5xl font-semibold text-zinc-900 leading-tight">
+            <h2 className="text-[36px] sm:text-[34px] md:text-[56px] lg:text-5xl font-heading text-zinc-900 leading-tight">
               Kitchen Budget
               <br />
               Calculator
@@ -129,8 +129,8 @@ export default function KitchenBudgetCalculator() {
                 gap-3 md:gap-4
                 bg-white
                 px-5 md:px-8
-                py-4 md:py-5
-                rounded-full
+                py-3 md:py-4
+                rounded-md
                 shadow-md
                 hover:shadow-xl
                 transition-all

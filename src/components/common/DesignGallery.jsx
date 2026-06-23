@@ -98,7 +98,7 @@ export default function DesignGallery({ data }) {
               {data.galleryDescription}
             </motion.p>
 
-            <motion.button
+            {/* <motion.button
               initial={{ opacity: 0, y: 10 }}
               animate={centerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
               transition={{ duration: 0.6, delay: 0.4 }}
@@ -113,7 +113,7 @@ export default function DesignGallery({ data }) {
               >
                 <ArrowRight size={14} />
               </motion.div>
-            </motion.button>
+            </motion.button> */}
           </motion.div>
 
           {/* Right Image */}

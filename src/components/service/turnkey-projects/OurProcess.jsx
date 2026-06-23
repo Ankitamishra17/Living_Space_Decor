@@ -114,7 +114,7 @@ export default function TurnkeyOverview() {
             </div>
 
             <div className="mt-10">
-              <button className="bg-[#3D1F0D] hover:bg-[#C8972B] text-white px-8 py-4 rounded-md font-semibold transition-all duration-300">
+              <button className="bg-[#3D1F0D] hover:bg-[#C8972B] text-white px-8 py-4 rounded-md font-body transition-all duration-300">
                 Book Free Consultation
               </button>
             </div>

@@ -1,126 +1,4 @@
-// "use client";
 
-// import { useState } from "react";
-
-// import DimensionStep from "./DimensionStep";
-// import ShapeStep from "./ShapeStep";
-// import PackageStep from "./PackageStep";
-// import LeadFormStep from "./LeadFormStep";
-
-// export default function KitchenCostCalculator() {
-//   const [step, setStep] = useState(1);
-
-//   const [formData, setFormData] = useState({
-//     dimension: "",
-//     shape: "",
-//     package: "",
-//     name: "",
-//     email: "",
-//     phone: "",
-//     pincode: "",
-//   });
-
-//   const handleDimensionSelect = (dimension) => {
-//     setFormData((prev) => ({
-//       ...prev,
-//       dimension,
-//     }));
-
-//     if (dimension === "Custom") {
-//       setStep(4);
-//     }
-//   };
-
-//   const nextStep = () => {
-//     setStep((prev) => prev + 1);
-//   };
-
-//   const prevStep = () => {
-//     setStep((prev) => prev - 1);
-//   };
-
-//   return (
-//     <div className="max-w-6xl mx-auto bg-white rounded-[30px] shadow-xl p-6 md:p-12">
-//       {/* Progress */}
-//       <div className="mb-10">
-//         <div className="flex justify-between mb-4">
-//           {[1, 2, 3, 4].map((item) => (
-//             <div
-//               key={item}
-//               className={`w-10 h-10 rounded-full flex items-center justify-center font-semibold
-//               ${
-//                 step >= item
-//                   ? "bg-[#C8972B] text-white"
-//                   : "bg-[#F5EBE0] text-[#3D1F0D]"
-//               }`}
-//             >
-//               {item}
-//             </div>
-//           ))}
-//         </div>
-
-//         <div className="h-2 bg-[#F5EBE0] rounded-full">
-//           <div
-//             className="h-full bg-[#C8972B] rounded-full transition-all duration-500"
-//             style={{
-//               width: `${(step / 4) * 100}%`,
-//             }}
-//           />
-//         </div>
-//       </div>
-
-//       {step === 1 && (
-//         <DimensionStep
-//           selected={formData.dimension}
-//           onSelect={handleDimensionSelect}
-//           onNext={nextStep}
-//         />
-//       )}
-
-//       {step === 2 && (
-//         <ShapeStep
-//           selected={formData.shape}
-//           onSelect={(shape) =>
-//             setFormData((prev) => ({
-//               ...prev,
-//               shape,
-//             }))
-//           }
-//           onNext={nextStep}
-//           onBack={prevStep}
-//         />
-//       )}
-
-//       {step === 3 && (
-//         <PackageStep
-//           selected={formData.package}
-//           onSelect={(pkg) =>
-//             setFormData((prev) => ({
-//               ...prev,
-//               package: pkg,
-//             }))
-//           }
-//           onNext={nextStep}
-//           onBack={prevStep}
-//         />
-//       )}
-
-//       {step === 4 && (
-//         <LeadFormStep
-//           formData={formData}
-//           setFormData={setFormData}
-//           onBack={() => {
-//             if (formData.dimension === "Custom") {
-//               setStep(1);
-//             } else {
-//               prevStep();
-//             }
-//           }}
-//         />
-//       )}
-//     </div>
-//   );
-// }
 
 "use client";
 
@@ -192,12 +70,12 @@ export default function KitchenCostCalculator() {
           transition={{ duration: 0.6 }}
           className="mb-8 md:mb-12"
         >
-          <h1 className="text-2xl md:text-4xl font-bold text-[#3D1F0D] text-center mb-3">
+          <h1 className=" mt-10 text-2xl  md:text-4xl font-heading text-[#3D1F0D] text-center mb-3">
             Kitchen Cost
             <br />
             <span className="text-[#C8972B]">Calculator</span>
           </h1>
-          <p className="text-gray-600 text-center text-lg max-w-2xl mx-auto">
+          <p className="text-gray-600 text-center text-md max-w-2xl mx-auto">
             Get an instant estimate for your dream kitchen in just a few steps
           </p>
         </motion.div>
@@ -349,7 +227,7 @@ export default function KitchenCostCalculator() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
               transition={{ duration: 0.3 }}
-              className="mt-6 mx-auto flex items-center gap-2 px-6 py-3 text-gray-700 hover:text-[#3D1F0D] font-medium transition-colors duration-300 group"
+              className="mt-6 mx-auto flex items-center gap-2 px-6 py-3 text-gray-700 hover:text-[#3D1F0D] font-body transition-colors duration-300 group"
             >
               <ChevronLeft
                 size={20}
@@ -368,7 +246,7 @@ export default function KitchenCostCalculator() {
           className="mt-8 md:mt-12 text-center text-sm text-gray-500 px-4"
         >
           <p>
-            💬 Questions? <span className="text-[#C8972B]">Chat with us</span> or call our
+             Questions? <span className="text-[#C8972B]">Chat with us</span> or call our
             design team
           </p>
         </motion.div>

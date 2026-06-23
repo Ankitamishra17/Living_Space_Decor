@@ -180,7 +180,7 @@ export default function GateSlider() {
           <button
             key={c}
             onClick={() => switchCat(c)}
-            className={`px-6 py-4 text-xs tracking-[0.25em] uppercase transition-all duration-200 border-b-2 ${
+            className={`px-2 lg:px-6 py-4 text-xs text-nowrap tracking-[0.25em] uppercase transition-all duration-200 border-b-2 ${
               cat === c
                 ? "text-[#C8972B] border-[#C8972B]"
                 : "text-white/40 border-transparent hover:text-white/70"

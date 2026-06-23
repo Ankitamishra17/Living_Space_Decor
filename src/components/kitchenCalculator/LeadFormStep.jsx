@@ -345,13 +345,13 @@ export default function LeadFormStep({
               Step 4 of 4
             </p>
 
-            <h2 className="text-4xl md:text-5xl font-bold text-[#3D1F0D] mb-4">
+            <h2 className="text-4xl md:text-5xl font-heading text-[#3D1F0D] mb-4">
               Get Your Kitchen
               <br />
               <span className="text-[#C8972B]">Estimate</span>
             </h2>
 
-            <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
+            <p className="text-gray-600 text-md max-w-2xl mx-auto leading-relaxed">
               Share your details and our expert team will provide a personalized
               cost estimate within 24 hours.
             </p>
@@ -367,7 +367,7 @@ export default function LeadFormStep({
             >
               {/* Name Field */}
               <div className="relative">
-                <label className="block mb-3 text-sm font-semibold text-[#3D1F0D] uppercase tracking-wide">
+                <label className="block mb-3 text-sm font-body text-[#3D1F0D] uppercase tracking-wide">
                   Full Name
                 </label>
 
@@ -430,7 +430,7 @@ export default function LeadFormStep({
 
               {/* Pincode Field */}
               <div className="relative">
-                <label className="block mb-3 text-sm font-semibold text-[#3D1F0D] uppercase tracking-wide">
+                <label className="block mb-3 text-sm font-body text-[#3D1F0D] uppercase tracking-wide">
                   Pincode
                 </label>
 
@@ -494,7 +494,7 @@ export default function LeadFormStep({
 
               {/* Phone Field */}
               <div className="relative sm:col-span-2 md:col-span-1">
-                <label className="block mb-3 text-sm font-semibold text-[#3D1F0D] uppercase tracking-wide">
+                <label className="block mb-3 text-sm font-body text-[#3D1F0D] uppercase tracking-wide">
                   Phone Number
                 </label>
 
@@ -564,7 +564,7 @@ export default function LeadFormStep({
 
               {/* Email Field */}
               <div className="relative sm:col-span-2 md:col-span-1">
-                <label className="block mb-3 text-sm font-semibold text-[#3D1F0D] uppercase tracking-wide">
+                <label className="block mb-3 text-sm font-body text-[#3D1F0D] uppercase tracking-wide">
                   Email Address
                 </label>
 
@@ -657,10 +657,10 @@ export default function LeadFormStep({
                     transition={{ delay: 0.4 + idx * 0.1 }}
                     className="p-4 rounded-2xl bg-white/60 backdrop-blur-sm"
                   >
-                    <p className="text-xs font-semibold uppercase tracking-wide text-gray-500 mb-2">
+                    <p className="text-xs font-body uppercase tracking-wide text-gray-500 mb-2">
                       {item.label}
                     </p>
-                    <p className="font-semibold text-[#3D1F0D] text-lg">
+                    <p className="font-body text-[#3D1F0D] text-md">
                       {item.value}
                     </p>
                   </motion.div>
@@ -702,7 +702,7 @@ export default function LeadFormStep({
                 type="button"
                 onClick={onBack}
                 disabled={isSubmitting}
-                className="px-8 py-4 rounded-full border-2 border-[#3D1F0D] text-[#3D1F0D] font-semibold hover:bg-[#3D1F0D]/5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="px-8 py-4 rounded-md border-2 border-[#3D1F0D] text-[#3D1F0D] font-body hover:bg-[#3D1F0D]/5 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
               >
                 Back
               </button>
@@ -710,7 +710,7 @@ export default function LeadFormStep({
               <button
                 type="submit"
                 disabled={isSubmitting || !isFormValid}
-                className={`px-12 py-4 rounded-full font-semibold text-lg text-white transition-all duration-300 flex items-center justify-center gap-2
+                className={`px-12 py-4 rounded-md font-body text-md text-white transition-all duration-300 flex items-center justify-center gap-2
                   ${
                     isFormValid && !isSubmitting
                       ? "bg-[#3D1F0D] hover:bg-[#2A1408] shadow-lg shadow-[#3D1F0D]/20 hover:shadow-xl hover:shadow-[#3D1F0D]/30"
@@ -722,7 +722,7 @@ export default function LeadFormStep({
                     <motion.div
                       animate={{ rotate: 360 }}
                       transition={{ duration: 1, repeat: Infinity }}
-                      className="w-5 h-5 border-2 border-white border-t-transparent rounded-full"
+                      className="w-5 h-5 border-2 text-nowrap border-white border-t-transparent rounded-md"
                     />
                     Processing...
                   </>
@@ -763,7 +763,7 @@ export default function LeadFormStep({
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="text-4xl md:text-5xl font-bold text-[#3D1F0D] mb-4"
+            className="text-4xl md:text-5xl font-body text-[#3D1F0D] mb-4"
           >
             Request Submitted!
           </motion.h2>
@@ -785,7 +785,7 @@ export default function LeadFormStep({
             className="p-6 rounded-2xl bg-blue-50 border border-blue-200 max-w-xl mx-auto mb-8"
           >
             <p className="text-sm text-blue-900">
-              📧 Check your email ({formData.email}) for a confirmation. You can also
+              Check your email ({formData.email}) for a confirmation. You can also
               track your request on WhatsApp.
             </p>
           </motion.div>
