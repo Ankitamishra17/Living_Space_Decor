@@ -19,25 +19,25 @@ const services = [
   {
     title: "Architecture & Planning",
     desc: "Strategic planning and architectural solutions that balance aesthetics, functionality, and sustainability.",
-    image: "/lsd_images/10.jpg",
+    image: "https://i.pinimg.com/736x/49/38/7a/49387af31bb13a81d9b8bf20b2383457.jpg",
     icon: MdArchitecture,
   },
   {
     title: "Elevation Design",
     desc: "Modern and elegant elevation concepts that enhance the visual identity of your property.",
-    image: "/lsd_images/11.jpg",
+    image: "https://i.pinimg.com/webp/736x/6e/5e/5d/6e5e5d2a676a699e5800ebc4cc7193f7.webp",
     icon: FaBuilding,
   },
   {
     title: "Residential Design",
     desc: "Personalized residential spaces crafted for comfort, luxury, and everyday living.",
-    image: "/lsd_images/12.jpg",
+    image: "https://i.pinimg.com/webp/1200x/21/5b/2b/215b2bc56b1c175050c79a33d242a656.webp",
     icon: GiHouse,
   },
   {
     title: "Civil Work",
     desc: "Reliable construction and structural solutions delivered with precision and quality.",
-    image: "/lsd_images/18.jpg",
+    image: "https://i.pinimg.com/736x/a9/e0/37/a9e0372548a1930abe384fd79ee13fe9.jpg",
     icon: GiCrane,
   },
 ];

@@ -42,10 +42,10 @@ export default function DesignIdeas() {
             </h2>
           </div>
 
-          <button className="hidden md:flex items-center gap-2 text-[#B8851F] font-medium">
+          {/* <button className="hidden md:flex items-center gap-2 text-[#B8851F] font-medium">
             View All Designs
             <ArrowRight size={18} />
-          </button>
+          </button> */}
         </div>
 
         {/* Cards */}

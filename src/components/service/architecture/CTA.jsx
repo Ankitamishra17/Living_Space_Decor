@@ -11,24 +11,21 @@ export default function CTA() {
           <div className="grid lg:grid-cols-2">
             {/* Image Side */}
             <div className="relative h-[350px] sm:h-[450px] md:h-[550px] lg:h-auto min-h-[320px]">
-              <Image
-                src="/lsd_images/3.jpg"
-                alt="Luxury Interior"
-                fill
-                sizes="(max-width:1024px) 100vw, 50vw"
-                className="object-cover"
-                priority
-              />
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 h-full w-full object-cover"
+              >
+                <source src="/architecture_video.mp4" type="video/mp4" />
+              </video>
 
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-transparent to-[#F2EBD9]/20" />
 
-              {/* Year Badge */}
-              <div className="absolute bottom-4 left-4 sm:bottom-6 sm:left-6 lg:bottom-8 lg:left-8 border border-[#D7C8A3] bg-[#F4EFE4]/90 backdrop-blur-sm px-4 py-2 sm:px-5 sm:py-3">
-                <span className="text-[#B8954A] tracking-[0.25em] sm:tracking-[0.35em] text-[10px] sm:text-xs uppercase">
-                  Est. 2006
-                </span>
-              </div>
+              
+              
             </div>
 
             {/* Content Side */}
@@ -46,7 +43,7 @@ export default function CTA() {
                 </div>
 
                 {/* Heading */}
-                <h2 className="font-heading text-[#231A14] leading-[1.05] text-3xl sm:text-4xl md:text-5xl lg:text-5xl">
+                <h2 className="font-heading text-[#3D1F0D] leading-[1.05] text-3xl sm:text-4xl md:text-5xl lg:text-5xl">
                   Let's Build
                   <br />
                   Something{" "}
@@ -64,7 +61,7 @@ export default function CTA() {
                   <div className="grid grid-cols-3 gap-4 sm:gap-6">
                     <div>
                       <h3 className="text-[#C59A43] text-3xl sm:text-4xl font-light">
-                        120+
+                        500+
                       </h3>
 
                       <p className="uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[10px] sm:text-xs text-[#9A8D7E] mt-2">
@@ -74,7 +71,7 @@ export default function CTA() {
 
                     <div className="border-x border-[#DCCFAF] px-3 sm:px-6">
                       <h3 className="text-[#C59A43] text-3xl sm:text-4xl font-light">
-                        18
+                        10
                       </h3>
 
                       <p className="uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[10px] sm:text-xs text-[#9A8D7E] mt-2">
@@ -84,11 +81,11 @@ export default function CTA() {
 
                     <div className="pl-1 sm:pl-3">
                       <h3 className="text-[#C59A43] text-3xl sm:text-4xl font-light">
-                        34
+                        45
                       </h3>
 
                       <p className="uppercase tracking-[0.2em] sm:tracking-[0.3em] text-[10px] sm:text-xs text-[#9A8D7E] mt-2">
-                        Awards
+                       Day Delivery
                       </p>
                     </div>
                   </div>
@@ -100,19 +97,19 @@ export default function CTA() {
                   <Link
                     href="/contact"
                     className="
-      group
-      w-full sm:w-auto
-      bg-[#2B1A0D]
-      text-white
-      px-4 md:px-4
-      py-4
-      uppercase
-      tracking-[0.08em] md:tracking-[0.1em]
-      text-[11px] md:text-xs
-      transition
-      hover:bg-[#3A2412]
-      text-center
-    "
+                      group
+                      w-full sm:w-auto
+                      bg-[#2B1A0D]
+                      text-white
+                      px-4 md:px-4
+                      py-4
+                      uppercase
+                      tracking-[0.08em] md:tracking-[0.1em]
+                      text-[11px] md:text-xs
+                      transition
+                      hover:bg-[#3A2412]
+                      text-center
+                    "
                   >
                     Book Free Consultation
                     <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">
@@ -124,19 +121,19 @@ export default function CTA() {
                   <Link
                     href="/portfolio"
                     className="
-      w-full sm:w-auto
-      border
-      border-[#D7C8A3]
-      text-[#B8954A]
-      px-6
-      py-4
-      uppercase
-      tracking-[0.08em] md:tracking-[0.1em]
-      text-[11px] md:text-sm
-      transition
-      hover:bg-white
-      text-center
-    "
+                    w-full sm:w-auto
+                    border
+                    border-[#D7C8A3]
+                    text-[#B8954A]
+                    px-6
+                    py-4
+                    uppercase
+                    tracking-[0.08em] md:tracking-[0.1em]
+                    text-[11px] md:text-sm
+                    transition
+                    hover:bg-white
+                    text-center
+                  "
                   >
                     View Portfolio
                   </Link>

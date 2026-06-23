@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { MapPin, ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const projects = [
   {
@@ -47,10 +48,10 @@ export default function RecentProjects() {
             </p>
           </div>
 
-          <button className="mt-6 md:mt-0 flex items-center gap-2 text-[#B8851F] font-medium">
+          <Link href="/portfolio" className="mt-6 md:mt-0 flex items-center gap-2 text-[#B8851F] font-medium">
             View All Projects
             <ArrowRight size={18} />
-          </button>
+          </Link>
         </div>
 
         {/* Projects Grid */}

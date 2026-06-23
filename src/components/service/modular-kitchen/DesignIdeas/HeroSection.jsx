@@ -229,7 +229,7 @@ export default function HeroSection() {
       </div>
 
       {/* Floating Cards */}
-      <div className=" bg-[#F5EBE0] relative z-20 -mt-32">
+      <div className=" bg-[#F5EBE0] relative z-20 ">
         <div className="container mx-auto px-4">
           <div className="grid gap-4 md:grid-cols-4">
             {kitchenTypes.map((item, index) => {
@@ -238,9 +238,9 @@ export default function HeroSection() {
               return (
                 <div
                   key={index}
-                  className="overflow-hidden rounded-[10px] bg-white shadow-md hover:shadow-2xl transition-shadow"
+                  className="overflow-hidden rounded-[10px] mt-2 bg-white shadow-md hover:shadow-2xl transition-shadow"
                 >
-                  <div className="relative h-[260px]">
+                  <div className="relative h-[260px] ">
                     <Image
                       src={item.image}
                       alt={item.title}

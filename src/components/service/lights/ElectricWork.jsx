@@ -13,9 +13,9 @@ export default function LightingShowcase() {
              Lighting
             </span>
 
-            <h2 className="mt-4 text-xl  lg:text-4xl font-light text-[#3D1F0D] leading-tight">
+            <h2 className="mt-4 text-xl sm:text-2xl lg:text-5xl font-heading text-[#3D1F0D] leading-tight">
               We Provide Complete
-              <span className="block font-normal">Electric Work</span>
+              <span className="block font-heading">Electric Work</span>
             </h2>
 
             

@@ -26,7 +26,7 @@ export default function ServiceCard({ title, desc, image, Icon }) {
 
         {/* Floating Icon */}
         <div className="flex justify-center -mt-10 relative z-20">
-          <div className="w-16 h-16 rounded-full bg-white border border-[#DDBB7B] shadow-lg flex items-center justify-center group-hover:bg-[#C8972B] transition-all duration-500">
+          <div className="w-12 h-12 rounded-full bg-white border border-[#DDBB7B] shadow-lg flex items-center justify-center group-hover:bg-[#C8972B] transition-all duration-500">
             <Icon
               size={24}
               className="text-[#C8972B] group-hover:text-white transition-all duration-500"

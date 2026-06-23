@@ -35,7 +35,7 @@ const howWeHelp = [
 
 export default function HowWeHelp() {
   return (
-    <section className="bg-[#F7F4EE] py-16 md:py-20 lg:py-28 overflow-hidden">
+    <section className="bg-[#F7F4EE] py-16 md:py-20 lg:py-10 overflow-hidden">
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-14 md:mb-20 lg:mb-24">
@@ -46,7 +46,7 @@ export default function HowWeHelp() {
           <h2
             className="
               font-heading
-              text-[#1B140F]
+              text-[#3D1F0D]
               text-3xl
               sm:text-4xl
               md:text-5xl
