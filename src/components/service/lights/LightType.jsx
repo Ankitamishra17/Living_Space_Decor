@@ -10,27 +10,27 @@ const lightingTypes = [
     description:
       "Modern linear lighting solutions creating clean architectural lines.",
     images: [
-      "https://images.pexels.com/photos/23916830/pexels-photo-23916830.png",
-      "https://i.ytimg.com/vi/aVghDk_xQII/maxresdefault.jpg",
-      "https://tse1.mm.bing.net/th/id/OIP._WB-gqBtM4VCLhEj_Fyo8gHaEJ?pid=Api&P=0&h=180",
+      "/Light/profile1.avif",
+      "/Light/profile2.avif",
+      "/Light/profile3.avif",
     ],
   },
   {
     title: "Cove Lighting",
     description: "Hidden lighting that delivers warm ambient illumination.",
     images: [
-      "https://images.pexels.com/photos/7005457/pexels-photo-7005457.jpeg",
-      "https://images.pexels.com/photos/8134787/pexels-photo-8134787.jpeg",
-      "https://images.pexels.com/photos/8082551/pexels-photo-8082551.jpeg",
+      "/Light/cove1.avif",
+      "/Light/cove2.avif",
+      "/Light/cove3.avif",
     ],
   },
   {
     title: "Accent Lighting",
     description: "Focused lighting to highlight walls, décor and artwork.",
     images: [
-      "https://images.pexels.com/photos/25039772/pexels-photo-25039772.jpeg",
-      "https://tse4.mm.bing.net/th/id/OIP.jq09G7sRkQ9YWdDfybEsNQHaEO?pid=Api&P=0&h=180",
-      "https://images.pexels.com/photos/27604110/pexels-photo-27604110.png",
+      "/Light/accent1.avif",
+      "/Light/accent2.avif",
+      "/Light/accent3.avif",
     ],
   },
 ];

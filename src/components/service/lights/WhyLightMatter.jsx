@@ -86,7 +86,7 @@ export default function WhyLightingMatters() {
   };
 
   return (
-    <section className="relative overflow-hidden bg-[#F5EBE0] py-16 sm:py-24 lg:py-32">
+    <section className="relative  overflow-hidden bg-[#F5EBE0] py-16 sm:py-24 lg:py-32">
       {/* Glow Effects */}
       <motion.div
         initial={{ opacity: 0 }}
@@ -218,7 +218,7 @@ export default function WhyLightingMatters() {
                 className="relative h-full w-full"
               >
                 <Image
-                  src="https://i.pinimg.com/736x/46/af/d3/46afd3560609dd7c19852fbabec80908.jpg"
+                  src="/Light/light1.avif"
                   alt="Luxury Lighting Design"
                   width={900}
                   height={100}

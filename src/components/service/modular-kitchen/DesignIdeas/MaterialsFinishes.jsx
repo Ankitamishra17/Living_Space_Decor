@@ -8,42 +8,42 @@ const materials = [
     description:
       "High-gloss premium finish with a seamless modern appearance and luxurious shine.",
     image:
-      "https://i.pinimg.com/736x/db/d2/f3/dbd2f380024231bd4b7808cf05050821.jpg",
+      "/kitchen/Acrylic.avif",
   },
   {
     title: "Laminate Finish Kitchen",
     description:
       "Durable, stylish and available in hundreds of colors, textures and patterns.",
     image:
-      "https://i.pinimg.com/1200x/d1/59/e9/d159e9b70c5d871f9a85c32bc25ce3a5.jpg",
+      "/kitchen/Laminate.avif",
   },
   {
     title: "PU Finish Kitchen",
     description:
       "Smooth painted finish offering elegance, durability and timeless beauty.",
     image:
-      "https://i.pinimg.com/1200x/3a/d6/07/3ad60786aa510999d3fbf4abb81f317d.jpg",
+      "/kitchen/PU.avif",
   },
   {
     title: "Wood Veneer Kitchen",
     description:
       "Natural wood grains that bring warmth and sophistication to interiors.",
     image:
-      "https://i.pinimg.com/1200x/55/18/0b/55180b84febe70a0df77bc7818c0cdaa.jpg",
+      "/kitchen/Veneer.avif",
   },
   {
     title: "Glass Finish Kitchen",
     description:
       "Reflective modern surfaces perfect for contemporary luxury spaces.",
     image:
-      "https://i.pinimg.com/736x/1b/c4/18/1bc41844fdc70ebd4fac0203032aae0d.jpg",
+      "/kitchen/Glass.avif",
   },
   {
     title: "Membrane Finish Kitchen",
     description:
       "Flexible and stylish finish with seamless edges and rich aesthetics.",
     image:
-      "https://i.pinimg.com/736x/92/b0/14/92b014aa4cf978502114a117a0c84a57.jpg",
+      "/kitchen/Membrane.avif",
   },
 ];
 

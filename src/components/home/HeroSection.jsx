@@ -13,29 +13,25 @@ import "swiper/css/pagination";
 const categories = [
   {
     title: "Modular Kitchen",
-    image:
-      "https://images.pexels.com/photos/35618203/pexels-photo-35618203.jpeg",
+    image: "/Home/banner1.avif",
     href: "/services/modular-kitchen",
     desc: "Elegant modular kitchens designed for functionality, comfort, and modern living.",
   },
   {
     title: "Modular Wardrobes",
-    image:
-      "https://images.pexels.com/photos/27562185/pexels-photo-27562185.png",
+    image: "/Home/banner2.avif",
     href: "/services/wardrobes",
     desc: "Smart storage solutions with premium finishes tailored to your lifestyle.",
   },
   {
     title: "Stylish Lighting",
-    image:
-      "https://images.pexels.com/photos/19343357/pexels-photo-19343357.jpeg",
+    image: "/Home/banner3.avif",
     href: "/services/lights",
     desc: "Transform your interiors with ambient, decorative, and modern lighting designs.",
   },
   {
     title: "Furnishings",
-    image:
-      "https://images.pexels.com/photos/36601409/pexels-photo-36601409.jpeg",
+    image: "/Home/banner4.avif",
     href: "/services/furnitures",
     desc: "Luxury furnishings that add warmth, elegance, and personality to every space.",
   },

@@ -7,22 +7,22 @@ const kitchenIdeas = [
   {
     title: "Modern Kitchens",
     description: "Clean lines & minimal aesthetics",
-    image: "https://images.pexels.com/photos/12850946/pexels-photo-12850946.jpeg",
+    image: "/kitchen/Modern_design.avif",
   },
   {
     title: "Contemporary Kitchens",
     description: "Elegant & functional designs",
-    image: "https://images.pexels.com/photos/6265836/pexels-photo-6265836.jpeg",
+    image: "/kitchen/Contemporary_design.avif",
   },
   {
     title: "Luxury Kitchens",
     description: "Premium finishes & high-end fittings",
-    image: "https://images.pexels.com/photos/35189709/pexels-photo-35189709.jpeg",
+    image: "/kitchen/Luxury_design.avif",
   },
   {
     title: "Classic Kitchens",
     description: "Timeless designs that never age",
-    image: "https://images.pexels.com/photos/8092436/pexels-photo-8092436.jpeg",
+    image: "/kitchen/Classic_design.avif",
   },
 ];
 
@@ -41,11 +41,6 @@ export default function DesignIdeas() {
               Kitchen Design Ideas
             </h2>
           </div>
-
-          {/* <button className="hidden md:flex items-center gap-2 text-[#B8851F] font-medium">
-            View All Designs
-            <ArrowRight size={18} />
-          </button> */}
         </div>
 
         {/* Cards */}

@@ -19,7 +19,7 @@ const services = [
     description:
       "Complete end-to-end turnkey interior solutions from design to execution.",
     image:
-      "https://images.unsplash.com/photo-1494526585095-c41746248156?q=80&w=1200&auto=format&fit=crop",
+      "/Home/trunkey.avif",
     icon: Building2,
     link: "/services/turnkey-projects",
   },
@@ -28,7 +28,7 @@ const services = [
     description:
       "Premium modular kitchen designs with intelligent storage and luxury finishes.",
     image:
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200&auto=format&fit=crop",
+      "/Home/service_kitchen.avif",
     icon: ChefHat,
     link: "/services/modular-kitchen",
   },
@@ -37,7 +37,7 @@ const services = [
     description:
       "Innovative architecture planning focused on luxury living and modern functionality.",
     image:
-      "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?q=80&w=1200&auto=format&fit=crop",
+      "/Home/architecture.avif",
     icon: Compass,
     link: "/services/architecture",
   },

@@ -120,7 +120,7 @@ export default function FAQSection() {
           <div className="w-12 h-px bg-[#C8972B] mx-auto mt-5 md:mt-6 mb-5 md:mb-6" />
 
           <p className="text-[#6E6258] max-w-xl mx-auto leading-7 sm:leading-8 text-sm px-2">
-            Find answers to the most common questions about our interior design,
+            Find answers to the most common questions about our design ideas,
             architecture, and turnkey services.
           </p>
         </div>

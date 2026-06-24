@@ -7,32 +7,32 @@ const accessories = [
   {
     title: "Pull-Out Pantry",
     description: "Maximize storage with easy access to groceries.",
-    image: "https://i.pinimg.com/736x/15/62/56/15625692aed88e5f3678d6896047f6d2.jpg",
+    image: "/kitchen/Pull-Out.avif",
   },
   {
     title: "Corner Carousel",
     description: "Utilize corner spaces efficiently.",
-    image: "https://i.pinimg.com/1200x/7e/f4/5c/7ef45c672dddc78d4d7f8c8394f61788.jpg",
+    image: "/kitchen/Corner.avif",
   },
   {
     title: "Tandem Drawers",
     description: "Smooth sliding drawers with large capacity.",
-    image: "https://images.thdstatic.com/productImages/b41472c0-e391-49b6-b666-6d75a110859e/svn/dove-gray-hampton-bay-assembled-kitchen-cabinets-kdb36-sdv-e1_600.jpg",
+    image: "/kitchen/Tandem.avif",
   },
   {
     title: "Cutlery Organizer",
     description: "Keep utensils neatly arranged and accessible.",
-    image: "https://i.pinimg.com/736x/7e/b5/cc/7eb5cc44587dab85daa35935da912546.jpg",
+    image: "/kitchen/Cutlery.avif",
   },
   {
     title: "Bottle Pull-Out",
     description: "Dedicated storage for bottles and jars.",
-    image: "https://5.imimg.com/data5/SELLER/Default/2023/7/324690033/JS/DX/DQ/10017366/dsc-6491-1000x1000.JPG",
+    image: "/kitchen/Bottel_Pull_Out.webp",
   },
   {
     title: "Dish Rack Unit",
     description: "Organized drying and storage solution.",
-    image: "https://i.pinimg.com/736x/d1/ef/91/d1ef91d76a7cda2a5f65fc442fbb7ee0.jpg",
+    image: "/kitchen/Dish_Rack.avif",
   },
 ];
 
