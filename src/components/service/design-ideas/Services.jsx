@@ -102,7 +102,7 @@ export default function Services() {
             viewport={{ once: true }}
           >
             <h2 className="font-heading text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-stone-950 leading-tight px-2">
-              Our Interior{" "}
+              Our Design{" "}
               <motion.span
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}

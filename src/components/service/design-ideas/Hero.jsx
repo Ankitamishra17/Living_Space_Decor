@@ -76,7 +76,7 @@ export default function InteriorHero() {
 
           {/* Heading */}
           <motion.div variants={itemVariants}>
-            <h1 className="font-heading text-[20px] sm:text-[46px] md:text-[52px] lg:text-[68px] leading-[0.95] text-white tracking-tight">
+            <h1 className="font-heading text-[20px] sm:text-[36px] md:text-[52px] lg:text-[58px] leading-[0.95] text-white tracking-tight">
               <motion.span
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -84,18 +84,10 @@ export default function InteriorHero() {
                 viewport={{ once: true }}
                 className="block"
               >
-                Luxury Interior
+               Our Design Ideas
               </motion.span>
 
-              <motion.span
-                initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                whileInView={{ opacity: 1, y: 0, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                viewport={{ once: true }}
-                className="block text-[#C8972B]"
-              >
-                Design Ideas
-              </motion.span>
+              
             </h1>
           </motion.div>
 
@@ -121,7 +113,7 @@ export default function InteriorHero() {
           {/* Description */}
           <motion.p
             variants={itemVariants}
-            className="max-w-3xl mx-auto mt-6 md:mt-8 text-sm sm:text-base md:text-lg leading-7 md:leading-8 text-[#acaaaa] font-light px-2"
+            className="max-w-2xl mx-auto mt-6 md:mt-8 text-sm sm:text-base md:text-base leading-4 md:leading-8 text-[#acaaaa] font-body px-2"
           >
             Transform your home with bespoke interior designs that blend luxury,
             functionality, and timeless elegance. From living spaces to
