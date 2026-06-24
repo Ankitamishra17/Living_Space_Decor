@@ -5,22 +5,19 @@ export const designIdeas = [
     slug: "living-room-design",
     title: "LIVING ROOM DESIGN",
     subtitle: "Timeless Elegance",
-    heroImage:
-      "https://images.pexels.com/photos/8584020/pexels-photo-8584020.jpeg",
+    heroImage: "/Design/Living_banner.avif",
     description: "Luxury living room interiors",
-    leftImage:
-      "https://images.pexels.com/photos/31737848/pexels-photo-31737848.jpeg",
-    rightImage:
-      "https://images.pexels.com/photos/9976124/pexels-photo-9976124.jpeg",
+    leftImage: "/Design/Living_Left.avif",
+    rightImage: "/Design/Living_Right.avif",
     galleryTitle:
       "Composed Meaningful Interiors To Elevated And Refined Spaces",
     galleryDescription:
       "Every great space begins with a vision. We transform your ideas into thoughtfully crafted interiors that reflect your personality and lifestyle.",
     moodboard: [
       "https://images.pexels.com/photos/14714646/pexels-photo-14714646.jpeg",
-      "https://images.pexels.com/photos/17948130/pexels-photo-17948130.jpeg",
+      "/Design/Living2.avif",
       "https://images.pexels.com/photos/8089172/pexels-photo-8089172.jpeg",
-      "https://images.pexels.com/photos/8583841/pexels-photo-8583841.jpeg",
+      "/Design/Living4.avif",
       "https://images.pexels.com/photos/8141956/pexels-photo-8141956.jpeg",
       "https://images.pexels.com/photos/3935336/pexels-photo-3935336.jpeg",
     ],
@@ -55,17 +52,14 @@ export const designIdeas = [
 
     subtitle: "Creative Spaces For Growing Minds",
 
-    heroImage:
-      "https://images.pexels.com/photos/27604123/pexels-photo-27604123.png",
+    heroImage: "/Design/Kids_banner.avif",
 
     description:
       "Discover inspiring kids room interior design ideas that combine creativity, comfort, safety, and functionality. From playful themes to smart storage solutions, create a space where children can learn, play, and grow.",
 
-    leftImage:
-      "https://images.pexels.com/photos/21336368/pexels-photo-21336368.jpeg",
+    leftImage: "/Design/kids_left.avif",
 
-    rightImage:
-      "https://images.pexels.com/photos/11664582/pexels-photo-11664582.jpeg",
+    rightImage: "/Design/kids_right.avif",
 
     galleryTitle:
       "Thoughtfully Designed Kids Rooms That Inspire Learning And Creativity",
@@ -74,12 +68,11 @@ export const designIdeas = [
       "A well-designed kids room goes beyond aesthetics. Our designs focus on safety, functionality, organization, and imagination, creating a personalized environment where children feel comfortable, inspired, and happy every day.",
 
     moodboard: [
-      "https://images.pexels.com/photos/8535156/pexels-photo-8535156.jpeg",
-      "https://images.pexels.com/photos/37070076/pexels-photo-37070076.jpeg",
-      "https://images.pexels.com/photos/7045850/pexels-photo-7045850.jpeg",
-      "https://images.pexels.com/photos/11295737/pexels-photo-11295737.jpeg",
-      "https://images.pexels.com/photos/4046082/pexels-photo-4046082.jpeg",
-      "https://images.pexels.com/photos/7494504/pexels-photo-7494504.jpeg",
+      "/Design/kids1.avif",
+      "/Design/kids2.avif",
+      "/Design/kids3.avif",
+      "/Design/kids4.avif",
+      "/Design/kids5.avif",
     ],
 
     faq: [
@@ -126,16 +119,13 @@ export const designIdeas = [
 
     subtitle: "Sacred Spaces For Peace & Spirituality",
 
-    heroImage:
-      "https://images.pexels.com/photos/36187718/pexels-photo-36187718.jpeg",
+    heroImage: "/Design/mandir_banner.avif",
 
     description:
       "Explore elegant mandir design ideas for modern homes. From traditional wooden temples to contemporary pooja room interiors, create a peaceful and spiritual space that blends beautifully with your home décor.",
 
-    leftImage:
-      "https://i.pinimg.com/736x/3a/18/4a/3a184a5a6095ea23f437d080ddb15bb9.jpg",
-    rightImage:
-      "https://i.pinimg.com/736x/99/10/7b/99107b24a6c5c1905703b418e7c4c817.jpg",
+    leftImage: "/Design/mandir_left.avif",
+    rightImage: "/Design/mandir_right.avif",
 
     galleryTitle:
       "Thoughtfully Crafted Pooja Rooms For Daily Worship And Serenity",
@@ -165,14 +155,11 @@ export const designIdeas = [
     },
     ctaVideo: "/mandir.mp4",
     moodboard: [
-      "https://i.pinimg.com/736x/70/bb/d9/70bbd9fdb7cec439859af66d97cb134b.jpg",
-      "https://i.pinimg.com/736x/97/1c/c7/971cc7ce5237c4ce4934ba208ce0457b.jpg",
-      "https://i.pinimg.com/736x/b4/e5/08/b4e508285cf6b77059f86f452975acb9.jpg",
-      "https://i.pinimg.com/736x/94/b0/31/94b03134d3661ff5570b5b70a6cdddeb.jpg",
-      "https://i.pinimg.com/736x/5e/ac/11/5eac11411de4cff6b07a5b2585489d61.jpg",
-      "https://i.pinimg.com/736x/a4/f8/7a/a4f87abe0cd5806ffde9455a95e4759b.jpg",
-      "https://i.pinimg.com/736x/28/49/55/284955181ad08ad949128d3166d323df.jpg",
-      "https://i.pinimg.com/736x/4a/33/45/4a33453ea6140c0e8d15b8a56ec3767b.jpg",
+      "/Design/mandir1.avif",
+      "/Design/mandir2.avif",
+      "/Design/mandir3.avif",
+      "/Design/mandir4.avif",
+      "/Design/mandir5.avif",
     ],
   },
   {
@@ -181,13 +168,10 @@ export const designIdeas = [
     title: "BEDROOM DESIGN",
 
     subtitle: "Comfort Meets Luxury",
-    heroImage:
-      "https://images.pexels.com/photos/6394580/pexels-photo-6394580.jpeg",
+    heroImage: "/Design/bed_room_banner.avif",
 
-    leftImage:
-      "https://images.pexels.com/photos/19980080/pexels-photo-19980080.jpeg",
-    rightImage:
-      "https://images.pexels.com/photos/37468265/pexels-photo-37468265.jpeg",
+    leftImage: "/Design/bed_left.avif",
+    rightImage: "/Design/bed_right.avif",
 
     description:
       "Discover modern bedroom interior design ideas that combine comfort, elegance, and functionality. Create a relaxing retreat with customized wardrobes, stylish furniture, and smart storage solutions.",
@@ -209,14 +193,34 @@ export const designIdeas = [
         answer:
           "Yes, we provide fully customized wardrobe and storage solutions.",
       },
+      {
+        question: "What is the ideal color scheme for a bedroom?",
+        answer:
+          "Soft neutral tones, pastel shades, and warm earthy colors create a calm and relaxing bedroom environment.",
+      },
+      {
+        question: "Can you design bedrooms for children and teenagers?",
+        answer:
+          "Yes, we create age-appropriate bedroom designs with functional layouts, study areas, and personalized themes.",
+      },
+      {
+        question: "How long does a bedroom interior project take?",
+        answer:
+          "The timeline depends on the scope of work, but most bedroom interior projects are completed within 2–6 weeks.",
+      },
+      {
+        question: "Do you provide lighting design for bedrooms?",
+        answer:
+          "Yes, we incorporate ambient, task, and accent lighting to enhance comfort, functionality, and aesthetics.",
+      },
     ],
     moodboard: [
-      "https://images.pexels.com/photos/6980671/pexels-photo-6980671.jpeg",
-      "https://images.pexels.com/photos/6588581/pexels-photo-6588581.jpeg",
-      "https://images.pexels.com/photos/7546276/pexels-photo-7546276.jpeg",
-      "https://images.pexels.com/photos/7061665/pexels-photo-7061665.jpeg",
-      "https://images.pexels.com/photos/6585757/pexels-photo-6585757.jpeg",
-      "https://images.pexels.com/photos/7545500/pexels-photo-7545500.jpeg",
+      "/Design/bed1.avif",
+      "/Design/bed2.webp",
+      "/Design/bed3.webp",
+      "/Design/bed4.avif",
+      "/Design/bed5.webp",
+      "/Design/bed6.avif",
     ],
 
     seo: {
@@ -234,8 +238,7 @@ export const designIdeas = [
     title: "BATHROOM DESIGN",
 
     subtitle: "Modern Elegance In Every Detail",
-    heroImage:
-      "https://images.pexels.com/photos/7746630/pexels-photo-7746630.jpeg",
+    heroImage: "/Design/bathroom_banner.avif",
     moodboard: [
       "https://images.pexels.com/photos/6980656/pexels-photo-6980656.jpeg",
       "https://images.pexels.com/photos/37058497/pexels-photo-37058497.png",
@@ -244,10 +247,8 @@ export const designIdeas = [
       "https://images.pexels.com/photos/8141967/pexels-photo-8141967.jpeg",
       "https://images.pexels.com/photos/8082549/pexels-photo-8082549.jpeg",
     ],
-    leftImage:
-      "https://images.pexels.com/photos/37331168/pexels-photo-37331168.jpeg",
-    rightImage:
-      "https://images.pexels.com/photos/3316926/pexels-photo-3316926.jpeg",
+    leftImage: "/Design/bathroom_left.avif",
+    rightImage: "/Design/bathroom_right.avif",
 
     description:
       "Explore stylish bathroom interior design ideas featuring modern vanities, luxury fittings, smart storage, and elegant finishes for contemporary homes.",
@@ -269,6 +270,26 @@ export const designIdeas = [
         answer:
           "Yes, we specialize in maximizing functionality and style in compact bathrooms.",
       },
+      {
+        question: "How can I make my bathroom look more spacious?",
+        answer:
+          "Using light colors, large mirrors, glass shower partitions, and smart storage solutions can make a bathroom feel larger.",
+      },
+      {
+        question: "Do you provide custom vanity and storage solutions?",
+        answer:
+          "Yes, we design customized vanities, cabinets, and storage units tailored to your space and requirements.",
+      },
+      {
+        question: "What materials are best for bathroom interiors?",
+        answer:
+          "Moisture-resistant materials such as vitrified tiles, quartz countertops, waterproof laminates, and anti-skid flooring are ideal for bathrooms.",
+      },
+      {
+        question: "How long does a bathroom renovation project take?",
+        answer:
+          "The duration depends on the scope of work, but most bathroom renovation projects are completed within 2–4 weeks.",
+      },
     ],
 
     seo: {
@@ -287,14 +308,11 @@ export const designIdeas = [
 
     subtitle: "Productive Spaces For Modern Professionals",
 
-    heroImage:
-      "https://images.pexels.com/photos/373904/pexels-photo-373904.jpeg",
-    moodboard: [],
-    leftImage:
-      "https://images.pexels.com/photos/31525131/pexels-photo-31525131.jpeg",
-    rightImage:
-      "https://images.pexels.com/photos/27436633/pexels-photo-27436633.jpeg",
+    heroImage: "/Design/office_banner.avif",
 
+    leftImage: "/Design/office_left.avif",
+    rightImage: "/Design/office_right.avif",
+    moodboard: ["/Design/office1.avif", "/Design/office2.avif"],
     description:
       "Create a functional and inspiring home office with ergonomic furniture, smart storage, and modern workspace design solutions.",
 
@@ -312,6 +330,26 @@ export const designIdeas = [
       {
         question: "Can you design a home office in a small room?",
         answer: "Yes, we create space-efficient workspaces for compact homes.",
+      },
+      {
+        question: "How do you improve productivity in a home office?",
+        answer:
+          "We create clutter-free layouts, optimize lighting, and incorporate ergonomic furniture to enhance focus and productivity.",
+      },
+      {
+        question: "Can you design a home office for multiple users?",
+        answer:
+          "Yes, we can create shared workspaces with separate workstations, storage solutions, and efficient layouts for multiple users.",
+      },
+      {
+        question: "What type of lighting is best for a home office?",
+        answer:
+          "A combination of natural light, ambient lighting, and task lighting helps reduce eye strain and creates a comfortable working environment.",
+      },
+      {
+        question: "Do you provide custom furniture for home offices?",
+        answer:
+          "Yes, we design custom desks, shelving units, storage cabinets, and workstation solutions tailored to your requirements.",
       },
     ],
 
@@ -333,11 +371,11 @@ export const designIdeas = [
       "https://images.pexels.com/photos/7587473/pexels-photo-7587473.jpeg",
     moodboard: [
       "https://images.pexels.com/photos/7587473/pexels-photo-7587473.jpeg",
-      "https://images.pexels.com/photos/12870090/pexels-photo-12870090.jpeg",
-      "https://images.pexels.com/photos/14286287/pexels-photo-14286287.jpeg",
-      "https://images.pexels.com/photos/19836799/pexels-photo-19836799.jpeg",
-      "https://images.pexels.com/photos/24807127/pexels-photo-24807127.jpeg",
-      "https://images.pexels.com/photos/7534285/pexels-photo-7534285.jpeg",
+      "/Design/balcony2.avif",
+      "/Design/balcony3.avif",
+      "/Design/balcony4.avif",
+      "/Design/balcony5.avif",
+      "/Design/balcony6.avif",
       "https://images.pexels.com/photos/8082313/pexels-photo-8082313.jpeg",
       "https://images.pexels.com/photos/19737863/pexels-photo-19737863.jpeg",
     ],
@@ -366,6 +404,27 @@ export const designIdeas = [
         answer:
           "Yes, terraces can be transformed into lounges, dining spaces, or garden retreats.",
       },
+      {
+        question:
+          "What are the best furniture options for balconies and terraces?",
+        answer:
+          "Weather-resistant furniture such as rattan, metal, and treated wood pieces are ideal for outdoor spaces.",
+      },
+      {
+        question: "How can I make my balcony more private?",
+        answer:
+          "Privacy screens, outdoor curtains, planters, and vertical gardens can create a secluded and comfortable environment.",
+      },
+      {
+        question: "Can you design a balcony garden?",
+        answer:
+          "Yes, we create customized balcony gardens with planters, vertical greenery, and low-maintenance landscaping solutions.",
+      },
+      {
+        question: "What lighting works best for balconies and terraces?",
+        answer:
+          "String lights, wall sconces, lanterns, and LED accent lighting help create a warm and inviting outdoor atmosphere.",
+      },
     ],
 
     seo: {
@@ -384,17 +443,14 @@ export const designIdeas = [
 
     subtitle: "Where Style Meets Meaningful Gatherings",
 
-    heroImage:
-      "https://images.pexels.com/photos/14598479/pexels-photo-14598479.jpeg",
+    heroImage: "/Design/dining_banner.avif",
 
     description:
       "Discover elegant dining room interior design ideas that bring families together. From modern dining spaces to luxury dining room interiors, create a welcoming atmosphere for everyday meals and special occasions.",
 
-    leftImage:
-      "https://images.pexels.com/photos/6908357/pexels-photo-6908357.jpeg",
+    leftImage: "/Design/dining_left.avif",
 
-    rightImage:
-      "https://images.pexels.com/photos/7061670/pexels-photo-7061670.jpeg",
+    rightImage: "/Design/dining_right.avif",
 
     galleryTitle: "Thoughtfully Designed Dining Spaces For Memorable Moments",
 
@@ -402,14 +458,12 @@ export const designIdeas = [
       "A beautifully designed dining room is more than just a place to eat. Our dining room interiors combine comfort, elegance, lighting, and functionality to create the perfect setting for family dinners, celebrations, and entertaining guests.",
 
     moodboard: [
-      "https://i.pinimg.com/736x/d5/6d/d5/d56dd53db36f95f512c4b359f9420aca.jpg",
-      "https://i.pinimg.com/736x/e9/fe/25/e9fe253b36865fae611732209cee4298.jpg",
-      "https://i.pinimg.com/1200x/16/c8/60/16c8606acb57b2758b136c5b6856efa2.jpg",
-      "https://i.pinimg.com/1200x/d4/b6/a6/d4b6a60f7cdce81be50226eeb2d8bd3c.jpg",
-      "https://i.pinimg.com/736x/0c/e8/80/0ce88088a8cedb6012deac75e1ca228a.jpg",
-      "https://i.pinimg.com/736x/50/f8/ba/50f8baf300ce66821ba9f65a6d82ed0b.jpg",
-      "https://i.pinimg.com/1200x/fd/16/04/fd1604760c96c165094cbc6984ee9ede.jpg",
-      "https://i.pinimg.com/736x/1e/d1/0a/1ed10aaa265e90c30df6ad7b36d81ca3.jpg",
+      "/Design/dining1.avif",
+      "/Design/dining2.avif",
+      "/Design/dining3.avif",
+      "/Design/dining4.avif",
+      "/Design/dining5.avif",
+      "/Design/dining6.avif",
     ],
 
     faq: [

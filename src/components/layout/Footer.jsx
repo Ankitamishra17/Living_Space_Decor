@@ -11,7 +11,7 @@ const NAV_LINKS = [
 ];
 
 const SERVICE_LINKS = [
-  { label: "Interior Design", href: "/services/interior-design" },
+  { label: "Design Ideas", href: "/services/interior-design" },
   { label: "Modular Kitchen", href: "/services/modular-kitchen" },
   { label: "Turnkey Projects", href: "/services/turnkey-projects" },
   { label: "Architecture", href: "/services/architecture" },
@@ -305,27 +305,7 @@ export default function Footer() {
           overflow: "hidden",
         }}
       >
-        {/* Watermark wordmark — moved to bottom, responsive via class */}
-        {/* <div
-          className="footer-wordmark"
-          style={{
-            position: "absolute",
-            left: "50%",
-            transform: "translate(-50%, 0)",
-            fontWeight: 700,
-            letterSpacing: "-0.02em",
-            textTransform: "uppercase",
-            color: "rgba(0,0,0,0.15)",
-            whiteSpace: "nowrap",
-            pointerEvents: "none",
-            zIndex: 0,
-            fontFamily: "'Syncopate', serif",
-            bottom: 30,
-            top: "auto",
-          }}
-        >
-          Living Space Decor
-        </div> */}
+      
 
         {/* Main grid */}
         <div
@@ -543,7 +523,7 @@ export default function Footer() {
               Best Interior Design — Noida 2026
             </div>
 
-            <div className="footer-legal-links">
+            {/* <div className="footer-legal-links">
               {[
                 ["Privacy Policy", "/privacy-policy"],
                 ["Terms", "/terms"],
@@ -570,7 +550,7 @@ export default function Footer() {
                   {label}
                 </Link>
               ))}
-            </div>
+            </div> */}
 
             <a
               href="https://deboxtechnology.com"
