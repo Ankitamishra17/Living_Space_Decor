@@ -5,21 +5,30 @@ export const designIdeas = [
     slug: "living-room-design",
     title: "LIVING ROOM DESIGN",
     subtitle: "Timeless Elegance",
-    heroImage: "/Design/Living_banner.avif",
+    heroImage: "/image/living_room7.jpeg",
     description: "Luxury living room interiors",
-    leftImage: "/Design/Living_Left.avif",
-    rightImage: "/Design/Living_Right.avif",
+    leftImage:  "/image/living_room14.jpeg",
+    rightImage:"/image/living_room1.jpeg",
     galleryTitle:
       "Composed Meaningful Interiors To Elevated And Refined Spaces",
     galleryDescription:
       "Every great space begins with a vision. We transform your ideas into thoughtfully crafted interiors that reflect your personality and lifestyle.",
     moodboard: [
-      "https://images.pexels.com/photos/14714646/pexels-photo-14714646.jpeg",
-      "/Design/Living2.avif",
-      "https://images.pexels.com/photos/8089172/pexels-photo-8089172.jpeg",
-      "/Design/Living4.avif",
-      "https://images.pexels.com/photos/8141956/pexels-photo-8141956.jpeg",
-      "https://images.pexels.com/photos/3935336/pexels-photo-3935336.jpeg",
+      
+      "/image/living_room2.jpeg",
+      "/image/living_room3.jpeg",
+      "/image/living_room4.jpeg",
+      "/image/living_room5.jpeg",
+      "/image/living_room6.jpeg",
+      "/image/living_room8.jpeg",
+      "/image/living_room9.jpeg",
+      "/image/living_room10.jpeg",
+      "/image/living_room11.jpeg",
+      "/image/living_room12.jpeg",
+      "/image/living_room13.jpeg",
+     
+      "/image/living_room15.jpeg",
+      
     ],
     faq: [
       {
@@ -240,15 +249,30 @@ export const designIdeas = [
     subtitle: "Modern Elegance In Every Detail",
     heroImage: "/Design/bathroom_banner.avif",
     moodboard: [
-      "https://images.pexels.com/photos/6980656/pexels-photo-6980656.jpeg",
-      "https://images.pexels.com/photos/37058497/pexels-photo-37058497.png",
-      "https://images.pexels.com/photos/27531871/pexels-photo-27531871.jpeg",
-      "https://images.pexels.com/photos/7587736/pexels-photo-7587736.jpeg",
-      "https://images.pexels.com/photos/8141967/pexels-photo-8141967.jpeg",
-      "https://images.pexels.com/photos/8082549/pexels-photo-8082549.jpeg",
+      // "https://images.pexels.com/photos/6980656/pexels-photo-6980656.jpeg",
+      // "https://images.pexels.com/photos/37058497/pexels-photo-37058497.png",
+      // "https://images.pexels.com/photos/27531871/pexels-photo-27531871.jpeg",
+      // "https://images.pexels.com/photos/7587736/pexels-photo-7587736.jpeg",
+      // "https://images.pexels.com/photos/8141967/pexels-photo-8141967.jpeg",
+      // "https://images.pexels.com/photos/8082549/pexels-photo-8082549.jpeg",
+      "/image/bathroom1.jpeg",
+      "/image/bathroom2.jpeg",
+    
+      "/image/bathroom4.jpeg",
+      "/image/bathroom5.jpeg",
+      "/image/bathroom6.jpeg",
+      "/image/bathroom7.jpeg",
+     
+      "/image/bathroom9.jpeg",
+      "/image/bathroom10.jpeg",
+      "/image/bathroom11.jpeg",
+      "/image/bathroom12.jpeg",
+      "/image/bathroom13.jpeg",
+      "/image/bathroom14.jpeg",
+      "/image/bathroom15.jpeg",
     ],
-    leftImage: "/Design/bathroom_left.avif",
-    rightImage: "/Design/bathroom_right.avif",
+    leftImage:   "/image/bathroom3.jpeg",
+    rightImage:  "/image/bathroom8.jpeg",
 
     description:
       "Explore stylish bathroom interior design ideas featuring modern vanities, luxury fittings, smart storage, and elegant finishes for contemporary homes.",
@@ -443,14 +467,14 @@ export const designIdeas = [
 
     subtitle: "Where Style Meets Meaningful Gatherings",
 
-    heroImage: "/Design/dining_banner.avif",
+    heroImage:  "/image/dining_room2.jpeg",
 
     description:
       "Discover elegant dining room interior design ideas that bring families together. From modern dining spaces to luxury dining room interiors, create a welcoming atmosphere for everyday meals and special occasions.",
 
-    leftImage: "/Design/dining_left.avif",
+    leftImage: "/image/dining_room1.jpeg",
 
-    rightImage: "/Design/dining_right.avif",
+    rightImage:  "/image/dining_room4.jpeg",
 
     galleryTitle: "Thoughtfully Designed Dining Spaces For Memorable Moments",
 
@@ -458,12 +482,16 @@ export const designIdeas = [
       "A beautifully designed dining room is more than just a place to eat. Our dining room interiors combine comfort, elegance, lighting, and functionality to create the perfect setting for family dinners, celebrations, and entertaining guests.",
 
     moodboard: [
-      "/Design/dining1.avif",
-      "/Design/dining2.avif",
-      "/Design/dining3.avif",
-      "/Design/dining4.avif",
-      "/Design/dining5.avif",
-      "/Design/dining6.avif",
+      // "/Design/dining1.avif",
+      // "/Design/dining2.avif",
+      // "/Design/dining3.avif",
+      // "/Design/dining4.avif",
+      // "/Design/dining5.avif",
+      // "/Design/dining6.avif",
+      "/image/dining_room1.jpeg",
+      "/image/dining_room2.jpeg",
+      "/image/dining_room3.jpeg",
+      "/image/dining_room5.jpeg",
     ],
 
     faq: [

@@ -9,8 +9,7 @@ const services = [
     title: "Design Ideas",
     description:
       "Luxury residential interiors crafted with modern elegance and premium aesthetics.",
-    image:
-      "/lsd_images/13.jpg",
+    image: "/lsd_images/13.jpg",
     icon: Sofa,
     link: "/services/interior-design",
   },
@@ -18,8 +17,7 @@ const services = [
     title: "Turnkey Projects",
     description:
       "Complete end-to-end turnkey interior solutions from design to execution.",
-    image:
-      "/Home/trunkey.avif",
+    image: "/Home/trunkey.avif",
     icon: Building2,
     link: "/services/turnkey-projects",
   },
@@ -27,8 +25,7 @@ const services = [
     title: "Modular Kitchen",
     description:
       "Premium modular kitchen designs with intelligent storage and luxury finishes.",
-    image:
-      "/Home/service_kitchen.avif",
+    image: "/Home/service_kitchen.avif",
     icon: ChefHat,
     link: "/services/modular-kitchen",
   },
@@ -36,8 +33,7 @@ const services = [
     title: "Architecture",
     description:
       "Innovative architecture planning focused on luxury living and modern functionality.",
-    image:
-      "/Home/architecture.avif",
+    image: "/Home/architecture.avif",
     icon: Compass,
     link: "/services/architecture",
   },
@@ -66,12 +62,12 @@ export default function ServicesSection() {
           href="/portfolio"
           className="inline-flex items-center gap-2 border border-[#3D1F0D]/30 text-[#3D1F0D] px-6 py-3 text-[11px] font-semibold uppercase tracking-[.12em] hover:bg-[#3D1F0D] hover:text-white transition-colors"
         >
-          View  Portfolio
+          View Portfolio
         </Link>
       </div>
 
       {/* ── Cards ── */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-1">
+      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-1">
         {services.map((service, index) => {
           const Icon = service.icon;
 

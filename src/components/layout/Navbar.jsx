@@ -1,11 +1,9 @@
-
-
 "use client";
 
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import { Menu, X, Phone, ChevronDown, Search } from "lucide-react";
+import { Menu, X, Phone, ChevronDown, Search, MapPin } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import ConsultationModal from "@/components/common/ConsultationModal";
@@ -124,12 +122,21 @@ export default function Navbar() {
             </div>
 
             {/* RIGHT - CTA */}
-            <button
-              onClick={() => setShowConsultationModal(true)}
-              className="w-full sm:w-auto justify-self-end bg-[#3D1F0D] hover:bg-[#B8851F] text-white text-[11px] sm:text-[12px] font-semibold uppercase tracking-[0.12em] px-5 sm:px-6 py-2.5 sm:py-3 rounded-sm transition-all duration-300 hover:shadow-lg whitespace-nowrap"
-            >
-              Book Consultation
-            </button>
+            <div className="justify-self-end flex items-center gap-4">
+                <Link
+                  href="/locations"
+                  className="flex items-center gap-2 text-[#3D1F0D] hover:text-[#B8851F] transition"
+                >
+                  <MapPin size={24} />
+                  
+                </Link>
+                <button
+                  onClick={() => setShowConsultationModal(true)}
+                  className="w-full sm:w-auto justify-self-end bg-[#3D1F0D] hover:bg-[#B8851F] text-white text-[11px] sm:text-[12px] font-semibold uppercase tracking-[0.12em] px-5 sm:px-6 py-2.5 sm:py-3 rounded-sm transition-all duration-300 hover:shadow-lg whitespace-nowrap"
+                >
+                  Book Consultation
+                </button>
+            </div>
           </div>
         </div>
       </div>
@@ -236,35 +243,46 @@ export default function Navbar() {
             </nav>
 
             {/* ── MOBILE & TABLET HAMBURGER ── */}
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              aria-label="Toggle menu"
-              className="lg:hidden w-11 h-11 xs:w-12 xs:h-12 flex items-center justify-center rounded-sm bg-[#3D1F0D]/8 hover:bg-[#3D1F0D]/12 text-[#3D1F0D] transition-colors"
-            >
-              <AnimatePresence mode="wait">
-                {isOpen ? (
-                  <motion.div
-                    key="close"
-                    initial={{ rotate: -90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: 90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
+              <div className="lg:hidden flex items-center gap-2">
+                  <Link
+                    href="/locations"
+                    className="w-11 h-11 flex items-center justify-center rounded-sm bg-[#3D1F0D]/8 hover:bg-[#3D1F0D]/12 text-[#3D1F0D] transition-colors"
+                    aria-label="Location"
                   >
-                    <X size={22} />
-                  </motion.div>
-                ) : (
-                  <motion.div
-                    key="menu"
-                    initial={{ rotate: 90, opacity: 0 }}
-                    animate={{ rotate: 0, opacity: 1 }}
-                    exit={{ rotate: -90, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
+                    <MapPin size={20} />
+                  </Link>
+
+                  <button
+                    onClick={() => setIsOpen(!isOpen)}
+                    aria-label="Toggle menu"
+                    className="lg:hidden w-11 h-11 xs:w-12 xs:h-12 flex items-center justify-center rounded-sm bg-[#3D1F0D]/8 hover:bg-[#3D1F0D]/12 text-[#3D1F0D] transition-colors"
                   >
-                    <Menu size={22} />
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </button>
+                
+                    <AnimatePresence mode="wait">
+                      {isOpen ? (
+                        <motion.div
+                          key="close"
+                          initial={{ rotate: -90, opacity: 0 }}
+                          animate={{ rotate: 0, opacity: 1 }}
+                          exit={{ rotate: 90, opacity: 0 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <X size={22} />
+                        </motion.div>
+                      ) : (
+                        <motion.div
+                          key="menu"
+                          initial={{ rotate: 90, opacity: 0 }}
+                          animate={{ rotate: 0, opacity: 1 }}
+                          exit={{ rotate: -90, opacity: 0 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <Menu size={22} />
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </button>
+              </div>
           </div>
         </div>
 
