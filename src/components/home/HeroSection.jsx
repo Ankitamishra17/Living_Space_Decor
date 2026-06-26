@@ -14,28 +14,32 @@ const categories = [
   {
     title: "Modular Kitchen",
     image: "/Home/banner1.avif",
-    mobileImage: "https://images.pexels.com/photos/5712146/pexels-photo-5712146.jpeg",
+    mobileImage:
+      "https://images.pexels.com/photos/5712146/pexels-photo-5712146.jpeg",
     href: "/services/modular-kitchen",
     desc: "Elegant modular kitchens designed for functionality, comfort, and modern living.",
   },
   {
     title: "Modular Wardrobes",
     image: "/Home/banner2.avif",
-    mobileImage: "https://images.pexels.com/photos/3315286/pexels-photo-3315286.jpeg",
+    mobileImage:
+      "https://images.pexels.com/photos/3315286/pexels-photo-3315286.jpeg",
     href: "/services/wardrobes",
     desc: "Smart storage solutions with premium finishes tailored to your lifestyle.",
   },
   {
     title: "Stylish Lighting",
     image: "/Home/banner3.avif",
-    mobileImage: "https://images.pexels.com/photos/5371578/pexels-photo-5371578.jpeg",
+    mobileImage:
+      "https://images.pexels.com/photos/5371578/pexels-photo-5371578.jpeg",
     href: "/services/lights",
     desc: "Transform your interiors with ambient, decorative, and modern lighting designs.",
   },
   {
     title: "Furnishings",
     image: "/Home/banner4.avif",
-    mobileImage: "https://images.pexels.com/photos/8657185/pexels-photo-8657185.jpeg",
+    mobileImage:
+      "https://images.pexels.com/photos/29532568/pexels-photo-29532568.jpeg",
     href: "/services/furnitures",
     desc: "Luxury furnishings that add warmth, elegance, and personality to every space.",
   },
@@ -70,8 +74,7 @@ export default function HomePage() {
         >
           {categories.map((slide, index) => (
             <SwiperSlide key={index}>
-              
-              <div className="relative h-screen min-h-[700px]">
+              <div className="relative h-max-screen min-h-[600px]">
                 {/* Desktop & Tablet */}
                 <Image
                   src={slide.image}
@@ -92,7 +95,7 @@ export default function HomePage() {
                   className="block md:hidden object-cover"
                 />
 
-                <div className="absolute inset-0 bg-[#3D1F0D]/60" />
+                <div className="absolute inset-0 bg-[#000000]/40" />
               </div>
             </SwiperSlide>
           ))}
