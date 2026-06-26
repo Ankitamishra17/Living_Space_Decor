@@ -4,60 +4,103 @@ export const locations = [
     title: "Living Room Design in Sector 62 Noida",
     city: "Noida",
     image: "/image/living_room11.jpeg",
-    description: "Looking for experienced interior designers in Sector-62 Noida? We specialize in modern interiors, modular kitchens, bedrooms, living rooms, and turnkey projects.",
+    description:
+      "Transform your living room in Sector 62 Noida with stylish interiors, premium furniture, and modern design solutions by Living Space Decor.",
+    service: "Living Room Design",
+    about:
+      "Living Space Decor creates elegant and modern living room interiors in Sector 62 Noida with customized furniture layouts, stylish décor, and premium finishes. Our expertise also includes modular kitchens, luxury bedrooms, wardrobes, false ceilings, and complete turnkey home interior solutions designed for contemporary lifestyles.",
+    aboutImage: "/image/living_room12.jpeg",
   },
+
   {
     slug: "interior-designers-sector-75-noida",
     title: "Bathroom Design in Sector 75 Noida",
     city: "Noida",
     image: "/image/bathroom3.jpeg",
-     description:"Looking for experienced interior designers in Sector 75 Noida? We specialize in modern interiors, modular kitchens, bedrooms, living rooms, and turnkey projects.",
+    description:
+      "Upgrade your bathroom in Sector 75 Noida with luxurious fittings, smart storage, and elegant interior designs.",
+    service: "Bathroom Design",
+    about:
+      "Living Space Decor specializes in luxury bathroom interiors in Sector 75 Noida with modern fittings, smart storage solutions, elegant tiles, and premium finishes. Along with designer bathrooms, we deliver modular kitchens, luxury bedrooms, wardrobes, and complete home interior solutions tailored to your needs.",
+    aboutImage: "/image/bathroom14.jpeg",
   },
+
   {
     slug: "interior-designers-indirapuram-ghaziabad",
     title: "Dining Room Design in Indirapuram Ghaziabad",
     city: "Ghaziabad",
     image: "/image/dining_room4.jpeg",
-     description:"Looking for experienced interior designers in Indirapuram Ghaziabad. We specialize in modern interiors, modular kitchens, bedrooms, living rooms, and turnkey projects.",
+    description:
+      "Create a stylish dining space in Indirapuram Ghaziabad with customized interiors and premium finishes.",
+    service: "Dining Design",
+    about:
+      "Living Space Decor designs sophisticated dining room interiors in Indirapuram Ghaziabad that combine comfort, style, and functionality. We also provide modular kitchens, luxury bedrooms, custom wardrobes, false ceilings, and complete turnkey interior solutions for modern homes.",
+    aboutImage: "/image/dining_room3.jpg",
   },
+
   {
     slug: "interior-designers-sector-104-noida",
     title: "Kitchen Design in Sector 104 Noida",
     city: "Noida",
     image: "/image/kitchen1.jpeg",
     description:
-      "Living Space Decor offers premium home interior design, modular kitchens, wardrobes, false ceilings, and turnkey interior solutions in Sector 104 Noida.",
+      "Get modern modular kitchens in Sector 104 Noida with smart storage and premium finishes by Living Space Decor.",
+    service: "Kitchen Design",
+    about:
+      "Living Space Decor delivers premium modular kitchen designs in Sector 104 Noida featuring smart storage solutions, ergonomic layouts, and high-quality finishes. Our team also specializes in luxury bedrooms, wardrobes, false ceilings, and complete home interior solutions for modern families.",
+    aboutImage: "/image/kitchen1.jpeg",
   },
+
   {
     slug: "interior-designers-sector-107-noida",
-    title: "Bed Room  Design in Sector 107 Noida",
+    title: "BedRoom Design in Sector 107 Noida",
     city: "Noida",
     image: "/Design/bed6.avif",
     description:
-      "Transform your home in Sector 107 Noida with luxury interior design services, customized modular kitchens, wardrobes, and complete home renovation solutions.",
+      "Design your dream bedroom in Sector 107 Noida with customized furniture, wardrobes, and elegant interiors.",
+    service: "BedRoom Design",
+    about:
+      "Living Space Decor creates luxurious and comfortable bedroom interiors in Sector 107 Noida with customized wardrobes, elegant lighting, and premium furnishings. We also offer modular kitchens, false ceilings, and complete turnkey home interior solutions that reflect your style and personality.",
+    aboutImage: "/image/bed4.avif",
   },
+
   {
     slug: "interior-designers-sector-137-noida",
     title: "Balcony Design in Sector 137 Noida",
     city: "Noida",
     image: "/Design/balcony5.avif",
     description:
-      "Looking for experienced interior designers in Sector 137 Noida? We specialize in modern interiors, modular kitchens, bedrooms, living rooms, and turnkey projects.",
+      "Turn your balcony into a relaxing retreat in Sector 137 Noida with creative and modern designs.",
+    service: "Balcony Design",
+    about:
+      "Transform your balcony into a relaxing retreat with Living Space Decor's creative balcony designs in Sector 137 Noida. From stylish seating and greenery concepts to premium décor elements, we also provide modular kitchens, luxury bedrooms, and complete home interior solutions.",
+    aboutImage: "/Design/balcony6.avif",
   },
+
   {
     slug: "interior-designers-sector-150-noida",
     title: "Kids Room Design in Sector 150 Noida",
     city: "Noida",
     image: "/Design/kids2.avif",
     description:
-      "Get elegant and functional home interiors in Sector 150 Noida with customized furniture, modular kitchens, wardrobes, lighting, and complete interior execution.",
+      "Create fun and functional kids' rooms in Sector 150 Noida with smart storage and creative themes.",
+    service: "Kids Room Design",
+    about:
+      "Living Space Decor designs fun, safe, and functional kids' room interiors in Sector 150 Noida with creative themes, smart storage, and child-friendly furniture solutions. We also specialize in modular kitchens, luxury bedrooms, wardrobes, and complete home interior projects.",
+    aboutImage: "/image/kids3.avif",
   },
+
   {
     slug: "interior-designers-gaur-city-greater-noida-west",
     title: "Mandir Room Design in Gaur City Greater Noida West",
     city: "Greater Noida West",
     image: "/Design/mandir6.avif",
     description:
-      "Living Space Decor provides premium interior design services in Gaur City, Greater Noida West, including modular kitchens, wardrobes, false ceilings, and turnkey interiors.",
+      "Enhance your home with beautifully designed mandir interiors in Gaur City Greater Noida West.",
+    service: "Mandir Design",
+    about:
+      "Living Space Decor creates beautifully designed mandir rooms in Gaur City Greater Noida West that bring elegance and spirituality to your home. Along with custom pooja units, we provide modular kitchens, luxury bedrooms, wardrobes, false ceilings, and complete turnkey interior solutions.",
+    aboutImage: "/Design/mandir5.avif",
   },
-]
+];
+

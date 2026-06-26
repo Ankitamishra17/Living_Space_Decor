@@ -14,24 +14,28 @@ const categories = [
   {
     title: "Modular Kitchen",
     image: "/Home/banner1.avif",
+    mobileImage: "https://images.pexels.com/photos/5712146/pexels-photo-5712146.jpeg",
     href: "/services/modular-kitchen",
     desc: "Elegant modular kitchens designed for functionality, comfort, and modern living.",
   },
   {
     title: "Modular Wardrobes",
     image: "/Home/banner2.avif",
+    mobileImage: "https://images.pexels.com/photos/3315286/pexels-photo-3315286.jpeg",
     href: "/services/wardrobes",
     desc: "Smart storage solutions with premium finishes tailored to your lifestyle.",
   },
   {
     title: "Stylish Lighting",
     image: "/Home/banner3.avif",
+    mobileImage: "https://images.pexels.com/photos/5371578/pexels-photo-5371578.jpeg",
     href: "/services/lights",
     desc: "Transform your interiors with ambient, decorative, and modern lighting designs.",
   },
   {
     title: "Furnishings",
     image: "/Home/banner4.avif",
+    mobileImage: "https://images.pexels.com/photos/8657185/pexels-photo-8657185.jpeg",
     href: "/services/furnitures",
     desc: "Luxury furnishings that add warmth, elegance, and personality to every space.",
   },
@@ -66,17 +70,29 @@ export default function HomePage() {
         >
           {categories.map((slide, index) => (
             <SwiperSlide key={index}>
+              
               <div className="relative h-screen min-h-[700px]">
+                {/* Desktop & Tablet */}
                 <Image
                   src={slide.image}
                   alt={slide.title}
                   fill
                   priority={index === 0}
                   sizes="100vw"
-                  className="object-cover"
+                  className="hidden md:block object-cover"
                 />
 
-                <div className="absolute inset-0 bg-gradient-to-r from-[#3D1F0D]/85 via-[#3D1F0D]/55 to-[#3D1F0D]/20" />
+                {/* Mobile */}
+                <Image
+                  src={slide.mobileImage}
+                  alt={slide.title}
+                  fill
+                  priority={index === 0}
+                  sizes="100vw"
+                  className="block md:hidden object-cover"
+                />
+
+                <div className="absolute inset-0 bg-[#3D1F0D]/60" />
               </div>
             </SwiperSlide>
           ))}
@@ -93,10 +109,12 @@ export default function HomePage() {
                   font-medium
                   leading-[1.05]
                   mb-6
-                  text-[38px]
-                  sm:text-[32px]
+                  text-[28px]
+                  sm:text-[22px]
                   md:text-[52px]
                   lg:text-[62px]
+                  text:nowrap
+                  
                 
                 "
             >
@@ -111,21 +129,19 @@ export default function HomePage() {
               <Link
                 href={activeSlide.href}
                 className="
-      inline-flex
-      items-center
-      gap-2
-      bg-[#C8972B]
-      hover:bg-[#3D1F0D]
-      text-white
-      px-8
-      py-4
-      text-sm
-      font-semibold
-      uppercase
-      tracking-[0.12em]
-      transition-all
-      duration-300
-    "
+                  inline-flex
+                  items-center
+                  gap-2
+                  bg-[#C8972B]
+                  hover:bg-[#3D1F0D]
+                  text-white
+                  px-8
+                  py-4
+                  text-sm
+                  tracking-[0.12em]
+                  transition-all
+                  duration-300
+                "
               >
                 Explore
                 <ArrowRight size={18} />

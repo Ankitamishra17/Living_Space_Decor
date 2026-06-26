@@ -48,9 +48,11 @@ export default async function LocationPage({ params }) {
 
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
           <div className="text-center text-white px-4">
-            <h1 className="text-4xl md:text-6xl font-bold">{location.title}</h1>
+            <h1 className="text-3xl md:text-4xl font-heading">
+              {location.title}
+            </h1>
 
-            <p className="mt-5 max-w-3xl mx-auto text-lg md:text-xl">
+            <p className="mt-5 max-w-2xl mx-auto text-md md:text-md">
               {location.description}
             </p>
           </div>
@@ -59,42 +61,29 @@ export default async function LocationPage({ params }) {
 
       {/* About */}
       <section className="max-w-7xl mx-auto py-20 px-5">
-        <h2 className="text-4xl font-bold text-[#3D1F0D]">
-          About Our Interior Design Services
-        </h2>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Left Section */}
+          <div>
+            <h2 className="text-4xl font-bold text-[#3D1F0D]">
+              Our {location.service}
+            </h2>
 
-        <p className="mt-6 text-lg text-gray-600 leading-8">
-          Living Space Decor provides premium residential and commercial
-          interior design services in <b>{location.city}</b>. Our expertise
-          includes modular kitchens, wardrobes, bedrooms, living rooms, false
-          ceilings, lighting, furniture, and turnkey interior solutions.
-        </p>
-      </section>
+            <p className="mt-6 text-lg text-gray-600 leading-9">
+              Living Space Decor specializes in premium{" "}
+              <strong>{location.service}</strong> in{" "}
+              <strong>{location.city}</strong>, {location.about}
+            </p>
+          </div>
 
-      {/* Services */}
-      <section className="max-w-7xl mx-auto py-12 px-5">
-        <h2 className="text-4xl font-bold text-center mb-12">Our Services</h2>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {[
-            "Modular Kitchen",
-            "Design Ideas",
-            "Wardrobe",
-            "Lighting",
-            "Architecture",
-            "Furniture",
-          ].map((service) => (
-            <div
-              key={service}
-              className="border rounded-xl p-8 hover:shadow-xl transition"
-            >
-              <h3 className="text-2xl font-semibold">{service}</h3>
-
-              <p className="mt-4 text-gray-600">
-                Premium {service.toLowerCase()} services in {location.city}.
-              </p>
-            </div>
-          ))}
+          {/* Right Section */}
+          <div className="relative h-[450px] rounded-xl overflow-hidden">
+            <Image
+              src={location.aboutImage}
+              alt={location.service}
+              fill
+              className="object-cover"
+            />
+          </div>
         </div>
       </section>
 
@@ -102,17 +91,20 @@ export default async function LocationPage({ params }) {
       <section className="bg-[#F5EBE0] py-20 mt-16">
         <div className="max-w-4xl mx-auto text-center px-5">
           <h2 className="text-4xl font-bold">
-            Looking for Interior Designers in {location.city}?
+            Looking for Interior Designers in Noida
           </h2>
 
           <p className="mt-5 text-gray-600">
-            Book a free consultation today and transform your dream home with
+            Call Now today and transform your dream home with
             Living Space Decor.
           </p>
 
-          <button className="mt-8 bg-[#3D1F0D] text-white px-8 py-4 rounded hover:bg-[#B8851F] transition">
-            Book Consultation
-          </button>
+          <a
+            href="tel:+918826606869"
+            className="inline-block mt-8 bg-[#3D1F0D] text-white px-8 py-4 rounded hover:bg-[#B8851F] transition"
+          >
+            Call Now
+          </a>
         </div>
       </section>
     </main>
