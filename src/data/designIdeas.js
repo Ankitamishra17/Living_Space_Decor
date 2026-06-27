@@ -6,7 +6,7 @@ export const designIdeas = [
     title: "LIVING ROOM DESIGN",
     detailType: "livingRoom",
     subtitle: "Timeless Elegance",
-    heroImage: "/image/living_room7.jpeg",
+    heroImage: "/image/living_room8.jpeg",
     description: "Luxury living room interiors",
     leftImage: "/image/living_room14.jpeg",
     rightImage: "/image/living_room1.jpeg",
@@ -16,16 +16,16 @@ export const designIdeas = [
       "Every great space begins with a vision. We transform your ideas into thoughtfully crafted interiors that reflect your personality and lifestyle.",
     moodboard: [
       "/image/living_room2.jpeg",
-      "/image/living_room3.jpeg",
-      "/image/living_room4.jpeg",
+      // "/image/living_room3.jpeg",
+      // "/image/living_room4.jpeg",
       "/image/living_room5.jpeg",
-      "/image/living_room6.jpeg",
-      "/image/living_room8.jpeg",
+      // "/image/living_room6.jpeg",
+      
       "/image/living_room9.jpeg",
-      "/image/living_room10.jpeg",
-      "/image/living_room11.jpeg",
-      "/image/living_room12.jpeg",
-      "/image/living_room13.jpeg",
+      // "/image/living_room10.jpeg",
+      // "/image/living_room11.jpeg",
+      // "/image/living_room12.jpeg",
+      // "/image/living_room13.jpeg",
 
       "/image/living_room15.jpeg",
     ],
@@ -248,19 +248,10 @@ export const designIdeas = [
     subtitle: "Modern Elegance In Every Detail",
     heroImage: "/Design/bathroom_banner.avif",
     moodboard: [
-      // "https://images.pexels.com/photos/6980656/pexels-photo-6980656.jpeg",
-      // "https://images.pexels.com/photos/37058497/pexels-photo-37058497.png",
-      // "https://images.pexels.com/photos/27531871/pexels-photo-27531871.jpeg",
-      // "https://images.pexels.com/photos/7587736/pexels-photo-7587736.jpeg",
-      // "https://images.pexels.com/photos/8141967/pexels-photo-8141967.jpeg",
-      // "https://images.pexels.com/photos/8082549/pexels-photo-8082549.jpeg",
-      // "/image/bathroom1.jpeg",
-      // "/image/bathroom2.jpeg",
-
-      // "/image/bathroom4.jpeg",
+     
       "/image/bathroom5.jpeg",
-      "/image/bathroom6.jpeg",
-      "/image/bathroom7.jpeg",
+      // "/image/bathroom6.jpeg",
+      // "/image/bathroom7.jpeg",
 
       "/image/bathroom9.jpeg",
       "/image/bathroom10.jpeg",
@@ -270,7 +261,7 @@ export const designIdeas = [
       "/image/bathroom14.jpeg",
       "/image/bathroom15.jpeg",
     ],
-    leftImage: "/image/bathroom3.jpeg",
+    leftImage: "/image/bathroom3.png",
     rightImage: "/image/bathroom8.jpeg",
 
     description:

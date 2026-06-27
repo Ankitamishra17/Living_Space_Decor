@@ -16,7 +16,7 @@ export const locations = [
     slug: "interior-designers-sector-75-noida",
     title: "Bathroom Design in Sector 75 Noida",
     city: "Noida",
-    image: "/image/bathroom3.jpeg",
+    image: "/image/bathroom3.png",
     description:
       "Upgrade your bathroom in Sector 75 Noida with luxurious fittings, smart storage, and elegant interior designs.",
     service: "Bathroom Design",
