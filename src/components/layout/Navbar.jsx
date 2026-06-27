@@ -123,19 +123,18 @@ export default function Navbar() {
 
             {/* RIGHT - CTA */}
             <div className="justify-self-end flex items-center gap-4">
-                <Link
-                  href="/locations"
-                  className="flex items-center gap-2 text-[#3D1F0D] hover:text-[#B8851F] transition"
-                >
-                  <MapPin size={24} />
-                  
-                </Link>
-                <button
-                  onClick={() => setShowConsultationModal(true)}
-                  className="w-full sm:w-auto justify-self-end bg-[#3D1F0D] hover:bg-[#B8851F] text-white text-[11px] sm:text-[12px] font-semibold uppercase tracking-[0.12em] px-5 sm:px-6 py-2.5 sm:py-3 rounded-sm transition-all duration-300 hover:shadow-lg whitespace-nowrap"
-                >
-                  Book Consultation
-                </button>
+              <Link
+                href="/locations"
+                className="flex items-center gap-2 text-[#3D1F0D] hover:text-[#B8851F] transition"
+              >
+                <MapPin size={24} />
+              </Link>
+              <button
+                onClick={() => setShowConsultationModal(true)}
+                className="w-full sm:w-auto justify-self-end bg-[#3D1F0D] hover:bg-[#B8851F] text-white text-[11px] sm:text-[12px] font-semibold uppercase tracking-[0.12em] px-5 sm:px-6 py-2.5 sm:py-3 rounded-sm transition-all duration-300 hover:shadow-lg whitespace-nowrap"
+              >
+                Book Consultation
+              </button>
             </div>
           </div>
         </div>
@@ -243,46 +242,45 @@ export default function Navbar() {
             </nav>
 
             {/* ── MOBILE & TABLET HAMBURGER ── */}
-              <div className="lg:hidden flex items-center gap-2">
-                  <Link
-                    href="/locations"
-                    className="w-11 h-11 flex items-center justify-center rounded-sm bg-[#3D1F0D]/8 hover:bg-[#3D1F0D]/12 text-[#3D1F0D] transition-colors"
-                    aria-label="Location"
-                  >
-                    <MapPin size={20} />
-                  </Link>
+            <div className="lg:hidden flex items-center gap-2">
+              <Link
+                href="/locations"
+                className="w-11 h-11 flex items-center justify-center rounded-sm bg-[#3D1F0D]/8 hover:bg-[#3D1F0D]/12 text-[#3D1F0D] transition-colors"
+                aria-label="Location"
+              >
+                <MapPin size={20} />
+              </Link>
 
-                  <button
-                    onClick={() => setIsOpen(!isOpen)}
-                    aria-label="Toggle menu"
-                    className="lg:hidden w-11 h-11 xs:w-12 xs:h-12 flex items-center justify-center rounded-sm bg-[#3D1F0D]/8 hover:bg-[#3D1F0D]/12 text-[#3D1F0D] transition-colors"
-                  >
-                
-                    <AnimatePresence mode="wait">
-                      {isOpen ? (
-                        <motion.div
-                          key="close"
-                          initial={{ rotate: -90, opacity: 0 }}
-                          animate={{ rotate: 0, opacity: 1 }}
-                          exit={{ rotate: 90, opacity: 0 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          <X size={22} />
-                        </motion.div>
-                      ) : (
-                        <motion.div
-                          key="menu"
-                          initial={{ rotate: 90, opacity: 0 }}
-                          animate={{ rotate: 0, opacity: 1 }}
-                          exit={{ rotate: -90, opacity: 0 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          <Menu size={22} />
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </button>
-              </div>
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                aria-label="Toggle menu"
+                className="lg:hidden w-11 h-11 xs:w-12 xs:h-12 flex items-center justify-center rounded-sm bg-[#3D1F0D]/8 hover:bg-[#3D1F0D]/12 text-[#3D1F0D] transition-colors"
+              >
+                <AnimatePresence mode="wait">
+                  {isOpen ? (
+                    <motion.div
+                      key="close"
+                      initial={{ rotate: -90, opacity: 0 }}
+                      animate={{ rotate: 0, opacity: 1 }}
+                      exit={{ rotate: 90, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <X size={22} />
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="menu"
+                      initial={{ rotate: 90, opacity: 0 }}
+                      animate={{ rotate: 0, opacity: 1 }}
+                      exit={{ rotate: -90, opacity: 0 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Menu size={22} />
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -311,7 +309,7 @@ export default function Navbar() {
                         </Link>
                       ) : (
                         <div className="px-3 xs:px-4 py-1.5 xs:py-2">
-                          <button
+                          {/* <button
                             type="button"
                             onClick={() => toggleMobileSubmenu(item.name)}
                             className="w-full flex items-center justify-between px-1 py-3 xs:py-3.5 text-[#3D1F0D] font-medium text-[13px] xs:text-[14px] hover:text-[#C8972B] transition-colors min-h-[44px] xs:min-h-[48px]"
@@ -325,7 +323,34 @@ export default function Navbar() {
                             >
                               <ChevronDown size={18} />
                             </motion.div>
-                          </button>
+                          </button> */}
+
+                          <div className="w-full flex items-center justify-between">
+                            <Link
+                              href={item.href}
+                              onClick={() => setIsOpen(false)}
+                              className="flex-1 px-1 py-3 xs:py-3.5 text-[#3D1F0D] font-medium text-[13px] xs:text-[14px] hover:text-[#C8972B] transition-colors"
+                            >
+                              {item.name}
+                            </Link>
+
+                            <button
+                              type="button"
+                              onClick={() => toggleMobileSubmenu(item.name)}
+                              className="p-2"
+                            >
+                              <motion.div
+                                animate={{
+                                  rotate: mobileSubmenuOpen[item.name]
+                                    ? 180
+                                    : 0,
+                                }}
+                                transition={{ duration: 0.2 }}
+                              >
+                                <ChevronDown size={18} />
+                              </motion.div>
+                            </button>
+                          </div>
 
                           <AnimatePresence>
                             {mobileSubmenuOpen[item.name] && (
