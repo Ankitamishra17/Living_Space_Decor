@@ -4,17 +4,17 @@ export const designIdeas = [
   {
     slug: "living-room-design",
     title: "LIVING ROOM DESIGN",
+    detailType: "livingRoom",
     subtitle: "Timeless Elegance",
     heroImage: "/image/living_room7.jpeg",
     description: "Luxury living room interiors",
-    leftImage:  "/image/living_room14.jpeg",
-    rightImage:"/image/living_room1.jpeg",
+    leftImage: "/image/living_room14.jpeg",
+    rightImage: "/image/living_room1.jpeg",
     galleryTitle:
       "Composed Meaningful Interiors To Elevated And Refined Spaces",
     galleryDescription:
       "Every great space begins with a vision. We transform your ideas into thoughtfully crafted interiors that reflect your personality and lifestyle.",
     moodboard: [
-      
       "/image/living_room2.jpeg",
       "/image/living_room3.jpeg",
       "/image/living_room4.jpeg",
@@ -26,9 +26,8 @@ export const designIdeas = [
       "/image/living_room11.jpeg",
       "/image/living_room12.jpeg",
       "/image/living_room13.jpeg",
-     
+
       "/image/living_room15.jpeg",
-      
     ],
     faq: [
       {
@@ -58,7 +57,7 @@ export const designIdeas = [
     slug: "kids-room-design",
 
     title: "KIDS ROOM DESIGN",
-
+    detailType: "kidsRoom",
     subtitle: "Creative Spaces For Growing Minds",
 
     heroImage: "/Design/Kids_banner.avif",
@@ -125,7 +124,7 @@ export const designIdeas = [
     slug: "mandir-design",
 
     title: "MANDIR DESIGN",
-
+    detailType: "mandir",
     subtitle: "Sacred Spaces For Peace & Spirituality",
 
     heroImage: "/Design/mandir_banner.avif",
@@ -175,7 +174,7 @@ export const designIdeas = [
     slug: "bedroom-design",
 
     title: "BEDROOM DESIGN",
-
+    detailType: "bedroom",
     subtitle: "Comfort Meets Luxury",
     heroImage: "/Design/bed_room_banner.avif",
 
@@ -245,7 +244,7 @@ export const designIdeas = [
     slug: "bathroom-design",
 
     title: "BATHROOM DESIGN",
-
+    detailType: "bathroom",
     subtitle: "Modern Elegance In Every Detail",
     heroImage: "/Design/bathroom_banner.avif",
     moodboard: [
@@ -255,14 +254,14 @@ export const designIdeas = [
       // "https://images.pexels.com/photos/7587736/pexels-photo-7587736.jpeg",
       // "https://images.pexels.com/photos/8141967/pexels-photo-8141967.jpeg",
       // "https://images.pexels.com/photos/8082549/pexels-photo-8082549.jpeg",
-      "/image/bathroom1.jpeg",
-      "/image/bathroom2.jpeg",
-    
-      "/image/bathroom4.jpeg",
+      // "/image/bathroom1.jpeg",
+      // "/image/bathroom2.jpeg",
+
+      // "/image/bathroom4.jpeg",
       "/image/bathroom5.jpeg",
       "/image/bathroom6.jpeg",
       "/image/bathroom7.jpeg",
-     
+
       "/image/bathroom9.jpeg",
       "/image/bathroom10.jpeg",
       "/image/bathroom11.jpeg",
@@ -271,8 +270,8 @@ export const designIdeas = [
       "/image/bathroom14.jpeg",
       "/image/bathroom15.jpeg",
     ],
-    leftImage:   "/image/bathroom3.jpeg",
-    rightImage:  "/image/bathroom8.jpeg",
+    leftImage: "/image/bathroom3.jpeg",
+    rightImage: "/image/bathroom8.jpeg",
 
     description:
       "Explore stylish bathroom interior design ideas featuring modern vanities, luxury fittings, smart storage, and elegant finishes for contemporary homes.",
@@ -329,7 +328,7 @@ export const designIdeas = [
     slug: "home-office-design",
 
     title: "HOME OFFICE DESIGN",
-
+    detailType: "homeOffice",
     subtitle: "Productive Spaces For Modern Professionals",
 
     heroImage: "/Design/office_banner.avif",
@@ -389,7 +388,7 @@ export const designIdeas = [
     slug: "balcony-terrace-design",
 
     title: "BALCONY & TERRACE DESIGN",
-
+    detailType: "balconyTerrace",
     subtitle: "Outdoor Spaces Designed To Inspire",
     heroImage:
       "https://images.pexels.com/photos/7587473/pexels-photo-7587473.jpeg",
@@ -464,17 +463,17 @@ export const designIdeas = [
     slug: "dining-room-design",
 
     title: "DINING ROOM DESIGN",
-
+    detailType: "diningRoom",
     subtitle: "Where Style Meets Meaningful Gatherings",
 
-    heroImage:  "/image/dining_room2.jpeg",
+    heroImage: "/image/dining_room2.jpeg",
 
     description:
       "Discover elegant dining room interior design ideas that bring families together. From modern dining spaces to luxury dining room interiors, create a welcoming atmosphere for everyday meals and special occasions.",
 
     leftImage: "/image/dining_room1.jpeg",
 
-    rightImage:  "/image/dining_room4.jpeg",
+    rightImage: "/image/dining_room4.jpeg",
 
     galleryTitle: "Thoughtfully Designed Dining Spaces For Memorable Moments",
 

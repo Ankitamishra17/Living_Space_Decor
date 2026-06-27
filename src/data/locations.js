@@ -26,8 +26,8 @@ export const locations = [
   },
 
   {
-    slug: "interior-designers-indirapuram-ghaziabad",
-    title: "Dining Room Design in Indirapuram Ghaziabad",
+    slug: "interior-designers-ghaziabad",
+    title: "Dining Room Design in  Ghaziabad",
     city: "Ghaziabad",
     image: "/image/dining_room4.jpeg",
     description:

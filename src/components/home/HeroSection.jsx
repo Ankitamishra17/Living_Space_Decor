@@ -74,7 +74,7 @@ export default function HomePage() {
         >
           {categories.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="relative h-max-screen min-h-[600px]">
+              <div className="relative h-screen min-h-[700px]">
                 {/* Desktop & Tablet */}
                 <Image
                   src={slide.image}
