@@ -8,7 +8,7 @@ export default function DesignHero({ data }) {
     <section>
       <div className="mx-auto">
         {/* Hero Image */}
-        <div className="relative h-[60vh] md:h-[75vh] lg:h-[85vh] overflow-hidden">
+        <div className="relative min-h-screen overflow-hidden">
           <Image
             src={data.heroImage}
             alt={data.title}
@@ -21,7 +21,7 @@ export default function DesignHero({ data }) {
           <div className="absolute inset-0 bg-[#3D1F0D]/50" />
 
           {/* Content */}
-          <div className="absolute inset-0 flex items-center justify-center text-center px-4">
+          <div className="absolute inset-0 flex items-center justify-center mt-34 lg:mt-6 text-center px-4">
             <div>
               <p className="text-[#F5EBE0] uppercase tracking-[2px] text-xs md:text-sm mb-4">
                 Interior Design Studio
@@ -37,8 +37,6 @@ export default function DesignHero({ data }) {
             </div>
           </div>
         </div>
-
-       
       </div>
     </section>
   );

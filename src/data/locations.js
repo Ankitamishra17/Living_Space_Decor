@@ -39,15 +39,15 @@ export const locations = [
   },
 
   {
-    slug: "interior-designers-sector-104-noida",
-    title: "Kitchen Design in Sector 104 Noida",
+    slug: "interior-designers-sector-63-noida",
+    title: "Kitchen Design in Sector 63 Noida",
     city: "Noida",
     image: "/image/kitchen1.jpeg",
     description:
-      "Get modern modular kitchens in Sector 104 Noida with smart storage and premium finishes by Living Space Decor.",
+      "Get modern modular kitchens in Sector 63 Noida with smart storage and premium finishes by Living Space Decor.",
     service: "Kitchen Design",
     about:
-      "Living Space Decor delivers premium modular kitchen designs in Sector 104 Noida featuring smart storage solutions, ergonomic layouts, and high-quality finishes. Our team also specializes in luxury bedrooms, wardrobes, false ceilings, and complete home interior solutions for modern families.",
+      "Living Space Decor delivers premium modular kitchen designs in Sector 63 Noida featuring smart storage solutions, ergonomic layouts, and high-quality finishes. Our team also specializes in luxury bedrooms, wardrobes, false ceilings, and complete home interior solutions for modern families.",
     aboutImage: "/image/kitchen1.jpeg",
   },
 
@@ -94,13 +94,13 @@ export const locations = [
     slug: "interior-designers-gaur-city-greater-noida-west",
     title: "Mandir Room Design in Gaur City Greater Noida West",
     city: "Greater Noida West",
-    image: "/Design/mandir6.avif",
+    image: "/image/mandir_design6.jpeg",
     description:
       "Enhance your home with beautifully designed mandir interiors in Gaur City Greater Noida West.",
     service: "Mandir Design",
     about:
       "Living Space Decor creates beautifully designed mandir rooms in Gaur City Greater Noida West that bring elegance and spirituality to your home. Along with custom pooja units, we provide modular kitchens, luxury bedrooms, wardrobes, false ceilings, and complete turnkey interior solutions.",
-    aboutImage: "/Design/mandir5.avif",
+    aboutImage: "/image/mandir_design2.webp",
   },
 ];
 

@@ -20,7 +20,7 @@ export const designIdeas = [
       // "/image/living_room4.jpeg",
       "/image/living_room5.jpeg",
       // "/image/living_room6.jpeg",
-      
+
       "/image/living_room9.jpeg",
       // "/image/living_room10.jpeg",
       // "/image/living_room11.jpeg",
@@ -60,14 +60,14 @@ export const designIdeas = [
     detailType: "kidsRoom",
     subtitle: "Creative Spaces For Growing Minds",
 
-    heroImage: "/Design/Kids_banner.avif",
+    heroImage: "/image/kids_room1.jpeg",
 
     description:
       "Discover inspiring kids room interior design ideas that combine creativity, comfort, safety, and functionality. From playful themes to smart storage solutions, create a space where children can learn, play, and grow.",
 
-    leftImage: "/Design/kids_left.avif",
+    leftImage: "/image/kids_room5.jpeg",
 
-    rightImage: "/Design/kids_right.avif",
+    rightImage: "/image/kids_room4.jpeg",
 
     galleryTitle:
       "Thoughtfully Designed Kids Rooms That Inspire Learning And Creativity",
@@ -76,11 +76,18 @@ export const designIdeas = [
       "A well-designed kids room goes beyond aesthetics. Our designs focus on safety, functionality, organization, and imagination, creating a personalized environment where children feel comfortable, inspired, and happy every day.",
 
     moodboard: [
-      "/Design/kids1.avif",
-      "/Design/kids2.avif",
-      "/Design/kids3.avif",
-      "/Design/kids4.avif",
-      "/Design/kids5.avif",
+      "/image/kids.jpeg",
+      "/image/kidss.jpeg",
+      "/image/kids_room_design.jpeg",
+      "/image/kids_room_design3.jpeg",
+      "/image/kids_room_interior_design.jpeg",
+      "/image/kids_room_interior.jpeg",
+
+      "/image/kids_room2.jpeg",
+      "/image/kids_room3.jpeg",
+
+      "/image/kids_room6.jpeg",
+      "/image/kids_room7.jpeg",
     ],
 
     faq: [
@@ -118,7 +125,7 @@ export const designIdeas = [
         "kids room design, children's bedroom design, kids room interior design, modern kids room ideas, study room design for kids, kids bedroom furniture, creative kids room interiors",
     },
 
-    ctaVideo: "/kids.mp4",
+    ctaVideo: "/image/kids_room_interior_design.mp4",
   },
   {
     slug: "mandir-design",
@@ -127,13 +134,13 @@ export const designIdeas = [
     detailType: "mandir",
     subtitle: "Sacred Spaces For Peace & Spirituality",
 
-    heroImage: "/Design/mandir_banner.avif",
+    heroImage: "/image/mandir_design5.jpeg",
 
     description:
       "Explore elegant mandir design ideas for modern homes. From traditional wooden temples to contemporary pooja room interiors, create a peaceful and spiritual space that blends beautifully with your home décor.",
 
-    leftImage: "/Design/mandir_left.avif",
-    rightImage: "/Design/mandir_right.avif",
+    leftImage: "/image/mandir_interior_design.jpeg",
+    rightImage: "/image/mandir_design6.jpeg",
 
     galleryTitle:
       "Thoughtfully Crafted Pooja Rooms For Daily Worship And Serenity",
@@ -163,11 +170,14 @@ export const designIdeas = [
     },
     ctaVideo: "/mandir.mp4",
     moodboard: [
-      "/Design/mandir1.avif",
-      "/Design/mandir2.avif",
-      "/Design/mandir3.avif",
-      "/Design/mandir4.avif",
-      "/Design/mandir5.avif",
+      "/image/mandir_design1.webp",
+      "/image/mandir_design2.webp",
+
+      "/image/mandir_design4.jpeg",
+      "/image/mandir_design5.jpeg",
+      "/image/mandir_design7.jpeg",
+      "/image/mandir_design3.jpeg",
+      "/image/mandir_design.jpeg",
     ],
   },
   {
@@ -248,7 +258,6 @@ export const designIdeas = [
     subtitle: "Modern Elegance In Every Detail",
     heroImage: "/Design/bathroom_banner.avif",
     moodboard: [
-     
       "/image/bathroom5.jpeg",
       // "/image/bathroom6.jpeg",
       // "/image/bathroom7.jpeg",
