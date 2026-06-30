@@ -11,32 +11,32 @@ const portfolio = [
     id: 1,
     title: "Luxury Living Room",
    
-    image: "/Home/living_room.avif",
+    image: "/image/living_room8.jpeg",
     featured: true,
   },
   {
     id: 2,
-    title: "Modern Bedroom Suite",
+    title: "Modern Bedroom ",
    
-    image: "/Home/bed_room.avif",
+    image: "/image/bedroom_design12.jpeg",
   },
   {
     id: 3,
     title: "Premium Kitchen",
    
-    image: "/Home/modern_kitchen.avif",
+    image: "/image/kitchen_design1.jpeg",
   },
   {
     id: 4,
     title: "Kids Room",
    
-    image: "/Home/kids_room.avif",
+    image: "/image/kids_room4.jpeg",
   },
   {
     id: 5,
     title: "Contemporary Dining",
    
-    image: "/Home/dining_room.avif",
+    image: "/image/dining_room2.jpeg",
   },
 ];
 

@@ -125,9 +125,9 @@ export default function HomePage() {
               {activeSlide.title}
             </h1>
             {/* Tag */}
-            <p className="text-[#ffffff] text-xs md:text-sm  tracking-[0.1em]  mb-5">
+            {/* <p className="text-[#ffffff] text-xs md:text-sm  tracking-[0.1em]  mb-5">
               {activeSlide.desc}
-            </p>
+            </p> */}
             {/* Button */}
             <div className="flex justify-center">
               <Link

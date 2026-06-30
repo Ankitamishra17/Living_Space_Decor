@@ -25,7 +25,7 @@ const services = [
     title: "Modular Kitchen",
     description:
       "Premium modular kitchen designs with intelligent storage and luxury finishes.",
-    image: "/Home/service_kitchen.avif",
+    image: "/image/kitchen_design5.jpeg",
     icon: ChefHat,
     link: "/services/modular-kitchen",
   },
