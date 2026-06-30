@@ -15,89 +15,89 @@ const images = [
   {
     category: "Living Room",
     image:
-      "https://i.pinimg.com/1200x/90/95/1d/90951d2f93607285c0f71ddeebe69f91.jpg",
+      "/image/living_room2.jpeg",
   },
   {
     category: "Home Office",
     image:
-      "https://i.pinimg.com/1200x/fe/9c/07/fe9c07e3ef5a6d7d227b894f8ca63d45.jpg",
+      "/image/office_design4.png",
   },
 
   {
     category: "Bedroom",
     image:
-      "https://i.pinimg.com/736x/25/90/c4/2590c48434c7a03070a3d7855c95e198.jpg",
+      "/image/bedroom_design2.jpeg",
   },
   {
     category: "Living Room",
     image:
-      "https://i.pinimg.com/1200x/12/05/39/1205392a607716616b81b7abcdf89c63.jpg",
+      "/image/living_room1.jpeg",
   },
 
   {
     category: "Bedroom",
     image:
-      "https://i.pinimg.com/736x/b4/fe/03/b4fe03b0dff9f825042696cb77ce2a2f.jpg",
+      "/image/bedroom_design3.jpeg",
   },
 
   {
     category: "Dining Room",
     image:
-      "https://i.pinimg.com/736x/65/f1/df/65f1dfac0ca8fdc4101b9b64b7143a46.jpg",
+      "/image/dining_room2.jpeg",
   },
   {
     category: "Bedroom",
     image:
-      "https://i.pinimg.com/736x/0b/e4/b6/0be4b6261c307e8accaee7376300e388.jpg",
+      "/image/bedroom_design6.jpeg",
   },
 
   {
     category: "Dining Room",
     image:
-      "https://i.pinimg.com/736x/2c/09/31/2c0931431cd42b3ed163da7e80cc9c8d.jpg",
+      "/image/dining_room3.jpeg",
   },
   {
     category: "Living Room",
     image:
-      "https://i.pinimg.com/736x/7e/d1/c8/7ed1c8c8e87f615fdd442575b42105d9.jpg",
+      "/image/living_room5.jpeg",
   },
   {
     category: "Home Office",
     image:
-      "https://i.pinimg.com/1200x/b9/2a/de/b92ade7b022259d533a445b1345591d1.jpg",
+      "/image/office_design5.jpg",
   },
 
   {
     category: "Dining Room",
     image:
-      "https://i.pinimg.com/736x/b2/b4/cd/b2b4cd6e8fa9fc86814b09f38d80bd64.jpg",
+      "/image/dining_room5.jpeg",
   },
   {
     category: "Living Room",
     image:
-      "https://i.pinimg.com/1200x/b1/0f/b3/b10fb37385a0e2d1d3f1b23f74ffb0d2.jpg",
+      "/image/living_room13.jpeg",
   },
 
   {
     category: "Bedroom",
     image:
-      "https://i.pinimg.com/1200x/22/39/ab/2239ab8af6c93e963b2dadc78266f8e8.jpg",
+      "/image/bedroom_design7.jpeg",
   },
   {
     category: "Home Office",
     image:
-      "https://i.pinimg.com/736x/df/62/6e/df626ef9bdfdd25beaf6f1590a7e6308.jpg",
+      "/image/office_design6.png",
   },
   {
     category: "Dining Room",
     image:
-      "https://i.pinimg.com/1200x/02/3b/24/023b2478a2a57d4823750a2451e85219.jpg",
+      "/image/dining_room6.jpeg",
   },
 
   {
     category: "Home Office",
     image:
-      "https://i.pinimg.com/1200x/c8/9e/a4/c89ea46e79cd18cb79d5744e3678840b.jpg",
+      "/image/office_design8.jpg",
   },
 ];
 

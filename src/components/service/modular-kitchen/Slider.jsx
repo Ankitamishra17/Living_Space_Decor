@@ -52,7 +52,7 @@ const data = {
       title: "Beige L-Shaped Kitchen with Open Shelving Design",
       color: "Warm Beige",
       finish: "Matt Laminate",
-      img: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?w=1200&q=80",
+      img: "/image/kitchen_design10.jpeg",
       thumbs: [
         "https://images.unsplash.com/photo-1565538810643-b5bdb714032a?w=400&q=80",
         "https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?w=400&q=80",
@@ -64,9 +64,9 @@ const data = {
       title: "Contemporary Parallel Kitchen with Champagne Cabinets",
       color: "Champagne",
       finish: "High Gloss Laminate",
-      img: "https://images.pexels.com/photos/6782474/pexels-photo-6782474.jpeg",
+      img: "/image/kitchen_design4.jpeg",
       thumbs: [
-        "https://images.pexels.com/photos/7214450/pexels-photo-7214450.jpeg",
+        "/image/kitchen_design6.jpeg",
         "https://images.pexels.com/photos/6782474/pexels-photo-6782474.jpeg",
       ],
     },
@@ -74,7 +74,7 @@ const data = {
       title: "Dark Parallel Kitchen with Handleless Cabinet Design",
       color: "Graphite",
       finish: "Matte Acrylic",
-      img: "https://images.pexels.com/photos/7061393/pexels-photo-7061393.jpeg",
+      img: "/image/kitchen_design11.jpeg",
       thumbs: [
         "https://images.pexels.com/photos/7515855/pexels-photo-7515855.png",
         "https://images.pexels.com/photos/8089080/pexels-photo-8089080.jpeg",

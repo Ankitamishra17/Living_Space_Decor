@@ -83,7 +83,7 @@ export default function RecentProjects() {
           <div className="grid lg:grid-cols-2">
             <div className="relative h-[400px] lg:h-auto">
               <Image
-                src="https://images.pexels.com/photos/5824883/pexels-photo-5824883.jpeg"
+                src="/image/kitchen_design9.jpeg"
                 alt="Featured Kitchen"
                 fill
                 className="object-cover"
@@ -96,7 +96,7 @@ export default function RecentProjects() {
               </span>
 
               <h3 className="mt-4 text-3xl md:text-4xl font-semibold text-white">
-                Luxury Island Kitchen
+                Luxury  Kitchen
               </h3>
 
               <p className="mt-5 text-gray-300 leading-relaxed">

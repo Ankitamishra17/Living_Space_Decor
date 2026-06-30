@@ -18,7 +18,7 @@ const services = [
     id: "02",
     title: "Bedroom Sanctuaries",
     image:
-      "https://images.pexels.com/photos/19980080/pexels-photo-19980080.jpeg",
+      "/image/bedroom_design7.jpeg",
     description:
       "Restful retreats designed with layered textures, ambient lighting, and bespoke furniture.",
   },
@@ -26,7 +26,7 @@ const services = [
     id: "03",
     title: "Kitchen & Dining",
     image:
-      "https://images.unsplash.com/photo-1556911220-bff31c812dba?q=80&w=1200",
+      "/image/kitchen_design13.jpeg",
     description:
       "Functional yet stunning culinary spaces that become the heart of your home.",
   },

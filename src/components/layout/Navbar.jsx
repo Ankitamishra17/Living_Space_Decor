@@ -62,7 +62,7 @@ const navLinks = [
     ],
   },
   { name: "Turnkey Project", href: "/services/turnkey-projects" },
-  { name: "Lights", href: "/services/lights" },
+  // { name: "Lights", href: "/services/lights" },
   { name: "Architecture & Construction", href: "/services/architecture" },
   { name: "Furnitures", href: "/services/furnitures" },
   { name: "Portfolio", href: "/portfolio" },

@@ -35,7 +35,7 @@ export const locations = [
     service: "Dining Design",
     about:
       "Living Space Decor designs sophisticated dining room interiors in Indirapuram Ghaziabad that combine comfort, style, and functionality. We also provide modular kitchens, luxury bedrooms, custom wardrobes, false ceilings, and complete turnkey interior solutions for modern homes.",
-    aboutImage: "/image/dining_room3.jpg",
+    aboutImage: "/image/dining_room3.jpeg",
   },
 
   {
@@ -48,27 +48,27 @@ export const locations = [
     service: "Kitchen Design",
     about:
       "Living Space Decor delivers premium modular kitchen designs in Sector 63 Noida featuring smart storage solutions, ergonomic layouts, and high-quality finishes. Our team also specializes in luxury bedrooms, wardrobes, false ceilings, and complete home interior solutions for modern families.",
-    aboutImage: "/image/kitchen1.jpeg",
+    aboutImage: "/image/kitchen_design11.jpeg",
   },
 
   {
     slug: "interior-designers-sector-107-noida",
     title: "BedRoom Design in Sector 107 Noida",
     city: "Noida",
-    image: "/Design/bed6.avif",
+    image: "/image/bedroom_design7.jpeg",
     description:
       "Design your dream bedroom in Sector 107 Noida with customized furniture, wardrobes, and elegant interiors.",
     service: "BedRoom Design",
     about:
       "Living Space Decor creates luxurious and comfortable bedroom interiors in Sector 107 Noida with customized wardrobes, elegant lighting, and premium furnishings. We also offer modular kitchens, false ceilings, and complete turnkey home interior solutions that reflect your style and personality.",
-    aboutImage: "/image/bed4.avif",
+    aboutImage: "/image/bedroom_design2.jpeg",
   },
 
   {
     slug: "interior-designers-sector-137-noida",
     title: "Balcony Design in Sector 137 Noida",
     city: "Noida",
-    image: "/Design/balcony5.avif",
+    image: "/image/balcony_design.jpeg",
     description:
       "Turn your balcony into a relaxing retreat in Sector 137 Noida with creative and modern designs.",
     service: "Balcony Design",
@@ -81,13 +81,13 @@ export const locations = [
     slug: "interior-designers-sector-150-noida",
     title: "Kids Room Design in Sector 150 Noida",
     city: "Noida",
-    image: "/Design/kids2.avif",
+    image: "/image/kids_room1.jpeg",
     description:
       "Create fun and functional kids' rooms in Sector 150 Noida with smart storage and creative themes.",
     service: "Kids Room Design",
     about:
       "Living Space Decor designs fun, safe, and functional kids' room interiors in Sector 150 Noida with creative themes, smart storage, and child-friendly furniture solutions. We also specialize in modular kitchens, luxury bedrooms, wardrobes, and complete home interior projects.",
-    aboutImage: "/image/kids3.avif",
+    aboutImage: "/image/kids_room5.jpeg",
   },
 
   {

@@ -52,7 +52,8 @@ export default function HomePage() {
 
   return (
     <main className="overflow-x-hidden">
-      <section className="relative h-screen min-h-[700px]">
+      <section className="relative  min-h-screen">
+      {/* min-h-[700px] h-min */}
         <Swiper
           modules={[Autoplay, Pagination]}
           autoplay={{

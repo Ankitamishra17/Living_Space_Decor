@@ -26,7 +26,7 @@ const cards = [
     title: "Economy",
     price: "Cost starting from ₹ 1 Lakhs",
     image:
-      "https://images.pexels.com/photos/15872826/pexels-photo-15872826.jpeg",
+      "/image/kitchen_design2.jpeg",
     rotate: "lg:rotate-12",
     bg: "bg-[#d7d1c8]",
     text: "text-zinc-700",

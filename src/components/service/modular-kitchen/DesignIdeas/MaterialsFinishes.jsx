@@ -22,7 +22,7 @@ const materials = [
     description:
       "Smooth painted finish offering elegance, durability and timeless beauty.",
     image:
-      "/kitchen/PU.avif",
+      "/image/kitchen_design6.jpeg",
   },
   {
     title: "Wood Veneer Kitchen",
@@ -36,7 +36,7 @@ const materials = [
     description:
       "Reflective modern surfaces perfect for contemporary luxury spaces.",
     image:
-      "/kitchen/Glass.avif",
+      "/image/kitchen_design7.jpeg",
   },
   {
     title: "Membrane Finish Kitchen",

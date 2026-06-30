@@ -21,7 +21,7 @@ const finishes = {
       subtitle: "Acrylic Solid",
       color: "#C1BDB8",
       image:
-        "https://images.pexels.com/photos/13722898/pexels-photo-13722898.jpeg",
+        "/image/kitchen_design1.jpeg",
     },
     {
       id: 3,
