@@ -13,9 +13,8 @@ import "swiper/css/pagination";
 const categories = [
   {
     title: "Modular Kitchen",
-    image: "/Home/banner1.avif",
-    mobileImage:
-      "https://images.pexels.com/photos/5712146/pexels-photo-5712146.jpeg",
+    image: "/image/kitchen_design7.jpeg",
+    mobileImage: "/image/kitchen_design7.jpeg",
     href: "/services/modular-kitchen",
     desc: "Elegant modular kitchens designed for functionality, comfort, and modern living.",
   },
@@ -27,14 +26,7 @@ const categories = [
     href: "/services/wardrobes",
     desc: "Smart storage solutions with premium finishes tailored to your lifestyle.",
   },
-  {
-    title: "Stylish Lighting",
-    image: "/Home/banner3.avif",
-    mobileImage:
-      "https://images.pexels.com/photos/5371578/pexels-photo-5371578.jpeg",
-    href: "/services/lights",
-    desc: "Transform your interiors with ambient, decorative, and modern lighting designs.",
-  },
+
   {
     title: "Furnishings",
     image: "/Home/banner4.avif",
@@ -53,7 +45,7 @@ export default function HomePage() {
   return (
     <main className="overflow-x-hidden">
       <section className="relative  min-h-screen">
-      {/* min-h-[700px] h-min */}
+        {/* min-h-[700px] h-min */}
         <Swiper
           modules={[Autoplay, Pagination]}
           autoplay={{
@@ -104,7 +96,7 @@ export default function HomePage() {
 
         {/* Content */}
         <div className="absolute inset-0 z-10 flex items-center justify-center">
-          <div className="max-w-4xl mx-auto px-5 text-center">
+          <div className="max-w-4xl    mx-auto px-5 text-center">
             {/* Heading */}
             <h1
               className="
@@ -114,9 +106,9 @@ export default function HomePage() {
                   leading-[1.05]
                   mb-6
                   text-[28px]
-                  sm:text-[22px]
-                  md:text-[52px]
-                  lg:text-[62px]
+                  sm:text-[18px]
+                  md:text-[42px]
+                  lg:text-[52px]
                   text:nowrap
                   
                 
