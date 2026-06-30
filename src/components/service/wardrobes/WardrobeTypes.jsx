@@ -46,7 +46,7 @@ const WardrobeTypes = () => {
       icon: '🚪',
       title: 'Sliding Wardrobes',
       subtitle: 'Elegant • Space-Saving',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=600&fit=crop',
+      image: '/image/wardrobe_design17.png',
       link: '#sliding',
     },
     {

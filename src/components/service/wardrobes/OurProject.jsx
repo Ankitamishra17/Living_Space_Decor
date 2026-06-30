@@ -7,27 +7,27 @@ const projects = [
   {
     title: "Sliding Wardrobe",
     image:
-      "https://tse1.mm.bing.net/th/id/OIP.RO33A9iA0Zx6eQ8ODGVsMQHaE8?pid=Api&P=0&h=180",
+      "/image/wardrobe_design9.png",
   },
   {
     title: "Walk-in Closet",
     image:
-      "https://tse3.mm.bing.net/th/id/OIP.EZGxFyHLXC8f2m6km5y35gHaHa?pid=Api&P=0&h=180",
+      "/image/wardrobe_design17.png",
   },
   {
     title: "Luxury Bedroom Wardrobe",
     image:
-      "https://tse3.mm.bing.net/th/id/OIP.Sr_WrUPZmtUgWZpFM8IWUQHaEc?pid=Api&P=0&h=180",
+      "/image/wardrobe_design8.png",
   },
   {
     title: "Glass Wardrobe",
     image:
-      "https://tse4.mm.bing.net/th/id/OIP.6W8bn1omjmTtril9Utd1-wHaE8?pid=Api&P=0&h=180",
+      "/image/wardrobe_design.jpeg",
   },
   {
     title: "Modern White Wardrobe",
     image:
-      "https://tse2.mm.bing.net/th/id/OIP.o6jyrH7cO_kdY6okOfcfnQHaE8?pid=Api&P=0&h=180",
+      "/image/wardrobe_design2.jpeg",
   },
 ];
 
