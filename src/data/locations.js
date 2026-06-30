@@ -74,7 +74,7 @@ export const locations = [
     service: "Balcony Design",
     about:
       "Transform your balcony into a relaxing retreat with Living Space Decor's creative balcony designs in Sector 137 Noida. From stylish seating and greenery concepts to premium décor elements, we also provide modular kitchens, luxury bedrooms, and complete home interior solutions.",
-    aboutImage: "/Design/balcony6.avif",
+    aboutImage: "/image/balcony_design1.jpeg",
   },
 
   {

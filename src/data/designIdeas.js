@@ -331,11 +331,26 @@ export const designIdeas = [
     detailType: "homeOffice",
     subtitle: "Productive Spaces For Modern Professionals",
 
-    heroImage: "/Design/office_banner.avif",
+    heroImage: "/image/office_design5.jpg",
 
-    leftImage: "/Design/office_left.avif",
-    rightImage: "/Design/office_right.avif",
-    moodboard: ["/Design/office1.avif", "/Design/office2.avif"],
+    leftImage: "/image/office_design2.png",
+    rightImage: "/image/office_design8.jpg",
+    // "/image/office_design3.jpeg",
+    moodboard: [
+      "/image/office_design.jpg",
+      "/image/office_design1.jpg",
+
+      "/image/office_design4.png",
+      "/image/office_interior1.jpg",
+      "/image/office_design8.jpg",
+      "/image/office_design7.jpg",
+      "/image/office_design5.jpg",
+      "/image/office_design6.png",
+      "/image/office_design10.png",
+      "/image/office_design11.png",
+      "/image/office_design12.jpeg",
+      // "/image/",
+    ],
     description:
       "Create a functional and inspiring home office with ergonomic furniture, smart storage, and modern workspace design solutions.",
 
@@ -394,18 +409,17 @@ export const designIdeas = [
       "https://images.pexels.com/photos/7587473/pexels-photo-7587473.jpeg",
     moodboard: [
       "https://images.pexels.com/photos/7587473/pexels-photo-7587473.jpeg",
-      "/Design/balcony2.avif",
+      "/image/balcony_design.jpeg",
+      "/image/balcony_design1.jpeg",
+      "/image/balcony_interior_design2.jpeg",
+
       "/Design/balcony3.avif",
       "/Design/balcony4.avif",
-      "/Design/balcony5.avif",
+
       "/Design/balcony6.avif",
-      "https://images.pexels.com/photos/8082313/pexels-photo-8082313.jpeg",
-      "https://images.pexels.com/photos/19737863/pexels-photo-19737863.jpeg",
     ],
-    leftImage:
-      "https://images.pexels.com/photos/16973548/pexels-photo-16973548.jpeg",
-    rightImage:
-      "https://images.pexels.com/photos/37671913/pexels-photo-37671913.jpeg",
+    leftImage: "/image/balcony_design.jpeg",
+    rightImage: "/image/balcony_design1.jpeg",
 
     description:
       "Transform your balcony or terrace into a beautiful outdoor retreat with modern seating, greenery, lighting, and customized décor solutions.",
@@ -481,12 +495,6 @@ export const designIdeas = [
       "A beautifully designed dining room is more than just a place to eat. Our dining room interiors combine comfort, elegance, lighting, and functionality to create the perfect setting for family dinners, celebrations, and entertaining guests.",
 
     moodboard: [
-      // "/Design/dining1.avif",
-      // "/Design/dining2.avif",
-      // "/Design/dining3.avif",
-      // "/Design/dining4.avif",
-      // "/Design/dining5.avif",
-      // "/Design/dining6.avif",
       "/image/dining_room1.jpeg",
       "/image/dining_room2.jpeg",
       "/image/dining_room3.jpeg",
