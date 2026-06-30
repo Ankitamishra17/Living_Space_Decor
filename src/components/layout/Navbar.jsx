@@ -148,7 +148,7 @@ export default function Navbar() {
             : "shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-3 xs:px-4 sm:px-6 lg:px-8">
+        <div className="max-w-[1400px] mx-auto px-3 xs:px-4 sm:px-6 lg:px-24">
           <div className="flex items-center justify-between h-14 xs:h-16 sm:h-18 lg:h-16">
             {/* ── LOGO - MOBILE & TABLET ── */}
             <div className="lg:hidden ">
