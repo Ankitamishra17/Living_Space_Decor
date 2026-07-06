@@ -16,7 +16,7 @@ const MORE_LINK = [
 
 const SERVICE_LINKS = [
   { label: "Wardrobe", href: "/services/wardrobes" },
-  { label: "Wardrobe-Cost Calculator", href: "/wardrobe-cost-calculator" },
+  { label: "Wardrobe Cost Calculator", href: "/wardrobe-cost-calculator" },
 ];
 const DESIGN_IDEAS = [
   {

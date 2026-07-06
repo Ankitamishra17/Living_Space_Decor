@@ -23,13 +23,19 @@ const navLinks = [
         name: "Kids Room Designs",
         href: "/services/design-ideas/kids-room-design",
       },
-      { name: "Modular Kitchen Designs", href: "/services/design-ideas/kitchen-design-ideas" },
+      {
+        name: "Modular Kitchen Designs",
+        href: "/services/design-ideas/kitchen-design-ideas",
+      },
       { name: "Mandir Designs", href: "/services/design-ideas/mandir-design" },
       {
         name: "Dining Room Designs",
         href: "/services/design-ideas/dining-room-design",
       },
-      { name: "Bedroom Designs", href: "/services/design-ideas/bedroom-design" },
+      {
+        name: "Bedroom Designs",
+        href: "/services/design-ideas/bedroom-design",
+      },
       {
         name: "Bathroom Designs",
         href: "/services/design-ideas/bathroom-design",
@@ -46,11 +52,11 @@ const navLinks = [
   },
   {
     name: "Modular Kitchen",
-    href: "/services/modular-kitchen",
+    href: "/kitchen-design",
     submenu: [
-      { name: "Modular Kitchens", href: "/services/modular-kitchen" },
+      { name: "Modular Kitchens", href: "/kitchen-design" },
       { name: "Kitchen Cost Calculator", href: "/kitchen-calculator" },
-      { name: "Modular Kitchen Design Ideas", href: "/kitchen-design" },
+      // { name: "Modular Kitchen Design Ideas", href: "/kitchen-design" },
     ],
   },
   {
@@ -58,7 +64,7 @@ const navLinks = [
     href: "/services/wardrobes",
     submenu: [
       { name: "Custom Wardrobe", href: "/services/wardrobes" },
-      { name: "Wardrobe-Cost Calculator", href: "/wardrobe-calculator" },
+      { name: "Wardrobe Cost Calculator", href: "/wardrobe-calculator" },
     ],
   },
   // { name: "Turnkey Project", href: "/services/turnkey-projects" },
@@ -168,7 +174,7 @@ export default function Navbar() {
             </div>
 
             {/* ── DESKTOP NAV ── */}
-            <nav className="hidden lg:flex items-center gap-0.5">
+            <nav className="hidden lg:flex ml-72 items-center gap-0.5">
               {navLinks.map((item) => (
                 <div
                   key={item.name}

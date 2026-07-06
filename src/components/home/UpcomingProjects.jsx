@@ -21,14 +21,14 @@ const PROJECTS = [
   {
     id: "01",
     title: "Modular Kitchen Design",
- 
+
     img: "/image/kitchen_design12.jpeg",
     alt: "Premium modular kitchen with under-cabinet accent lighting",
   },
   {
     id: "02",
     title: "Kids Room Design",
-  
+
     img: "/image/kids_room4.jpeg",
     alt: "Warmly lit modern kids room interior",
   },
@@ -67,9 +67,11 @@ export default function ProjectsSection() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16">
           <div>
-            <span className="font-mono text-xs tracking-[0.25em] uppercase text-[#C8972B] block">
-              // Upcoming Projects
-            </span>
+            <p className="flex items-center gap-3 text-[10px] tracking-[.28em] uppercase text-[#C8972B] font-medium mb-3">
+              <span className="w-6 h-px bg-[#C8972B]" />
+             Upcoming Projects
+            </p>
+
             <h2 className="font-display text-4xl sm:text-5xl mt-3 leading-[1.1] text-[#3D1F0D] tracking-tight">
               Our Latest Project
             </h2>
@@ -99,7 +101,7 @@ export default function ProjectsSection() {
 
                 {/* Smooth Gradient Screen Matrix Overlay */}
                 <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(61,31,13,0.95)_0%,rgba(61,31,13,0.4)_50%,rgba(61,31,13,0.05)_100%)] mix-blend-multiply opacity-90" />
-                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(61,31,13,0.92)_0%,rgba(61,31,13,0.2)_60%,transparent_100%)]" />
+                {/* <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(61,31,13,0.92)_0%,rgba(61,31,13,0.2)_60%,transparent_100%)]" /> */}
 
                 {/* Top Fine Border Line Decorator */}
                 <div className="absolute inset-x-0 top-0 h-[2px] bg-[linear-gradient(to_right,transparent,#C8972B,transparent)] opacity-70" />
@@ -107,7 +109,6 @@ export default function ProjectsSection() {
                 {/* Floating Meta Details Container Panel with Z-Axis displacement */}
                 <div className="absolute inset-x-0 bottom-0 px-5 pb-6 pt-16 [transform:translateZ(40px)] sm:px-6 sm:pb-7">
                   {/* Tag Token */}
-                  
 
                   {/* Title */}
                   <h3 className="font-display text-2xl tracking-wide text-white leading-tight">

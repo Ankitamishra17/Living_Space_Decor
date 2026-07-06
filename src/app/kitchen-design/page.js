@@ -7,6 +7,9 @@ import AccessoriesStorage from "@/components/service/modular-kitchen/DesignIdeas
 import RecentProjects from "@/components/service/modular-kitchen/DesignIdeas/RecentProjects";
 import KitchenCTA from "@/components/service/modular-kitchen/DesignIdeas/KitchenCTA";
 import FAQSection from "@/components/service/modular-kitchen/DesignIdeas/FAQSection";
+import KitchenBudgetCalculator from "@/components/service/modular-kitchen/KitchenBudgetCalculator";
+
+
 
 export default function KitchenPage() {
   return (
@@ -18,6 +21,7 @@ export default function KitchenPage() {
       <MaterialsFinishes />
       <AccessoriesStorage />
       <RecentProjects />
+       <KitchenBudgetCalculator />
       <KitchenCTA />
       <FAQSection />
     </>

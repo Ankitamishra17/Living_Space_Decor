@@ -79,7 +79,7 @@ export default function RecentProjects() {
         </div>
 
         {/* Featured Project */}
-        <div className="mt-20 overflow-hidden rounded-[40px] bg-[#3D1F0D]">
+        {/* <div className="mt-20 overflow-hidden rounded-[40px] bg-[#3D1F0D]">
           <div className="grid lg:grid-cols-2">
             <div className="relative h-[400px] lg:h-auto">
               <Image
@@ -110,7 +110,7 @@ export default function RecentProjects() {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

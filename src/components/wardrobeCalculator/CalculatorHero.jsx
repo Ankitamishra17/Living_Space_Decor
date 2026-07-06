@@ -73,9 +73,7 @@ export default function CalculatorHero() {
                 Starting From
               </p>
 
-              <h3 className="text-2xl font-bold text-[#3D1F0D]">
-                ₹65,000*
-              </h3>
+             
             </div>
           </div>
 

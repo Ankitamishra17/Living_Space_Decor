@@ -304,7 +304,7 @@ export const wardrobeType = [
     title: "Hinged Wardrobe",
     description:
       "Classic wardrobe with shutter doors offering full accessibility.",
-    image: "/images/wardrobes/hinged.jpg",
+    image: "/image/wardrobe_design6.png",
   },
 
   {
@@ -312,7 +312,7 @@ export const wardrobeType = [
     title: "Sliding Wardrobe",
     description:
       "Space-saving modern wardrobe with elegant sliding shutters.",
-    image: "/images/wardrobes/sliding.jpg",
+    image: "/image/wardrobe_design17.png",
   },
 
   {
@@ -320,7 +320,7 @@ export const wardrobeType = [
     title: "Walk-In Wardrobe",
     description:
       "Luxury dressing area with premium storage and organization.",
-    image: "/images/wardrobes/walkin.jpg",
+    image: "/image/wardrobe_design5.jpeg",
   },
 ];
 
@@ -330,8 +330,6 @@ export const dimensions = [
   "6 x 7 ft",
   "7 x 7 ft",
   "8 x 7 ft",
-  "9 x 7 ft",
-  "10 x 8 ft",
   "12 x 8 ft",
 ];
 
@@ -343,7 +341,7 @@ export const finishes = [
     category: "Economical",
     description:
       "Affordable and durable finish available in various textures.",
-    image: "/images/finishes/laminate.jpg",
+    image: "https://i.pinimg.com/736x/70/4e/bc/704ebcb4c2b423df9de2c1d06b3af7d7.jpg",
   },
 
   {
@@ -351,7 +349,7 @@ export const finishes = [
     category: "Premium",
     description:
       "High-gloss luxurious finish with modern aesthetics.",
-    image: "/images/finishes/acrylic.jpg",
+    image: "https://i.pinimg.com/736x/97/5a/f9/975af9b4671232b6d9704561022f7fbe.jpg",
   },
 
   {
@@ -359,7 +357,7 @@ export const finishes = [
     category: "Luxury",
     description:
       "Smooth painted finish offering a premium designer appearance.",
-    image: "/images/finishes/pu-finish.jpg",
+    image: "https://i.pinimg.com/1200x/3e/49/12/3e491220f352a0fa2910cd8d6dbac73c.jpg",
   },
 
   {
@@ -367,7 +365,7 @@ export const finishes = [
     category: "Ultra Luxury",
     description:
       "Natural wood finish delivering timeless elegance.",
-    image: "/images/finishes/veneer.jpg",
+    image: "https://i.pinimg.com/1200x/f7/26/5f/f7265f7359d681063a92bb4413848b36.jpg",
   },
 ];
 

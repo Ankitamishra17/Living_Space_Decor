@@ -8,7 +8,7 @@ const services = [
   {
     title: "Living Room",
     description:
-      "Luxury residential interiors crafted with modern elegance and premium aesthetics.",
+      "Transform your living room with luxury interior design solutions in Noida, Greater Noida, and Ghaziabad. We create elegant, functional, and modern living spaces tailored to your lifestyle.",
     image: "/image/living_room6.jpeg",
     icon: Sofa,
     link: "/services/design-ideas/living-room-design",
@@ -17,31 +17,31 @@ const services = [
   {
     title: "Modular Kitchen",
     description:
-      "Premium modular kitchen designs with intelligent storage and luxury finishes.",
+      "Premium modular kitchen designs with smart storage, modern layouts, and customized finishes. Get stylish and functional kitchen interiors for homes in Noida, Greater Noida, and Ghaziabad.",
     image: "/image/kitchen_design5.jpeg",
     icon: ChefHat,
-    link: "/services/modular-kitchen",
+    link: "/services/design-ideas/kitchen-design-ideas",
   },
   {
     title: "Bedroom Design",
     description:
-      "Complete end-to-end turnkey interior solutions from design to execution.",
+      "Create a comfortable and luxurious bedroom with custom interior design solutions. Our bedroom designs combine aesthetics, functionality, and personalized comfort for modern homes.",
     image: "/image/bedroom_design6.jpeg",
     icon: Building2,
-    link: "/services/turnkey-projects",
+    link: "/services/design-ideas/bedroom-design",
   },
   {
     title: "Bathroom Design",
     description:
-      "Complete end-to-end turnkey interior solutions from design to execution.",
+      "Modern bathroom interior designs featuring premium fittings, elegant layouts, and space-efficient solutions. Upgrade your bathroom with stylish and functional designs.",
     image: "/image/bathroom_design.png",
     icon: Building2,
-    link: "/services/turnkey-projects",
+    link: "/services/design-ideas/bathroom-design",
   },
   {
     title: "Architecture",
     description:
-      "Innovative architecture planning focused on luxury living and modern functionality.",
+      "Professional architectural design services for residential and commercial projects. We deliver innovative planning, modern elevations, and sustainable architectural solutions.",
     image: "/Home/architecture.avif",
     icon: Compass,
     link: "/services/architecture",
@@ -49,7 +49,7 @@ const services = [
   {
     title: "Dining Room Design",
     description:
-      "Innovative architecture planning focused on luxury living and modern functionality.",
+      "Elegant dining room interior designs that enhance comfort, functionality, and style. Create the perfect dining experience with customized furniture and luxury décor solutions.",
     image: "/image/dining_room5.jpeg",
     icon: Compass,
     link: "/services/design-ideas/dining-room-design",
@@ -57,7 +57,7 @@ const services = [
   {
     title: "Office Design",
     description:
-      "Innovative architecture planning focused on luxury living and modern functionality.",
+      "Modern office interior design solutions that improve productivity, comfort, and brand identity. We create inspiring workspaces for home offices and commercial offices.",
     image: "/image/office_design8.jpg",
     icon: Compass,
     link: "/services/design-ideas/home-office-design",
@@ -65,16 +65,18 @@ const services = [
   {
     title: "Hospitality",
     description:
-      "Innovative architecture planning focused on luxury living and modern functionality.",
-    image: "/Home/architecture.avif",
+      "Luxury hospitality interior design services for hotels, restaurants, cafés, resorts, and commercial spaces. We create memorable guest experiences through premium design concepts.",
+    image: "https://i.pinimg.com/736x/66/bd/54/66bd54f9c1b4b46691c66a2d62ef01d7.jpg",
     icon: Compass,
-    link: "/services/architecture",
+    link: "/services/design-ideas",
   },
 ];
 
+
+
 export default function ServicesSection() {
   return (
-    <section className="px-6 lg:px-14 -py-10">
+    <section className="px-6 lg:px-14  mt-32">
       {/* ── Heading ── */}
       <div className="flex items-end justify-between mb-14 flex-wrap gap-5">
         <div>

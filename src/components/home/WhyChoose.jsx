@@ -169,9 +169,7 @@ export default function WhyChooseUs() {
                     Full Estate Makeover, Greater Noida
                   </p>
                 </div>
-                <div className="h-8 w-8 rounded-full border border-white/20 bg-[#3D1F0D] text-[#F5EBE0] flex items-center justify-center group-hover/img:bg-[#C8972B] group-hover/img:text-[#3D1F0D] transition-colors duration-300">
-                  <MoveRight size={14} />
-                </div>
+               
               </div>
             </div>
           </motion.div>

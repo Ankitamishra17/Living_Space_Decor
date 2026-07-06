@@ -5,7 +5,7 @@ import { Search } from "lucide-react";
 
 export const AnimatedSearchBar = ({
   categories = [
-    "Doors & Windows",
+    "Wardrobes",
     "Design Ideas",
     "Kitchen Designs",
     "Interior Styles",

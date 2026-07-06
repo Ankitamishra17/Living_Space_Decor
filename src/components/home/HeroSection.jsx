@@ -16,7 +16,7 @@ const categories = [
     image: "/image/kitchen_design7.jpeg",
     mobileImage: "/image/kitchen_design7.jpeg",
     href: "/services/modular-kitchen",
-    desc: "write here text....",
+    desc: "Crafted For Modern Homes.",
   },
   {
     title: "Modular Wardrobes",
@@ -24,7 +24,7 @@ const categories = [
     mobileImage:
       "https://images.pexels.com/photos/3315286/pexels-photo-3315286.jpeg",
     href: "/services/wardrobes",
-    desc: "write here  text ....",
+    desc: "Style Meets Smart Storage.",
   },
 
   {
@@ -32,7 +32,7 @@ const categories = [
     image: "/image/living_room1.jpeg",
     mobileImage: "/image/living_room8.jpeg",
     href: "/services/design-ideas/living-room-design",
-    desc: "Where Luxury Meet Life Style....",
+    desc: "Where Luxury Meet Life Style.",
   },
 ];
 
