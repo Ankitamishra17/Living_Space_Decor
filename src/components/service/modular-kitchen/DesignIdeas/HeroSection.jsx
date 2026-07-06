@@ -141,7 +141,7 @@ import Image from "next/image";
 import { wardrobeTypes } from "@/data/wardrobeData";
 import { ArrowRight, DoorClosed, Shirt } from "lucide-react";
 import { motion } from "framer-motion";
-
+import Link from "next/link";
 
 const icons = [DoorClosed, DoorClosed, Shirt];
 const kitchenTypes = [
@@ -215,13 +215,16 @@ export default function HeroSection() {
               </p>
 
               <div className="mt-10 flex flex-wrap justify-center gap-4 mb-4">
-                <button className="rounded-md bg-[#B8851F] px-8 py-4 font-body text-white transition hover:opacity-90">
-                  Explore Designs
-                </button>
-
-                <button className="rounded-md border border-[#B8851F] bg-white/12 px-8 py-4 font-body text-[#B8851F] backdrop-blur transition hover:bg-white/20">
-                  Book Free Consultation
-                </button>
+                <Link href="/portfolio">
+                  <button className="rounded-md bg-[#B8851F] px-8 py-4 font-body text-white transition hover:opacity-90">
+                    Explore Designs
+                  </button>
+                </Link>
+                <Link href="/contact">
+                  <button className="rounded-md border border-[#B8851F] bg-white/12 px-8 py-4 font-body text-[#B8851F] backdrop-blur transition hover:bg-white/20">
+                    Book Free Consultation
+                  </button>
+                </Link>
               </div>
             </div>
           </div>

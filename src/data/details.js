@@ -837,4 +837,123 @@ export const details = {
       },
     ],
   },
+
+  modularKitchen: {
+  title: "Modular Kitchen Interior Design in Noida, Greater Noida & Ghaziabad",
+
+  intro:
+    "A modular kitchen is the perfect combination of functionality, aesthetics, and smart space utilization. Modern homeowners in Noida, Greater Noida, and Ghaziabad prefer modular kitchen designs because they offer organized storage, efficient workflow, and a premium look. Whether you need a compact kitchen for an apartment or a luxury modular kitchen for a villa, our expert designers create customized solutions that match your lifestyle, cooking habits, and budget.",
+
+  sections: [
+    {
+      heading: "Popular Modular Kitchen Designs in Noida",
+      content: [
+        {
+          title: "L-Shaped Modular Kitchen",
+          description:
+            "One of the most popular kitchen layouts in Noida apartments, offering efficient space utilization, better movement, and ample storage.",
+        },
+        {
+          title: "U-Shaped Modular Kitchen",
+          description:
+            "Perfect for large families and spacious homes in Greater Noida, providing maximum countertop space and storage.",
+        },
+        {
+          title: "Parallel Modular Kitchen",
+          description:
+            "Ideal for modern apartments in Ghaziabad, featuring two parallel workspaces for seamless cooking efficiency.",
+        },
+        {
+          title: "Island Modular Kitchen",
+          description:
+            "A premium kitchen design featuring a central island that enhances functionality, storage, and social interaction.",
+        },
+      ],
+    },
+
+    {
+      heading: "Essential Features of Modern Modular Kitchens",
+      content: [
+        {
+          title: "Smart Storage Solutions",
+          description:
+            "Pull-out units, corner carousels, pantry cabinets, and tall units maximize storage while keeping the kitchen clutter-free.",
+        },
+        {
+          title: "Premium Countertops",
+          description:
+            "Quartz, granite, and engineered stone countertops provide durability, elegance, and easy maintenance.",
+        },
+        {
+          title: "Soft-Close Cabinets",
+          description:
+            "Modern modular kitchens feature smooth soft-close drawers and shutters for convenience and longevity.",
+        },
+        {
+          title: "Built-In Appliances",
+          description:
+            "Integrated ovens, chimneys, hobs, and dishwashers create a sleek and modern kitchen appearance.",
+        },
+      ],
+    },
+
+    {
+      heading: "Trending Modular Kitchen Design Ideas",
+      content: [
+        {
+          title: "Luxury Modular Kitchens",
+          description:
+            "Premium finishes, designer lighting, glass cabinets, and customized storage create a sophisticated cooking space.",
+        },
+        {
+          title: "Minimalist Kitchen Designs",
+          description:
+            "Clean lines, handleless cabinets, and neutral colors provide a modern and clutter-free appearance.",
+        },
+        {
+          title: "Open Kitchen Concepts",
+          description:
+            "Open kitchens seamlessly connect the cooking and living areas, making homes feel spacious and inviting.",
+        },
+        {
+          title: "Smart Kitchens",
+          description:
+            "Technology-enabled kitchens with sensor lighting, smart appliances, and advanced storage systems enhance convenience.",
+        },
+      ],
+    },
+
+    {
+      heading: "Benefits of Modular Kitchen Interior Design",
+      content: [
+        {
+          title: "Maximum Space Utilization",
+          description:
+            "Every corner is optimized through customized cabinets and storage solutions.",
+        },
+        {
+          title: "Easy Maintenance",
+          description:
+            "High-quality materials and finishes make cleaning and maintenance hassle-free.",
+        },
+        {
+          title: "Enhanced Functionality",
+          description:
+            "Efficient layouts improve workflow between cooking, cleaning, and storage areas.",
+        },
+        {
+          title: "Increased Property Value",
+          description:
+            "A professionally designed modular kitchen significantly enhances the value of your home.",
+        },
+      ],
+    },
+
+    {
+      heading: "Modular Kitchen Cost in Noida, Greater Noida & Ghaziabad",
+      text:
+        "The cost of modular kitchen design depends on kitchen size, layout, materials, finishes, hardware, appliances, and customization requirements. Whether you are looking for a budget-friendly modular kitchen or a luxury designer kitchen, our experts provide tailored solutions for homes across Noida, Greater Noida, and Ghaziabad.",
+    },
+  ],
+},
 };

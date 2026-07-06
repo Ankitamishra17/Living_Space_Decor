@@ -542,4 +542,76 @@ export const designIdeas = [
 
     ctaVideo: "https://www.pexels.com/download/video/36778204/",
   },
+
+  {
+  slug: "kitchen-design-ideas",
+
+  title: "KITCHEN DESIGN",
+  detailType: "kitchen",
+
+  subtitle: "Stylish, Functional & Modern Kitchen Spaces",
+
+  heroImage: "/image/kitchen_design.jpeg",
+
+  description:
+    "Explore modern kitchen design ideas that combine functionality, elegance, and smart space planning. From modular kitchens to luxurious contemporary layouts, create a kitchen that enhances your cooking experience while complementing your home's interior style.",
+
+  leftImage: "/image/kitchen_design8.jpeg",
+
+  rightImage: "/image/kitchen_design9.jpeg",
+
+  galleryTitle:
+    "Beautifully Crafted Kitchens Designed For Everyday Living",
+
+  galleryDescription:
+    "A well-designed kitchen is the heart of every home. Our kitchen interiors focus on efficient layouts, premium finishes, smart storage solutions, and ergonomic designs that make cooking, dining, and entertaining more enjoyable.",
+
+  moodboard: [
+    "/image/kitchen_design2.jpeg",
+    "/image/kitchen_design13.jpeg",
+    "/image/kitchen_design3.jpeg",
+    "/image/kitchen_design4.jpeg",
+    "/image/kitchen_design5.jpeg",
+    "/image/kitchen_design6.jpeg",
+     "/image/kitchen_design11.jpeg",
+    "/image/kitchen_design15.jpeg",
+   
+  ],
+
+  faq: [
+    {
+      question: "Which kitchen layout is best for my home?",
+      answer:
+        "The ideal kitchen layout depends on your available space and lifestyle. Popular options include L-shaped, U-shaped, Parallel, Straight, and Island kitchens.",
+    },
+    {
+      question: "What materials are best for modular kitchen cabinets?",
+      answer:
+        "Popular materials include plywood, MDF, HDF, acrylic, laminates, membrane finishes, and PU-coated panels, depending on your budget and design preferences.",
+    },
+    {
+      question: "How can I maximize storage in a small kitchen?",
+      answer:
+        "We use corner units, pull-out drawers, tall pantry cabinets, overhead storage, and smart organizers to maximize every inch of available space.",
+    },
+    {
+      question: "Can you design a customized modular kitchen?",
+      answer:
+        "Yes. Every kitchen is tailored to your space, cooking habits, storage requirements, and aesthetic preferences for a fully personalized design.",
+    },
+  ],
+
+  seo: {
+    metaTitle:
+      "Modern Kitchen Design Ideas | Modular Kitchen Interior Designs",
+
+    metaDescription:
+      "Explore stylish kitchen design ideas with modular layouts, smart storage solutions, premium finishes, and functional interiors. Get customized kitchen designs for modern homes.",
+
+    keywords:
+      "kitchen design ideas, modular kitchen design, modern kitchen interiors, kitchen renovation ideas, luxury kitchen design, small kitchen ideas, kitchen storage solutions, modular kitchen cabinets",
+  },
+
+  ctaVideo: "/image/kitchen_design_video.mp4",
+}
 ];

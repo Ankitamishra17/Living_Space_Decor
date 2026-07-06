@@ -31,6 +31,7 @@ export default async function Page({ params }) {
     "kids-room-design":"kidsRoom",
     "mandir-design":"mandir",
     "balcony-terrace-design":"balconyTerrace",
+    "kitchen-design-ideas":"modularKitchen",
   };
 
 

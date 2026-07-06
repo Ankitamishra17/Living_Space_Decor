@@ -4,17 +4,51 @@ import Link from "next/link";
 import Image from "next/image";
 
 const NAV_LINKS = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Portfolio", href: "/portfolio" },
-  { name: "Contact", href: "/contact" },
+  { label: "Modular Kitchens", href: "/services/modular-kitchen" },
+  { label: "Kitchen Cost Calculator", href: "/kitchen-calculator" },
+  { label: "Modular Kitchen Design Ideas", href: "/kitchen-design" },
+];
+const MORE_LINK = [
+  { label: "Architecture & Construction", href: "/services/architecture" },
+  { label: "Furnitures", href: "/services/furnitures" },
+  { label: "Trunkey Projects",href: "/services/turnkey-projects" },
 ];
 
 const SERVICE_LINKS = [
-  { label: "Design Ideas", href: "/services/interior-design" },
-  { label: "Modular Kitchen", href: "/services/modular-kitchen" },
-  { label: "Turnkey Projects", href: "/services/turnkey-projects" },
-  { label: "Architecture", href: "/services/architecture" },
+  { label: "Wardrobe", href: "/services/wardrobes" },
+  { label: "Wardrobe-Cost Calculator", href: "/wardrobe-cost-calculator" },
+];
+const DESIGN_IDEAS = [
+  {
+    label: "Living Room Designs",
+    href: "/services/design-ideas/living-room-design",
+  },
+  {
+    label: "Kids Room Designs",
+    href: "/services/design-ideas/kids-room-design",
+  },
+  {
+    label: "Modular Kitchen Designs",
+    href: "/services/design-ideas/kitchen-design-ideas",
+  },
+  { label: "Mandir Designs", href: "/services/design-ideas/mandir-design" },
+  {
+    label: "Dining Room Designs",
+    href: "/services/design-ideas/dining-room-design",
+  },
+  {
+    label: "Bathroom Design",
+  href: "/services/design-ideas/bathroom-design",
+  },
+  { label: "Bedroom Design", href: "/services/design-ideas/bathroom-design" },
+  {
+    label: "Home Office Design",
+    href: "/services/design-ideas/home-office-design",
+  },
+  {
+    label: "Balcony & Terrace Designs",
+    href: "/services/design-ideas/balcony-terrace-design",
+  },
 ];
 
 const SOCIAL_ICONS = [
@@ -22,10 +56,7 @@ const SOCIAL_ICONS = [
     label: "Facebook",
     path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z",
   },
-  {
-    label: "Instagram",
-    isInstagram: true,
-  },
+  { label: "Instagram", isInstagram: true },
   {
     label: "YouTube",
     path: "M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46a2.78 2.78 0 0 0-1.95 1.96A29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58A2.78 2.78 0 0 0 3.41 19.6C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.95A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z M9.75 15.02l5.75-3.02-5.75-3.02v6.04z",
@@ -207,14 +238,11 @@ export default function Footer() {
       <style>{`
         .footer-grid {
           display: grid;
-          grid-template-columns: 1.4fr 1fr 1fr 1.2fr;
-          gap: 48px;
-          margin-bottom: 80px;
+          grid-template-columns: 1.3fr 0.9fr 0.9fr 1fr 0.9fr 1.1fr;
+          gap: 32px;
+          margin-bottom: 64px;
         }
-        .footer-wordmark {
-          font-size: 110px;
-          top: 70%;
-        }
+
         .footer-bottom-bar {
           display: flex;
           align-items: center;
@@ -241,36 +269,29 @@ export default function Footer() {
           color: #C8972B;
         }
 
-        /* Tablet: 768px–1023px */
-        @media (max-width: 1024px) {
+        /* Large laptop: below 1200px — tighten to 3 columns x 2 rows */
+        @media (max-width: 1199px) {
           .footer-grid {
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-          }
-          .footer-wordmark {
-            font-size: 60px;
-            top: 85%;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 36px 28px;
           }
         }
 
-        /* Mobile: up to 767px */
+        /* Tablet: 768px–1023px — 2 columns */
+        @media (max-width: 1023px) {
+          .footer-grid {
+            grid-template-columns: 1fr 1fr;
+            gap: 40px 32px;
+          }
+        }
+
+        /* Mobile: up to 767px — single column */
         @media (max-width: 767px) {
           .footer-grid {
             grid-template-columns: 1fr;
             gap: 36px;
             padding: 48px 20px !important;
-            margin-bottom: 48px ;
-          }
-          .footer-wordmark {
-            font-size: 28px !important;
-            top: auto !important;
-            bottom: 40px;
-            white-space: normal !important;
-            text-align: center;
-            width: 100%;
-            left: 50%;
-            transform: translate(-50%, 0) !important;
-            line-height: 1.3;
+            margin-bottom: 48px;
           }
           .footer-bottom-bar {
             flex-direction: column;
@@ -289,9 +310,8 @@ export default function Footer() {
 
         /* Small mobile: up to 400px */
         @media (max-width: 400px) {
-          .footer-wordmark {
-            font-size: 25px !important;
-            margin-bottom:75px
+          .footer-grid {
+            gap: 32px;
           }
         }
       `}</style>
@@ -305,8 +325,6 @@ export default function Footer() {
           overflow: "hidden",
         }}
       >
-      
-
         {/* Main grid */}
         <div
           className="footer-grid"
@@ -383,19 +401,19 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Col 2 — Navigate */}
+          {/* Col 2 — Kitchens */}
           <div>
-            <ColTitle>Navigate</ColTitle>
+            <ColTitle>Kitchens</ColTitle>
             <ul style={{ padding: 0, margin: 0 }}>
               {NAV_LINKS.map((item) => (
-                <LinkRow key={item.name} label={item.name} href={item.href} />
+                <LinkRow key={item.label} label={item.label} href={item.href} />
               ))}
             </ul>
           </div>
 
-          {/* Col 3 — Services */}
+          {/* Col 3 — Wardrobes */}
           <div>
-            <ColTitle>Services</ColTitle>
+            <ColTitle>Wardrobes</ColTitle>
             <ul style={{ padding: 0, margin: 0 }}>
               {SERVICE_LINKS.map((s) => (
                 <LinkRow key={s.label} label={s.label} href={s.href} />
@@ -403,7 +421,27 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 4 — Contact */}
+          {/* Col 4 — Design Ideas */}
+          <div>
+            <ColTitle>Design Ideas</ColTitle>
+            <ul style={{ padding: 0, margin: 0 }}>
+              {DESIGN_IDEAS.map((s) => (
+                <LinkRow key={s.label} label={s.label} href={s.href} />
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 5 — More */}
+          <div>
+            <ColTitle>More</ColTitle>
+            <ul style={{ padding: 0, margin: 0 }}>
+              {MORE_LINK.map((s) => (
+                <LinkRow key={s.label} label={s.label} href={s.href} />
+              ))}
+            </ul>
+          </div>
+
+          {/* Col 6 — Contact */}
           <div>
             <ColTitle>Reach Us</ColTitle>
 
@@ -522,35 +560,6 @@ export default function Footer() {
               />
               Best Interior Design — Noida 2026
             </div>
-
-            {/* <div className="footer-legal-links">
-              {[
-                ["Privacy Policy", "/privacy-policy"],
-                ["Terms", "/terms"],
-                ["Sitemap", "/sitemap"],
-              ].map(([label, href]) => (
-                <Link
-                  key={label}
-                  href={href}
-                  style={{
-                    fontFamily: "poppins",
-                    fontSize: 12,
-                    fontWeight: 300,
-                    color: "rgba(245,235,224,0.35)",
-                    textDecoration: "none",
-                    transition: "color 0.2s",
-                  }}
-                  onMouseEnter={(e) =>
-                    (e.currentTarget.style.color = "#C8972B")
-                  }
-                  onMouseLeave={(e) =>
-                    (e.currentTarget.style.color = "rgba(245,235,224,0.35)")
-                  }
-                >
-                  {label}
-                </Link>
-              ))}
-            </div> */}
 
             <a
               href="https://deboxtechnology.com"

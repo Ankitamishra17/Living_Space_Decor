@@ -54,13 +54,13 @@ export default function DesignGallery({ data }) {
             {description}
           </p>
 
-          <Link
+          {/* <Link
             href={buttonLink}
             className="inline-flex items-center gap-2 bg-[#C8972B] text-white px-7 py-3 font-medium text-sm hover:bg-[#B8851F] transition duration-300"
           >
             {buttonText}
             <ArrowRight size={16} />
-          </Link>
+          </Link> */}
         </div>
 
         {/* Gallery Grid - 2 cols on mobile, 4 cols on desktop */}

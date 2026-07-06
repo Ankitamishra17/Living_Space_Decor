@@ -2,7 +2,7 @@
 
 import BHKCard from "./BHKCard";
 
-const bhks = ["1 BHK", "2 BHK", "3 BHK", "4 BHK", "Villa"];
+const bhks = ["1 BHK", "2 BHK", "3 BHK", "4 BHK",];
 
 export default function Step1BHK({ formData, setFormData, next }) {
   return (
@@ -26,7 +26,7 @@ export default function Step1BHK({ formData, setFormData, next }) {
           grid
           grid-cols-2
           sm:grid-cols-3
-          lg:grid-cols-5
+          lg:grid-cols-4
           gap-4
           md:gap-5
         "

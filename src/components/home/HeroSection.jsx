@@ -16,7 +16,7 @@ const categories = [
     image: "/image/kitchen_design7.jpeg",
     mobileImage: "/image/kitchen_design7.jpeg",
     href: "/services/modular-kitchen",
-    desc: "Elegant modular kitchens designed for functionality, comfort, and modern living.",
+    desc: "write here text....",
   },
   {
     title: "Modular Wardrobes",
@@ -24,16 +24,15 @@ const categories = [
     mobileImage:
       "https://images.pexels.com/photos/3315286/pexels-photo-3315286.jpeg",
     href: "/services/wardrobes",
-    desc: "Smart storage solutions with premium finishes tailored to your lifestyle.",
+    desc: "write here  text ....",
   },
 
   {
-    title: "Furnishings",
-    image: "/Home/banner4.avif",
-    mobileImage:
-      "https://images.pexels.com/photos/29532568/pexels-photo-29532568.jpeg",
-    href: "/services/furnitures",
-    desc: "Luxury furnishings that add warmth, elegance, and personality to every space.",
+    title: "Living Room",
+    image: "/image/living_room1.jpeg",
+    mobileImage: "/image/living_room8.jpeg",
+    href: "/services/design-ideas/living-room-design",
+    desc: "Where Luxury Meet Life Style....",
   },
 ];
 
@@ -117,9 +116,9 @@ export default function HomePage() {
               {activeSlide.title}
             </h1>
             {/* Tag */}
-            {/* <p className="text-[#ffffff] text-xs md:text-sm  tracking-[0.1em]  mb-5">
+            <p className="text-[#ffffff] text-xs md:text-sm  tracking-[0.1em]  mb-5">
               {activeSlide.desc}
-            </p> */}
+            </p>
             {/* Button */}
             <div className="flex justify-center">
               <Link

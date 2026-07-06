@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { wardrobeTypes } from "@/data/wardrobeData";
 import { ArrowRight, DoorClosed, Shirt } from "lucide-react";
+import Link from "next/link";
 
 const icons = [DoorClosed, DoorClosed, Shirt];
 
@@ -19,7 +20,7 @@ export default function HeroSection() {
           className="object-cover"
         />
 
-      <div className="absolute inset-0 bg-[#1F0E04]/60" />
+        <div className="absolute inset-0 bg-[#1F0E04]/60" />
 
         <div className="absolute inset-0">
           <div className="container mx-auto flex h-full items-center justify-center px-4">
@@ -41,13 +42,16 @@ export default function HeroSection() {
               </p>
 
               <div className="mt-10 flex flex-wrap justify-center gap-4">
-                <button className="rounded-md bg-[#B8851F] px-8 py-4 font-body text-white transition hover:opacity-90">
-                  Explore Designs
-                </button>
-
-                <button className="rounded-md border border-[#B8851F] bg-white/10 px-8 py-4 font-body text-white backdrop-blur transition hover:bg-white/20">
-                  Book Free Consultation
-                </button>
+                <Link href="/portfolio">
+                  <button className="rounded-md bg-[#B8851F] px-8 py-4 font-body text-white transition hover:opacity-90">
+                    Explore Designs
+                  </button>
+                </Link>
+                <Link href="/contact">
+                  <button className="rounded-md border border-[#B8851F] bg-white/10 px-8 py-4 font-body text-white backdrop-blur transition hover:bg-white/20">
+                    Book Free Consultation
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
@@ -87,8 +91,6 @@ export default function HeroSection() {
                     <p className="mt-3 text-sm md:text-base text-gray-500 leading-relaxed">
                       {item.subtitle}
                     </p>
-
-                  
                   </div>
                 </div>
               );

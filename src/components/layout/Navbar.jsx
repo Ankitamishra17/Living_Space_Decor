@@ -23,13 +23,13 @@ const navLinks = [
         name: "Kids Room Designs",
         href: "/services/design-ideas/kids-room-design",
       },
-      { name: "Modular Kitchen Designs", href: "/services/modular-kitchen" },
+      { name: "Modular Kitchen Designs", href: "/services/design-ideas/kitchen-design-ideas" },
       { name: "Mandir Designs", href: "/services/design-ideas/mandir-design" },
       {
         name: "Dining Room Designs",
         href: "/services/design-ideas/dining-room-design",
       },
-      { name: "Bedroom Design", href: "/services/design-ideas/bedroom-design" },
+      { name: "Bedroom Designs", href: "/services/design-ideas/bedroom-design" },
       {
         name: "Bathroom Designs",
         href: "/services/design-ideas/bathroom-design",
@@ -58,13 +58,13 @@ const navLinks = [
     href: "/services/wardrobes",
     submenu: [
       { name: "Custom Wardrobe", href: "/services/wardrobes" },
-      // { name: "Wardrobe-Cost Calculator", href: "/wardrobe-cost-calculator" },
+      { name: "Wardrobe-Cost Calculator", href: "/wardrobe-calculator" },
     ],
   },
-  { name: "Turnkey Project", href: "/services/turnkey-projects" },
+  // { name: "Turnkey Project", href: "/services/turnkey-projects" },
   // { name: "Lights", href: "/services/lights" },
-  { name: "Architecture & Construction", href: "/services/architecture" },
-  { name: "Furnitures", href: "/services/furnitures" },
+  // { name: "Architecture & Construction", href: "/services/architecture" },
+  // { name: "Furnitures", href: "/services/furnitures" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "Contact", href: "/contact" },
 ];

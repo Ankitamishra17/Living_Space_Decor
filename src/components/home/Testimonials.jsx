@@ -33,6 +33,21 @@ const testimonials = [
 
 export default function Testimonials() {
   const [active, setActive] = useState(0);
+  const [googleData, setGoogleData] = useState(null);
+
+  useEffect(() => {
+    const fetchGoogleData = async () => {
+      try {
+        const res = await fetch("/api/google-reviews");
+        const data = await res.json();
+        setGoogleData(data);
+      } catch (error) {
+        console.error(error);
+      }
+    };
+
+    fetchGoogleData();
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -48,52 +63,35 @@ export default function Testimonials() {
     <section className="py-16 md:py-20 lg:py-24 bg-[#F7F2EB] overflow-hidden">
       {/* HEADER */}
       <div className="max-w-7xl mx-auto px-5 sm:px-6 lg:px-8 mb-12 md:mb-16">
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
-          <div>
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              className="mb-4"
-            >
-              <div className="flex items-center gap-3 text-[10px] sm:text-[11px] tracking-[0.28em] uppercase text-[#C8972B] font-medium">
-                <span className="w-6 h-px bg-[#C8972B]" />
-                Client Stories
+        {googleData && (
+          <div className="mb-10">
+            <div className="bg-white border border-[#C8972B]/20 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between gap-4 shadow-sm">
+              <div>
+                <h3 className="text-xl font-semibold text-[#2A1506]">
+                  {googleData.displayName?.text}
+                </h3>
+
+                <p className="text-sm text-gray-600 mt-1">
+                  Google Verified Reviews
+                </p>
               </div>
-            </motion.div>
 
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6 }}
-              className="font-heading text-[34px] sm:text-[44px] md:text-[56px] lg:text-[64px] font-medium text-[#2A1506] leading-[1.05]"
-            >
-              Words From
-              <br />
-              <span className="text-[#C8972B]">Our Clients</span>
-            </motion.h2>
+              <div className="flex items-center gap-3">
+                <span className="text-3xl font-bold text-[#C8972B]">
+                  {googleData.rating}
+                </span>
 
-            <motion.div
-              initial={{ x: -200, width: 0 }}
-              whileInView={{ x: 0, width: 60 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.8,
-                delay: 0.4,
-                ease: "easeOut",
-              }}
-              className="h-[2px] bg-[#C8972B] mt-5 rounded-full"
-            />
+                <div>
+                  <div className="text-[#C8972B] text-lg">★★★★★</div>
+
+                  <p className="text-xs text-gray-500">
+                    {googleData.userRatingCount} Reviews
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
-
-          <Link
-            href="/portfolio"
-            className="inline-flex items-center justify-center gap-2 border border-[#3D1F0D]/30 text-[#3D1F0D] px-6 py-3 text-[11px] font-semibold uppercase tracking-[.12em] hover:bg-[#3D1F0D] hover:text-white transition-colors self-start lg:self-auto"
-          >
-            View Portfolio
-          </Link>
-        </div>
+        )}
       </div>
 
       {/* CONTENT */}

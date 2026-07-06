@@ -111,11 +111,11 @@ export default function ProjectGallery() {
         </div>
 
         {/* Bottom CTA */}
-        <div className="text-center mt-20">
+        {/* <div className="text-center mt-20">
           <Link href="/portfolio" className="bg-[#3D1F0D] text-white px-10 py-5 rounded-md uppercase tracking-[0.25em] text-sm hover:bg-[#C8972B] transition duration-300">
             View All Projects
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );

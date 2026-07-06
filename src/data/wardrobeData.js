@@ -295,3 +295,82 @@ export const wardrobeDetails = {
     },
   ],
 };
+
+// Wardrobe Types
+
+export const wardrobeType = [
+  {
+    id: "hinged",
+    title: "Hinged Wardrobe",
+    description:
+      "Classic wardrobe with shutter doors offering full accessibility.",
+    image: "/images/wardrobes/hinged.jpg",
+  },
+
+  {
+    id: "sliding",
+    title: "Sliding Wardrobe",
+    description:
+      "Space-saving modern wardrobe with elegant sliding shutters.",
+    image: "/images/wardrobes/sliding.jpg",
+  },
+
+  {
+    id: "walkin",
+    title: "Walk-In Wardrobe",
+    description:
+      "Luxury dressing area with premium storage and organization.",
+    image: "/images/wardrobes/walkin.jpg",
+  },
+];
+
+// Wardrobe Sizes
+
+export const dimensions = [
+  "6 x 7 ft",
+  "7 x 7 ft",
+  "8 x 7 ft",
+  "9 x 7 ft",
+  "10 x 8 ft",
+  "12 x 8 ft",
+];
+
+// Finish Options
+
+export const finishes = [
+  {
+    title: "Laminate",
+    category: "Economical",
+    description:
+      "Affordable and durable finish available in various textures.",
+    image: "/images/finishes/laminate.jpg",
+  },
+
+  {
+    title: "Acrylic",
+    category: "Premium",
+    description:
+      "High-gloss luxurious finish with modern aesthetics.",
+    image: "/images/finishes/acrylic.jpg",
+  },
+
+  {
+    title: "PU Finish",
+    category: "Luxury",
+    description:
+      "Smooth painted finish offering a premium designer appearance.",
+    image: "/images/finishes/pu-finish.jpg",
+  },
+
+  {
+    title: "Veneer",
+    category: "Ultra Luxury",
+    description:
+      "Natural wood finish delivering timeless elegance.",
+    image: "/images/finishes/veneer.jpg",
+  },
+];
+
+
+
+

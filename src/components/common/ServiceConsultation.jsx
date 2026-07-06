@@ -67,7 +67,7 @@ export default function ServiceConsultation() {
             {/* CTA */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
               <Link
-                href="/cost-calculator"
+                href="/contact"
                 className="group inline-flex items-center justify-center gap-2 rounded-lg bg-[#C8972B] px-6 md:px-8 py-4 text-sm md:text-base font-medium text-white transition-all duration-300 hover:bg-[#b68522]"
               >
                 Get Free Estimate
@@ -78,7 +78,7 @@ export default function ServiceConsultation() {
               </Link>
 
               <Link
-                href="/contact"
+                href="tel:+918826606869"
                 className="inline-flex items-center justify-center gap-2 rounded-lg border border-white px-6 md:px-8 py-4 text-sm md:text-base font-medium text-white transition-all duration-300 hover:bg-white hover:text-[#3D1F0D]"
               >
                 <Phone size={18} />

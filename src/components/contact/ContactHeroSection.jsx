@@ -77,10 +77,10 @@ export default function ContactHeroSection() {
             text-white
             leading-[1.05]
             font-medium
-            text-[40px]
-            sm:text-[54px]
-            md:text-[70px]
-            lg:text-[90px]
+            text-[30px]
+            sm:text-[44px]
+            md:text-[50px]
+            lg:text-[60px]
           "
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -116,7 +116,7 @@ export default function ContactHeroSection() {
             text-white/75
             text-sm
             sm:text-base
-            md:text-lg
+            md:text-sm
             leading-7
             md:leading-8
             px-2

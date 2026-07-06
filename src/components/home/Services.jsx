@@ -6,21 +6,14 @@ import { ArrowRight, Sofa, Building2, ChefHat, Compass } from "lucide-react";
 
 const services = [
   {
-    title: "Design Ideas",
+    title: "Living Room",
     description:
       "Luxury residential interiors crafted with modern elegance and premium aesthetics.",
-    image: "/lsd_images/13.jpg",
+    image: "/image/living_room6.jpeg",
     icon: Sofa,
-    link: "/services/interior-design",
+    link: "/services/design-ideas/living-room-design",
   },
-  {
-    title: "Turnkey Projects",
-    description:
-      "Complete end-to-end turnkey interior solutions from design to execution.",
-    image: "/Home/trunkey.avif",
-    icon: Building2,
-    link: "/services/turnkey-projects",
-  },
+  
   {
     title: "Modular Kitchen",
     description:
@@ -30,7 +23,47 @@ const services = [
     link: "/services/modular-kitchen",
   },
   {
+    title: "Bedroom Design",
+    description:
+      "Complete end-to-end turnkey interior solutions from design to execution.",
+    image: "/image/bedroom_design6.jpeg",
+    icon: Building2,
+    link: "/services/turnkey-projects",
+  },
+  {
+    title: "Bathroom Design",
+    description:
+      "Complete end-to-end turnkey interior solutions from design to execution.",
+    image: "/image/bathroom_design.png",
+    icon: Building2,
+    link: "/services/turnkey-projects",
+  },
+  {
     title: "Architecture",
+    description:
+      "Innovative architecture planning focused on luxury living and modern functionality.",
+    image: "/Home/architecture.avif",
+    icon: Compass,
+    link: "/services/architecture",
+  },
+  {
+    title: "Dining Room Design",
+    description:
+      "Innovative architecture planning focused on luxury living and modern functionality.",
+    image: "/image/dining_room5.jpeg",
+    icon: Compass,
+    link: "/services/design-ideas/dining-room-design",
+  },
+  {
+    title: "Office Design",
+    description:
+      "Innovative architecture planning focused on luxury living and modern functionality.",
+    image: "/image/office_design8.jpg",
+    icon: Compass,
+    link: "/services/design-ideas/home-office-design",
+  },
+  {
+    title: "Hospitality",
     description:
       "Innovative architecture planning focused on luxury living and modern functionality.",
     image: "/Home/architecture.avif",
