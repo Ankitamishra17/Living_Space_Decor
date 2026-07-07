@@ -8,7 +8,7 @@ const services = [
   {
     title: "Living Room",
     description:
-      "Transform your living room with luxury interior design solutions in Noida, Greater Noida, and Ghaziabad. We create elegant, functional, and modern living spaces tailored to your lifestyle.",
+      "Transform your living room with luxury interior design solutions in Noida, Greater Noida, and Ghaziabad.",
     image: "/image/living_room6.jpeg",
     icon: Sofa,
     link: "/services/design-ideas/living-room-design",
@@ -17,7 +17,7 @@ const services = [
   {
     title: "Modular Kitchen",
     description:
-      "Premium modular kitchen designs with smart storage, modern layouts, and customized finishes. Get stylish and functional kitchen interiors for homes in Noida, Greater Noida, and Ghaziabad.",
+      "Get stylish and functional kitchen interiors for homes in Noida, Greater Noida, and Ghaziabad.",
     image: "/image/kitchen_design5.jpeg",
     icon: ChefHat,
     link: "/services/design-ideas/kitchen-design-ideas",
@@ -25,7 +25,7 @@ const services = [
   {
     title: "Bedroom Design",
     description:
-      "Create a comfortable and luxurious bedroom with custom interior design solutions. Our bedroom designs combine aesthetics, functionality, and personalized comfort for modern homes.",
+      "Create a comfortable and luxurious bedroom with custom interior design solutions.",
     image: "/image/bedroom_design6.jpeg",
     icon: Building2,
     link: "/services/design-ideas/bedroom-design",
@@ -33,7 +33,7 @@ const services = [
   {
     title: "Bathroom Design",
     description:
-      "Modern bathroom interior designs featuring premium fittings, elegant layouts, and space-efficient solutions. Upgrade your bathroom with stylish and functional designs.",
+      "Modern bathroom interior designs featuring premium fittings, elegant layouts, and space-efficient solutions.",
     image: "/image/bathroom_design.png",
     icon: Building2,
     link: "/services/design-ideas/bathroom-design",
@@ -49,7 +49,7 @@ const services = [
   {
     title: "Dining Room Design",
     description:
-      "Elegant dining room interior designs that enhance comfort, functionality, and style. Create the perfect dining experience with customized furniture and luxury décor solutions.",
+      "Elegant dining room interior designs that enhance comfort, functionality, and style.",
     image: "/image/dining_room5.jpeg",
     icon: Compass,
     link: "/services/design-ideas/dining-room-design",
@@ -57,7 +57,7 @@ const services = [
   {
     title: "Office Design",
     description:
-      "Modern office interior design solutions that improve productivity, comfort, and brand identity. We create inspiring workspaces for home offices and commercial offices.",
+      "Modern office interior design solutions that improve productivity, comfort, and brand identity.",
     image: "/image/office_design8.jpg",
     icon: Compass,
     link: "/services/design-ideas/home-office-design",
@@ -65,7 +65,7 @@ const services = [
   {
     title: "Hospitality",
     description:
-      "Luxury hospitality interior design services for hotels, restaurants, cafés, resorts, and commercial spaces. We create memorable guest experiences through premium design concepts.",
+      "Luxury hospitality interior design services for hotels, restaurants, cafés, resorts, and commercial spaces.",
     image: "https://i.pinimg.com/736x/66/bd/54/66bd54f9c1b4b46691c66a2d62ef01d7.jpg",
     icon: Compass,
     link: "/services/design-ideas",
@@ -76,7 +76,7 @@ const services = [
 
 export default function ServicesSection() {
   return (
-    <section className="px-6 lg:px-14  mt-32">
+    <section className="px-6 lg:px-14 py-12">
       {/* ── Heading ── */}
       <div className="flex items-end justify-between mb-14 flex-wrap gap-5">
         <div>

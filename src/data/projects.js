@@ -17,6 +17,12 @@ const projects = [
       "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?q=80&w=1200&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1200&auto=format&fit=crop",
       "https://images.unsplash.com/photo-1567538096621-38d2284b23ff?q=80&w=1200&auto=format&fit=crop",
+            "https://images.unsplash.com/photo-1567538096621-38d2284b23ff?q=80&w=1200&auto=format&fit=crop",
+
+                  "https://images.unsplash.com/photo-1567538096621-38d2284b23ff?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1567538096621-38d2284b23ff?q=80&w=1200&auto=format&fit=crop",
+
+            
     ],
     description:
       "A thoughtfully designed space that balances aesthetic beauty with everyday functionality, crafted with meticulous attention to detail and the finest materials sourced from across the globe.",

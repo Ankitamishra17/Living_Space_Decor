@@ -8,27 +8,23 @@
  * Espresso Brown #3D1F0D  – primary brand / dark text
  * Warm Gold      #C8972B  – luxury accent
  * Warm Cream     #F5EBE0  – page background
- * Linen Beige    #F0E6D8  – card meta background
- * Charcoal       #2C2C2C  – paragraph text
- * Medium Gray    #6B6B6B  – secondary text
  * Pure White     #FFFFFF  – card surface
+ * Charcoal       #2C2C2C  – paragraph text
  *
  * Fonts:
- * Fraunces (display) + Inter (body) + JetBrains Mono (labels)
+ * Marcellus (display/headings) + Poppins (body/labels)
  */
 
 const PROJECTS = [
   {
     id: "01",
     title: "Modular Kitchen Design",
-
     img: "/image/kitchen_design12.jpeg",
     alt: "Premium modular kitchen with under-cabinet accent lighting",
   },
   {
     id: "02",
     title: "Kids Room Design",
-
     img: "/image/kids_room4.jpeg",
     alt: "Warmly lit modern kids room interior",
   },
@@ -50,76 +46,74 @@ export default function ProjectsSection() {
   return (
     <section className="relative bg-[#F5EBE0] py-24 px-6 sm:px-10 lg:px-16 selection:bg-[#3D1F0D] selection:text-[#F5EBE0]">
       <style jsx global>{`
-        @import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap");
-        .font-display {
-          font-family: "Fraunces", serif;
-          font-optical-sizing: auto;
+        @import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Poppins:wght@300;400;500;600&display=swap");
+
+        .font-marcellus {
+          font-family: "Marcellus", serif;
         }
-        .font-body {
-          font-family: "Inter", sans-serif;
-        }
-        .font-mono {
-          font-family: "JetBrains Mono", monospace;
+        .font-poppins {
+          font-family: "Poppins", sans-serif;
         }
       `}</style>
 
-      <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-16">
+      <div className="max-w-7xl mx-auto font-poppins">
+        {/* ─── HEADER SECTION (LUXURY MINIMALIST) ─── */}
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16 border-b border-[#3D1F0D]/10 pb-8">
           <div>
-            <p className="flex items-center gap-3 text-[10px] tracking-[.28em] uppercase text-[#C8972B] font-medium mb-3">
+            <p className="flex items-center gap-3 text-[10px] tracking-[0.3em] uppercase text-[#C8972B] font-semibold mb-2">
               <span className="w-6 h-px bg-[#C8972B]" />
-             Upcoming Projects
+              Upcoming Projects
             </p>
 
-            <h2 className="font-display text-4xl sm:text-5xl mt-3 leading-[1.1] text-[#3D1F0D] tracking-tight">
-              Our Latest Project
+            <h2 className="font-marcellus text-4xl sm:text-5xl text-[#3D1F0D] tracking-wide mt-2">
+              Our Upcoming Projects
             </h2>
           </div>
-          <p className="font-body text-[#6B6B6B] max-w-sm text-sm sm:text-base leading-relaxed">
-            A look at spaces we're currently wiring, lighting and finishing to a
-            premium luxury standard.
+          <p className="text-[#6B6B6B] max-w-sm text-sm leading-relaxed font-light">
+            A meticulous showcase of spaces we are currently transforming,
+            custom engineering, and finishing to an absolute luxury standard.
           </p>
         </div>
 
-        {/* Cards Grid Layout */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        {/* ─── CARDS GRID LAYOUT ─── */}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {PROJECTS.map((p) => (
             <div
               key={p.id}
-              className="h-[min(120vw,480px)] w-full [perspective:1000px] xs:h-[min(110vw,520px)] sm:h-[clamp(440px,55vw,560px)] lg:h-[clamp(420px,45vw,500px)] group"
+              className="relative h-[280px] xs:h-[350px] sm:h-[420px] lg:h-[460px] w-full overflow-hidden bg-[#F0E6D8] group cursor-pointer"
             >
-              {/* Outer Card Shell with 3D Depth Treatment */}
-              <div className="relative h-full w-full overflow-hidden rounded-2xl border border-[#3D1F0D]/5 bg-white shadow-[0_15px_35px_-15px_rgba(61,31,13,0.15)] [transform-style:preserve-3d] transition-all duration-500 ease-out group-hover:shadow-[0_25px_50px_-12px_rgba(61,31,13,0.3)] group-hover:[transform:rotateX(2deg)_rotateY(-2deg)_translateZ(5px)]">
-                {/* Background Image Layer */}
+              {/* Background Image Frame */}
+              <div className="absolute inset-0 w-full h-full overflow-hidden">
                 <img
-                  className="block h-full w-full object-cover opacity-[0.9] transition-transform duration-700 ease-out [transform:translateZ(0px)] group-hover:scale-105"
+                  className="block h-full w-full object-cover grayscale-[15%] sepia-[5%] transition-all duration-1000 ease-[0.25,1,0.5,1] group-hover:scale-105 group-hover:grayscale-0 group-hover:sepia-0"
                   src={p.img}
                   alt={p.alt}
                   loading="lazy"
                 />
+              </div>
 
-                {/* Smooth Gradient Screen Matrix Overlay */}
-                <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(61,31,13,0.95)_0%,rgba(61,31,13,0.4)_50%,rgba(61,31,13,0.05)_100%)] mix-blend-multiply opacity-90" />
-                {/* <div className="absolute inset-0 bg-[linear-gradient(to_top,rgba(61,31,13,0.92)_0%,rgba(61,31,13,0.2)_60%,transparent_100%)]" /> */}
+              {/* Sophisticated Soft Shadow Gradient Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#3D1F0D]/90 via-[#3D1F0D]/30 to-transparent opacity-90 transition-opacity duration-500 group-hover:opacity-95" />
 
-                {/* Top Fine Border Line Decorator */}
-                <div className="absolute inset-x-0 top-0 h-[2px] bg-[linear-gradient(to_right,transparent,#C8972B,transparent)] opacity-70" />
+              {/* Top Accent Luxury Border Line */}
+              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-transparent via-[#C8972B]/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
-                {/* Floating Meta Details Container Panel with Z-Axis displacement */}
-                <div className="absolute inset-x-0 bottom-0 px-5 pb-6 pt-16 [transform:translateZ(40px)] sm:px-6 sm:pb-7">
-                  {/* Tag Token */}
+              {/* Floating Large Serial Number (Marcellus) */}
+              <span className="font-marcellus pointer-events-none absolute right-4 top-2 select-none text-4xl sm:text-5xl font-medium tracking-tight text-[#F5EBE0]/10 transition-colors duration-500 group-hover:text-[#C8972B]/20">
+                {p.id}
+              </span>
 
-                  {/* Title */}
-                  <h3 className="font-display text-xl md:text-2xl lg:text-2xl tracking-wide text-white leading-tight">
-                    {p.title.trim()}
-                  </h3>
-                </div>
-
-                {/* Oversized Background Watermark ID with Z-Axis elevation */}
-                <span className="font-display pointer-events-none absolute right-5 top-2 select-none text-[55px] font-semibold leading-none tracking-tighter text-[#F5EBE0]/15 [transform:translateZ(20px)] transition-all duration-500 group-hover:text-[#C8972B]/25 sm:text-[65px] md:text-[75px]">
-                  {p.id}
+              {/* Text Content Area */}
+              <div className="absolute inset-x-0 bottom-0 p-5 sm:p-6 flex flex-col gap-2 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-500 ease-out">
+                {/* Micro Label */}
+                <span className="text-[9px] tracking-[0.2em] uppercase text-[#C8972B] font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-75">
+                  Bespoke Concept
                 </span>
+
+                {/* Title (Marcellus) */}
+                <h3 className="font-marcellus text-lg sm:text-xl lg:text-2xl text-white tracking-wide leading-tight">
+                  {p.title.trim()}
+                </h3>
               </div>
             </div>
           ))}

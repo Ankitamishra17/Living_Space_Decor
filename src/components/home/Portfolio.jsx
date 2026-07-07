@@ -117,7 +117,7 @@ export default function LatestProjectsPremium() {
                   <span className="inline-block px-3 py-1.5 bg-[#C8972B] text-white text-[9px] uppercase tracking-[.2em] font-semibold rounded-full mb-4">
                     Featured
                   </span>
-                  <p className="font-[Cormorant_Garamond,serif] text-[32px] md:text-[40px] font-medium text-white mb-2">
+                  <p className="font-heading text-[32px] md:text-[40px] font-medium text-white mb-2">
                     {portfolio[0].title}
                   </p>
                   <p className="text-[11px] tracking-[.12em] uppercase text-[#C8972B]">
@@ -146,7 +146,7 @@ export default function LatestProjectsPremium() {
                 transition={{ type: "spring", stiffness: 200 }}
               >
                 <div className="w-16 h-16 rounded-full border-2 border-[#C8972B] flex items-center justify-center">
-                  <span className="font-[Cormorant_Garamond,serif] text-[#C8972B] text-2xl font-semibold">
+                  <span className="font-heading text-[#C8972B] text-2xl font-semibold">
                     01
                   </span>
                 </div>
@@ -202,7 +202,7 @@ export default function LatestProjectsPremium() {
                   transition={{ duration: 0.3 }}
                 >
                   <div className="flex-1">
-                    <p className="font-[Cormorant_Garamond,serif] text-[22px] font-medium text-white mb-1">
+                    <p className="font-heading text-[22px] font-medium text-white mb-1">
                       {p.title}
                     </p>
                    

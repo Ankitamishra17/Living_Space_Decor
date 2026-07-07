@@ -98,22 +98,7 @@ export default function DesignGallery({ data }) {
               {data.galleryDescription}
             </motion.p>
 
-            {/* <motion.button
-              initial={{ opacity: 0, y: 10 }}
-              animate={centerInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              whileHover={{ scale: 1.02 }}
-              whileTap={{ scale: 0.98 }}
-              className="mt-8 inline-flex items-center gap-2 border border-[#C8972B]/40 px-6 py-2.5 text-[#3D1F0D] text-xs md:text-sm font-medium hover:border-[#C8972B] hover:bg-[#C8972B] hover:text-white transition-all duration-300"
-            >
-              Explore Design
-              <motion.div
-                whileHover={{ x: 3 }}
-                transition={{ duration: 0.3 }}
-              >
-                <ArrowRight size={14} />
-              </motion.div>
-            </motion.button> */}
+            
           </motion.div>
 
           {/* Right Image */}
