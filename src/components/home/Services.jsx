@@ -143,7 +143,7 @@ export default function ServicesSection() {
 
               {/* ── DEFAULT: only title at bottom ── */}
               <div className="absolute bottom-0 left-0 right-0 p-6 z-10 transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
-                <h3 className="font-[Cormorant_Garamond,serif] text-2xl md:text-3xl text-white">
+                <h3 className="font-[Cormorant_Garamond,serif] text-md md:text-3xl lg:text-3xl text-white">
                   {service.title}
                 </h3>
                 {/* gold underline */}

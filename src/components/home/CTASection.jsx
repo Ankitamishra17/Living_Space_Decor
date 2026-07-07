@@ -119,7 +119,7 @@ export default function CTABanner() {
                 <span className="font-semibold">500+</span> luxury projects
                 delivered
                 <br />
-                across Noida, Greater Noida & Delhi NCR
+                across Noida, Greater Noida & Ghaziabad
               </p>
             </motion.div>
           </div>

@@ -83,7 +83,7 @@ export default function ProjectsSection() {
         </div>
 
         {/* Cards Grid Layout */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
           {PROJECTS.map((p) => (
             <div
               key={p.id}
@@ -111,7 +111,7 @@ export default function ProjectsSection() {
                   {/* Tag Token */}
 
                   {/* Title */}
-                  <h3 className="font-display text-2xl tracking-wide text-white leading-tight">
+                  <h3 className="font-display text-xl md:text-2xl lg:text-2xl tracking-wide text-white leading-tight">
                     {p.title.trim()}
                   </h3>
                 </div>
