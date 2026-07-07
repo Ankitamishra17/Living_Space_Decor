@@ -6,28 +6,65 @@ import Link from "next/link";
 
 const testimonials = [
   {
-    name: "Priya & Rahul Sharma",
-    role: "Home Owner, New Delhi",
+    name: "Aditi Kaptiyal",
+       rating: "Homeowner, Gurgaon",
+
     review:
-      "They transformed our house into a home beyond imagination. Every detail was perfectly executed.",
+      "I had a wonderful experience with Living Space Build and Design. From start to finish, the team was professional, friendly, and very attentive to what I wanted. They really listened to my ideas and gave helpful suggestions that made the design even better.",
   },
   {
-    name: "Sunita Kapoor",
-    role: "Homeowner, Mumbai",
+    name: "VISHU YT",
+      rating: "Homeowner, Gurgaon",
+
     review:
-      "Our kitchen is now the heart of our home. Cooking has never felt this luxurious.",
+      "best interior shop and best quality products and good codination amazing team work",
   },
   {
-    name: "Anil Mehta",
-    role: "Villa Owner, Bangalore",
+    name: "Aakanksha Singh",
+        rating: "Homeowner, Gurgaon",
+
     review:
-      "Our dream home became a reality. The team understood our vision perfectly from day one.",
+      "This company did a wonderful job, beyond my expectation, you can choose this company without having a second thought.",
   },
   {
-    name: "Vikram Gupta",
-    role: "Homeowner, Gurgaon",
-    review:
-      "Zero stress, complete transformation. They handled everything from start to finish brilliantly.",
+    name: "SHOURYA",
+       rating: "Homeowner, Gurgaon",
+
+    review: "Wonderfull sevices and great designs. Timely services provided!!",
+  },
+  {
+    name: "Dipanshu Rawat",
+       rating: "Homeowner, Gurgaon",
+
+    review: "Wonderfull sevices and great designs . Timely services provided!!",
+  },
+  {
+    name: "Aman Haldar",
+       rating: "Homeowner, Gurgaon",
+
+    review: "My experience very good and good service provide living space build and design",
+  },
+  {
+    name: "Deepak Bainsla",
+       rating: "Homeowner, Gurgaon",
+
+    review: "Awesome work done by their team at my home. #bestinteriordesigner in Noida",
+  },
+  {
+    name: "Grisha Bhardwaj",
+        rating: "Homeowner, Gurgaon",
+
+    review: "I really liked the collection at this shop. Prices are reasonable and the service is friendly.",
+  },
+  {
+    name: "Vanz",
+    rating: "Homeowner, Gurgaon",
+    review: "Amazing experience! Worth trying !",
+  },
+  {
+    name: "Mohmd Shehwaz",
+    rating: "Homeowner, Gurgaon",
+    review: "Best In Terms Of Everything in Their Work.",
   },
 ];
 

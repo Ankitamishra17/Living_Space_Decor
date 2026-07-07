@@ -54,7 +54,7 @@ function FeatureCard({ stat, index }) {
       initial={{ opacity: 0, y: 40 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.8, delay: index * 0.1, ease: [0.215, 0.61, 0.355, 1] }}
-      className="group relative flex flex-col justify-between max-w-7xl bg-[#FCFAF7] border border-[#3D1F0D]/5 p-6 md:p-8 rounded-none transition-all duration-500 hover:bg-white hover:shadow-2xl hover:shadow-[#3D1F0D]/5"
+      className="group relative flex flex-col justify-between bg-[#FCFAF7] border border-[#3D1F0D]/5 p-6 md:p-8 rounded-none transition-all duration-500 hover:bg-white hover:shadow-2xl hover:shadow-[#3D1F0D]/5"
     >
       {/* Top Meta Line */}
       <div className="flex items-center justify-between border-b border-[#3D1F0D]/5 pb-4 mb-6">
@@ -65,7 +65,7 @@ function FeatureCard({ stat, index }) {
       </div>
 
       {/* Asymmetrical Layout: Text & Image Interlocking */}
-      <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center">
+      <div className="grid grid-cols-1 sm:grid-cols-12 gap-6 items-center ">
         {/* Left Side: Editorial Content */}
         <div className="sm:col-span-7 order-2 sm:order-1 space-y-3">
           <div className="flex items-baseline gap-2">
@@ -107,10 +107,10 @@ function FeatureCard({ stat, index }) {
       </div>
 
       {/* Bottom Minimal Action Trigger */}
-      <div className="mt-6 pt-4 border-t border-[#3D1F0D]/5 flex items-center justify-between text-[11px] font-medium tracking-widest uppercase text-[#2A1B12] opacity-60 group-hover:opacity-100 transition-opacity duration-300">
+      {/* <div className="mt-6 pt-4 border-t border-[#3D1F0D]/5 flex items-center justify-between text-[11px] font-medium tracking-widest uppercase text-[#2A1B12] opacity-60 group-hover:opacity-100 transition-opacity duration-300">
         <span>View Details</span>
         <ArrowUpRight size={14} className="text-[#C8972B] transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-      </div>
+      </div> */}
     </motion.div>
   );
 }
@@ -129,7 +129,7 @@ export default function WhyChooseUs() {
       <div className="absolute inset-y-0 left-8 lg:left-16 w-px bg-[#3D1F0D]/[0.02] pointer-events-none" />
       <div className="absolute inset-y-0 right-8 lg:right-16 w-px bg-[#3D1F0D]/[0.02] pointer-events-none" />
 
-      <div className="relative mx-auto max-w-6xl px-6 lg:px-8">
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         
         {/* ─── LUXURY MINIMALIST HEADER ─── */}
         <motion.div 
@@ -149,14 +149,14 @@ export default function WhyChooseUs() {
             className="text-3xl sm:text-4xl lg:text-5xl font-normal text-[#2A1B12] leading-[1.2] tracking-tight"
             style={{ fontFamily: "'Marcellus', serif" }}
           >
-            Design that lives <span className="italic text-[#C8972B] font-light">with you</span>, not just in it.
+            Design that lives <span className=" text-[#C8972B] font-light">with you</span>, not just in it.
           </h2>
           
           <div className="h-[1px] w-12 bg-[#C8972B]/50 mx-auto pt-1" />
         </motion.div>
 
         {/* ─── PRESTIGE LOOKBOOK GRID ─── */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 ">
           {BRAND_STATS.map((stat, i) => (
             <FeatureCard key={stat.label} stat={stat} index={i} />
           ))}

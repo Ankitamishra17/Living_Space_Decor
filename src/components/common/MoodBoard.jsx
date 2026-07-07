@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  useState,
-  useEffect,
-  useRef,
-  useCallback,
-  useLayoutEffect,
-} from "react";
+import { useState, useEffect, useRef, useCallback, useLayoutEffect } from "react";
 import Image from "next/image";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
@@ -146,6 +140,53 @@ export default function DesignGallery({ data }) {
     startAutoSlide(); // reset the timer so it doesn't jump right after a manual click
   };
 
+  // ── Drag / swipe gesture (mouse + touch, unified via Pointer Events) ──
+  const [isDragging, setIsDragging] = useState(false);
+  const [dragOffset, setDragOffset] = useState(0);
+  const dragStartX = useRef(0);
+  const draggedRef = useRef(false); // true once the pointer has moved past a small threshold
+
+  const handlePointerDown = (e) => {
+    // Only primary button for mouse; touch/pen always fire without a `button` distinction
+    if (e.pointerType === "mouse" && e.button !== 0) return;
+    setIsDragging(true);
+    draggedRef.current = false;
+    dragStartX.current = e.clientX;
+    setDragOffset(0);
+    setWithTransition(false);
+    clearInterval(timerRef.current); // pause autoslide while the user is interacting
+    e.currentTarget.setPointerCapture?.(e.pointerId);
+  };
+
+  const handlePointerMove = (e) => {
+    if (!isDragging) return;
+    const delta = e.clientX - dragStartX.current;
+    if (Math.abs(delta) > 4) draggedRef.current = true;
+    setDragOffset(delta);
+  };
+
+  const endDrag = () => {
+    if (!isDragging) return;
+    setIsDragging(false);
+    setWithTransition(true);
+
+    const delta = dragOffset;
+    const pitch = slideWidth || 0;
+    // Swipe past ~18% of a slide's width to trigger a step; otherwise snap back.
+    const threshold = pitch ? pitch * 0.18 : 40;
+
+    setDragOffset(0);
+    if (delta <= -threshold) {
+      goNext();
+    } else if (delta >= threshold) {
+      goPrev();
+    }
+    startAutoSlide(); // resume autoslide after the interaction ends
+  };
+
+  const handlePointerUp = () => endDrag();
+  const handlePointerCancel = () => endDrag();
+
   const ImageCard = ({ src, priority = false }) => (
     <div className="relative overflow-hidden bg-white group cursor-pointer shadow-sm hover:shadow-lg transition-shadow h-[260px] md:h-[300px] w-full">
       <Image
@@ -153,7 +194,8 @@ export default function DesignGallery({ data }) {
         alt="Design"
         fill
         priority={priority}
-        className="object-cover transition-all duration-500 group-hover:scale-105"
+        draggable={false}
+        className="object-cover transition-all duration-500 group-hover:scale-105 pointer-events-none"
       />
     </div>
   );
@@ -198,11 +240,19 @@ export default function DesignGallery({ data }) {
           <div
             ref={trackRef}
             onTransitionEnd={handleTransitionEnd}
-            className="flex gap-4 md:gap-6 lg:gap-8"
+            onPointerDown={handlePointerDown}
+            onPointerMove={handlePointerMove}
+            onPointerUp={handlePointerUp}
+            onPointerCancel={handlePointerCancel}
+            onPointerLeave={isDragging ? handlePointerUp : undefined}
+            className={`flex gap-4 md:gap-6 lg:gap-8 select-none ${
+              isDragging ? "cursor-grabbing" : "cursor-grab"
+            }`}
             style={{
+              touchAction: "pan-y",
               transform: slideWidth
-                ? `translateX(-${index * slideWidth}px)`
-                : `translateX(-${index * itemWidthPercent}%)`,
+                ? `translateX(calc(-${index * slideWidth}px + ${dragOffset}px))`
+                : `translateX(calc(-${index * itemWidthPercent}% + ${dragOffset}px))`,
               transition: withTransition ? "transform 0.6s ease" : "none",
             }}
           >

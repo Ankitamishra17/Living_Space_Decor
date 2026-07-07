@@ -10,32 +10,27 @@ const portfolio = [
   {
     id: 1,
     title: "Luxury Living Room",
-   
     image: "/image/living_room8.jpeg",
     featured: true,
   },
   {
     id: 2,
     title: "Modern Bedroom ",
-   
     image: "/image/bedroom_design12.jpeg",
   },
   {
     id: 3,
     title: "Premium Kitchen",
-   
     image: "/image/kitchen_design1.jpeg",
   },
   {
     id: 4,
     title: "Kids Room",
-   
     image: "/image/kids_room4.jpeg",
   },
   {
     id: 5,
     title: "Contemporary Dining",
-   
     image: "/image/dining_room2.jpeg",
   },
 ];
@@ -95,24 +90,11 @@ export default function LatestProjectsPremium() {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
 
-              <motion.div
-                className="absolute inset-0 bg-gradient-to-t from-[#140802]/80 via-[#140802]/30 to-transparent"
-                initial={{ opacity: 0 }}
-                animate={{
-                  opacity: hoveredId === portfolio[0].id ? 1 : 0,
-                }}
-                transition={{ duration: 0.3 }}
-              />
+              {/* gradient overlay - always visible so text stays readable */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#140802]/80 via-[#140802]/30 to-transparent" />
 
-              <motion.div
-                className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{
-                  opacity: hoveredId === portfolio[0].id ? 1 : 0,
-                  y: hoveredId === portfolio[0].id ? 0 : 20,
-                }}
-                transition={{ duration: 0.3 }}
-              >
+              {/* text - always visible */}
+              <div className="absolute bottom-0 left-0 right-0 p-8 flex items-end justify-between">
                 <div className="flex-1">
                   <span className="inline-block px-3 py-1.5 bg-[#C8972B] text-white text-[9px] uppercase tracking-[.2em] font-semibold rounded-full mb-4">
                     Featured
@@ -120,37 +102,25 @@ export default function LatestProjectsPremium() {
                   <p className="font-heading text-[32px] md:text-[40px] font-medium text-white mb-2">
                     {portfolio[0].title}
                   </p>
-                  <p className="text-[11px] tracking-[.12em] uppercase text-[#C8972B]">
-                    {portfolio[0].location}
-                  </p>
                 </div>
                 <motion.div
-                  initial={{ scale: 0 }}
                   animate={{
-                    scale: hoveredId === portfolio[0].id ? 1 : 0,
+                    scale: hoveredId === portfolio[0].id ? 1.1 : 1,
                   }}
                   transition={{ type: "spring", stiffness: 300 }}
                   className="w-12 h-12 rounded-full bg-[#C8972B] flex items-center justify-center flex-shrink-0 ml-4"
                 >
                   <ArrowUpRight size={18} className="text-white" />
                 </motion.div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                className="absolute top-6 right-6"
-                initial={{ scale: 0, rotate: -45 }}
-                animate={{
-                  scale: hoveredId === portfolio[0].id ? 1 : 0,
-                  rotate: hoveredId === portfolio[0].id ? 0 : -45,
-                }}
-                transition={{ type: "spring", stiffness: 200 }}
-              >
+              <div className="absolute top-6 right-6">
                 <div className="w-16 h-16 rounded-full border-2 border-[#C8972B] flex items-center justify-center">
                   <span className="font-heading text-[#C8972B] text-2xl font-semibold">
                     01
                   </span>
                 </div>
-              </motion.div>
+              </div>
             </Link>
           </motion.div>
         </motion.div>
@@ -183,51 +153,29 @@ export default function LatestProjectsPremium() {
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
 
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-t from-[#140802]/80 via-[#140802]/20 to-transparent"
-                  initial={{ opacity: 0 }}
-                  animate={{
-                    opacity: hoveredId === p.id ? 1 : 0,
-                  }}
-                  transition={{ duration: 0.3 }}
-                />
+                {/* gradient overlay - always visible so text stays readable */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#140802]/80 via-[#140802]/20 to-transparent" />
 
-                <motion.div
-                  className="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between"
-                  initial={{ opacity: 0, y: 15 }}
-                  animate={{
-                    opacity: hoveredId === p.id ? 1 : 0,
-                    y: hoveredId === p.id ? 0 : 15,
-                  }}
-                  transition={{ duration: 0.3 }}
-                >
+                {/* text - always visible */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 flex items-end justify-between">
                   <div className="flex-1">
                     <p className="font-heading text-[22px] font-medium text-white mb-1">
                       {p.title}
                     </p>
-                   
                   </div>
                   <motion.div
-                    initial={{ x: -5 }}
                     animate={{
-                      x: hoveredId === p.id ? 5 : -5,
+                      x: hoveredId === p.id ? 5 : 0,
                     }}
                     className="flex-shrink-0"
                   >
                     <ArrowUpRight size={14} className="text-white" />
                   </motion.div>
-                </motion.div>
+                </div>
 
-                <motion.div
-                  className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#C8972B] flex items-center justify-center text-white font-semibold text-sm"
-                  initial={{ scale: 0 }}
-                  animate={{
-                    scale: hoveredId === p.id ? 1 : 0,
-                  }}
-                  transition={{ type: "spring", stiffness: 300 }}
-                >
+                <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-[#C8972B] flex items-center justify-center text-white font-semibold text-sm">
                   {String(p.id).padStart(2, "0")}
-                </motion.div>
+                </div>
               </Link>
             </motion.div>
           ))}
@@ -239,32 +187,30 @@ export default function LatestProjectsPremium() {
         className="mt-20 flex justify-center"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.3 }}
+        transition={{ duration: 0.6 }}
         viewport={{ once: true }}
       >
         <Link
           href="/portfolio"
-          className="group relative inline-flex items-center gap-3 px-8 py-3.5 border-2 border-[#3D1F0D] text-[#3D1F0D] text-[11px] font-semibold uppercase tracking-[.12em] transition-all duration-300 overflow-hidden"
+          className="group relative overflow-hidden  px-10 py-4 bg-[#3D1F0D] text-white uppercase tracking-[0.18em] text-xs font-semibold flex items-center gap-3 shadow-[0_10px_30px_rgba(61,31,13,0.25)]"
         >
-          <motion.div
-            className="absolute inset-0 bg-[#3D1F0D] "
-            initial={{ scaleX: 0 }}
-            whileHover={{ scaleX: 1 }}
-            transition={{ duration: 0.4 }}
-            style={{ originX: 0 }}
-          />
-          <motion.span
-            className="relative group-hover:text-[#C8972B] transition-colors"
-            whileHover={{ letterSpacing: "0.2em" }}
-          >
+          {/* Animated Gold Sweep */}
+         
+          {/* Border Glow */}
+          {/* <span className="absolute inset-0 rounded-full border border-[#C8972B]/40 group-hover:border-[#C8972B]" /> */}
+
+          {/* Text */}
+          <span className="relative z-10 group-hover:tracking-[0.22em] transition-all duration-300">
             Explore Full Portfolio
-          </motion.span>
+          </span>
+
+          {/* Icon */}
           <motion.div
-            initial={{ x: 0 }}
-            whileHover={{ x: 5 }}
-            transition={{ type: "spring", stiffness: 400 }}
+            className="relative z-10 flex items-center justify-center w-8 h-8 rounded-full bg-[#C8972B] text-[#3D1F0D]"
+            whileHover={{ rotate: 45 }}
+            transition={{ duration: 0.3 }}
           >
-            <ArrowUpRight size={14} className="group-hover:text-[##3D1F0D]" />
+            <ArrowUpRight size={16} />
           </motion.div>
         </Link>
       </motion.div>
