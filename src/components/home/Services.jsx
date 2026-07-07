@@ -82,7 +82,9 @@ export default function ServicesSection() {
   const [dragging, setDragging] = useState(false);
   const [atStart, setAtStart] = useState(true);
   const [atEnd, setAtEnd] = useState(false);
-  const [progress, setProgress] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const rafId = useRef(null);
 
   const updateScrollState = useCallback(() => {
     const track = trackRef.current;
@@ -90,27 +92,66 @@ export default function ServicesSection() {
     const max = track.scrollWidth - track.clientWidth;
     setAtStart(track.scrollLeft <= 4);
     setAtEnd(track.scrollLeft >= max - 4);
-    setProgress(max > 0 ? track.scrollLeft / max : 0);
+
+    // The "active" card is whichever one is most centered in the visible
+    // track — far more reliable than comparing left edges, which gets
+    // thrown off by scroll-padding and the gap between cards.
+    const cards = Array.from(track.querySelectorAll("[data-card]"));
+    if (cards.length === 0) return;
+    const trackRect = track.getBoundingClientRect();
+    const trackCenter = trackRect.left + trackRect.width / 2;
+    let closest = 0;
+    let closestDist = Infinity;
+    cards.forEach((card, i) => {
+      const cardRect = card.getBoundingClientRect();
+      const cardCenter = cardRect.left + cardRect.width / 2;
+      const dist = Math.abs(cardCenter - trackCenter);
+      if (dist < closestDist) {
+        closestDist = dist;
+        closest = i;
+      }
+    });
+    setActiveIndex(closest);
   }, []);
+
+  const scheduleUpdate = useCallback(() => {
+    if (rafId.current) cancelAnimationFrame(rafId.current);
+    rafId.current = requestAnimationFrame(updateScrollState);
+  }, [updateScrollState]);
 
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
-    updateScrollState();
-    track.addEventListener("scroll", updateScrollState, { passive: true });
-    window.addEventListener("resize", updateScrollState);
+    // Wait a tick so images/layout have settled before the first read.
+    const initial = requestAnimationFrame(updateScrollState);
+    track.addEventListener("scroll", scheduleUpdate, { passive: true });
+    window.addEventListener("resize", scheduleUpdate);
     return () => {
-      track.removeEventListener("scroll", updateScrollState);
-      window.removeEventListener("resize", updateScrollState);
+      cancelAnimationFrame(initial);
+      if (rafId.current) cancelAnimationFrame(rafId.current);
+      track.removeEventListener("scroll", scheduleUpdate);
+      window.removeEventListener("resize", scheduleUpdate);
     };
-  }, [updateScrollState]);
+  }, [updateScrollState, scheduleUpdate]);
 
   const scrollByCard = (dir) => {
     const track = trackRef.current;
     if (!track) return;
     const card = track.querySelector("[data-card]");
-    const step = card ? card.offsetWidth + 4 : 300;
+    const step = card ? card.offsetWidth + 16 : 300;
     track.scrollBy({ left: dir * step, behavior: "smooth" });
+  };
+
+  const scrollToIndex = (i) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const cards = track.querySelectorAll("[data-card]");
+    const card = cards[i];
+    if (!card) return;
+    const trackRect = track.getBoundingClientRect();
+    const cardRect = card.getBoundingClientRect();
+    const offset = cardRect.left - trackRect.left + track.scrollLeft;
+    track.scrollTo({ left: offset, behavior: "smooth" });
   };
 
   const handlePointerDown = (e) => {
@@ -131,6 +172,7 @@ export default function ServicesSection() {
     const walk = x - startX.current;
     if (Math.abs(walk) > 5) dragMoved.current = true;
     track.scrollLeft = scrollLeftStart.current - walk;
+    scheduleUpdate();
   };
 
   const stopDragging = () => {
@@ -203,10 +245,13 @@ export default function ServicesSection() {
           role="region"
           aria-label="Our services"
           tabIndex={0}
-          className={`flex gap-4 overflow-x-auto scrollbar-hide select-none snap-x snap-mandatory scroll-px-6 focus-visible:outline-none ${
+          className={`flex gap-4 overflow-x-auto scrollbar-hide select-none snap-x snap-proximity scroll-px-6 focus-visible:outline-none ${
             dragging ? "cursor-grabbing" : "cursor-grab"
           }`}
-          style={{ scrollBehavior: dragging ? "auto" : "smooth" }}
+          style={{
+            scrollBehavior: dragging ? "auto" : "smooth",
+            scrollSnapType: dragging ? "none" : "x proximity",
+          }}
           onMouseDown={handlePointerDown}
           onMouseMove={handlePointerMove}
           onMouseUp={stopDragging}
@@ -291,15 +336,38 @@ export default function ServicesSection() {
           })}
         </div>
 
-        {/* Progress rail — shows position within the carousel */}
-        <div className="mt-6 h-[2px] w-full bg-[#3D1F0D]/10 rounded-full overflow-hidden md:hidden">
-          <div
-            className="h-full bg-[#C8972B] rounded-full transition-transform duration-150"
-            style={{
-              width: "25%",
-              transform: `translateX(${progress * 300}%)`,
-            }}
-          />
+        {/* Active-card indicator — a line with the current number picked out */}
+        <div className="mt-8 flex items-center gap-3 md:gap-4">
+          {services.map((service, index) => {
+            const isActive = index === activeIndex;
+            return (
+              <button
+                key={service.title}
+                type="button"
+                onClick={() => scrollToIndex(index)}
+                aria-label={`Go to ${service.title}`}
+                aria-current={isActive}
+                className="group/dot flex flex-1 flex-col items-center gap-2.5 py-1"
+              >
+                <span
+                  className={`transition-all duration-300 text-[11px] tracking-[0.15em] ${
+                    isActive
+                      ? "text-[#C8972B] font-medium"
+                      : "text-[#2A1506]/35 group-hover/dot:text-[#2A1506]/60"
+                  }`}
+                >
+                  {String(index + 1).padStart(2, "0")}
+                </span>
+                <span
+                  className={`h-[2px] w-full rounded-full transition-all duration-500 ${
+                    isActive
+                      ? "bg-[#C8972B]"
+                      : "bg-[#3D1F0D]/12 group-hover/dot:bg-[#3D1F0D]/25"
+                  }`}
+                />
+              </button>
+            );
+          })}
         </div>
       </div>
 
