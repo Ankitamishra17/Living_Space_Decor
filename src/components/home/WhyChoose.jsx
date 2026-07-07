@@ -40,7 +40,7 @@ const BRAND_STATS = [
     title: "Recognitions for Excellence",
     description:
       "Eighteen regional accolades celebrating groundbreaking structural planning, ambient lighting integration, and premium material curation.",
-    img: "",
+    img: "/image/living_room13.jpeg",
   },
 ];
 

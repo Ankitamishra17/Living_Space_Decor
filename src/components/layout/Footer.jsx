@@ -4,19 +4,22 @@ import Link from "next/link";
 import Image from "next/image";
 
 const NAV_LINKS = [
-  { label: "Modular Kitchens", href: "/services/modular-kitchen" },
+  { label: "Modular Kitchens", href: "/kitchen-design" },
   { label: "Kitchen Cost Calculator", href: "/kitchen-calculator" },
-  { label: "Modular Kitchen Design Ideas", href: "/kitchen-design" },
+  {
+    label: "Modular Kitchen Design Ideas",
+    href: "/services/design-ideas/kitchen-design-ideas",
+  },
 ];
 const MORE_LINK = [
   { label: "Architecture & Construction", href: "/services/architecture" },
   { label: "Furnitures", href: "/services/furnitures" },
-  { label: "Trunkey Projects",href: "/services/turnkey-projects" },
+  { label: "Trunkey Projects", href: "/services/turnkey-projects" },
 ];
 
 const SERVICE_LINKS = [
   { label: "Wardrobe", href: "/services/wardrobes" },
-  { label: "Wardrobe Cost Calculator", href: "/wardrobe-cost-calculator" },
+  { label: "Wardrobe Cost Calculator", href: "/wardrobe-calculator" },
 ];
 const DESIGN_IDEAS = [
   {
@@ -38,7 +41,7 @@ const DESIGN_IDEAS = [
   },
   {
     label: "Bathroom Design",
-  href: "/services/design-ideas/bathroom-design",
+    href: "/services/design-ideas/bathroom-design",
   },
   { label: "Bedroom Design", href: "/services/design-ideas/bathroom-design" },
   {

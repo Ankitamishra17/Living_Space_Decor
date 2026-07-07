@@ -86,18 +86,11 @@ export default function ServicesSection() {
   const [atEnd, setAtEnd] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
-  // Progress bar fill + dot are updated directly via the DOM (refs),
-  // never via React state. That's the key fix: driving them through
-  // setState meant every scroll (many times per second) forced a
-  // React re-render of the whole section — that's what was causing
-  // the jank/stutter on mobile. Direct style writes are essentially free.
   const fillRef = useRef(null);
   const dotRef = useRef(null);
 
   const rafId = useRef(null);
-  // Track last-seen values so we only call setState when something the
-  // rest of the UI actually depends on (arrow disabled state, active
-  // number badge) really changes — not on every single scroll tick.
+
   const lastActive = useRef(0);
   const lastAtStart = useRef(true);
   const lastAtEnd = useRef(false);
@@ -110,7 +103,6 @@ export default function ServicesSection() {
     const progress = max > 0 ? Math.min(1, Math.max(0, track.scrollLeft / max)) : 0;
     const pct = `${progress * 100}%`;
 
-    // Direct DOM writes for the progress line/dot — no re-render.
     if (fillRef.current) fillRef.current.style.width = pct;
     if (dotRef.current) dotRef.current.style.left = pct;
 
@@ -125,10 +117,6 @@ export default function ServicesSection() {
       setAtEnd(newAtEnd);
     }
 
-    // Active card via arithmetic (scrollLeft / step) instead of looping
-    // every card and calling getBoundingClientRect() on each — that loop
-    // forced a layout read on every scroll frame, which is expensive and
-    // was contributing to the jank alongside the setState-per-frame issue.
     const firstCard = track.querySelector("[data-card]");
     if (!firstCard) return;
     const step = firstCard.offsetWidth + 16; // card width + gap-4 (16px)
