@@ -62,15 +62,15 @@ const services = [
     icon: Compass,
     link: "/services/design-ideas/home-office-design",
   },
-  {
-    title: "Hospitality",
-    description:
-      "Luxury hospitality interior design services for hotels, restaurants, cafés, resorts, and commercial spaces.",
-    image:
-      "https://i.pinimg.com/736x/66/bd/54/66bd54f9c1b4b46691c66a2d62ef01d7.jpg",
-    icon: Compass,
-    link: "/services/design-ideas",
-  },
+  // {
+  //   title: "Hospitality",
+  //   description:
+  //     "Luxury hospitality interior design services for hotels, restaurants, cafés, resorts, and commercial spaces.",
+  //   image:
+  //     "https://i.pinimg.com/736x/66/bd/54/66bd54f9c1b4b46691c66a2d62ef01d7.jpg",
+  //   icon: Compass,
+  //   link: "/services/design-ideas",
+  // },
 ];
 
 export default function ServicesSection() {
@@ -309,18 +309,7 @@ export default function ServicesSection() {
       >
         {/* Edge fades — a quiet visual cue that there's more to scroll to,
             especially useful on mobile where there's no arrow affordance. */}
-        <div
-          aria-hidden
-          className={`pointer-events-none absolute left-0 top-0 bottom-8 w-10 md:w-16 z-20 bg-gradient-to-r from-white to-transparent transition-opacity duration-300 ${
-            atStart ? "opacity-0" : "opacity-100"
-          }`}
-        />
-        <div
-          aria-hidden
-          className={`pointer-events-none absolute right-0 top-0 bottom-8 w-10 md:w-16 z-20 bg-gradient-to-l from-white to-transparent transition-opacity duration-300 ${
-            atEnd ? "opacity-0" : "opacity-100"
-          }`}
-        />
+      
 
         <div
           ref={trackRef}
@@ -451,14 +440,14 @@ export default function ServicesSection() {
           >
             <span
               ref={fillRef}
-              className="absolute left-0 top-0 h-full rounded-full bg-[#C8972B]"
-              style={{ width: "0%" }}
+              className="absolute left-0 top-0 h-full rounded-full bg-[#C8972B] transition-[width] duration-100 ease-out"
+              style={{ width: "0%", willChange: "width" }}
             />
             {/* a small dot riding the head of the line reads as an active marker */}
             <span
               ref={dotRef}
-              className="absolute top-1/2 h-2.5 w-2.5 -translate-y-1/2 -translate-x-1/2 rounded-full bg-[#C8972B] shadow-[0_0_0_3px_#fff]"
-              style={{ left: "0%" }}
+              className="absolute top-1/2 h-2.5 w-2.5 -translate-y-1/2 -translate-x-1/2 rounded-full bg-[#C8972B] shadow-[0_0_0_3px_#fff] transition-[left] duration-100 ease-out"
+              style={{ left: "0%", willChange: "left" }}
             />
           </div>
           <span className="shrink-0 text-[11px] tracking-[0.15em] tabular-nums text-[#2A1506]/60">
