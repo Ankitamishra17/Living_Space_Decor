@@ -80,11 +80,11 @@ export const designIdeas = [
       "/image/kidss.jpeg",
       "/image/kids_room_design.jpeg",
       "/image/kids_room_design3.jpeg",
-      "/image/kids_room_interior_design.jpeg",
+      // "/image/kids_room_interior_design.jpeg",
       "/image/kids_room_interior.jpeg",
 
       "/image/kids_room2.jpeg",
-      "/image/kids_room3.jpeg",
+      // "/image/kids_room3.jpeg",
 
       "/image/kids_room6.jpeg",
       "/image/kids_room7.jpeg",
