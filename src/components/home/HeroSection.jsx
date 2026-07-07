@@ -15,7 +15,7 @@ const categories = [
     title: "Modular Kitchen",
     image: "/image/kitchen_design7.jpeg",
     mobileImage: "/image/kitchen_design7.jpeg",
-    href: "/services/modular-kitchen",
+    href: "/kitchen-design",
     desc: "Crafted For Modern Homes.",
   },
   {

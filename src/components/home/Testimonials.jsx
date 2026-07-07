@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Phone, MessageCircle, Clock } from "lucide-react";
 
 const testimonials = [
   {
@@ -274,22 +274,95 @@ export default function Testimonials() {
         </div>
       </div>
 
-      {/* CTA */}
-      <div className="bg-[#F5EBE0] py-16 md:py-20 mt-16 md:mt-20">
-        <div className="max-w-4xl mx-auto text-center px-5">
-          <h2 className="font-heading text-3xl sm:text-4xl font-medium text-[#2A1506]">
-            Looking for Interior Designers in Noida?
-          </h2>
-          <p className="mt-4 text-[#2A1506]/60 text-[15px] leading-relaxed">
-            Book a free consultation today and transform your dream home with
-            Living Space Decor.
-          </p>
-          <a
-            href="tel:+918826606869"
-            className="inline-block mt-8 bg-[#3D1F0D] text-white px-8 py-4 rounded text-[13px] tracking-[0.1em] uppercase font-medium hover:bg-[#B8851F] transition-colors duration-300"
-          >
-            Call Now
-          </a>
+      {/* CTA — redesigned */}
+      <div className="mt-16 md:mt-20 px-5">
+        <div className="relative max-w-5xl mx-auto rounded-2xl overflow-hidden bg-[#3D1F0D]">
+          {/* Decorative accents */}
+          <div className="pointer-events-none absolute -top-16 -right-16 w-64 h-64 rounded-full bg-[#C8972B]/15 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-20 -left-10 w-56 h-56 rounded-full bg-white/5 blur-3xl" />
+          <div
+            className="pointer-events-none absolute inset-0 opacity-[0.06]"
+            style={{
+              backgroundImage:
+                "repeating-linear-gradient(135deg, #F7F2EB 0px, #F7F2EB 1px, transparent 1px, transparent 14px)",
+            }}
+          />
+
+          <div className="relative flex flex-col lg:flex-row items-center lg:items-stretch gap-10 lg:gap-0 px-6 py-12 sm:px-12 sm:py-14 lg:px-16">
+            {/* Left: message */}
+            <div className="flex-1 text-center lg:text-left">
+              <p className="flex items-center justify-center lg:justify-start gap-3 text-[10px] tracking-[.28em] uppercase text-[#C8972B] font-medium mb-4">
+                <span className="w-6 h-px bg-[#C8972B]" />
+                Start Your Project
+              </p>
+              <h2 className="font-heading text-3xl sm:text-4xl font-medium text-white leading-[1.15]">
+                Looking for Interior Designers in Noida?
+              </h2>
+              <p className="mt-4 text-white/60 text-[15px] leading-relaxed max-w-md mx-auto lg:mx-0">
+                Book a free consultation today and transform your dream home
+                with Living Space Decor.
+              </p>
+
+              <div className="mt-7 flex items-center justify-center lg:justify-start gap-2 text-white/50 text-[12px]">
+                <Clock size={14} className="text-[#C8972B]" />
+                <span>Mon – Sun, 10:00 AM – 7:00 PM</span>
+              </div>
+            </div>
+
+            {/* Divider */}
+            <div className="hidden lg:block w-px bg-white/10 mx-4" />
+
+            {/* Right: actions */}
+            <div className="flex flex-col justify-center gap-4 w-full lg:w-auto lg:min-w-[280px]">
+              <a
+                href="tel:+918826606869"
+                className="group flex items-center justify-between gap-4 bg-[#C8972B] text-[#2A1506] px-6 py-4 rounded-xl hover:bg-[#dba838] transition-colors duration-300"
+              >
+                <span className="flex items-center gap-3">
+                  <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#2A1506]/10">
+                    <Phone size={16} />
+                  </span>
+                  <span className="text-left">
+                    <span className="block text-[13px] tracking-[0.08em] uppercase font-medium">
+                      Call Now
+                    </span>
+                    <span className="block text-[11px] opacity-70">
+                      +91 88266 06869
+                    </span>
+                  </span>
+                </span>
+                <ChevronRight
+                  size={16}
+                  className="opacity-60 group-hover:translate-x-1 transition-transform duration-300"
+                />
+              </a>
+
+              <a
+                href="https://wa.me/918826606869"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center justify-between gap-4 bg-white/5 border border-white/15 text-white px-6 py-4 rounded-xl hover:bg-white/10 transition-colors duration-300"
+              >
+                <span className="flex items-center gap-3">
+                  <span className="flex items-center justify-center w-9 h-9 rounded-full bg-white/10">
+                    <MessageCircle size={16} />
+                  </span>
+                  <span className="text-left">
+                    <span className="block text-[13px] tracking-[0.08em] uppercase font-medium">
+                      WhatsApp Us
+                    </span>
+                    <span className="block text-[11px] opacity-60">
+                      Get a quick reply
+                    </span>
+                  </span>
+                </span>
+                <ChevronRight
+                  size={16}
+                  className="opacity-40 group-hover:translate-x-1 transition-transform duration-300"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

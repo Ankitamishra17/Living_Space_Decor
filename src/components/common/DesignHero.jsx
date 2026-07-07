@@ -1,9 +1,28 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { ChevronRight, ArrowRight } from "lucide-react";
 
 export default function DesignHero({ data }) {
+  const pathname = usePathname();
+  const segments = pathname.split("/").filter(Boolean);
+
+  // Build breadcrumb trail from the URL: Home / Design Ideas / Living Room
+  const breadcrumbs = [
+    { label: "Home", href: "/" },
+    ...segments.map((seg, idx) => {
+      const href = "/" + segments.slice(0, idx + 1).join("/");
+      const isLast = idx === segments.length - 1;
+      const label =
+        isLast && data?.title
+          ? data.title
+          : seg.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
+      return { label, href };
+    }),
+  ];
+
   return (
     <section>
       <div className="mx-auto">
@@ -23,6 +42,40 @@ export default function DesignHero({ data }) {
           {/* Content */}
           <div className="absolute inset-0 flex items-center justify-center mt-34 lg:mt-6 text-center px-4">
             <div>
+              {/* Breadcrumb */}
+              <nav aria-label="Breadcrumb" className="mb-5">
+                <ol className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 text-[10px] md:text-xs tracking-[0.15em] uppercase">
+                  {breadcrumbs.map((crumb, idx) => {
+                    const isLast = idx === breadcrumbs.length - 1;
+                    return (
+                      <li
+                        key={crumb.href}
+                        className="flex items-center gap-1.5"
+                      >
+                        {isLast ? (
+                          <span className="text-[#C8972B] font-medium">
+                            {crumb.label}
+                          </span>
+                        ) : (
+                          <Link
+                            href={crumb.href}
+                            className="text-[#F5EBE0]/75 hover:text-[#C8972B] transition-colors duration-300"
+                          >
+                            {crumb.label}
+                          </Link>
+                        )}
+                        {!isLast && (
+                          <ChevronRight
+                            size={12}
+                            className="text-[#F5EBE0]/40"
+                          />
+                        )}
+                      </li>
+                    );
+                  })}
+                </ol>
+              </nav>
+
               <p className="text-[#F5EBE0] uppercase tracking-[2px] text-xs md:text-sm mb-4">
                 Interior Design Studio
               </p>
