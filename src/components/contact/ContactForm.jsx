@@ -207,7 +207,7 @@ export default function ContactSection() {
                     </div>
                     <ArrowRight
                       size={18}
-                      className="text-[#C8972B] opacity-0 group-hover/card:opacity-100 transition-all duration-500 group-hover/card:translate-x-2"
+                      className="text-[#C8972B] opacity-0 mt-4 group-hover/card:opacity-100 transition-all duration-500 group-hover/card:translate-x-2"
                     />
                   </div>
                 </div>
@@ -240,7 +240,7 @@ export default function ContactSection() {
                     </div>
                     <ArrowRight
                       size={18}
-                      className="text-[#C8972B] opacity-0 group-hover/card:opacity-100 transition-all duration-500 group-hover/card:translate-x-2"
+                      className="text-[#C8972B] opacity-0 mt-4 group-hover/card:opacity-100 transition-all duration-500 group-hover/card:translate-x-2"
                     />
                   </div>
                 </div>
@@ -267,10 +267,10 @@ export default function ContactSection() {
                         West, Greater Noida, Uttar Pradesh 201009
                       </p>
                     </div>
-                    <ArrowRight
+                    {/* <ArrowRight
                       size={18}
-                      className="text-[#C8972B] opacity-0 group-hover/card:opacity-100 transition-all duration-500 group-hover/card:translate-x-2"
-                    />
+                      className="text-[#C8972B] opacity-0 mt-4 group-hover/card:opacity-100 transition-all duration-500 group-hover/card:translate-x-2"
+                    /> */}
                   </div>
                 </div>
               </div>

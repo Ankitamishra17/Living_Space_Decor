@@ -80,9 +80,10 @@ export default function MaterialsFinishes() {
                 transition-all
                 duration-700
                 ease-in-out
-                rounded-[32px]
+                rounded-[22px]
                 overflow-hidden
                 cursor-pointer
+                
               "
             >
               {/* Background Image */}
@@ -102,7 +103,7 @@ export default function MaterialsFinishes() {
 
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-8">
-                <h3 className="text-white font-semibold text-xl lg:text-2xl transition-all">
+                <h3 className="text-white font-heading text-md lg:text-xl transition-all">
                   {item.title}
                 </h3>
 

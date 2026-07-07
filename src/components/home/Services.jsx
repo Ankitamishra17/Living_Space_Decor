@@ -13,7 +13,6 @@ const services = [
     icon: Sofa,
     link: "/services/design-ideas/living-room-design",
   },
-  
   {
     title: "Modular Kitchen",
     description:
@@ -66,13 +65,15 @@ const services = [
     title: "Hospitality",
     description:
       "Luxury hospitality interior design services for hotels, restaurants, cafés, resorts, and commercial spaces.",
-    image: "https://i.pinimg.com/736x/66/bd/54/66bd54f9c1b4b46691c66a2d62ef01d7.jpg",
+    image:
+      "https://i.pinimg.com/736x/66/bd/54/66bd54f9c1b4b46691c66a2d62ef01d7.jpg",
     icon: Compass,
     link: "/services/design-ideas",
   },
 ];
 
-
+// duplicated once for a seamless infinite loop
+const marqueeServices = [...services, ...services];
 
 export default function ServicesSection() {
   return (
@@ -101,75 +102,96 @@ export default function ServicesSection() {
         </Link>
       </div>
 
-      {/* ── Cards ── */}
-      <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-1">
-        {services.map((service, index) => {
-          const Icon = service.icon;
+      {/* ── Marquee ── */}
+      <div className="relative overflow-hidden group/marquee">
+        {/* edge fades */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-16 md:w-28 z-20 bg-gradient-to-r from-white to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-16 md:w-28 z-20 bg-gradient-to-l from-white to-transparent" />
 
-          return (
-            <Link
-              key={service.title}
-              href={service.link}
-              className="relative h-[340px] md:h-[420px] overflow-hidden group block"
-            >
-              {/* Image */}
-              <Image
-                src={service.image}
-                alt={service.title}
-                fill
-                sizes="(max-width:768px) 100vw, 25vw"
-                className="object-cover transition-transform duration-700 group-hover:scale-105"
-              />
+        <div className="marquee-track flex gap-1 w-max">
+          {marqueeServices.map((service, index) => {
+            const Icon = service.icon;
 
-              {/* Default overlay — lighter */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#140802]/80 via-[#140802]/10 to-transparent transition-opacity duration-500 group-hover:opacity-0" />
+            return (
+              <Link
+                key={`${service.title}-${index}`}
+                href={service.link}
+                className="relative h-[340px] md:h-[420px] w-[260px] md:w-[320px] shrink-0 overflow-hidden group block"
+              >
+                {/* Image */}
+                <Image
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  sizes="(max-width:768px) 260px, 320px"
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
+                />
 
-              {/* Hover overlay — darker */}
-              <div className="absolute inset-0 bg-[#140802]/75 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                {/* Default overlay — lighter */}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#140802]/80 via-[#140802]/10 to-transparent transition-opacity duration-500 group-hover:opacity-0" />
 
-              {/* Icon top-left */}
-              <div className="absolute top-5 left-5 z-10">
-                <div className="w-12 h-12 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm flex items-center justify-center">
-                  <Icon size={22} className="text-white" />
+                {/* Hover overlay — darker */}
+                <div className="absolute inset-0 bg-[#140802]/75 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                {/* Icon top-left */}
+                <div className="absolute top-5 left-5 z-10">
+                  <div className="w-12 h-12 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm flex items-center justify-center">
+                    <Icon size={22} className="text-white" />
+                  </div>
                 </div>
-              </div>
 
-              {/* Number top-right */}
-              <div className="absolute top-5 right-5 z-10">
-                <span className="text-[#C8972B] text-sm tracking-[0.2em]">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-              </div>
-
-              {/* ── DEFAULT: only title at bottom ── */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 z-10 transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
-                <h3 className="font-[Cormorant_Garamond,serif] text-md md:text-3xl lg:text-3xl text-white">
-                  {service.title}
-                </h3>
-                {/* gold underline */}
-                <span className="block w-8 h-px bg-[#C8972B] mt-3" />
-              </div>
-
-              {/* ── HOVER: title + description centered ── */}
-              <div className="absolute inset-0 z-10 mt-34 flex flex-col justify-center p-8 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                <span className="block w-8 h-px bg-[#C8972B] mb-5" />
-                <h3 className="font-[Cormorant_Garamond,serif]  text-2xl md:text-3xl text-white mb-4">
-                  {service.title}
-                </h3>
-                <p className="text-white/75 text-sm leading-7">
-                  {service.description}
-                </p>
-
-                {/* arrow CTA */}
-                <div className="mt-6 flex items-center gap-2 text-[#C8972B] text-xs tracking-[0.2em] uppercase">
-                  <span>Explore</span>
-                  <ArrowRight size={14} />
+                {/* Number top-right */}
+                <div className="absolute top-5 right-5 z-10">
+                  <span className="text-[#C8972B] text-sm tracking-[0.2em]">
+                    {String((index % services.length) + 1).padStart(2, "0")}
+                  </span>
                 </div>
-              </div>
-            </Link>
-          );
-        })}
+
+                {/* ── DEFAULT: only title at bottom ── */}
+                <div className="absolute bottom-0 left-0 right-0 p-6 z-10 transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
+                  <h3 className="font-heading text-md md:text-3xl lg:text-3xl text-white">
+                    {service.title}
+                  </h3>
+                  <span className="block w-8 h-px bg-[#C8972B] mt-3" />
+                </div>
+
+                {/* ── HOVER: title + description centered ── */}
+                <div className="absolute inset-0 z-10 mt-34 flex flex-col justify-center p-8 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
+                  <span className="block w-8 h-px bg-[#C8972B] mb-5" />
+                  <h3 className="font-heading text-2xl md:text-3xl text-white mb-4">
+                    {service.title}
+                  </h3>
+                  <p className="text-white/75 text-sm leading-7">
+                    {service.description}
+                  </p>
+
+                  <div className="mt-6 flex items-center gap-2 text-[#C8972B] text-xs tracking-[0.2em] uppercase">
+                    <span>Explore</span>
+                    <ArrowRight size={14} />
+                  </div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
       </div>
+
+      <style jsx>{`
+        .marquee-track {
+          animation: marquee-scroll 35s linear infinite;
+        }
+        .group\\/marquee:hover .marquee-track {
+          animation-play-state: paused;
+        }
+        @keyframes marquee-scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
     </section>
   );
 }

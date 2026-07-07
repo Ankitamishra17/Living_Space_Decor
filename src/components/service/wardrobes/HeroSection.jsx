@@ -68,7 +68,7 @@ export default function HeroSection() {
               return (
                 <div
                   key={index}
-                  className="overflow-hidden  rounded-[10px] bg-[#F5EBE0] shadow-md hover:shadow-2xl transition-shadow"
+                  className="overflow-hidden  -mt-16  rounded-[10px] bg-[#F5EBE0] shadow-md hover:shadow-2xl transition-shadow"
                 >
                   <div className="relative h-[260px] ">
                     <Image

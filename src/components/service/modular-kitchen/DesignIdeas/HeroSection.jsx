@@ -221,7 +221,7 @@ export default function HeroSection() {
                   </button>
                 </Link>
                 <Link href="/contact">
-                  <button className="rounded-md border border-[#B8851F] bg-white/12 px-8 py-4 font-body text-[#B8851F] backdrop-blur transition hover:bg-white/20">
+                  <button className="rounded-md border border-[#B8851F] bg-white/10 px-8 py-4 font-body text-white backdrop-blur transition hover:bg-white/20">
                     Book Free Consultation
                   </button>
                 </Link>
@@ -241,7 +241,7 @@ export default function HeroSection() {
               return (
                 <div
                   key={index}
-                  className="overflow-hidden rounded-[10px] mt-2 bg-white shadow-md hover:shadow-2xl transition-shadow"
+                  className="overflow-hidden rounded-[10px] -mt-6 bg-white shadow-md hover:shadow-2xl transition-shadow"
                 >
                   <div className="relative h-[260px] ">
                     <Image

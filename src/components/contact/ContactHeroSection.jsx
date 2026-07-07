@@ -24,8 +24,7 @@ export default function ContactHeroSection() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-[#1F0E04]/70" />
 
-      {/* Decorative Circle */}
-      <div className="absolute top-16 right-16 lg:top-24 lg:right-24 w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 border border-[#C8972B]/30 rounded-full hidden lg:block" />
+     
 
       {/* Content */}
       <div className="relative z-10 w-full max-w-[1200px] mx-auto px-5 sm:px-6 md:px-8 lg:px-14 text-center">
