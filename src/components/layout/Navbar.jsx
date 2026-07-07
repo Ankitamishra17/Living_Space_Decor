@@ -88,18 +88,6 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // Lock body scroll while the mobile drawer is open
-  useEffect(() => {
-    if (isOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [isOpen]);
-
   const handleSearch = (query) => {
     console.log("Searching for:", query);
   };
@@ -302,123 +290,126 @@ export default function Navbar() {
           </div>
         </div>
 
-        {/* ── MOBILE & TABLET MENU (slides in from the right) ── */}
+        {/* ── MOBILE & TABLET MENU ── */}
         <AnimatePresence>
           {isOpen && (
-            <>
-              {/* BACKDROP OVERLAY */}
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                onClick={() => setIsOpen(false)}
-                className="lg:hidden fixed inset-0 top-0 bg-black/40 z-40"
-              />
-
-              {/* RIGHT-SIDE DRAWER */}
-              <motion.div
-                initial={{ x: "100%" }}
-                animate={{ x: 0 }}
-                exit={{ x: "100%" }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
-                className="lg:hidden fixed top-0 right-0 h-full w-[85%] xs:w-[80%] sm:w-[420px] max-w-full border-l border-[#3D1F0D]/10 bg-white overflow-y-auto z-50 shadow-[-8px_0_32px_rgba(61,31,13,0.12)]"
-              >
-                <div className="px-3 xs:px-4 sm:px-6 py-4 xs:py-5 flex flex-col gap-2">
-                  {/* NAVIGATION MENU */}
-                  <div className="flex flex-col gap-0.5">
-                    {navLinks.map((item) => (
-                      <div key={item.name}>
-                        {!item.submenu ? (
-                          <Link
-                            href={item.href}
-                            onClick={() => setIsOpen(false)}
-                            className="flex items-center justify-between px-4 py-3 xs:py-3.5 rounded-sm text-[#3D1F0D] font-medium text-[13px] xs:text-[14px] hover:bg-[#F5EBE0] hover:text-[#C8972B] transition-colors duration-150 min-h-[44px] xs:min-h-[48px]"
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3 }}
+              className="lg:hidden overflow-hidden border-t border-[#3D1F0D]/10 bg-white max-h-[calc(100vh-70px)] overflow-y-auto"
+            >
+              <div className="max-w-[1400px] mx-auto px-3 xs:px-4 sm:px-6 py-4 xs:py-5 flex flex-col gap-2">
+                {/* NAVIGATION MENU */}
+                <div className="flex flex-col gap-0.5">
+                  {navLinks.map((item) => (
+                    <div key={item.name}>
+                      {!item.submenu ? (
+                        <Link
+                          href={item.href}
+                          onClick={() => setIsOpen(false)}
+                          className="flex items-center justify-between px-4 py-3 xs:py-3.5 rounded-sm text-[#3D1F0D] font-medium text-[13px] xs:text-[14px] hover:bg-[#F5EBE0] hover:text-[#C8972B] transition-colors duration-150 min-h-[44px] xs:min-h-[48px]"
+                        >
+                          {item.name}
+                        </Link>
+                      ) : (
+                        <div className="px-3 xs:px-4 py-1.5 xs:py-2">
+                          {/* <button
+                            type="button"
+                            onClick={() => toggleMobileSubmenu(item.name)}
+                            className="w-full flex items-center justify-between px-1 py-3 xs:py-3.5 text-[#3D1F0D] font-medium text-[13px] xs:text-[14px] hover:text-[#C8972B] transition-colors min-h-[44px] xs:min-h-[48px]"
                           >
-                            {item.name}
-                          </Link>
-                        ) : (
-                          <div className="px-3 xs:px-4 py-1.5 xs:py-2">
-                            <div className="w-full flex items-center justify-between">
-                              <Link
-                                href={item.href}
-                                onClick={() => setIsOpen(false)}
-                                className="flex-1 px-1 py-3 xs:py-3.5 text-[#3D1F0D] font-medium text-[13px] xs:text-[14px] hover:text-[#C8972B] transition-colors"
-                              >
-                                {item.name}
-                              </Link>
+                            <span>{item.name}</span>
+                            <motion.div
+                              animate={{
+                                rotate: mobileSubmenuOpen[item.name] ? 180 : 0,
+                              }}
+                              transition={{ duration: 0.2 }}
+                            >
+                              <ChevronDown size={18} />
+                            </motion.div>
+                          </button> */}
 
-                              <button
-                                type="button"
-                                onClick={() => toggleMobileSubmenu(item.name)}
-                                className="p-2"
-                              >
-                                <motion.div
-                                  animate={{
-                                    rotate: mobileSubmenuOpen[item.name]
-                                      ? 180
-                                      : 0,
-                                  }}
-                                  transition={{ duration: 0.2 }}
-                                >
-                                  <ChevronDown size={18} />
-                                </motion.div>
-                              </button>
-                            </div>
+                          <div className="w-full flex items-center justify-between">
+                            <Link
+                              href={item.href}
+                              onClick={() => setIsOpen(false)}
+                              className="flex-1 px-1 py-3 xs:py-3.5 text-[#3D1F0D] font-medium text-[13px] xs:text-[14px] hover:text-[#C8972B] transition-colors"
+                            >
+                              {item.name}
+                            </Link>
 
-                            <AnimatePresence>
-                              {mobileSubmenuOpen[item.name] && (
-                                <motion.div
-                                  initial={{
-                                    opacity: 0,
-                                    height: 0,
-                                  }}
-                                  animate={{
-                                    opacity: 1,
-                                    height: "auto",
-                                  }}
-                                  exit={{
-                                    opacity: 0,
-                                    height: 0,
-                                  }}
-                                  transition={{ duration: 0.2 }}
-                                  className="overflow-hidden mt-1 ml-4 xs:ml-6 flex flex-col gap-1"
-                                >
-                                  {item.submenu.map((subItem) => (
-                                    <Link
-                                      key={subItem.name}
-                                      href={subItem.href}
-                                      onClick={() => setIsOpen(false)}
-                                      className="py-2.5 xs:py-3 px-2 text-[12px] xs:text-[13px] text-[#3D1F0D]/75 hover:text-[#C8972B] hover:pl-3 xs:hover:pl-4 transition-all duration-150 rounded-sm hover:bg-[#F5EBE0]/50 min-h-[40px] xs:min-h-[44px] flex items-center"
-                                    >
-                                      {subItem.name}
-                                    </Link>
-                                  ))}
-                                </motion.div>
-                              )}
-                            </AnimatePresence>
+                            <button
+                              type="button"
+                              onClick={() => toggleMobileSubmenu(item.name)}
+                              className="p-2"
+                            >
+                              <motion.div
+                                animate={{
+                                  rotate: mobileSubmenuOpen[item.name]
+                                    ? 180
+                                    : 0,
+                                }}
+                                transition={{ duration: 0.2 }}
+                              >
+                                <ChevronDown size={18} />
+                              </motion.div>
+                            </button>
                           </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
 
-                  {/* DIVIDER */}
-                  <div className="my-2 xs:my-3 border-t border-[#3D1F0D]/10" />
-
-                  {/* CTA */}
-                  <button
-                    onClick={() => {
-                      setShowConsultationModal(true);
-                      setIsOpen(false);
-                    }}
-                    className="w-full bg-[#3D1F0D] hover:bg-[#3D1F0D] text-white text-[12px] xs:text-[13px] font-semibold uppercase tracking-[0.12em] py-3 xs:py-3.5 rounded-sm transition-all duration-300 hover:shadow-lg min-h-[44px] xs:min-h-[48px] flex items-center justify-center"
-                  >
-                    Book Free Consultation
-                  </button>
+                          <AnimatePresence>
+                            {mobileSubmenuOpen[item.name] && (
+                              <motion.div
+                                initial={{
+                                  opacity: 0,
+                                  height: 0,
+                                }}
+                                animate={{
+                                  opacity: 1,
+                                  height: "auto",
+                                }}
+                                exit={{
+                                  opacity: 0,
+                                  height: 0,
+                                }}
+                                transition={{ duration: 0.2 }}
+                                className="overflow-hidden mt-1 ml-4 xs:ml-6 flex flex-col gap-1"
+                              >
+                                {item.submenu.map((subItem) => (
+                                  <Link
+                                    key={subItem.name}
+                                    href={subItem.href}
+                                    onClick={() => setIsOpen(false)}
+                                    className="py-2.5 xs:py-3 px-2 text-[12px] xs:text-[13px] text-[#3D1F0D]/75 hover:text-[#C8972B] hover:pl-3 xs:hover:pl-4 transition-all duration-150 rounded-sm hover:bg-[#F5EBE0]/50 min-h-[40px] xs:min-h-[44px] flex items-center"
+                                  >
+                                    {subItem.name}
+                                  </Link>
+                                ))}
+                              </motion.div>
+                            )}
+                          </AnimatePresence>
+                        </div>
+                      )}
+                    </div>
+                  ))}
                 </div>
-              </motion.div>
-            </>
+
+                {/* DIVIDER */}
+                <div className="my-2 xs:my-3 border-t border-[#3D1F0D]/10" />
+
+                {/* CTA */}
+                <button
+                  onClick={() => {
+                    setShowConsultationModal(true);
+                    setIsOpen(false);
+                  }}
+                  className="w-full bg-[#3D1F0D] hover:bg-[#3D1F0D] text-white text-[12px] xs:text-[13px] font-semibold uppercase tracking-[0.12em] py-3 xs:py-3.5 rounded-sm transition-all duration-300 hover:shadow-lg min-h-[44px] xs:min-h-[48px] flex items-center justify-center"
+                >
+                  Book Free Consultation
+                </button>
+              </div>
+            </motion.div>
           )}
         </AnimatePresence>
       </header>
