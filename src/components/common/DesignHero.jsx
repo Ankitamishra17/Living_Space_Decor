@@ -2,25 +2,26 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import { ChevronRight, ArrowRight } from "lucide-react";
 
 export default function DesignHero({ data }) {
-  const pathname = usePathname();
-  const segments = pathname.split("/").filter(Boolean);
+  // Normalize any casing (e.g. "LIVING ROOM DESIGN") to clean Title Case
+  const toTitleCase = (str) =>
+    str
+      .toLowerCase()
+      .replace(/-/g, " ")
+      .replace(/\b\w/g, (c) => c.toUpperCase());
 
-  // Build breadcrumb trail from the URL: Home / Design Ideas / Living Room
+  // "LIVING ROOM DESIGN" -> "Living Room" (drop a trailing "Design")
+  const pageLabel = data?.title
+    ? toTitleCase(data.title).replace(/\s+Design$/i, "")
+    : "";
+
+  // Fixed 3-level trail: Home / Design Ideas / {page}
   const breadcrumbs = [
     { label: "Home", href: "/" },
-    ...segments.map((seg, idx) => {
-      const href = "/" + segments.slice(0, idx + 1).join("/");
-      const isLast = idx === segments.length - 1;
-      const label =
-        isLast && data?.title
-          ? data.title
-          : seg.replace(/-/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
-      return { label, href };
-    }),
+    { label: "Design Ideas", href: "/services/design-ideas" },
+    { label: pageLabel, href: null },
   ];
 
   return (
@@ -49,10 +50,10 @@ export default function DesignHero({ data }) {
                     const isLast = idx === breadcrumbs.length - 1;
                     return (
                       <li
-                        key={crumb.href}
+                        key={crumb.label}
                         className="flex items-center gap-1.5"
                       >
-                        {isLast ? (
+                        {isLast || !crumb.href ? (
                           <span className="text-[#C8972B] font-medium">
                             {crumb.label}
                           </span>

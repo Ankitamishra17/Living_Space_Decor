@@ -29,7 +29,7 @@ const categories = [
 
   {
     title: "Living Room",
-    image: "/image/living_room1.jpeg",
+    image: "/image/living_room8.jpeg",
     mobileImage: "/image/living_room8.jpeg",
     href: "/services/design-ideas/living-room-design",
     desc: "Where Luxury Meet Life Style.",

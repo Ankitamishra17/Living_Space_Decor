@@ -74,6 +74,8 @@ const services = [
 ];
 
 export default function ServicesSection() {
+  const sectionRef = useRef(null);
+  const [inView, setInView] = useState(false);
   const trackRef = useRef(null);
   const isDragging = useRef(false);
   const dragMoved = useRef(false);
@@ -84,34 +86,60 @@ export default function ServicesSection() {
   const [atEnd, setAtEnd] = useState(false);
   const [activeIndex, setActiveIndex] = useState(0);
 
+  // Progress bar fill + dot are updated directly via the DOM (refs),
+  // never via React state. That's the key fix: driving them through
+  // setState meant every scroll (many times per second) forced a
+  // React re-render of the whole section — that's what was causing
+  // the jank/stutter on mobile. Direct style writes are essentially free.
+  const fillRef = useRef(null);
+  const dotRef = useRef(null);
+
   const rafId = useRef(null);
+  // Track last-seen values so we only call setState when something the
+  // rest of the UI actually depends on (arrow disabled state, active
+  // number badge) really changes — not on every single scroll tick.
+  const lastActive = useRef(0);
+  const lastAtStart = useRef(true);
+  const lastAtEnd = useRef(false);
 
   const updateScrollState = useCallback(() => {
     const track = trackRef.current;
     if (!track) return;
-    const max = track.scrollWidth - track.clientWidth;
-    setAtStart(track.scrollLeft <= 4);
-    setAtEnd(track.scrollLeft >= max - 4);
 
-    // The "active" card is whichever one is most centered in the visible
-    // track — far more reliable than comparing left edges, which gets
-    // thrown off by scroll-padding and the gap between cards.
-    const cards = Array.from(track.querySelectorAll("[data-card]"));
-    if (cards.length === 0) return;
-    const trackRect = track.getBoundingClientRect();
-    const trackCenter = trackRect.left + trackRect.width / 2;
-    let closest = 0;
-    let closestDist = Infinity;
-    cards.forEach((card, i) => {
-      const cardRect = card.getBoundingClientRect();
-      const cardCenter = cardRect.left + cardRect.width / 2;
-      const dist = Math.abs(cardCenter - trackCenter);
-      if (dist < closestDist) {
-        closestDist = dist;
-        closest = i;
-      }
-    });
-    setActiveIndex(closest);
+    const max = track.scrollWidth - track.clientWidth;
+    const progress = max > 0 ? Math.min(1, Math.max(0, track.scrollLeft / max)) : 0;
+    const pct = `${progress * 100}%`;
+
+    // Direct DOM writes for the progress line/dot — no re-render.
+    if (fillRef.current) fillRef.current.style.width = pct;
+    if (dotRef.current) dotRef.current.style.left = pct;
+
+    const newAtStart = track.scrollLeft <= 4;
+    const newAtEnd = track.scrollLeft >= max - 4;
+    if (newAtStart !== lastAtStart.current) {
+      lastAtStart.current = newAtStart;
+      setAtStart(newAtStart);
+    }
+    if (newAtEnd !== lastAtEnd.current) {
+      lastAtEnd.current = newAtEnd;
+      setAtEnd(newAtEnd);
+    }
+
+    // Active card via arithmetic (scrollLeft / step) instead of looping
+    // every card and calling getBoundingClientRect() on each — that loop
+    // forced a layout read on every scroll frame, which is expensive and
+    // was contributing to the jank alongside the setState-per-frame issue.
+    const firstCard = track.querySelector("[data-card]");
+    if (!firstCard) return;
+    const step = firstCard.offsetWidth + 16; // card width + gap-4 (16px)
+    const newActive = Math.min(
+      services.length - 1,
+      Math.round(track.scrollLeft / step)
+    );
+    if (newActive !== lastActive.current) {
+      lastActive.current = newActive;
+      setActiveIndex(newActive);
+    }
   }, []);
 
   const scheduleUpdate = useCallback(() => {
@@ -134,6 +162,25 @@ export default function ServicesSection() {
     };
   }, [updateScrollState, scheduleUpdate]);
 
+  // Fire the entrance animation once when the section scrolls into the
+  // viewport — the heading, carousel, and cards each pick this up with
+  // their own stagger below.
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setInView(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.15 }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
+
   const scrollByCard = (dir) => {
     const track = trackRef.current;
     if (!track) return;
@@ -154,21 +201,29 @@ export default function ServicesSection() {
     track.scrollTo({ left: offset, behavior: "smooth" });
   };
 
+  // ── Drag-to-scroll is a MOUSE/trackpad affordance only. ──
+  // Touch devices already get buttery-smooth native momentum scrolling
+  // from the browser; hijacking touch events to manually drive
+  // `scrollLeft` (the old behaviour) fights that native momentum and is
+  // exactly what made mobile scrolling feel janky. We use the Pointer
+  // Events API and simply ignore anything that isn't a mouse.
   const handlePointerDown = (e) => {
+    if (e.pointerType && e.pointerType !== "mouse") return;
     const track = trackRef.current;
     if (!track) return;
     isDragging.current = true;
     dragMoved.current = false;
     setDragging(true);
-    startX.current = (e.touches ? e.touches[0].pageX : e.pageX) - track.offsetLeft;
+    startX.current = e.pageX - track.offsetLeft;
     scrollLeftStart.current = track.scrollLeft;
   };
 
   const handlePointerMove = (e) => {
+    if (e.pointerType && e.pointerType !== "mouse") return;
     const track = trackRef.current;
     if (!isDragging.current || !track) return;
     e.preventDefault();
-    const x = (e.touches ? e.touches[0].pageX : e.pageX) - track.offsetLeft;
+    const x = e.pageX - track.offsetLeft;
     const walk = x - startX.current;
     if (Math.abs(walk) > 5) dragMoved.current = true;
     track.scrollLeft = scrollLeftStart.current - walk;
@@ -189,12 +244,20 @@ export default function ServicesSection() {
   };
 
   return (
-    <section className="px-6 lg:px-14 py-12">
+    <section ref={sectionRef} className="px-6 lg:px-14 py-12 overflow-hidden">
       {/* ── Heading ── */}
-      <div className="flex items-end justify-between mb-14 flex-wrap gap-5">
+      <div
+        className={`flex items-end justify-between mb-10 md:mb-14 flex-wrap gap-5 transition-all duration-700 ease-out ${
+          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"
+        }`}
+      >
         <div>
           <p className="flex items-center gap-3 text-[10px] tracking-[.28em] uppercase text-[#C8972B] font-medium mb-3">
-            <span className="w-6 h-px bg-[#C8972B]" />
+            <span
+              className={`h-px bg-[#C8972B] transition-all duration-700 delay-150 ease-out ${
+                inView ? "w-6" : "w-0"
+              }`}
+            />
             What We Offer
           </p>
           <h2 className="font-[Cormorant_Garamond,serif] text-4xl md:text-[50px] font-medium leading-[1.1] text-[#2A1506]">
@@ -214,7 +277,7 @@ export default function ServicesSection() {
               onClick={() => scrollByCard(-1)}
               disabled={atStart}
               aria-label="Scroll services left"
-              className="w-11 h-11 flex items-center justify-center rounded-full border border-[#3D1F0D]/25 text-[#3D1F0D] transition-all hover:bg-[#3D1F0D] hover:text-white disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#3D1F0D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C8972B]"
+              className="w-11 h-11 flex items-center justify-center rounded-full border border-[#3D1F0D]/25 text-[#3D1F0D] transition-all duration-300 hover:bg-[#3D1F0D] hover:text-white hover:scale-110 hover:-translate-x-0.5 active:scale-95 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#3D1F0D] disabled:hover:scale-100 disabled:hover:translate-x-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C8972B]"
             >
               <ArrowLeft size={16} />
             </button>
@@ -223,7 +286,7 @@ export default function ServicesSection() {
               onClick={() => scrollByCard(1)}
               disabled={atEnd}
               aria-label="Scroll services right"
-              className="w-11 h-11 flex items-center justify-center rounded-full border border-[#3D1F0D]/25 text-[#3D1F0D] transition-all hover:bg-[#3D1F0D] hover:text-white disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#3D1F0D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C8972B]"
+              className="w-11 h-11 flex items-center justify-center rounded-full border border-[#3D1F0D]/25 text-[#3D1F0D] transition-all duration-300 hover:bg-[#3D1F0D] hover:text-white hover:scale-110 hover:translate-x-0.5 active:scale-95 disabled:opacity-30 disabled:hover:bg-transparent disabled:hover:text-[#3D1F0D] disabled:hover:scale-100 disabled:hover:translate-x-0 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C8972B]"
             >
               <ArrowRight size={16} />
             </button>
@@ -231,7 +294,7 @@ export default function ServicesSection() {
 
           <Link
             href="/portfolio"
-            className="inline-flex items-center gap-2 border border-[#3D1F0D]/30 text-[#3D1F0D] px-6 py-3 text-[11px] font-semibold uppercase tracking-[.12em] hover:bg-[#3D1F0D] hover:text-white transition-colors"
+            className="inline-flex items-center gap-2 border border-[#3D1F0D]/30 text-[#3D1F0D] px-6 py-3 text-[11px] font-semibold uppercase tracking-[.12em] transition-all duration-300 hover:bg-[#3D1F0D] hover:text-white hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0"
           >
             View Portfolio
           </Link>
@@ -239,26 +302,47 @@ export default function ServicesSection() {
       </div>
 
       {/* ── Carousel ── */}
-      <div className="relative">
+      <div
+        className={`relative transition-all duration-700 delay-100 ease-out ${
+          inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+        }`}
+      >
+        {/* Edge fades — a quiet visual cue that there's more to scroll to,
+            especially useful on mobile where there's no arrow affordance. */}
+        <div
+          aria-hidden
+          className={`pointer-events-none absolute left-0 top-0 bottom-8 w-10 md:w-16 z-20 bg-gradient-to-r from-white to-transparent transition-opacity duration-300 ${
+            atStart ? "opacity-0" : "opacity-100"
+          }`}
+        />
+        <div
+          aria-hidden
+          className={`pointer-events-none absolute right-0 top-0 bottom-8 w-10 md:w-16 z-20 bg-gradient-to-l from-white to-transparent transition-opacity duration-300 ${
+            atEnd ? "opacity-0" : "opacity-100"
+          }`}
+        />
+
         <div
           ref={trackRef}
           role="region"
           aria-label="Our services"
           tabIndex={0}
-          className={`flex gap-4 overflow-x-auto scrollbar-hide select-none snap-x snap-proximity scroll-px-6 focus-visible:outline-none ${
-            dragging ? "cursor-grabbing" : "cursor-grab"
+          className={`flex gap-4 overflow-x-auto overscroll-x-contain scrollbar-hide select-none snap-x snap-proximity scroll-px-6 focus-visible:outline-none ${
+            dragging ? "cursor-grabbing" : "cursor-grab md:cursor-grab"
           }`}
           style={{
-            scrollBehavior: dragging ? "auto" : "smooth",
+            // `proximity` (not `mandatory`) is the key fix here: mandatory
+            // snap forces the browser to fight its own momentum scroll on
+            // touch devices, which is what produced the jerky/stuttery
+            // feel. Proximity only snaps once the scroll has basically
+            // settled, so momentum stays smooth the whole way through.
             scrollSnapType: dragging ? "none" : "x proximity",
           }}
-          onMouseDown={handlePointerDown}
-          onMouseMove={handlePointerMove}
-          onMouseUp={stopDragging}
-          onMouseLeave={stopDragging}
-          onTouchStart={handlePointerDown}
-          onTouchMove={handlePointerMove}
-          onTouchEnd={stopDragging}
+          onPointerDown={handlePointerDown}
+          onPointerMove={handlePointerMove}
+          onPointerUp={stopDragging}
+          onPointerLeave={stopDragging}
+          onPointerCancel={stopDragging}
           onKeyDown={(e) => {
             if (e.key === "ArrowRight") scrollByCard(1);
             if (e.key === "ArrowLeft") scrollByCard(-1);
@@ -274,15 +358,18 @@ export default function ServicesSection() {
                 draggable={false}
                 data-card
                 onClick={handleCardClick}
-                className="group relative h-[340px] md:h-[420px] w-[260px] md:w-[320px] shrink-0 snap-start overflow-hidden focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C8972B]"
+                style={{ transitionDelay: inView ? `${Math.min(index, 6) * 80}ms` : "0ms" }}
+                className={`group relative h-[320px] sm:h-[360px] md:h-[420px] w-[76vw] xs:w-[260px] md:w-[320px] max-w-[320px] shrink-0 snap-start overflow-hidden transition-all duration-700 ease-out hover:-translate-y-2 hover:shadow-2xl hover:shadow-[#140802]/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#C8972B] ${
+                  inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                }`}
               >
                 {/* Image */}
                 <Image
                   src={service.image}
                   alt={service.title}
                   fill
-                  sizes="(max-width:768px) 260px, 320px"
-                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+                  sizes="(max-width:768px) 76vw, 320px"
+                  className="object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.15]"
                 />
 
                 {/* Default overlay — lighter */}
@@ -292,43 +379,43 @@ export default function ServicesSection() {
                 <div className="absolute inset-0 bg-[#140802]/78 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 {/* Gold frame — reads as "selected" on hover, no shadow needed */}
-                <div className="pointer-events-none absolute inset-3 z-10 border border-[#C8972B]/0 group-hover:border-[#C8972B]/50 transition-colors duration-500" />
+                <div className="pointer-events-none absolute inset-3 z-10 border border-[#C8972B]/0 scale-95 group-hover:scale-100 group-hover:border-[#C8972B]/50 transition-all duration-500" />
 
                 {/* Icon top-left */}
                 <div className="absolute top-5 left-5 z-10">
-                  <div className="w-12 h-12 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm flex items-center justify-center transition-colors duration-500 group-hover:bg-[#C8972B]/90 group-hover:border-[#C8972B]">
-                    <Icon size={22} className="text-white" />
+                  <div className="w-11 h-11 md:w-12 md:h-12 rounded-full border border-white/20 bg-white/10 backdrop-blur-sm flex items-center justify-center transition-all duration-500 group-hover:bg-[#C8972B]/90 group-hover:border-[#C8972B] group-hover:rotate-[18deg] group-hover:scale-110">
+                    <Icon size={20} className="text-white transition-transform duration-500 group-hover:-rotate-[18deg]" />
                   </div>
                 </div>
 
                 {/* Number top-right */}
                 <div className="absolute top-5 right-5 z-10">
-                  <span className="text-[#C8972B] text-sm tracking-[0.2em]">
+                  <span className="inline-block text-[#C8972B] text-sm tracking-[0.2em] transition-all duration-500 group-hover:scale-110 group-hover:tracking-[0.3em]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                 </div>
 
                 {/* ── DEFAULT: only title at bottom ── */}
                 <div className="absolute bottom-0 left-0 right-0 p-6 z-10 transition-all duration-500 group-hover:opacity-0 group-hover:translate-y-4">
-                  <h3 className="font-heading text-md md:text-3xl lg:text-3xl text-white">
+                  <h3 className="font-heading text-xl md:text-3xl text-white">
                     {service.title}
                   </h3>
                   <span className="block w-8 h-px bg-[#C8972B] mt-3" />
                 </div>
 
-                {/* ── HOVER: title + description, properly centered ── */}
+                {/* ── HOVER: title + description, cascading in ── */}
                 <div className="absolute inset-0 z-10 flex flex-col justify-center p-8 opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500">
-                  <span className="block w-8 h-px bg-[#C8972B] mb-5" />
-                  <h3 className="font-heading text-2xl md:text-3xl text-white mb-4">
+                  <span className="block w-8 h-px bg-[#C8972B] mb-5 opacity-0 group-hover:opacity-100 -translate-x-3 group-hover:translate-x-0 transition-all duration-500 group-hover:delay-75" />
+                  <h3 className="font-heading text-2xl md:text-3xl text-white mb-4 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 group-hover:delay-100">
                     {service.title}
                   </h3>
-                  <p className="text-white/75 text-sm leading-7">
+                  <p className="text-white/75 text-sm leading-7 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 group-hover:delay-150">
                     {service.description}
                   </p>
 
-                  <div className="mt-6 flex items-center gap-2 text-[#C8972B] text-xs tracking-[0.2em] uppercase">
+                  <div className="mt-6 flex items-center gap-2 text-[#C8972B] text-xs tracking-[0.2em] uppercase opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-500 group-hover:delay-200">
                     <span>Explore</span>
-                    <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1" />
+                    <ArrowRight size={14} className="transition-transform duration-300 group-hover:translate-x-1.5" />
                   </div>
                 </div>
               </Link>
@@ -336,38 +423,51 @@ export default function ServicesSection() {
           })}
         </div>
 
-        {/* Active-card indicator — a line with the current number picked out */}
-        <div className="mt-8 flex items-center gap-3 md:gap-4">
-          {services.map((service, index) => {
-            const isActive = index === activeIndex;
-            return (
-              <button
-                key={service.title}
-                type="button"
-                onClick={() => scrollToIndex(index)}
-                aria-label={`Go to ${service.title}`}
-                aria-current={isActive}
-                className="group/dot flex flex-1 flex-col items-center gap-2.5 py-1"
-              >
-                <span
-                  className={`transition-all duration-300 text-[11px] tracking-[0.15em] ${
-                    isActive
-                      ? "text-[#C8972B] font-medium"
-                      : "text-[#2A1506]/35 group-hover/dot:text-[#2A1506]/60"
-                  }`}
-                >
-                  {String(index + 1).padStart(2, "0")}
-                </span>
-                <span
-                  className={`h-[2px] w-full rounded-full transition-all duration-500 ${
-                    isActive
-                      ? "bg-[#C8972B]"
-                      : "bg-[#3D1F0D]/12 group-hover/dot:bg-[#3D1F0D]/25"
-                  }`}
-                />
-              </button>
-            );
-          })}
+        {/* Progress indicator — a single line that grows as you move through
+            the cards, with the active card's number sitting beside it.
+            NOTE: the fill/dot widths are set via refs (see updateScrollState),
+            not React state, so this never re-renders during scroll. */}
+        <div className="mt-9 flex items-center gap-4 md:gap-5">
+          <div
+            role="slider"
+            aria-label="Services scroll progress"
+            aria-valuemin={1}
+            aria-valuemax={services.length}
+            aria-valuenow={activeIndex + 1}
+            tabIndex={0}
+            onClick={(e) => {
+              const track = trackRef.current;
+              if (!track) return;
+              const rect = e.currentTarget.getBoundingClientRect();
+              const ratio = Math.min(1, Math.max(0, (e.clientX - rect.left) / rect.width));
+              const max = track.scrollWidth - track.clientWidth;
+              track.scrollTo({ left: ratio * max, behavior: "smooth" });
+            }}
+            onKeyDown={(e) => {
+              if (e.key === "ArrowRight") scrollByCard(1);
+              if (e.key === "ArrowLeft") scrollByCard(-1);
+            }}
+            className="relative flex-1 h-[3px] rounded-full bg-[#3D1F0D]/10 cursor-pointer focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#C8972B]"
+          >
+            <span
+              ref={fillRef}
+              className="absolute left-0 top-0 h-full rounded-full bg-[#C8972B]"
+              style={{ width: "0%" }}
+            />
+            {/* a small dot riding the head of the line reads as an active marker */}
+            <span
+              ref={dotRef}
+              className="absolute top-1/2 h-2.5 w-2.5 -translate-y-1/2 -translate-x-1/2 rounded-full bg-[#C8972B] shadow-[0_0_0_3px_#fff]"
+              style={{ left: "0%" }}
+            />
+          </div>
+          <span className="shrink-0 text-[11px] tracking-[0.15em] tabular-nums text-[#2A1506]/60">
+            <span className="text-[#C8972B] font-medium">
+              {String(activeIndex + 1).padStart(2, "0")}
+            </span>
+            {" / "}
+            {String(services.length).padStart(2, "0")}
+          </span>
         </div>
       </div>
 

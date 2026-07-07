@@ -274,95 +274,78 @@ export default function Testimonials() {
         </div>
       </div>
 
-      {/* CTA — redesigned */}
+      {/* CTA — "consultation ticket" */}
       <div className="mt-16 md:mt-20 px-5">
-        <div className="relative max-w-5xl mx-auto rounded-2xl overflow-hidden bg-[#3D1F0D]">
-          {/* Decorative accents */}
-          <div className="pointer-events-none absolute -top-16 -right-16 w-64 h-64 rounded-full bg-[#C8972B]/15 blur-3xl" />
-          <div className="pointer-events-none absolute -bottom-20 -left-10 w-56 h-56 rounded-full bg-white/5 blur-3xl" />
-          <div
-            className="pointer-events-none absolute inset-0 opacity-[0.06]"
-            style={{
-              backgroundImage:
-                "repeating-linear-gradient(135deg, #F7F2EB 0px, #F7F2EB 1px, transparent 1px, transparent 14px)",
-            }}
-          />
-
-          <div className="relative flex flex-col lg:flex-row items-center lg:items-stretch gap-10 lg:gap-0 px-6 py-12 sm:px-12 sm:py-14 lg:px-16">
-            {/* Left: message */}
-            <div className="flex-1 text-center lg:text-left">
-              <p className="flex items-center justify-center lg:justify-start gap-3 text-[10px] tracking-[.28em] uppercase text-[#C8972B] font-medium mb-4">
+        <div className="max-w-3xl mx-auto">
+          <div className="relative flex flex-col sm:flex-row bg-white rounded-2xl shadow-[0_8px_30px_rgba(61,31,13,0.08)] border border-[#3D1F0D]/10">
+            {/* Main stub */}
+            <div className="flex-1 px-8 py-10 sm:px-10 sm:py-12 text-center sm:text-left">
+              <p className="flex items-center justify-center sm:justify-start gap-3 text-[10px] tracking-[.28em] uppercase text-[#C8972B] font-medium mb-4">
                 <span className="w-6 h-px bg-[#C8972B]" />
-                Start Your Project
+                Free Consultation
               </p>
-              <h2 className="font-heading text-3xl sm:text-4xl font-medium text-white leading-[1.15]">
+              <h2 className="font-heading text-3xl sm:text-[34px] font-medium text-[#2A1506] leading-[1.15]">
                 Looking for Interior Designers in Noida?
               </h2>
-              <p className="mt-4 text-white/60 text-[15px] leading-relaxed max-w-md mx-auto lg:mx-0">
+              <p className="mt-4 text-[#2A1506]/55 text-[15px] leading-relaxed max-w-sm mx-auto sm:mx-0">
                 Book a free consultation today and transform your dream home
                 with Living Space Decor.
               </p>
 
-              <div className="mt-7 flex items-center justify-center lg:justify-start gap-2 text-white/50 text-[12px]">
-                <Clock size={14} className="text-[#C8972B]" />
-                <span>Mon – Sun, 10:00 AM – 7:00 PM</span>
+              <div className="mt-8 flex items-center justify-center sm:justify-start gap-2 text-[#6E6258] text-[11px] tracking-[0.08em] uppercase">
+                <Clock size={13} className="text-[#C8972B]" />
+                <span>Mon – Sun · 10 AM – 7 PM</span>
               </div>
             </div>
 
-            {/* Divider */}
-            <div className="hidden lg:block w-px bg-white/10 mx-4" />
+            {/* Perforated divider with punch-hole notches */}
+            <div className="relative hidden sm:flex flex-col items-center justify-center w-0">
+              <span className="absolute -top-3 w-6 h-6 rounded-full bg-[#F7F2EB]" />
+              <span className="absolute -bottom-3 w-6 h-6 rounded-full bg-[#F7F2EB]" />
+              <span className="h-full w-px border-l-2 border-dashed border-[#3D1F0D]/15" />
+            </div>
+            <div className="sm:hidden relative flex items-center justify-center h-0">
+              <span className="absolute -left-3 w-6 h-6 rounded-full bg-[#F7F2EB]" />
+              <span className="absolute -right-3 w-6 h-6 rounded-full bg-[#F7F2EB]" />
+              <span className="w-full h-px border-t-2 border-dashed border-[#3D1F0D]/15" />
+            </div>
 
-            {/* Right: actions */}
-            <div className="flex flex-col justify-center gap-4 w-full lg:w-auto lg:min-w-[280px]">
+            {/* Ticket stub — call action */}
+            <div className="relative flex flex-col items-center justify-center gap-3 px-8 py-10 sm:py-12 sm:w-[240px] bg-[#F5EBE0] rounded-b-2xl sm:rounded-r-2xl sm:rounded-bl-none">
+              <span className="flex items-center justify-center w-12 h-12 rounded-full bg-[#3D1F0D] text-[#C8972B]">
+                <Phone size={18} />
+              </span>
+              <div className="text-center">
+                <p className="text-[10px] tracking-[0.2em] uppercase text-[#6E6258]">
+                  Admit One Enquiry
+                </p>
+                <p className="font-heading text-lg font-medium text-[#2A1506] mt-1">
+                  +91 88266 06869
+                </p>
+              </div>
               <a
                 href="tel:+918826606869"
-                className="group flex items-center justify-between gap-4 bg-[#C8972B] text-[#2A1506] px-6 py-4 rounded-xl hover:bg-[#dba838] transition-colors duration-300"
+                className="mt-1 inline-flex items-center gap-2 bg-[#3D1F0D] text-white px-6 py-3 rounded text-[12px] tracking-[0.1em] uppercase font-medium hover:bg-[#B8851F] transition-colors duration-300"
               >
-                <span className="flex items-center gap-3">
-                  <span className="flex items-center justify-center w-9 h-9 rounded-full bg-[#2A1506]/10">
-                    <Phone size={16} />
-                  </span>
-                  <span className="text-left">
-                    <span className="block text-[13px] tracking-[0.08em] uppercase font-medium">
-                      Call Now
-                    </span>
-                    <span className="block text-[11px] opacity-70">
-                      +91 88266 06869
-                    </span>
-                  </span>
-                </span>
-                <ChevronRight
-                  size={16}
-                  className="opacity-60 group-hover:translate-x-1 transition-transform duration-300"
-                />
-              </a>
-
-              <a
-                href="https://wa.me/918826606869"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center justify-between gap-4 bg-white/5 border border-white/15 text-white px-6 py-4 rounded-xl hover:bg-white/10 transition-colors duration-300"
-              >
-                <span className="flex items-center gap-3">
-                  <span className="flex items-center justify-center w-9 h-9 rounded-full bg-white/10">
-                    <MessageCircle size={16} />
-                  </span>
-                  <span className="text-left">
-                    <span className="block text-[13px] tracking-[0.08em] uppercase font-medium">
-                      WhatsApp Us
-                    </span>
-                    <span className="block text-[11px] opacity-60">
-                      Get a quick reply
-                    </span>
-                  </span>
-                </span>
-                <ChevronRight
-                  size={16}
-                  className="opacity-40 group-hover:translate-x-1 transition-transform duration-300"
-                />
+                Call Now
+                <ChevronRight size={14} />
               </a>
             </div>
           </div>
+
+          {/* Secondary link */}
+          <p className="text-center mt-6 text-[13px] text-[#6E6258]">
+            Prefer messaging?{" "}
+            <a
+              href="https://wa.me/918826606869"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 text-[#C8972B] font-medium hover:underline"
+            >
+              <MessageCircle size={13} />
+              WhatsApp us instead
+            </a>
+          </p>
         </div>
       </div>
     </section>
