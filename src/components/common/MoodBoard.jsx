@@ -1,6 +1,12 @@
 "use client";
 
-import { useState, useEffect, useRef, useCallback } from "react";
+import {
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+  useLayoutEffect,
+} from "react";
 import Image from "next/image";
 import { ArrowRight, ChevronLeft, ChevronRight } from "lucide-react";
 import Link from "next/link";
@@ -30,6 +36,12 @@ export default function DesignGallery({ data }) {
 
   const hasEnoughImages = images.length > visibleCount;
 
+  // Real gap size in px for each breakpoint (matches gap-4 / md:gap-6 / lg:gap-8).
+  // The old mapping only distinguished 16 vs 24, so desktop (visibleCount = 4,
+  // gap-8 = 32px) was silently using the wrong value and slides didn't line
+  // up with the true 32px gap.
+  const currentGapPx = visibleCount === 2 ? 16 : visibleCount === 3 ? 24 : 32;
+
   // Extend the track with a clone of the leading slides at the end,
   // so we can slide "past" the last real image into a clone, then
   // snap back to index 0 invisibly — no blank space, no visible jump.
@@ -43,6 +55,32 @@ export default function DesignGallery({ data }) {
   const timerRef = useRef(null);
 
   const itemWidthPercent = 100 / visibleCount;
+
+  // ── Pixel-accurate slide pitch (item width + gap) ──
+  // Percentage-based translateX doesn't know about the flex `gap`, so it
+  // consistently undershoots by (gap / visibleCount) on every step, and the
+  // error compounds each autoslide tick. Measuring the real distance between
+  // two rendered slides gives the exact pitch regardless of gap/width, so
+  // each step moves precisely one card — no drift, no misalignment.
+  const [slideWidth, setSlideWidth] = useState(0);
+
+  const measureSlideWidth = useCallback(() => {
+    const track = trackRef.current;
+    if (!track || track.children.length < 2) return;
+    const first = track.children[0];
+    const second = track.children[1];
+    const pitch = second.offsetLeft - first.offsetLeft;
+    if (pitch > 0) setSlideWidth(pitch);
+  }, []);
+
+  useLayoutEffect(() => {
+    measureSlideWidth();
+  }, [measureSlideWidth, visibleCount, images.length]);
+
+  useEffect(() => {
+    window.addEventListener("resize", measureSlideWidth);
+    return () => window.removeEventListener("resize", measureSlideWidth);
+  }, [measureSlideWidth]);
 
   const goNext = useCallback(() => {
     setWithTransition(true);
@@ -162,7 +200,9 @@ export default function DesignGallery({ data }) {
             onTransitionEnd={handleTransitionEnd}
             className="flex gap-4 md:gap-6 lg:gap-8"
             style={{
-              transform: `translateX(-${index * itemWidthPercent}%)`,
+              transform: slideWidth
+                ? `translateX(-${index * slideWidth}px)`
+                : `translateX(-${index * itemWidthPercent}%)`,
               transition: withTransition ? "transform 0.6s ease" : "none",
             }}
           >
@@ -172,8 +212,7 @@ export default function DesignGallery({ data }) {
                 className="flex-shrink-0"
                 style={{
                   width: `calc(${itemWidthPercent}% - ${
-                    ((visibleCount - 1) / visibleCount) *
-                    (visibleCount <= 2 ? 16 : 24)
+                    ((visibleCount - 1) / visibleCount) * currentGapPx
                   }px)`,
                 }}
               >
