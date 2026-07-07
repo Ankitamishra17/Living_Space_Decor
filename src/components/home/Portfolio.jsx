@@ -194,11 +194,7 @@ export default function LatestProjectsPremium() {
           href="/portfolio"
           className="group relative overflow-hidden  px-10 py-4 bg-[#3D1F0D] text-white uppercase tracking-[0.18em] text-xs font-semibold flex items-center gap-3 shadow-[0_10px_30px_rgba(61,31,13,0.25)]"
         >
-          {/* Animated Gold Sweep */}
          
-          {/* Border Glow */}
-          {/* <span className="absolute inset-0 rounded-full border border-[#C8972B]/40 group-hover:border-[#C8972B]" /> */}
-
           {/* Text */}
           <span className="relative z-10 group-hover:tracking-[0.22em] transition-all duration-300">
             Explore Full Portfolio

@@ -81,14 +81,6 @@ export default function DesignIdeas() {
             </div>
           ))}
         </div>
-
-        {/* Mobile Button */}
-        <div className="mt-8 flex justify-center md:hidden">
-          <button className="flex items-center gap-2 text-[#B8851F] font-medium">
-            View All Designs
-            <ArrowRight size={18} />
-          </button>
-        </div>
       </div>
     </section>
   );

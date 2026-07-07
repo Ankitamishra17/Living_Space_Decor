@@ -7,6 +7,51 @@ export default function ContactSection() {
   const [hoveredCard, setHoveredCard] = useState(null);
   const [focusedField, setFocusedField] = useState(null);
 
+  // Form values + validation state
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    city: "",
+    project: "",
+    message: "",
+  });
+  const [errors, setErrors] = useState({});
+  const [submitAttempted, setSubmitAttempted] = useState(false);
+
+  const handleFieldChange = (field, value) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    if (errors[field] && value.trim()) {
+      setErrors((prev) => ({ ...prev, [field]: false }));
+    }
+  };
+
+  const isFormComplete =
+    formData.name.trim() &&
+    formData.phone.trim() &&
+    formData.city.trim() &&
+    formData.project.trim() &&
+    formData.message.trim();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitAttempted(true);
+
+    const newErrors = {
+      name: !formData.name.trim(),
+      phone: !formData.phone.trim(),
+      city: !formData.city.trim(),
+      project: !formData.project.trim(),
+      message: !formData.message.trim(),
+    };
+    setErrors(newErrors);
+
+    if (Object.values(newErrors).some(Boolean)) {
+      return;
+    }
+
+    // All fields filled — proceed with actual submission logic here
+  };
+
   return (
     <section className="bg-gradient-to-b from-[#F7F2EB] to-[#F0EAE0] py-20 md:py-28 lg:py-32 relative overflow-hidden">
       {/* Decorative Elements */}
@@ -37,21 +82,30 @@ export default function ContactSection() {
               </h2>
 
               {/* Form */}
-              <form className="space-y-5">
+              <form className="space-y-5" onSubmit={handleSubmit} noValidate>
                 {/* Name Input */}
                 <div className="relative group/input">
                   <input
                     type="text"
                     placeholder="Your Name"
+                    value={formData.name}
+                    onChange={(e) => handleFieldChange("name", e.target.value)}
                     onFocus={() => setFocusedField("name")}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full bg-gradient-to-b from-white to-[#FAFAF8] border-2 border-[#E8DCC8] px-5 py-4 outline-none focus:border-[#C8972B] text-sm text-[#2A1506] placeholder-[#B8A89C] transition-all duration-300 rounded-sm"
+                    className={`w-full bg-gradient-to-b from-white to-[#FAFAF8] border-2 px-5 py-4 outline-none focus:border-[#C8972B] text-sm text-[#2A1506] placeholder-[#B8A89C] transition-all duration-300 rounded-sm ${
+                      errors.name ? "border-red-400" : "border-[#E8DCC8]"
+                    }`}
                   />
                   <div
                     className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#C8972B] via-[#D4A852] to-transparent transition-all duration-500 ${
                       focusedField === "name" ? "w-full" : "w-0"
                     }`}
                   />
+                  {errors.name && (
+                    <p className="mt-1.5 text-xs text-red-500">
+                      Please enter your name.
+                    </p>
+                  )}
                 </div>
 
                 {/* Phone Input */}
@@ -59,15 +113,24 @@ export default function ContactSection() {
                   <input
                     type="tel"
                     placeholder="Phone Number"
+                    value={formData.phone}
+                    onChange={(e) => handleFieldChange("phone", e.target.value)}
                     onFocus={() => setFocusedField("phone")}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full bg-gradient-to-b from-white to-[#FAFAF8] border-2 border-[#E8DCC8] px-5 py-4 outline-none focus:border-[#C8972B] text-sm text-[#2A1506] placeholder-[#B8A89C] transition-all duration-300 rounded-sm"
+                    className={`w-full bg-gradient-to-b from-white to-[#FAFAF8] border-2 px-5 py-4 outline-none focus:border-[#C8972B] text-sm text-[#2A1506] placeholder-[#B8A89C] transition-all duration-300 rounded-sm ${
+                      errors.phone ? "border-red-400" : "border-[#E8DCC8]"
+                    }`}
                   />
                   <div
                     className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#C8972B] via-[#D4A852] to-transparent transition-all duration-500 ${
                       focusedField === "phone" ? "w-full" : "w-0"
                     }`}
                   />
+                  {errors.phone && (
+                    <p className="mt-1.5 text-xs text-red-500">
+                      Please enter your phone number.
+                    </p>
+                  )}
                 </div>
 
                 {/* City Input */}
@@ -75,25 +138,40 @@ export default function ContactSection() {
                   <input
                     type="text"
                     placeholder="City"
+                    value={formData.city}
+                    onChange={(e) => handleFieldChange("city", e.target.value)}
                     onFocus={() => setFocusedField("city")}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full bg-gradient-to-b from-white to-[#FAFAF8] border-2 border-[#E8DCC8] px-5 py-4 outline-none focus:border-[#C8972B] text-sm text-[#2A1506] placeholder-[#B8A89C] transition-all duration-300 rounded-sm"
+                    className={`w-full bg-gradient-to-b from-white to-[#FAFAF8] border-2 px-5 py-4 outline-none focus:border-[#C8972B] text-sm text-[#2A1506] placeholder-[#B8A89C] transition-all duration-300 rounded-sm ${
+                      errors.city ? "border-red-400" : "border-[#E8DCC8]"
+                    }`}
                   />
                   <div
                     className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#C8972B] via-[#D4A852] to-transparent transition-all duration-500 ${
                       focusedField === "city" ? "w-full" : "w-0"
                     }`}
                   />
+                  {errors.city && (
+                    <p className="mt-1.5 text-xs text-red-500">
+                      Please enter your city.
+                    </p>
+                  )}
                 </div>
 
                 {/* Project Type Select */}
                 <div className="relative group/input">
                   <select
+                    value={formData.project}
+                    onChange={(e) =>
+                      handleFieldChange("project", e.target.value)
+                    }
                     onFocus={() => setFocusedField("project")}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full bg-gradient-to-b from-white to-[#FAFAF8] border-2 border-[#E8DCC8] px-5 py-4 outline-none focus:border-[#C8972B] text-sm text-[#2A1506] transition-all duration-300 rounded-sm appearance-none cursor-pointer"
+                    className={`w-full bg-gradient-to-b from-white to-[#FAFAF8] border-2 px-5 py-4 outline-none focus:border-[#C8972B] text-sm text-[#2A1506] transition-all duration-300 rounded-sm appearance-none cursor-pointer ${
+                      errors.project ? "border-red-400" : "border-[#E8DCC8]"
+                    }`}
                   >
-                    <option>Select Project Type</option>
+                    <option value="">Select Project Type</option>
                     <option>Interior Design</option>
                     <option>Modular Kitchen</option>
                     <option>Turnkey Project</option>
@@ -108,6 +186,11 @@ export default function ContactSection() {
                     size={16}
                     className="absolute right-4 top-1/2 -translate-y-1/2 text-[#C8972B] pointer-events-none rotate-90"
                   />
+                  {errors.project && (
+                    <p className="mt-1.5 text-xs text-red-500">
+                      Please select a project type.
+                    </p>
+                  )}
                 </div>
 
                 {/* Message Textarea */}
@@ -115,21 +198,39 @@ export default function ContactSection() {
                   <textarea
                     rows={5}
                     placeholder="Tell us about your project..."
+                    value={formData.message}
+                    onChange={(e) =>
+                      handleFieldChange("message", e.target.value)
+                    }
                     onFocus={() => setFocusedField("message")}
                     onBlur={() => setFocusedField(null)}
-                    className="w-full bg-gradient-to-b from-white to-[#FAFAF8] border-2 border-[#E8DCC8] px-5 py-4 outline-none focus:border-[#C8972B] text-sm text-[#2A1506] placeholder-[#B8A89C] transition-all duration-300 resize-none rounded-sm"
+                    className={`w-full bg-gradient-to-b from-white to-[#FAFAF8] border-2 px-5 py-4 outline-none focus:border-[#C8972B] text-sm text-[#2A1506] placeholder-[#B8A89C] transition-all duration-300 resize-none rounded-sm ${
+                      errors.message ? "border-red-400" : "border-[#E8DCC8]"
+                    }`}
                   />
                   <div
                     className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#C8972B] via-[#D4A852] to-transparent transition-all duration-500 ${
                       focusedField === "message" ? "w-full" : "w-0"
                     }`}
                   />
+                  {errors.message && (
+                    <p className="mt-1.5 text-xs text-red-500">
+                      Please tell us about your project.
+                    </p>
+                  )}
                 </div>
+
+                {submitAttempted && !isFormComplete && (
+                  <p className="text-xs text-red-500 text-center -mb-1">
+                    Please fill all fields before submitting.
+                  </p>
+                )}
 
                 {/* Premium Button */}
                 <button
                   type="submit"
-                  className="w-full relative group/btn mt-8"
+                  disabled={!isFormComplete}
+                  className="w-full relative group/btn mt-8 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-[#C8972B] to-[#A8752A] rounded-sm opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 blur-lg" />
                   <div className="relative bg-gradient-to-r from-[#C8972B] to-[#B38530] hover:from-[#3D1F0D] hover:to-[#2A1506] text-white px-2 py-4 uppercase tracking-[0.1em] text-xs sm:text-sm font-semibold transition-all duration-500 rounded-sm flex items-center justify-center gap-3 group/btn-inner">

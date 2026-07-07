@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const accessories = [
   {
@@ -76,10 +77,6 @@ export default function AccessoriesStorage() {
                 <h3 className="text-base font-semibold text-[#3D1F0D]">
                   {item.title}
                 </h3>
-
-               
-
-                
               </div>
             </div>
           ))}
@@ -98,9 +95,12 @@ export default function AccessoriesStorage() {
                 that optimize storage and improve everyday convenience.
               </p>
 
-              <button className="mt-6 rounded-md text-nowrap bg-[#B8851F] px-6 py-3 text-white font-sm">
-                Get Free  Consultation
-              </button>
+              <Link
+                href="/contact"
+                className="mt-6 inline-block rounded-md bg-[#B8851F] px-6 py-3 text-white text-sm font-medium transition-all duration-300 hover:bg-[#9d741a]"
+              >
+                Get Free Consultation
+              </Link>
             </div>
 
             <div className="grid grid-cols-2 gap-4">

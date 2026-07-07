@@ -150,7 +150,6 @@ export default function ServicesSection() {
   useEffect(() => {
     const track = trackRef.current;
     if (!track) return;
-    // Wait a tick so images/layout have settled before the first read.
     const initial = requestAnimationFrame(updateScrollState);
     track.addEventListener("scroll", scheduleUpdate, { passive: true });
     window.addEventListener("resize", scheduleUpdate);
@@ -162,9 +161,7 @@ export default function ServicesSection() {
     };
   }, [updateScrollState, scheduleUpdate]);
 
-  // Fire the entrance animation once when the section scrolls into the
-  // viewport — the heading, carousel, and cards each pick this up with
-  // their own stagger below.
+ 
   useEffect(() => {
     const el = sectionRef.current;
     if (!el) return;
@@ -201,12 +198,6 @@ export default function ServicesSection() {
     track.scrollTo({ left: offset, behavior: "smooth" });
   };
 
-  // ── Drag-to-scroll is a MOUSE/trackpad affordance only. ──
-  // Touch devices already get buttery-smooth native momentum scrolling
-  // from the browser; hijacking touch events to manually drive
-  // `scrollLeft` (the old behaviour) fights that native momentum and is
-  // exactly what made mobile scrolling feel janky. We use the Pointer
-  // Events API and simply ignore anything that isn't a mouse.
   const handlePointerDown = (e) => {
     if (e.pointerType && e.pointerType !== "mouse") return;
     const track = trackRef.current;
