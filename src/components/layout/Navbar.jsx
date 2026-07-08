@@ -492,8 +492,17 @@ export default function Navbar() {
     }
     return () => {
       document.body.style.overflow = "unset";
-    }
+    };
   }, [isOpen]);
+
+  // ESC key closes the mobile drawer
+  useEffect(() => {
+    const onKeyDown = (e) => {
+      if (e.key === "Escape") setIsOpen(false);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
 
   const handleSearch = (query) => {
     console.log("Searching for:", query);
@@ -508,43 +517,44 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ── TOP CONTACT BAR - DESKTOP ONLY ── */}
+      {/* ── TOP CONTACT BAR - DESKTOP ONLY (lg and up) ── */}
       <div className="hidden lg:block w-full bg-[#F5EBE0]">
-        <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col sm:grid sm:grid-cols-[1fr_auto_1fr] gap-2 xs:gap-3 sm:gap-0 py-2.5 xs:py-3 sm:py-3.5 items-center">
+        <div className="max-w-[1400px] mx-auto px-4 xl:px-8 2xl:px-12">
+          <div className="flex items-center justify-between gap-4 py-3 xl:py-3.5">
             {/* LEFT - LOGO */}
-            <div className="justify-self-start w-full sm:w-auto h-18">
-              <Link
-                href="/"
-                className="flex items-center gap-2 -mt-6 xs:gap-3 group flex-shrink-0 justify-center sm:justify-start hover:opacity-80 transition-opacity"
-              >
-                <Image
-                  src="/logo.png"
-                  alt="Living Space Decor"
-                  width={300}
-                  height={80}
-                  priority
-                  className="h-10 sm:h-12 lg:h-28 w-auto object-contain"
-                />
-              </Link>
-            </div>
+            <Link
+              href="/"
+              className="flex items-center flex-shrink-0 group hover:opacity-80 transition-opacity"
+            >
+              <Image
+                src="/logo.png"
+                alt="Living Space Decor"
+                width={300}
+                height={80}
+                priority
+                className="h-16 xl:h-20 2xl:h-24 w-auto object-contain"
+              />
+            </Link>
 
             {/* CENTER - SEARCH BAR */}
-            <div className="justify-self-center hidden sm:block w-full -ml-6 sm:w-auto">
-              <AnimatedSearchBar onSearch={handleSearch} />
+            <div className="flex-1 flex justify-center min-w-0 px-4">
+              <div className="w-full max-w-md">
+                <AnimatedSearchBar onSearch={handleSearch} />
+              </div>
             </div>
 
             {/* RIGHT - CTA */}
-            <div className="justify-self-end flex items-center gap-4">
+            <div className="flex items-center gap-3 xl:gap-4 flex-shrink-0">
               <Link
                 href="/locations"
                 className="flex items-center gap-2 text-[#3D1F0D] hover:text-[#B8851F] transition"
+                aria-label="Locations"
               >
-                <MapPin size={24} />
+                <MapPin size={22} className="xl:size-6" />
               </Link>
               <button
                 onClick={() => setShowConsultationModal(true)}
-                className="w-full sm:w-auto justify-self-end bg-[#3D1F0D] hover:bg-[#B8851F] text-white text-[11px] sm:text-[12px] font-semibold uppercase tracking-[0.12em] px-5 sm:px-6 py-2.5 sm:py-3 rounded-sm transition-all duration-300 hover:shadow-lg whitespace-nowrap"
+                className="bg-[#3D1F0D] hover:bg-[#B8851F] text-white text-[11px] xl:text-[12px] font-semibold uppercase tracking-[0.12em] px-5 xl:px-6 py-2.5 xl:py-3 rounded-sm transition-all duration-300 hover:shadow-lg whitespace-nowrap"
               >
                 Book Consultation
               </button>
@@ -555,19 +565,19 @@ export default function Navbar() {
 
       {/* ── MAIN NAVBAR ── */}
       <header
-        className={`sticky lg:-mt-8 top-0 z-40 bg-[#F5EBE0] transition-all duration-300 ${
+        className={`sticky top-0 z-40 bg-[#F5EBE0] transition-all duration-300 ${
           scrolled
             ? "shadow-[0_8px_32px_rgba(61,31,13,0.12)]"
             : "shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
         }`}
       >
-        <div className="max-w-[1400px] mx-auto px-3 xs:px-4 sm:px-6 lg:px-24">
-          <div className="flex items-center justify-between h-14 xs:h-16 sm:h-18 lg:h-16">
-            {/* ── LOGO - MOBILE & TABLET ── */}
-            <div className="lg:hidden ">
+        <div className="max-w-[1400px] mx-auto px-3 xs:px-4 sm:px-6 lg:px-8 xl:px-12">
+          <div className="flex items-center justify-between h-14 xs:h-16 sm:h-18 lg:h-20">
+            {/* ── LOGO - MOBILE & TABLET (hidden lg+, since top bar carries it there) ── */}
+            <div className="lg:hidden flex-shrink-0 min-w-0">
               <Link
                 href="/"
-                className="flex items-center gap-2 group flex-shrink-0 hover:opacity-80 transition-opacity"
+                className="flex items-center gap-2 group hover:opacity-80 transition-opacity"
               >
                 <Image
                   src="/logo.png"
@@ -575,13 +585,13 @@ export default function Navbar() {
                   width={300}
                   height={80}
                   priority
-                  className="h-14 xs:h-16 sm:h-20 w-auto object-contain"
+                  className="h-10 xs:h-12 sm:h-14 md:h-16 w-auto object-contain"
                 />
               </Link>
             </div>
 
             {/* ── DESKTOP NAV ── */}
-            <nav className="hidden lg:flex ml-72 items-center gap-0.5">
+            <nav className="hidden lg:flex flex-1 items-center justify-center gap-0.5 xl:gap-1 min-w-0">
               {navLinks.map((item) => (
                 <div
                   key={item.name}
@@ -594,16 +604,16 @@ export default function Navbar() {
                   {!item.submenu ? (
                     <Link
                       href={item.href}
-                      className="relative px-4 py-2.5 text-[13px] font-medium text-[#3D1F0D]/75 hover:text-[#C8972B] transition-colors duration-200 group whitespace-nowrap"
+                      className="relative px-2.5 xl:px-4 py-2.5 text-[12px] xl:text-[13px] font-medium text-[#3D1F0D]/75 hover:text-[#C8972B] transition-colors duration-200 group whitespace-nowrap"
                     >
                       {item.name}
-                      <span className="absolute bottom-1.5 left-4 right-4 h-0.5 bg-[#C8972B] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                      <span className="absolute bottom-1.5 left-2.5 right-2.5 xl:left-4 xl:right-4 h-0.5 bg-[#C8972B] scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                     </Link>
                   ) : (
                     <>
                       <Link
                         href={item.href}
-                        className="flex items-center gap-1.5 px-4 py-2.5 text-[13px] font-medium text-[#3D1F0D]/75 hover:text-[#C8972B] transition-colors duration-200 whitespace-nowrap group"
+                        className="flex items-center gap-1 xl:gap-1.5 px-2.5 xl:px-4 py-2.5 text-[12px] xl:text-[13px] font-medium text-[#3D1F0D]/75 hover:text-[#C8972B] transition-colors duration-200 whitespace-nowrap group"
                       >
                         {item.name}
                         <motion.div
@@ -623,7 +633,7 @@ export default function Navbar() {
                             animate={{ opacity: 1, y: 0 }}
                             exit={{ opacity: 0, y: -8 }}
                             transition={{ duration: 0.2 }}
-                            className="absolute left-0 top-full mt-1 min-w-[260px] bg-white rounded-lg shadow-xl border border-[#3D1F0D]/8 overflow-hidden"
+                            className="absolute left-0 top-full mt-1 min-w-[240px] xl:min-w-[260px] max-w-[90vw] bg-white rounded-lg shadow-xl border border-[#3D1F0D]/8 overflow-hidden z-50"
                           >
                             {item.submenu.map((subItem, idx) => (
                               <motion.div
@@ -652,20 +662,25 @@ export default function Navbar() {
               ))}
             </nav>
 
+            {/* ── DESKTOP RIGHT SPACER (keeps nav visually centered against logo width) ── */}
+            <div className="hidden lg:block flex-shrink-0 w-px" aria-hidden="true" />
+
             {/* ── MOBILE & TABLET HAMBURGER ── */}
-            <div className="lg:hidden flex items-center gap-2">
+            <div className="lg:hidden flex items-center gap-2 flex-shrink-0">
               <Link
                 href="/locations"
-                className="w-11 h-11 flex items-center justify-center rounded-sm bg-[#3D1F0D]/8 hover:bg-[#3D1F0D]/12 text-[#3D1F0D] transition-colors"
+                className="w-10 h-10 xs:w-11 xs:h-11 flex items-center justify-center rounded-sm bg-[#3D1F0D]/8 hover:bg-[#3D1F0D]/12 text-[#3D1F0D] transition-colors"
                 aria-label="Location"
               >
-                <MapPin size={20} />
+                <MapPin size={18} className="xs:hidden" />
+                <MapPin size={20} className="hidden xs:block" />
               </Link>
 
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 aria-label="Toggle menu"
-                className="w-11 h-11 xs:w-12 xs:h-12 flex items-center justify-center rounded-sm bg-[#3D1F0D]/8 hover:bg-[#3D1F0D]/12 text-[#3D1F0D] transition-colors z-50 relative"
+                aria-expanded={isOpen}
+                className="w-10 h-10 xs:w-11 xs:h-11 sm:w-12 sm:h-12 flex items-center justify-center rounded-sm bg-[#3D1F0D]/8 hover:bg-[#3D1F0D]/12 text-[#3D1F0D] transition-colors z-50 relative"
               >
                 <AnimatePresence mode="wait">
                   {isOpen ? (
@@ -688,11 +703,15 @@ export default function Navbar() {
                     >
                       <Menu size={22} />
                     </motion.div>
-                  )
-                  }
+                  )}
                 </AnimatePresence>
               </button>
             </div>
+          </div>
+
+          {/* ── SEARCH BAR - TABLET (shown below the row on sm/md, hidden on mobile & desktop) ── */}
+          <div className="hidden sm:block lg:hidden pb-3">
+            <AnimatedSearchBar onSearch={handleSearch} />
           </div>
         </div>
 
@@ -700,7 +719,7 @@ export default function Navbar() {
         <AnimatePresence>
           {isOpen && (
             <>
-              {/* BACKDROP (ब्लर/डार्क बैकग्राउंड स्क्रीन जो मेनू के पीछे दिखेगी) */}
+              {/* BACKDROP */}
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 0.4 }}
@@ -715,7 +734,7 @@ export default function Navbar() {
                 animate={{ x: 0 }}
                 exit={{ x: "100%" }}
                 transition={{ type: "tween", duration: 0.3 }}
-                className="fixed right-0 top-0 h-screen w-[280px] xs:w-[320px] bg-white z-40 lg:hidden shadow-2xl flex flex-col pt-20 pb-6 overflow-y-auto"
+                className="fixed right-0 top-0 h-[100dvh] w-[85vw] xs:w-[320px] max-w-[320px] bg-white z-40 lg:hidden shadow-2xl flex flex-col pt-20 pb-6 overflow-y-auto"
               >
                 <div className="px-4 flex flex-col gap-2 flex-1">
                   {/* NAVIGATION MENU */}
@@ -744,6 +763,7 @@ export default function Navbar() {
                               <button
                                 type="button"
                                 onClick={() => toggleMobileSubmenu(item.name)}
+                                aria-label={`Toggle ${item.name} submenu`}
                                 className="p-2"
                               >
                                 <motion.div
@@ -794,7 +814,7 @@ export default function Navbar() {
                       setShowConsultationModal(true);
                       setIsOpen(false);
                     }}
-                    className="w-full bg-[#3D1F0D] hover:bg-[#C8972B] text-white text-[12px] xs:text-[13px] font-semibold uppercase tracking-[0.12em] py-3 xs:py-3.5 rounded-sm transition-all duration-300 hover:shadow-lg min-h-[44px] xs:min-h-[48px] flex items-center justify-center mt-auto"
+                    className="w-full -mt-46 bg-[#3D1F0D] hover:bg-[#C8972B] text-white text-[12px] xs:text-[13px] font-semibold uppercase tracking-[0.12em] py-3 xs:py-3.5 rounded-sm transition-all duration-300 hover:shadow-lg min-h-[44px] xs:min-h-[48px] flex items-center justify-center mt-auto"
                   >
                     Book Free Consultation
                   </button>
