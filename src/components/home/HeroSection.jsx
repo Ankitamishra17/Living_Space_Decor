@@ -60,7 +60,7 @@ export default function HomePage() {
             h-full
             [&_.swiper-pagination]:!bottom-8
             [&_.swiper-pagination-bullet]:bg-white/40
-            [&_.swiper-pagination-bullet-active]:bg-[#C8972B]
+            [&_.swiper-pagination-bullet-active]:!bg-[#C8972B]
             [&_.swiper-pagination-bullet-active]:w-8
           "
         >

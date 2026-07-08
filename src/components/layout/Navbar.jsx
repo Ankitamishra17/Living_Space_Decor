@@ -522,19 +522,21 @@ export default function Navbar() {
         <div className="max-w-[1400px] mx-auto px-4 xl:px-8 2xl:px-12">
           <div className="flex items-center justify-between gap-4 py-3 xl:py-3.5">
             {/* LEFT - LOGO */}
-            <Link
-              href="/"
-              className="flex items-center flex-shrink-0 group hover:opacity-80 transition-opacity"
-            >
-              <Image
-                src="/logo.png"
-                alt="Living Space Decor"
-                width={300}
-                height={80}
-                priority
-                className="h-16 xl:h-20 2xl:h-24 w-auto object-contain"
-              />
-            </Link>
+            <div className="justify-self-start w-full sm:w-auto h-18">
+                <Link
+                  href="/"
+                  className="flex items-center -mt-8 flex-shrink-0 group hover:opacity-80 transition-opacity"
+                >
+                  <Image
+                    src="/logo.png"
+                    alt="Living Space Decor"
+                    width={300}
+                    height={80}
+                    priority
+                    className="h-18 xl:h-30 2xl:h-28 w-auto object-contain"
+                  />
+                </Link>
+            </div>
 
             {/* CENTER - SEARCH BAR */}
             <div className="flex-1 flex justify-center min-w-0 px-4">
@@ -565,7 +567,7 @@ export default function Navbar() {
 
       {/* ── MAIN NAVBAR ── */}
       <header
-        className={`sticky top-0 z-40 bg-[#F5EBE0] transition-all duration-300 ${
+        className={`sticky top-0 -mt-6 z-40 bg-[#F5EBE0] transition-all duration-300 ${
           scrolled
             ? "shadow-[0_8px_32px_rgba(61,31,13,0.12)]"
             : "shadow-[0_2px_8px_rgba(0,0,0,0.04)]"
@@ -585,7 +587,7 @@ export default function Navbar() {
                   width={300}
                   height={80}
                   priority
-                  className="h-10 xs:h-12 sm:h-14 md:h-16 w-auto object-contain"
+                  className="h-25 xs:h-12 sm:h-14 md:h-16 w-auto object-contain"
                 />
               </Link>
             </div>
