@@ -180,8 +180,8 @@ export default function HeroSection() {
 
         <div className="absolute inset-0">
           <div className="container mx-auto flex h-full items-center justify-center px-4">
-            <div className="max-w-2xl text-center text-white">
-              <span className="inline-block mb-5 text-sm tracking-[2px] uppercase text-[#B8851F] text-sm">
+            <div className="max-w-2xl lg:-mt-56 text-center text-white">
+              <span className="inline-block mb-5 whitespace-nowrap tracking-[2px] uppercase text-[#B8851F] text-sm">
                 Beautiful. Functional. Timeless.
               </span>
               <h1 className="text-3xl md:text-4xl lg:text-5xl font-serif leading-tight">
@@ -252,7 +252,7 @@ export default function HeroSection() {
                     />
                   </div>
 
-                  <div className="relative px-4 pb-6 pt-6 text-center">
+                  <div className="relative px-4 pb-6 pt-6  text-center">
                     <h3 className="text-xl md:text-2xl font-serif text-[#3D1F0D]">
                       {item.title}
                     </h3>

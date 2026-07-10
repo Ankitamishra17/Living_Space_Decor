@@ -24,7 +24,7 @@ export default function HeroSection() {
 
         <div className="absolute inset-0">
           <div className="container mx-auto flex h-full items-center justify-center px-4">
-            <div className="max-w-2xl text-center text-white">
+            <div className="max-w-2xl lg:-mt-56 text-center text-white">
               <span className="inline-block text-sm uppercase tracking-[3px] text-[#B8851F]">
                 Designed Around You
               </span>
@@ -59,7 +59,7 @@ export default function HeroSection() {
       </div>
 
       {/* Floating Cards */}
-      <div className=" bg-[#F5EBE0] relative z-20 ">
+      {/* <div className=" bg-[#F5EBE0] relative z-20 ">
         <div className="container mx-auto px-4 ">
           <div className="grid gap-6 md:grid-cols-3 mt-2">
             {wardrobeTypes.map((item, index) => {
@@ -97,7 +97,7 @@ export default function HeroSection() {
             })}
           </div>
         </div>
-      </div>
+      </div> */}
     </section>
   );
 }
