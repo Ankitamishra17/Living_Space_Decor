@@ -2,958 +2,958 @@
 
 export const details = {
   livingRoom: {
-    title: "Living Room Interior Design in Noida",
+    title: "Living Room Interior Designer in Noida",
     intro:
-      "The living room is the centerpiece of every home, where families gather, guests are welcomed, and memorable moments are created. A well-designed living room combines comfort, functionality, and aesthetics to create an inviting atmosphere. Whether you own a modern apartment or a luxury villa in Noida, professional living room interior design can help maximize space while reflecting your personal style.",
+      "A well-designed living room creates the perfect balance of comfort, functionality, and style. As a leading living room interior designer in Noida, we create personalized living spaces that reflect your lifestyle and enhance the overall aesthetics of your home. Whether you own a modern apartment, independent house, or luxury villa, our expert designers deliver customized living room interiors tailored to your preferences and space requirements.",
 
     sections: [
       {
-        heading: "Popular Living Room Design Styles in Noida",
+        heading: "Popular Living Room Interior Design Services in Noida",
         content: [
           {
-            title: "Modern Living Room Design",
+            title: "Modern Living Room Interior Design",
             description:
-              "Modern living room interiors feature clean lines, neutral color palettes, smart furniture layouts, and minimalist décor. This style is ideal for homeowners seeking elegance and functionality.",
+              "Our living room interior designers create modern spaces with clean lines, neutral color palettes, smart furniture layouts, and minimalist décor that offer both elegance and functionality.",
           },
           {
-            title: "Luxury Living Room Design",
+            title: "Luxury Living Room Interior Design",
             description:
-              "Luxury living rooms incorporate premium materials, designer furniture, statement lighting, and customized décor to create a sophisticated and refined ambiance.",
+              "Luxury living room designs feature premium materials, customized furniture, designer lighting, and sophisticated décor elements to create an upscale living experience.",
           },
           {
-            title: "Contemporary Living Room Design",
+            title: "Contemporary Living Room Interior Design",
             description:
-              "Contemporary living room interiors focus on current design trends, open spaces, sleek furniture, and artistic accents that create a fresh and stylish environment.",
+              "Contemporary living room interiors combine current design trends, open layouts, sleek furnishings, and creative accents to create a stylish and inviting atmosphere.",
           },
           {
-            title: "Minimalist Living Room Design",
+            title: "Minimalist Living Room Interior Design",
             description:
-              "Minimalist living rooms emphasize simplicity, clutter-free layouts, and functional furniture while maintaining a modern and elegant appearance.",
+              "Minimalist living room designs focus on simplicity, clutter-free layouts, and carefully selected furniture pieces that maximize comfort and visual appeal.",
           },
         ],
       },
 
       {
-        heading: "Essential Elements of Living Room Interior Design",
+        heading: "Why Choose Our Living Room Interior Designers in Noida",
         content: [
           {
-            title: "Space Planning",
+            title: "Expert Space Planning",
             description:
-              "Efficient space planning ensures smooth movement, balanced furniture placement, and optimal use of available living space.",
+              "Our interior designers optimize furniture placement, circulation flow, and room functionality to make the best use of available space.",
           },
           {
-            title: "Furniture Selection",
+            title: "Customized Furniture Solutions",
             description:
-              "Choosing the right sofa, coffee table, TV unit, and accent chairs enhances both comfort and visual appeal.",
+              "We design and recommend furniture that complements your lifestyle, design preferences, and living room dimensions.",
           },
           {
-            title: "Lighting Design",
+            title: "Creative Lighting Design",
             description:
-              "A combination of ambient, task, and decorative lighting helps create a warm and welcoming atmosphere.",
+              "Our designers use layered lighting techniques, including ambient, accent, and decorative lighting, to create the perfect mood.",
           },
           {
-            title: "Wall Design and Décor",
+            title: "Personalized Wall Décor",
             description:
-              "Feature walls, wallpapers, artwork, and decorative elements add character and personality to the living room.",
+              "From feature walls and wallpapers to artwork and decorative panels, we create visually appealing focal points that enhance your living room.",
           },
         ],
       },
 
       {
         heading: "Living Room Interior Design Cost in Noida",
-        text: "The cost of living room interior design in Noida depends on factors such as room size, furniture selection, material quality, customization requirements, and design complexity. Professional interior designers can create solutions suitable for both budget-friendly and luxury projects.",
+        text: "The cost of hiring a living room interior designer in Noida depends on factors such as room size, furniture requirements, material selection, customization level, and overall design complexity. Whether you are looking for affordable living room interiors or luxury living room design solutions, our expert designers provide customized packages to suit every budget and style preference.",
       },
     ],
   },
 
   bedroom: {
-    title: "Bedroom Interior Design in Noida",
+    title: "Bedroom Interior Designer in Noida",
     intro:
-      "Your bedroom is your personal sanctuary where comfort, relaxation, and privacy come together. A thoughtfully designed bedroom improves both functionality and well-being while enhancing the overall beauty of your home. From modern apartments to premium residences in Noida, customized bedroom interior design helps create a peaceful and stylish retreat tailored to your lifestyle.",
+      "Your bedroom is a personal sanctuary where comfort, relaxation, and privacy come together. A professionally designed bedroom enhances functionality, improves well-being, and adds elegance to your home. As a trusted bedroom interior designer in Noida, we create customized bedroom interiors that reflect your lifestyle, maximize space, and provide a peaceful retreat. Whether you own a modern apartment, independent house, or luxury residence, our expert designers deliver stylish and practical bedroom solutions tailored to your needs.",
 
     sections: [
       {
-        heading: "Popular Bedroom Design Styles in Noida",
+        heading: "Popular Bedroom Interior Design Services in Noida",
         content: [
           {
             title: "Modern Bedroom Interior Design",
             description:
-              "Modern bedrooms focus on clean aesthetics, practical storage solutions, soft color palettes, and sleek furniture to create a relaxing environment.",
+              "Our bedroom interior designers create modern spaces with clean aesthetics, smart storage solutions, soothing color palettes, and sleek furniture that promote comfort and relaxation.",
           },
           {
-            title: "Master Bedroom Design",
+            title: "Master Bedroom Interior Design",
             description:
-              "Master bedroom interiors combine luxury, comfort, and functionality through spacious layouts, premium furnishings, and personalized décor.",
+              "Master bedroom interiors combine luxury, functionality, and personalized design elements, featuring spacious layouts, premium furnishings, and elegant décor.",
           },
           {
-            title: "Luxury Bedroom Design",
+            title: "Luxury Bedroom Interior Design",
             description:
-              "Luxury bedrooms feature elegant finishes, designer wardrobes, premium upholstery, statement lighting, and customized interiors for a sophisticated lifestyle.",
+              "Luxury bedroom interiors feature premium materials, designer wardrobes, customized furniture, statement lighting, and sophisticated finishes that create a refined living experience.",
           },
           {
-            title: "Kids Bedroom Design",
+            title: "Kids Bedroom Interior Design",
             description:
-              "Kids' bedrooms are designed with vibrant colors, playful themes, smart storage, and study areas to support creativity and growth.",
+              "Our designers create vibrant and functional kids' bedrooms with creative themes, smart storage solutions, study areas, and playful elements that support learning and growth.",
           },
         ],
       },
 
       {
-        heading: "Essential Elements of Bedroom Interior Design",
+        heading: "Why Choose Our Bedroom Interior Designers in Noida",
         content: [
           {
-            title: "Bed and Furniture Selection",
+            title: "Customized Furniture Planning",
             description:
-              "Selecting the right bed, bedside tables, and storage furniture creates a comfortable and visually appealing bedroom layout.",
+              "We carefully select and design beds, bedside tables, wardrobes, and storage units that perfectly suit your space and lifestyle requirements.",
           },
           {
-            title: "Wardrobe and Storage Solutions",
+            title: "Smart Wardrobe and Storage Solutions",
             description:
-              "Customized wardrobes and modular storage systems help maximize organization while maintaining a clean and clutter-free space.",
+              "Our bedroom interior designers create customized wardrobes and modular storage systems that maximize organization while maintaining a clutter-free environment.",
           },
           {
-            title: "Lighting and Ambience",
+            title: "Ambient Lighting Design",
             description:
-              "Layered lighting solutions enhance comfort, improve functionality, and create a soothing bedroom atmosphere.",
+              "We use layered lighting techniques, including ambient, task, and accent lighting, to create a comfortable and relaxing bedroom atmosphere.",
           },
           {
-            title: "Wall Treatments and Décor",
+            title: "Personalized Wall Décor and Finishes",
             description:
-              "Decorative wall panels, wallpapers, artwork, and accent walls add depth and personality to bedroom interiors.",
+              "From decorative wall panels and wallpapers to accent walls and artwork, we add unique design elements that enhance the beauty and character of your bedroom.",
           },
         ],
       },
 
       {
         heading: "Bedroom Interior Design Cost in Noida",
-        text: "The cost of bedroom interior design in Noida varies depending on room size, wardrobe requirements, furniture customization, materials, lighting fixtures, and design preferences. Professional designers can create personalized bedroom interiors to match different budgets and lifestyle needs.",
+        text: "The cost of hiring a bedroom interior designer in Noida depends on factors such as room size, wardrobe requirements, furniture customization, material selection, lighting fixtures, and overall design complexity. Whether you are looking for affordable bedroom interiors or luxury bedroom design solutions, our expert designers provide customized options to suit every budget and style preference.",
       },
     ],
   },
 
   bathroom: {
-    title: "Bathroom Interior Design in Noida",
+    title: "Bathroom Interior Designer in Noida",
     intro:
-      "A thoughtfully designed bathroom adds comfort, functionality, and elegance to your home. Modern bathroom interior design in Noida focuses on creating relaxing spaces with smart layouts, premium fixtures, efficient storage, and stylish finishes. Whether you need a compact bathroom solution for an apartment or a luxurious spa-inspired bathroom for a villa, professional bathroom interiors can transform your daily routine into a comfortable and refreshing experience.",
+      "A well-designed bathroom enhances comfort, functionality, and aesthetics while adding value to your home. As a trusted bathroom interior designer in Noida, we create modern and customized bathroom interiors that combine smart layouts, premium fixtures, efficient storage solutions, and elegant finishes. Whether you need a compact bathroom for an apartment or a luxury spa-inspired bathroom for a villa, our expert designers deliver stylish and practical solutions tailored to your lifestyle and space requirements.",
 
     sections: [
       {
-        heading: "Popular Bathroom Design Styles in Noida",
+        heading: "Popular Bathroom Interior Design Services in Noida",
         content: [
           {
-            title: "Modern Bathroom Design",
+            title: "Modern Bathroom Interior Design",
             description:
-              "Modern bathroom interiors feature clean lines, sleek fittings, floating vanities, frameless glass partitions, and minimalist décor. This style creates a sophisticated and clutter-free environment.",
+              "Our bathroom interior designers create modern spaces with clean lines, sleek fittings, floating vanities, frameless glass partitions, and minimalist décor for a sophisticated and clutter-free environment.",
           },
           {
-            title: "Luxury Bathroom Design",
+            title: "Luxury Bathroom Interior Design",
             description:
-              "Luxury bathrooms combine premium materials, designer sanitaryware, elegant lighting, and customized storage solutions to deliver a hotel-like experience at home.",
+              "Luxury bathroom interiors feature premium materials, designer sanitaryware, elegant lighting, customized storage solutions, and high-end finishes that deliver a hotel-like experience at home.",
           },
           {
-            title: "Contemporary Bathroom Design",
+            title: "Contemporary Bathroom Interior Design",
             description:
-              "Contemporary bathroom interiors embrace modern trends with stylish fixtures, innovative materials, and practical layouts that enhance both aesthetics and functionality.",
+              "Contemporary bathroom interiors embrace the latest design trends with stylish fixtures, innovative materials, and practical layouts that enhance both aesthetics and functionality.",
           },
           {
-            title: "Compact Bathroom Design",
+            title: "Compact Bathroom Interior Design",
             description:
-              "Small bathroom designs focus on maximizing available space through smart storage, wall-mounted fixtures, and space-saving layouts without compromising comfort.",
+              "Our designers maximize small bathroom spaces through smart storage solutions, wall-mounted fixtures, and space-saving layouts without compromising comfort or style.",
           },
         ],
       },
 
       {
-        heading: "Essential Elements of Bathroom Interior Design",
+        heading: "Why Choose Our Bathroom Interior Designers in Noida",
         content: [
           {
-            title: "Space Planning",
+            title: "Expert Space Planning",
             description:
-              "Efficient space planning ensures smooth movement, proper fixture placement, and optimal utilization of every corner of the bathroom.",
+              "Efficient bathroom layouts ensure smooth movement, proper fixture placement, and optimal utilization of every available space.",
           },
           {
             title: "Shower and Wet Area Design",
             description:
-              "Well-designed shower spaces improve functionality while maintaining a clean and organized layout. Glass partitions and walk-in showers are popular choices.",
+              "Our bathroom interior designers create functional shower spaces with glass partitions, walk-in showers, and practical layouts that enhance convenience and aesthetics.",
           },
           {
-            title: "Storage Solutions",
+            title: "Smart Storage Solutions",
             description:
-              "Vanity cabinets, wall niches, mirrored cabinets, and modular storage units help keep toiletries organized while maintaining a clutter-free appearance.",
+              "Customized vanity units, wall niches, mirrored cabinets, and modular storage systems help maintain a clean and organized bathroom environment.",
           },
           {
-            title: "Lighting Design",
+            title: "Professional Lighting Design",
             description:
-              "Layered lighting with ceiling fixtures, vanity lights, and accent lighting enhances visibility while creating a relaxing atmosphere.",
+              "Layered lighting using ceiling fixtures, vanity lights, and accent lighting improves visibility while creating a relaxing atmosphere.",
           },
           {
-            title: "Tiles and Finishes",
+            title: "Premium Tiles and Finishes",
             description:
-              "Premium wall and floor tiles, anti-slip surfaces, natural stone textures, and waterproof finishes contribute to durability and visual appeal.",
+              "We carefully select durable, water-resistant tiles, anti-slip flooring, natural stone textures, and premium finishes that enhance both beauty and longevity.",
           },
         ],
       },
 
       {
-        heading: "Trending Bathroom Color Combinations",
+        heading: "Trending Bathroom Interior Design Ideas",
         content: [
           {
-            title: "White and Grey",
+            title: "White and Grey Bathroom Interiors",
             description:
-              "A timeless combination that creates a clean, spacious, and elegant bathroom environment.",
+              "A timeless combination that creates a clean, spacious, and elegant bathroom environment suitable for both modern and luxury homes.",
           },
           {
-            title: "Beige and Brown",
+            title: "Beige and Brown Bathroom Interiors",
             description:
-              "Warm neutral tones bring a natural and relaxing feel while maintaining sophistication.",
+              "Warm neutral tones provide a natural and relaxing ambiance while maintaining sophistication and visual appeal.",
           },
           {
-            title: "Black and White",
+            title: "Black and White Bathroom Interiors",
             description:
-              "A bold and contemporary color palette that adds contrast and modern character.",
+              "A bold and contemporary color scheme that adds contrast, style, and modern character to bathroom spaces.",
           },
           {
-            title: "Blue and White",
+            title: "Blue and White Bathroom Interiors",
             description:
-              "Inspired by water and nature, this combination creates a refreshing and calming atmosphere.",
+              "Inspired by nature and water, this refreshing combination creates a calm and soothing bathroom atmosphere.",
           },
         ],
       },
 
       {
-        heading: "Benefits of Professional Bathroom Interior Design",
+        heading: "Benefits of Hiring a Bathroom Interior Designer in Noida",
         content: [
           {
             title: "Optimized Space Utilization",
             description:
-              "Professional designers maximize available space while ensuring comfort and functionality.",
+              "Professional bathroom interior designers maximize every inch of available space while maintaining comfort and functionality.",
           },
           {
-            title: "Customized Solutions",
+            title: "Customized Bathroom Solutions",
             description:
-              "Every bathroom is designed according to the homeowner's lifestyle, preferences, and space requirements.",
+              "Every bathroom is designed according to the homeowner's preferences, lifestyle, and specific space requirements.",
           },
           {
             title: "Premium Material Selection",
             description:
-              "Experts help choose durable, water-resistant, and aesthetically appealing materials suitable for long-term use.",
+              "Our designers help you choose durable, water-resistant, and aesthetically appealing materials for long-lasting performance.",
           },
           {
-            title: "Modern Design Execution",
+            title: "Seamless Project Execution",
             description:
-              "Professional planning ensures a seamless blend of style, practicality, and long-lasting quality.",
+              "Professional planning and execution ensure a perfect balance of style, practicality, and quality craftsmanship.",
           },
         ],
       },
 
       {
         heading: "Bathroom Interior Design Cost in Noida",
-        text: "The cost of bathroom interior design in Noida depends on factors such as bathroom size, tile selection, sanitary fittings, storage requirements, lighting design, and customization level. Whether you are renovating an existing bathroom or designing a new one, professional interior solutions can be tailored to suit different budgets and design preferences.",
+        text: "The cost of hiring a bathroom interior designer in Noida depends on factors such as bathroom size, tile selection, sanitary fittings, storage requirements, lighting design, material quality, and customization level. Whether you are renovating an existing bathroom or designing a new one, our expert designers provide customized bathroom interior solutions to suit different budgets and style preferences.",
       },
     ],
   },
 
   diningRoom: {
-    title: "Dining Room Interior Design in Noida",
+    title: "Dining Room Interior Designer in Noida",
     intro:
-      "A well-designed dining room creates the perfect setting for family meals, celebrations, and meaningful conversations. Modern dining room interior design in Noida focuses on combining comfort, functionality, and elegance through smart layouts, stylish furniture, ambient lighting, and personalized décor. Whether you prefer a contemporary dining space or a luxurious dining area, professional interior design can transform your dining experience while complementing the overall aesthetics of your home.",
+      "A beautifully designed dining room creates the perfect setting for family meals, celebrations, and memorable conversations. As a trusted dining room interior designer in Noida, we create elegant and functional dining spaces that combine comfort, style, and practicality. From modern apartments to luxury residences, our expert designers craft customized dining room interiors with smart layouts, premium furniture, ambient lighting, and personalized décor that enhance both everyday dining and special gatherings.",
 
     sections: [
       {
-        heading: "Popular Dining Room Design Styles in Noida",
+        heading: "Popular Dining Room Interior Design Services in Noida",
         content: [
           {
-            title: "Modern Dining Room Design",
+            title: "Modern Dining Room Interior Design",
             description:
-              "Modern dining rooms feature clean lines, minimalist furniture, neutral color palettes, and elegant lighting to create a sophisticated atmosphere.",
+              "Our dining room interior designers create modern spaces featuring clean lines, minimalist furniture, neutral color palettes, and elegant lighting for a sophisticated dining experience.",
           },
           {
-            title: "Luxury Dining Room Design",
+            title: "Luxury Dining Room Interior Design",
             description:
-              "Luxury dining spaces incorporate premium materials, designer furniture, statement chandeliers, and customized décor elements for an upscale look.",
+              "Luxury dining room interiors incorporate premium materials, designer furniture, statement chandeliers, and customized décor elements that create an upscale and refined atmosphere.",
           },
           {
-            title: "Contemporary Dining Room Design",
+            title: "Contemporary Dining Room Interior Design",
             description:
-              "Contemporary dining interiors blend modern trends with functional layouts, creating inviting spaces suitable for both everyday use and entertaining guests.",
+              "Contemporary dining spaces blend modern trends with practical layouts, offering stylish and inviting environments suitable for both daily use and entertaining guests.",
           },
           {
-            title: "Compact Dining Room Design",
+            title: "Compact Dining Room Interior Design",
             description:
-              "Small dining room designs maximize available space through smart furniture choices, efficient layouts, and multifunctional storage solutions.",
+              "Our designers maximize smaller dining areas through smart furniture selection, efficient space planning, and multifunctional storage solutions without compromising comfort or aesthetics.",
           },
         ],
       },
 
       {
-        heading: "Essential Elements of Dining Room Interior Design",
+        heading: "Why Choose Our Dining Room Interior Designers in Noida",
         content: [
           {
-            title: "Dining Table Selection",
+            title: "Expert Dining Space Planning",
             description:
-              "The dining table is the focal point of the room. Choosing the right shape, size, and material ensures both comfort and visual appeal.",
+              "We create well-balanced layouts that improve movement, optimize seating arrangements, and ensure maximum functionality within the available space.",
           },
           {
-            title: "Comfortable Seating",
+            title: "Customized Dining Furniture Solutions",
             description:
-              "Well-designed dining chairs enhance comfort while complementing the overall style of the dining space.",
+              "Our dining room interior designers help select or design dining tables, chairs, and storage units that perfectly match your lifestyle and interior preferences.",
           },
           {
-            title: "Lighting Design",
+            title: "Professional Lighting Design",
             description:
-              "Pendant lights, chandeliers, and layered lighting create a warm and welcoming atmosphere while highlighting the dining area.",
+              "Pendant lights, chandeliers, and layered lighting solutions are carefully planned to create a warm, welcoming, and visually appealing dining environment.",
           },
           {
-            title: "Wall Décor and Accessories",
+            title: "Personalized Wall Décor and Styling",
             description:
-              "Artwork, mirrors, feature walls, and decorative accessories add character and elevate the overall dining room aesthetics.",
+              "From feature walls and mirrors to artwork and decorative accessories, we enhance your dining room with thoughtfully curated design elements.",
           },
         ],
       },
 
       {
-        heading: "Trending Dining Room Color Combinations",
+        heading: "Trending Dining Room Interior Design Ideas",
         content: [
           {
-            title: "White and Wood",
+            title: "White and Wood Dining Interiors",
             description:
-              "A timeless combination that creates a bright, warm, and elegant dining environment.",
+              "A timeless combination that creates a bright, warm, and elegant dining environment suitable for modern and traditional homes.",
           },
           {
-            title: "Grey and Beige",
+            title: "Grey and Beige Dining Interiors",
             description:
-              "Neutral tones offer sophistication and versatility while maintaining a modern appearance.",
+              "Neutral tones provide sophistication, versatility, and a contemporary appearance that complements various interior styles.",
           },
           {
-            title: "Black and Gold",
+            title: "Black and Gold Dining Interiors",
             description:
-              "A luxurious color palette that adds drama and premium appeal to dining interiors.",
+              "A luxurious color palette that adds elegance, depth, and premium appeal to dining room interiors.",
           },
           {
-            title: "Green and Natural Wood",
+            title: "Green and Natural Wood Dining Interiors",
             description:
-              "Nature-inspired colors bring freshness and create a calming dining experience.",
+              "Nature-inspired colors and textures bring freshness, warmth, and a calming atmosphere to the dining space.",
           },
         ],
       },
 
       {
-        heading: "Benefits of Professional Dining Room Interior Design",
+        heading: "Benefits of Hiring a Dining Room Interior Designer in Noida",
         content: [
           {
-            title: "Optimized Space Planning",
+            title: "Optimized Space Utilization",
             description:
-              "Professional designers create layouts that improve movement, seating capacity, and overall functionality.",
+              "Professional dining room interior designers create layouts that maximize seating capacity while maintaining comfort and functionality.",
           },
           {
-            title: "Customized Furniture Solutions",
+            title: "Customized Design Solutions",
             description:
-              "Tailor-made dining furniture ensures maximum comfort and perfect alignment with your interior style.",
+              "Every dining room is designed according to your lifestyle, family requirements, and aesthetic preferences.",
           },
           {
             title: "Enhanced Visual Appeal",
             description:
-              "Expertly selected materials, colors, and décor elements create a cohesive and elegant dining space.",
+              "Carefully selected materials, colors, furniture, and décor elements create a cohesive and elegant dining environment.",
           },
           {
-            title: "Long-Term Value",
+            title: "Long-Term Value and Durability",
             description:
-              "Quality materials and professional execution improve durability and add value to your home.",
+              "Quality materials and expert craftsmanship ensure lasting performance while increasing the overall value of your home.",
           },
         ],
       },
 
       {
         heading: "Dining Room Interior Design Cost in Noida",
-        text: "The cost of dining room interior design in Noida depends on factors such as room size, furniture selection, lighting requirements, material quality, and customization preferences. Professional interior designers can create solutions ranging from budget-friendly dining spaces to luxurious designer dining rooms tailored to your lifestyle and budget.",
+        text: "The cost of hiring a dining room interior designer in Noida depends on factors such as room size, furniture selection, lighting requirements, material quality, customization preferences, and overall design complexity. Whether you are looking for a budget-friendly dining room makeover or a luxury dining room interior solution, our expert designers provide customized services tailored to your lifestyle and budget.",
       },
     ],
   },
 
   homeOffice: {
-    title: "Home Office Interior Design in Noida",
+    title: "Home Office Interior Designer in Noida",
     intro:
-      "A well-designed home office creates a productive, comfortable, and inspiring workspace within your home. With the rise of remote work and hybrid work environments, home office interior design in Noida focuses on combining functionality, ergonomics, and aesthetics. Whether you need a dedicated office room or a compact work corner, professional interior design helps create a workspace that enhances productivity while seamlessly blending with your home's overall décor.",
+      "A well-designed home office creates a productive, comfortable, and inspiring workspace within your home. As a trusted home office interior designer in Noida, we create customized workspaces that combine functionality, ergonomics, and aesthetics. With the growing demand for remote and hybrid work environments, our expert designers help transform dedicated office rooms, study areas, and compact work corners into efficient and stylish spaces that enhance productivity while complementing your home's overall interior design.",
 
     sections: [
       {
-        heading: "Popular Home Office Design Styles in Noida",
+        heading: "Popular Home Office Interior Design Services in Noida",
         content: [
           {
-            title: "Modern Home Office Design",
+            title: "Modern Home Office Interior Design",
             description:
-              "Modern home offices feature clean lines, minimalist furniture, smart storage solutions, and neutral color palettes that promote focus and productivity.",
+              "Our home office interior designers create modern workspaces with clean lines, minimalist furniture, smart storage solutions, and neutral color palettes that promote focus and productivity.",
           },
           {
-            title: "Luxury Home Office Design",
+            title: "Luxury Home Office Interior Design",
             description:
-              "Luxury workspaces incorporate premium furniture, customized cabinetry, elegant lighting, and sophisticated finishes to create an executive-style environment.",
+              "Luxury home office interiors feature premium furniture, customized cabinetry, elegant lighting, and sophisticated finishes that create a professional executive-style workspace.",
           },
           {
-            title: "Compact Home Office Design",
+            title: "Compact Home Office Interior Design",
             description:
-              "Small home office designs maximize available space through wall-mounted desks, floating shelves, and multifunctional furniture without compromising comfort.",
+              "We maximize smaller spaces through wall-mounted desks, floating shelves, modular storage units, and multifunctional furniture without compromising comfort or functionality.",
           },
           {
             title: "Creative Home Workspace Design",
             description:
-              "Creative office interiors use inspiring colors, personalized décor, and innovative layouts to encourage creativity and improve workflow.",
+              "Our designers create inspiring work environments using personalized décor, innovative layouts, and carefully selected color schemes that encourage creativity and improve workflow.",
           },
         ],
       },
 
       {
-        heading: "Essential Elements of Home Office Interior Design",
+        heading: "Why Choose Our Home Office Interior Designers in Noida",
         content: [
           {
-            title: "Ergonomic Furniture",
+            title: "Ergonomic Furniture Planning",
             description:
-              "Comfortable chairs and properly designed workstations support good posture and improve productivity during long working hours.",
+              "We select and design ergonomic chairs, desks, and workstations that support proper posture, comfort, and productivity during long working hours.",
           },
           {
             title: "Smart Storage Solutions",
             description:
-              "Cabinets, shelving units, and hidden storage help keep documents, devices, and office supplies organized and easily accessible.",
+              "Customized cabinets, shelving units, and hidden storage systems help keep documents, devices, and office supplies organized and easily accessible.",
           },
           {
-            title: "Lighting Design",
+            title: "Professional Lighting Design",
             description:
-              "Natural light combined with task lighting and ambient lighting creates a comfortable and efficient working environment.",
+              "A combination of natural light, task lighting, and ambient lighting creates a comfortable and efficient working environment.",
           },
           {
-            title: "Technology Integration",
+            title: "Seamless Technology Integration",
             description:
-              "Modern home offices are designed to accommodate computers, charging stations, internet connectivity, and other essential work tools.",
+              "Our home office interior designers plan spaces that accommodate computers, charging stations, internet connectivity, cable management, and other essential work tools.",
           },
         ],
       },
 
       {
-        heading: "Trending Home Office Design Ideas",
+        heading: "Trending Home Office Interior Design Ideas",
         content: [
           {
-            title: "Work-From-Home Setups",
+            title: "Work-From-Home Office Setups",
             description:
-              "Dedicated workspaces with ergonomic furniture and efficient layouts are becoming increasingly popular for remote professionals.",
+              "Dedicated home workspaces with ergonomic furniture, efficient layouts, and professional interiors are increasingly popular among remote professionals.",
           },
           {
-            title: "Multi-Functional Home Offices",
+            title: "Multi-Functional Home Office Interiors",
             description:
-              "Spaces that combine work, study, and storage functions help maximize utility in modern homes.",
+              "Modern home offices combine work, study, storage, and meeting functions to maximize space utilization in contemporary homes.",
           },
           {
-            title: "Nature-Inspired Office Designs",
+            title: "Nature-Inspired Home Office Designs",
             description:
-              "Indoor plants, natural materials, and large windows create a refreshing environment that improves focus and well-being.",
+              "Indoor plants, natural materials, wooden finishes, and large windows create a refreshing workspace that improves focus and well-being.",
           },
           {
-            title: "Minimalist Workspaces",
+            title: "Minimalist Home Office Interiors",
             description:
-              "Clutter-free layouts and simple décor create a calm atmosphere that supports concentration and productivity.",
+              "Clean, clutter-free layouts and simple décor elements create a calm atmosphere that enhances concentration and productivity.",
           },
         ],
       },
 
       {
-        heading: "Benefits of Professional Home Office Interior Design",
+        heading: "Benefits of Hiring a Home Office Interior Designer in Noida",
         content: [
           {
             title: "Improved Productivity",
             description:
-              "A thoughtfully planned workspace minimizes distractions and helps maintain focus throughout the day.",
+              "A professionally designed workspace minimizes distractions and helps maintain focus throughout the workday.",
           },
           {
-            title: "Better Space Utilization",
+            title: "Optimized Space Utilization",
             description:
-              "Professional designers maximize available space while maintaining comfort and functionality.",
+              "Our home office interior designers maximize available space while ensuring comfort, functionality, and efficient workflow.",
           },
           {
-            title: "Customized Work Environment",
+            title: "Customized Workspace Solutions",
             description:
-              "Every workspace is tailored to match your profession, work habits, and personal preferences.",
+              "Every home office is tailored to suit your profession, work habits, storage requirements, and personal preferences.",
           },
           {
-            title: "Enhanced Comfort",
+            title: "Enhanced Comfort and Well-Being",
             description:
-              "Proper furniture selection and ergonomic planning reduce fatigue and support long-term health.",
+              "Proper ergonomic planning, furniture selection, and workspace organization reduce fatigue and support long-term health.",
           },
         ],
       },
 
       {
         heading: "Home Office Interior Design Cost in Noida",
-        text: "The cost of home office interior design in Noida depends on factors such as room size, furniture requirements, storage solutions, lighting design, technology integration, and customization preferences. Professional interior designers can create functional and stylish home offices suitable for different budgets and workspace needs.",
+        text: "The cost of hiring a home office interior designer in Noida depends on factors such as room size, furniture requirements, storage solutions, lighting design, technology integration, material selection, and customization preferences. Whether you need a compact work-from-home setup or a luxury executive workspace, our expert designers provide customized home office interior solutions to suit different budgets and professional needs.",
       },
     ],
   },
 
   kidsRoom: {
-    title: "Kids Room Interior Design in Noida",
+    title: "Kids Room Designer in Noida & Greater Noida",
     intro:
-      "A well-designed kids room should be fun, safe, comfortable, and functional. Modern kids room interior design in Noida focuses on creating inspiring spaces that support learning, creativity, relaxation, and play. From colorful themes and smart storage solutions to study areas and customized furniture, a thoughtfully designed kids room grows with your child while reflecting their unique personality and interests.",
+      "A well-designed kids room should be fun, safe, comfortable, and functional. As a trusted kids room interior designer in Noida, we create inspiring spaces that support learning, creativity, relaxation, and play. From colorful themes and smart storage solutions to study areas and customized furniture, our expert designers create personalized kids room interiors that grow with your child while reflecting their unique personality, interests, and lifestyle needs.",
 
     sections: [
       {
-        heading: "Popular Kids Room Design Styles in Noida",
+        heading: "Popular Kids Room Interior Design Services in Noida",
         content: [
           {
-            title: "Modern Kids Room Design",
+            title: "Modern Kids Room Interior Design",
             description:
-              "Modern kids room interiors feature clean layouts, vibrant colors, functional furniture, and creative décor elements that create an engaging environment.",
+              "Our kids room interior designers create modern spaces with vibrant colors, functional furniture, creative décor elements, and smart layouts that encourage learning and play.",
           },
           {
-            title: "Themed Kids Room Design",
+            title: "Themed Kids Room Interior Design",
             description:
-              "Customized themes such as space, nature, superheroes, princesses, or adventure-inspired concepts make the room exciting and personalized.",
+              "Customized themes such as space, nature, superheroes, princesses, sports, and adventure-inspired concepts make every room exciting, engaging, and unique.",
           },
           {
             title: "Study and Play Room Design",
             description:
-              "Combining dedicated study areas with playful zones helps children stay organized while encouraging creativity and learning.",
+              "We design multifunctional kids rooms that combine dedicated study zones with creative play areas, helping children stay organized while supporting growth and development.",
           },
           {
-            title: "Shared Kids Bedroom Design",
+            title: "Shared Kids Bedroom Interior Design",
             description:
-              "Shared rooms are designed with smart layouts, bunk beds, storage solutions, and personalized spaces for each child.",
+              "Shared kids rooms feature smart layouts, bunk beds, customized storage solutions, and personalized spaces that provide comfort and privacy for each child.",
           },
         ],
       },
 
       {
-        heading: "Essential Elements of Kids Room Interior Design",
+        heading: "Why Choose Our Kids Room Interior Designers in Noida",
         content: [
           {
             title: "Smart Storage Solutions",
             description:
-              "Customized wardrobes, toy organizers, bookshelves, and storage cabinets help keep the room tidy and clutter-free.",
+              "Customized wardrobes, toy organizers, bookshelves, and modular storage units help keep kids rooms organized, functional, and clutter-free.",
           },
           {
-            title: "Comfortable Furniture",
+            title: "Child-Friendly Furniture Design",
             description:
-              "Child-friendly furniture with ergonomic designs ensures comfort, safety, and functionality for everyday activities.",
+              "Our designers select ergonomic, comfortable, and age-appropriate furniture that supports daily activities while ensuring safety and convenience.",
           },
           {
-            title: "Study Area Design",
+            title: "Dedicated Study Area Planning",
             description:
-              "Dedicated study desks, proper lighting, and organized storage help create a productive learning environment.",
+              "Well-designed study desks, proper lighting, and organized storage solutions create productive learning environments for children.",
           },
           {
             title: "Safe and Durable Materials",
             description:
-              "Using non-toxic finishes, rounded furniture edges, and durable materials ensures a safe space for children.",
+              "We use non-toxic finishes, rounded furniture edges, durable materials, and child-safe design principles to create secure and long-lasting interiors.",
           },
         ],
       },
 
       {
-        heading: "Trending Kids Room Design Ideas",
+        heading: "Trending Kids Room Interior Design Ideas",
         content: [
           {
             title: "Creative Wall Designs",
             description:
-              "Wallpapers, murals, educational graphics, and accent walls add personality and make the room visually engaging.",
+              "Wallpapers, murals, educational graphics, themed artwork, and accent walls add personality and make kids rooms visually engaging.",
           },
           {
-            title: "Space-Saving Furniture",
+            title: "Space-Saving Furniture Solutions",
             description:
-              "Bunk beds, pull-out storage, and multifunctional furniture maximize available space while maintaining comfort.",
+              "Bunk beds, pull-out storage, loft beds, and multifunctional furniture maximize available space while maintaining comfort and functionality.",
           },
           {
             title: "Interactive Play Areas",
             description:
-              "Dedicated play zones encourage creativity, imagination, and physical activity within the room.",
+              "Dedicated play zones encourage creativity, imagination, learning, and physical activity within the room.",
           },
           {
-            title: "Nature-Inspired Interiors",
+            title: "Nature-Inspired Kids Room Interiors",
             description:
-              "Natural colors, wooden textures, and indoor plants create a calming and refreshing atmosphere.",
+              "Natural colors, wooden textures, eco-friendly materials, and nature-inspired décor create a calm and refreshing environment for children.",
           },
         ],
       },
 
       {
-        heading: "Benefits of Professional Kids Room Interior Design",
+        heading: "Benefits of Hiring a Kids Room Interior Designer in Noida",
         content: [
           {
-            title: "Age-Appropriate Design",
+            title: "Age-Appropriate Design Solutions",
             description:
-              "Professional designers create rooms that meet the evolving needs of children as they grow.",
+              "Professional kids room interior designers create spaces that adapt to the changing needs of children as they grow.",
           },
           {
             title: "Optimized Space Utilization",
             description:
-              "Efficient layouts ensure proper balance between sleeping, studying, storage, and play areas.",
+              "Efficient layouts ensure the perfect balance between sleeping, studying, storage, and play areas.",
           },
           {
-            title: "Enhanced Safety",
+            title: "Enhanced Safety Standards",
             description:
-              "Carefully selected materials and furniture designs minimize risks and improve child safety.",
+              "Carefully selected materials, furniture designs, and layouts minimize risks while improving overall safety.",
           },
           {
-            title: "Personalized Interiors",
+            title: "Personalized Kids Room Interiors",
             description:
-              "Customized themes, colors, and décor elements create a unique space that reflects your child’s personality.",
+              "Customized themes, color schemes, furniture, and décor elements create unique spaces that reflect your child's personality and interests.",
           },
         ],
       },
 
       {
         heading: "Kids Room Interior Design Cost in Noida",
-        text: "The cost of kids room interior design in Noida depends on factors such as room size, furniture customization, storage requirements, theme selection, materials, and décor elements. Professional interior designers can create customized kids rooms that combine safety, functionality, and creativity while matching different budgets and lifestyle preferences.",
+        text: "The cost of hiring a kids room interior designer in Noida depends on factors such as room size, furniture customization, storage requirements, theme selection, materials, lighting, and décor elements. Whether you are looking for a simple kids room makeover or a fully customized themed interior, our expert designers provide solutions that combine safety, functionality, and creativity while matching different budgets and preferences.",
       },
     ],
   },
 
   mandir: {
-    title: "Mandir Interior Design in Noida",
+    title: "Mandir Interior Designer in Noida",
     intro:
-      "A beautifully designed mandir creates a peaceful and spiritual atmosphere within your home. Modern mandir interior design in Noida combines traditional aesthetics with contemporary functionality, offering dedicated spaces for prayer, meditation, and daily rituals. Whether you prefer a compact pooja unit for an apartment or an elaborate home temple for a luxury residence, professional mandir design enhances both the spiritual and visual appeal of your living space.",
+      "A beautifully designed mandir creates a peaceful and spiritual atmosphere within your home. As a trusted mandir interior designer in Noida, we create customized pooja spaces that blend traditional aesthetics with modern functionality. Whether you need a compact pooja unit for an apartment or a grand home temple for a luxury residence, our expert designers craft elegant mandir interiors that enhance spirituality while complementing your home's overall interior design.",
 
     sections: [
       {
-        heading: "Popular Mandir Design Styles in Noida",
+        heading: "Popular Mandir Interior Design Services in Noida",
         content: [
           {
-            title: "Modern Mandir Design",
+            title: "Modern Mandir Interior Design",
             description:
-              "Modern mandirs feature clean lines, elegant materials, soft lighting, and minimalist décor while maintaining a sacred and peaceful environment.",
+              "Our mandir interior designers create modern pooja spaces with clean lines, elegant materials, soft lighting, and minimalist décor while maintaining a sacred and peaceful environment.",
           },
           {
-            title: "Wooden Mandir Design",
+            title: "Wooden Mandir Interior Design",
             description:
-              "Wooden mandirs offer timeless beauty with intricate carvings, premium finishes, and traditional craftsmanship that create a warm spiritual ambiance.",
+              "Wooden mandirs showcase timeless beauty through intricate carvings, premium finishes, and traditional craftsmanship that create a warm and spiritual ambiance.",
           },
           {
             title: "Wall-Mounted Mandir Design",
             description:
-              "Wall-mounted pooja units are ideal for compact homes and apartments, providing a dedicated prayer space without occupying additional floor area.",
+              "Wall-mounted pooja units are ideal for apartments and compact homes, offering a dedicated prayer area without occupying valuable floor space.",
           },
           {
-            title: "Luxury Home Temple Design",
+            title: "Luxury Home Temple Interior Design",
             description:
-              "Luxury mandirs incorporate premium materials, decorative panels, custom lighting, and detailed craftsmanship to create a grand spiritual space.",
-          },
-        ],
-      },
-
-      {
-        heading: "Essential Elements of Mandir Interior Design",
-        content: [
-          {
-            title: "Mandir Placement",
-            description:
-              "Proper placement of the mandir ensures a peaceful atmosphere while aligning with traditional design principles and space planning.",
-          },
-          {
-            title: "Storage Solutions",
-            description:
-              "Built-in drawers and cabinets provide organized storage for पूजा essentials, books, incense, and other religious items.",
-          },
-          {
-            title: "Lighting Design",
-            description:
-              "Soft ambient lighting, LED backlighting, and decorative fixtures enhance the spiritual experience while highlighting architectural details.",
-          },
-          {
-            title: "Decorative Back Panels",
-            description:
-              "Laser-cut panels, marble backdrops, wooden carvings, and decorative textures add elegance and visual appeal to the mandir area.",
+              "Luxury mandir interiors feature premium materials, decorative panels, customized lighting, and detailed craftsmanship to create a grand and elegant spiritual space.",
           },
         ],
       },
 
       {
-        heading: "Trending Mandir Design Ideas",
+        heading: "Why Choose Our Mandir Interior Designers in Noida",
         content: [
           {
-            title: "Marble Mandir Designs",
+            title: "Expert Mandir Placement Planning",
             description:
-              "Marble pooja rooms offer a luxurious and timeless appearance while creating a serene and elegant atmosphere.",
+              "Our designers carefully plan mandir placement to create a peaceful atmosphere while ensuring harmony with your home's layout and traditional design principles.",
           },
           {
-            title: "Minimalist Pooja Units",
+            title: "Smart Storage Solutions",
             description:
-              "Simple and clutter-free mandir designs are increasingly popular for modern apartments and contemporary homes.",
+              "Built-in drawers, cabinets, and storage units help organize pooja essentials, religious books, incense sticks, and other sacred items efficiently.",
           },
           {
-            title: "Backlit Mandir Panels",
+            title: "Spiritual Lighting Design",
             description:
-              "LED backlighting enhances the beauty of decorative panels and creates a soothing spiritual environment.",
+              "Soft ambient lighting, LED backlit panels, and decorative fixtures enhance the spiritual experience while highlighting the beauty of the mandir.",
           },
           {
-            title: "Custom Temple Designs",
+            title: "Decorative Back Panel Design",
             description:
-              "Personalized mandir interiors are designed to suit individual preferences, available space, and religious requirements.",
+              "Laser-cut panels, marble backdrops, wooden carvings, and customized textures add elegance, depth, and visual appeal to the pooja area.",
           },
         ],
       },
 
       {
-        heading: "Benefits of Professional Mandir Interior Design",
+        heading: "Trending Mandir Interior Design Ideas",
         content: [
           {
-            title: "Customized Spiritual Space",
+            title: "Marble Mandir Interiors",
             description:
-              "Professional designers create prayer areas that reflect your beliefs, traditions, and lifestyle requirements.",
+              "Marble mandir designs offer a luxurious and timeless appearance while creating a serene and elegant prayer environment.",
+          },
+          {
+            title: "Minimalist Pooja Unit Designs",
+            description:
+              "Simple and clutter-free mandir interiors are highly popular in modern apartments and contemporary homes.",
+          },
+          {
+            title: "Backlit Mandir Panel Designs",
+            description:
+              "LED backlit decorative panels enhance the beauty of the mandir and create a calming spiritual atmosphere.",
+          },
+          {
+            title: "Custom Home Temple Designs",
+            description:
+              "Customized mandir interiors are designed according to your religious preferences, available space, and architectural requirements.",
+          },
+        ],
+      },
+
+      {
+        heading: "Benefits of Hiring a Mandir Interior Designer in Noida",
+        content: [
+          {
+            title: "Customized Spiritual Spaces",
+            description:
+              "Professional mandir interior designers create prayer areas that reflect your beliefs, traditions, and personal preferences.",
           },
           {
             title: "Optimized Space Utilization",
             description:
-              "Smart planning ensures the mandir integrates seamlessly into your home's layout without compromising functionality.",
+              "Smart planning ensures your mandir integrates seamlessly into your home's layout without affecting functionality.",
           },
           {
-            title: "Premium Craftsmanship",
+            title: "Premium Craftsmanship and Materials",
             description:
-              "High-quality materials and expert detailing enhance durability, aesthetics, and long-term value.",
+              "High-quality materials, expert detailing, and skilled workmanship enhance durability, aesthetics, and long-term value.",
           },
           {
-            title: "Elegant and Peaceful Ambience",
+            title: "Peaceful and Elegant Ambience",
             description:
-              "Thoughtful design elements create a calming environment that supports prayer, meditation, and spiritual well-being.",
+              "Thoughtfully designed mandir interiors create a serene environment that supports prayer, meditation, and spiritual well-being.",
           },
         ],
       },
 
       {
         heading: "Mandir Interior Design Cost in Noida",
-        text: "The cost of mandir interior design in Noida depends on factors such as size, material selection, customization requirements, storage features, lighting design, and decorative elements. Professional interior designers can create compact pooja units as well as luxury home temples tailored to different budgets and spiritual preferences.",
+        text: "The cost of hiring a mandir interior designer in Noida depends on factors such as mandir size, material selection, customization requirements, storage features, lighting design, decorative elements, and craftsmanship. Whether you need a compact pooja unit or a luxury home temple, our expert designers provide customized mandir interior solutions to suit different budgets and spiritual preferences.",
       },
     ],
   },
 
   balconyTerrace: {
-    title: "Balcony & Terrace Interior Design in Noida",
+    title: "Balcony & Terrace Interior Designer in Noida",
     intro:
-      "A well-designed balcony or terrace extends your living space and creates the perfect outdoor retreat for relaxation, entertainment, and enjoying nature. Modern balcony and terrace interior design in Noida focuses on combining comfort, functionality, and aesthetics through smart seating arrangements, greenery, lighting, and weather-resistant materials. Whether you have a compact apartment balcony or a spacious terrace, professional design can transform it into a stylish and inviting outdoor space.",
+      "A beautifully designed balcony or terrace extends your living space and creates the perfect outdoor retreat for relaxation, entertainment, and enjoying nature. As a leading balcony and terrace interior designer in Noida, we create customized outdoor spaces that combine comfort, functionality, and aesthetics. From compact apartment balconies to spacious rooftop terraces, our expert designers transform outdoor areas with stylish seating, greenery, lighting, and weather-resistant materials that enhance both lifestyle and property value.",
 
     sections: [
       {
-        heading: "Popular Balcony & Terrace Design Styles in Noida",
+        heading: "Popular Balcony & Terrace Interior Design Services in Noida",
         content: [
           {
-            title: "Modern Balcony Design",
+            title: "Modern Balcony Interior Design",
             description:
-              "Modern balconies feature sleek furniture, minimalist décor, ambient lighting, and functional layouts that create a sophisticated outdoor living experience.",
+              "Our balcony interior designers create modern outdoor spaces with sleek furniture, minimalist décor, ambient lighting, and functional layouts that offer a sophisticated living experience.",
           },
           {
-            title: "Garden Balcony Design",
+            title: "Garden Balcony Interior Design",
             description:
-              "Garden-inspired balconies incorporate plants, vertical gardens, decorative planters, and natural elements to create a refreshing and peaceful atmosphere.",
+              "Garden-inspired balcony interiors feature vertical gardens, decorative planters, natural materials, and lush greenery to create a refreshing and peaceful atmosphere.",
           },
           {
-            title: "Luxury Terrace Design",
+            title: "Luxury Terrace Interior Design",
             description:
-              "Luxury terraces include premium outdoor furniture, pergolas, designer lighting, and customized landscaping to create elegant entertainment spaces.",
+              "Luxury terrace interiors include premium outdoor furniture, pergolas, designer lighting, customized landscaping, and elegant décor elements for a high-end outdoor experience.",
           },
           {
-            title: "Compact Balcony Design",
+            title: "Compact Balcony Interior Design",
             description:
-              "Small balcony interiors maximize available space through foldable furniture, wall-mounted planters, and smart storage solutions without compromising comfort.",
+              "Our designers maximize small balcony spaces with foldable furniture, wall-mounted planters, smart storage solutions, and space-saving layouts without compromising comfort.",
           },
         ],
       },
 
       {
-        heading: "Essential Elements of Balcony & Terrace Interior Design",
+        heading: "Why Choose Our Balcony & Terrace Interior Designers in Noida",
         content: [
           {
-            title: "Outdoor Seating Solutions",
+            title: "Customized Outdoor Seating Solutions",
             description:
-              "Comfortable seating arrangements such as lounge chairs, benches, and outdoor sofas enhance usability and relaxation.",
+              "We design comfortable outdoor seating areas with lounge chairs, benches, swings, and outdoor sofas that enhance relaxation and usability.",
           },
           {
-            title: "Greenery and Landscaping",
+            title: "Professional Landscaping and Greenery",
             description:
-              "Plants, vertical gardens, and decorative landscaping add natural beauty while improving the overall ambiance.",
+              "Our balcony and terrace interior designers incorporate plants, vertical gardens, decorative landscaping, and natural elements to create vibrant outdoor environments.",
           },
           {
-            title: "Lighting Design",
+            title: "Creative Outdoor Lighting Design",
             description:
-              "String lights, wall sconces, lanterns, and LED lighting create a warm and inviting outdoor environment for evening use.",
+              "String lights, wall sconces, lanterns, LED fixtures, and ambient lighting create a warm and inviting atmosphere for evening use.",
           },
           {
-            title: "Weather-Resistant Materials",
+            title: "Weather-Resistant Material Selection",
             description:
-              "Durable flooring, outdoor furniture, and weatherproof finishes ensure long-lasting performance in changing weather conditions.",
+              "We use durable flooring, weatherproof furniture, and high-quality outdoor finishes that ensure long-lasting beauty and performance.",
           },
         ],
       },
 
       {
-        heading: "Trending Balcony & Terrace Design Ideas",
+        heading: "Trending Balcony & Terrace Interior Design Ideas",
         content: [
           {
-            title: "Outdoor Lounge Areas",
+            title: "Outdoor Lounge Spaces",
             description:
-              "Dedicated lounge spaces with comfortable seating and decorative lighting are becoming increasingly popular in modern homes.",
+              "Dedicated lounge areas with comfortable seating, decorative lighting, and stylish décor are increasingly popular in modern homes.",
           },
           {
-            title: "Balcony Garden Concepts",
+            title: "Balcony Garden Designs",
             description:
-              "Vertical gardens, hanging planters, and compact green spaces help bring nature into urban homes.",
+              "Vertical gardens, hanging planters, herb gardens, and compact green spaces bring nature closer to urban living.",
           },
           {
-            title: "Rooftop Entertainment Spaces",
+            title: "Rooftop Entertainment Areas",
             description:
-              "Terraces are being transformed into stylish entertainment zones for family gatherings, dining, and social events.",
+              "Terrace spaces can be transformed into elegant entertainment zones for dining, family gatherings, and social events.",
           },
           {
             title: "Multi-Functional Outdoor Spaces",
             description:
-              "Modern balcony and terrace designs combine relaxation, dining, gardening, and work-from-home functionality within a single space.",
+              "Modern balcony and terrace interiors combine relaxation, gardening, dining, and work-from-home functionality within a single outdoor area.",
           },
         ],
       },
 
       {
-        heading: "Benefits of Professional Balcony & Terrace Interior Design",
+        heading:
+          "Benefits of Hiring a Balcony & Terrace Interior Designer in Noida",
         content: [
           {
             title: "Optimized Space Utilization",
             description:
-              "Professional designers maximize available outdoor space while maintaining comfort and functionality.",
+              "Professional balcony and terrace interior designers maximize every inch of available outdoor space while maintaining comfort and functionality.",
           },
           {
             title: "Enhanced Property Value",
             description:
-              "Well-designed balconies and terraces improve the visual appeal and value of residential properties.",
+              "Well-designed balconies and terraces improve curb appeal, usability, and the overall value of residential properties.",
           },
           {
-            title: "Customized Outdoor Experience",
+            title: "Personalized Outdoor Living Experience",
             description:
-              "Every design is tailored to your lifestyle, preferences, and intended use of the outdoor area.",
+              "Every design is customized according to your lifestyle, preferences, and intended use of the outdoor space.",
           },
           {
             title: "Improved Aesthetic Appeal",
             description:
-              "Carefully selected materials, furniture, lighting, and greenery create a visually appealing and relaxing environment.",
+              "Carefully selected furniture, materials, lighting, and greenery create visually appealing outdoor environments that enhance your home's overall design.",
           },
         ],
       },
 
       {
         heading: "Balcony & Terrace Interior Design Cost in Noida",
-        text: "The cost of balcony and terrace interior design in Noida depends on factors such as area size, furniture selection, landscaping requirements, lighting design, flooring materials, and customization preferences. Professional interior designers can create outdoor spaces ranging from simple balcony makeovers to luxurious terrace transformations suitable for various budgets.",
+        text: "The cost of hiring a balcony and terrace interior designer in Noida depends on factors such as area size, furniture selection, landscaping requirements, lighting design, flooring materials, pergola installations, and customization preferences. Whether you need a simple balcony makeover or a luxury terrace transformation, our expert designers provide customized outdoor interior solutions to suit different budgets and lifestyle requirements.",
       },
     ],
   },
 
   modularKitchen: {
-  title: "Modular Kitchen Interior Design in Noida, Greater Noida & Ghaziabad",
+    title: "Modular Kitchen Designer in Noida, Greater Noida & Ghaziabad",
 
-  intro:
-    "A modular kitchen is the perfect combination of functionality, aesthetics, and smart space utilization. Modern homeowners in Noida, Greater Noida, and Ghaziabad prefer modular kitchen designs because they offer organized storage, efficient workflow, and a premium look. Whether you need a compact kitchen for an apartment or a luxury modular kitchen for a villa, our expert designers create customized solutions that match your lifestyle, cooking habits, and budget.",
+    intro:
+      "A modular kitchen is the perfect combination of functionality, aesthetics, and smart space utilization. As a trusted modular kitchen designer in Noida, Greater Noida, and Ghaziabad, we create customized kitchen solutions that combine organized storage, efficient workflow, and premium finishes. Modern homeowners prefer modular kitchens because they maximize space, improve functionality, and enhance the overall appearance of the home. Whether you need a compact kitchen for an apartment or a luxury modular kitchen for a villa, our expert kitchen designers deliver personalized solutions that match your lifestyle, cooking habits, and budget.",
 
-  sections: [
-    {
-      heading: "Popular Modular Kitchen Designs in Noida",
-      content: [
-        {
-          title: "L-Shaped Modular Kitchen",
-          description:
-            "One of the most popular kitchen layouts in Noida apartments, offering efficient space utilization, better movement, and ample storage.",
-        },
-        {
-          title: "U-Shaped Modular Kitchen",
-          description:
-            "Perfect for large families and spacious homes in Greater Noida, providing maximum countertop space and storage.",
-        },
-        {
-          title: "Parallel Modular Kitchen",
-          description:
-            "Ideal for modern apartments in Ghaziabad, featuring two parallel workspaces for seamless cooking efficiency.",
-        },
-        {
-          title: "Island Modular Kitchen",
-          description:
-            "A premium kitchen design featuring a central island that enhances functionality, storage, and social interaction.",
-        },
-      ],
-    },
+    sections: [
+      {
+        heading: "Popular Modular Kitchen Design Services in Noida",
+        content: [
+          {
+            title: "L-Shaped Modular Kitchen Design",
+            description:
+              "One of the most popular modular kitchen layouts, offering efficient space utilization, smooth workflow, and ample storage for modern homes.",
+          },
+          {
+            title: "U-Shaped Modular Kitchen Design",
+            description:
+              "Ideal for spacious homes and large families, providing maximum countertop space, storage capacity, and cooking convenience.",
+          },
+          {
+            title: "Parallel Modular Kitchen Design",
+            description:
+              "A practical kitchen layout featuring parallel workstations that improve efficiency and optimize available space.",
+          },
+          {
+            title: "Island Modular Kitchen Design",
+            description:
+              "A premium modular kitchen solution featuring a central island that enhances functionality, storage, dining, and social interaction.",
+          },
+        ],
+      },
 
-    {
-      heading: "Essential Features of Modern Modular Kitchens",
-      content: [
-        {
-          title: "Smart Storage Solutions",
-          description:
-            "Pull-out units, corner carousels, pantry cabinets, and tall units maximize storage while keeping the kitchen clutter-free.",
-        },
-        {
-          title: "Premium Countertops",
-          description:
-            "Quartz, granite, and engineered stone countertops provide durability, elegance, and easy maintenance.",
-        },
-        {
-          title: "Soft-Close Cabinets",
-          description:
-            "Modern modular kitchens feature smooth soft-close drawers and shutters for convenience and longevity.",
-        },
-        {
-          title: "Built-In Appliances",
-          description:
-            "Integrated ovens, chimneys, hobs, and dishwashers create a sleek and modern kitchen appearance.",
-        },
-      ],
-    },
+      {
+        heading: "Why Choose Our Modular Kitchen Designers",
+        content: [
+          {
+            title: "Smart Storage Solutions",
+            description:
+              "Pull-out units, corner carousels, pantry cabinets, tandem drawers, and tall units maximize storage while keeping the kitchen organized and clutter-free.",
+          },
+          {
+            title: "Premium Countertop Selection",
+            description:
+              "Quartz, granite, marble, and engineered stone countertops provide durability, elegance, and long-lasting performance.",
+          },
+          {
+            title: "Soft-Close Cabinets and Drawers",
+            description:
+              "Modern modular kitchens feature smooth soft-close shutters and drawers that improve convenience, safety, and durability.",
+          },
+          {
+            title: "Built-In Kitchen Appliances",
+            description:
+              "Integrated chimneys, hobs, ovens, microwaves, and dishwashers create a seamless and contemporary kitchen experience.",
+          },
+        ],
+      },
 
-    {
-      heading: "Trending Modular Kitchen Design Ideas",
-      content: [
-        {
-          title: "Luxury Modular Kitchens",
-          description:
-            "Premium finishes, designer lighting, glass cabinets, and customized storage create a sophisticated cooking space.",
-        },
-        {
-          title: "Minimalist Kitchen Designs",
-          description:
-            "Clean lines, handleless cabinets, and neutral colors provide a modern and clutter-free appearance.",
-        },
-        {
-          title: "Open Kitchen Concepts",
-          description:
-            "Open kitchens seamlessly connect the cooking and living areas, making homes feel spacious and inviting.",
-        },
-        {
-          title: "Smart Kitchens",
-          description:
-            "Technology-enabled kitchens with sensor lighting, smart appliances, and advanced storage systems enhance convenience.",
-        },
-      ],
-    },
+      {
+        heading: "Trending Modular Kitchen Design Ideas",
+        content: [
+          {
+            title: "Luxury Modular Kitchen Designs",
+            description:
+              "Premium finishes, designer lighting, glass cabinets, and customized storage solutions create elegant and sophisticated cooking spaces.",
+          },
+          {
+            title: "Minimalist Modular Kitchen Designs",
+            description:
+              "Handleless cabinets, clean lines, and neutral color palettes deliver a sleek, modern, and clutter-free appearance.",
+          },
+          {
+            title: "Open Modular Kitchen Concepts",
+            description:
+              "Open kitchens connect cooking and living areas seamlessly, creating a spacious and welcoming environment.",
+          },
+          {
+            title: "Smart Modular Kitchens",
+            description:
+              "Technology-enabled kitchens with sensor lighting, smart appliances, and advanced storage systems enhance convenience and efficiency.",
+          },
+        ],
+      },
 
-    {
-      heading: "Benefits of Modular Kitchen Interior Design",
-      content: [
-        {
-          title: "Maximum Space Utilization",
-          description:
-            "Every corner is optimized through customized cabinets and storage solutions.",
-        },
-        {
-          title: "Easy Maintenance",
-          description:
-            "High-quality materials and finishes make cleaning and maintenance hassle-free.",
-        },
-        {
-          title: "Enhanced Functionality",
-          description:
-            "Efficient layouts improve workflow between cooking, cleaning, and storage areas.",
-        },
-        {
-          title: "Increased Property Value",
-          description:
-            "A professionally designed modular kitchen significantly enhances the value of your home.",
-        },
-      ],
-    },
+      {
+        heading: "Benefits of Hiring a Modular Kitchen Designer",
+        content: [
+          {
+            title: "Maximum Space Utilization",
+            description:
+              "Every corner of the kitchen is optimized through customized cabinetry and intelligent storage solutions.",
+          },
+          {
+            title: "Easy Maintenance",
+            description:
+              "Premium-quality materials and finishes make cleaning and maintenance simple and hassle-free.",
+          },
+          {
+            title: "Enhanced Functionality",
+            description:
+              "Professionally planned layouts improve workflow between cooking, preparation, cleaning, and storage zones.",
+          },
+          {
+            title: "Increased Property Value",
+            description:
+              "A well-designed modular kitchen enhances the visual appeal and overall value of your property.",
+          },
+        ],
+      },
 
-    {
-      heading: "Modular Kitchen Cost in Noida, Greater Noida & Ghaziabad",
-      text:
-        "The cost of modular kitchen design depends on kitchen size, layout, materials, finishes, hardware, appliances, and customization requirements. Whether you are looking for a budget-friendly modular kitchen or a luxury designer kitchen, our experts provide tailored solutions for homes across Noida, Greater Noida, and Ghaziabad.",
-    },
-  ],
-},
+      {
+        heading: "Modular Kitchen Cost in Noida, Greater Noida & Ghaziabad",
+        text: "The cost of hiring a modular kitchen designer depends on kitchen size, layout, materials, finishes, hardware, appliances, and customization requirements. Whether you are looking for an affordable modular kitchen or a luxury designer kitchen, our experts provide tailored kitchen solutions for homes across Noida, Greater Noida, and Ghaziabad.",
+      },
+    ],
+  },
 };

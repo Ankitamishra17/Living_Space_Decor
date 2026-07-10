@@ -13,7 +13,7 @@ export const designIdeas = [
     galleryTitle:
       "Composed Meaningful Interiors To Elevated And Refined Spaces",
     galleryDescription:
-      "Every great space begins with a vision. We transform your ideas into thoughtfully crafted interiors that reflect your personality and lifestyle.",
+      "Every great space begins with a vision. We create personalized interiors that reflect your style, personality, and lifestyle.",
     moodboard: [
       "/image/living_room2.jpeg",
       // "/image/living_room3.jpeg",
@@ -73,7 +73,7 @@ export const designIdeas = [
       "Thoughtfully Designed Kids Rooms That Inspire Learning And Creativity",
 
     galleryDescription:
-      "A well-designed kids room goes beyond aesthetics. Our designs focus on safety, functionality, organization, and imagination, creating a personalized environment where children feel comfortable, inspired, and happy every day.",
+      "Our kids room interior designers create safe, functional, and personalized spaces that encourage learning, creativity, and everyday comfort.",
 
     moodboard: [
       "/image/kids.jpeg",
@@ -146,7 +146,7 @@ export const designIdeas = [
       "Thoughtfully Crafted Pooja Rooms For Daily Worship And Serenity",
 
     galleryDescription:
-      "Our mandir designs combine functionality, aesthetics, and spiritual significance to create a calm and sacred atmosphere for prayer and meditation.",
+      "Our mandir  designers create peaceful and elegant pooja spaces that blend spirituality, functionality, and timeless design.",
 
     faq: [
       {
@@ -196,10 +196,10 @@ export const designIdeas = [
     title: "BEDROOM DESIGN",
     detailType: "bedroom",
     subtitle: "Comfort Meets Luxury",
-    heroImage: "/Design/bed_room_banner.avif",
+    heroImage: "/image/bedroom_design7.jpeg",
 
     leftImage: "/Design/bed_left.avif",
-    rightImage: "/Design/bed_right.avif",
+    rightImage: "/image/bedroom_design2.jpeg",
 
     description:
       "Discover modern bedroom interior design ideas that combine comfort, elegance, and functionality. Create a relaxing retreat with customized wardrobes, stylish furniture, and smart storage solutions.",
@@ -208,7 +208,7 @@ export const designIdeas = [
       "Personalized Bedroom Interiors Designed For Rest And Relaxation",
 
     galleryDescription:
-      "From contemporary master bedrooms to luxury suites, our designs focus on comfort, aesthetics, and efficient space planning.",
+      "Our bedroom interior designers create stylish and personalized bedroom interiors that blend comfort, elegance, and functionality.",
 
     faq: [
       {
@@ -247,8 +247,8 @@ export const designIdeas = [
       "/Design/bed2.webp",
       "/Design/bed3.webp",
       "/Design/bed4.avif",
-      "/Design/bed5.webp",
-      "/Design/bed6.avif",
+      "/image/bedroom_design6.jpeg",
+      "/image/bedroom_design12.jpeg",
     ],
 
     seo: {
@@ -287,11 +287,10 @@ export const designIdeas = [
       "Explore stylish bathroom interior design ideas featuring modern vanities, luxury fittings, smart storage, and elegant finishes for contemporary homes.",
 
     galleryTitle:
-      "Sophisticated Bathrooms Designed For Comfort And Functionality",
+      "Modern Bathroom Interior Designs for Comfort and Functionality",
 
     galleryDescription:
-      "We create spa-inspired bathrooms with premium materials, efficient layouts, and timeless aesthetics.",
-
+      "Explore our customized bathroom interior designs featuring premium materials, smart layouts, elegant finishes, and functional storage solutions for modern homes.",
     faq: [
       {
         question: "What are the latest bathroom design trends?",
@@ -434,12 +433,10 @@ export const designIdeas = [
     description:
       "Transform your balcony or terrace into a beautiful outdoor retreat with modern seating, greenery, lighting, and customized décor solutions.",
 
-    galleryTitle:
-      "Stylish Outdoor Living Spaces For Relaxation And Entertainment",
+    galleryTitle: "Modern Balcony & Terrace Designs for Outdoor Living",
 
     galleryDescription:
-      "Our balcony and terrace designs maximize comfort, functionality, and aesthetics while connecting your home with nature.",
-
+      "Explore customized balcony and terrace designs featuring comfortable seating, stylish décor, greenery, and smart layouts that create the perfect outdoor retreat.",
     faq: [
       {
         question: "How can I decorate a small balcony?",
@@ -501,8 +498,7 @@ export const designIdeas = [
 
     galleryTitle: "Thoughtfully Designed Dining Spaces For Memorable Moments",
 
-    galleryDescription:
-      "A beautifully designed dining room is more than just a place to eat. Our dining room interiors combine comfort, elegance, lighting, and functionality to create the perfect setting for family dinners, celebrations, and entertaining guests.",
+    galleryDescription:"Our dining room interior designers create elegant and functional spaces with stylish furniture, ambient lighting, and thoughtful layouts for memorable dining experiences.",
 
     moodboard: [
       "/image/dining_room1.jpeg",

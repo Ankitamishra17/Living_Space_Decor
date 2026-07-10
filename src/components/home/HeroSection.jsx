@@ -12,27 +12,25 @@ import "swiper/css/pagination";
 
 const categories = [
   {
-    title: "Modular Kitchen",
-    image: "/image/kitchen_design7.jpeg",
-    mobileImage: "/image/kitchen_design7.jpeg",
-    href: "/kitchen-design",
-    desc: "Crafted For Modern Homes.",
-  },
-  {
-    title: "Modular Wardrobes",
-    image: "/Home/banner2.avif",
-    mobileImage:
-      "https://images.pexels.com/photos/3315286/pexels-photo-3315286.jpeg",
-    href: "/services/wardrobes",
-    desc: "Style Meets Smart Storage.",
-  },
-
-  {
     title: "Living Room",
     image: "/image/living_room8.jpeg",
     mobileImage: "/image/living_room8.jpeg",
     href: "/services/design-ideas/living-room-design",
     desc: "Where Luxury Meet Life Style.",
+  },
+  {
+    title: "Modular Kitchen",
+    image: "/image/9.png",
+    mobileImage: "/image/9.png",
+    href: "/kitchen-design",
+    desc: "Crafted For Modern Homes.",
+  },
+  {
+    title: "Modular Wardrobes",
+    image: "/image/8.png",
+    mobileImage: "/image/8.png",
+    href: "/services/wardrobes",
+    desc: "Style Meets Smart Storage.",
   },
 ];
 
@@ -68,24 +66,28 @@ export default function HomePage() {
             <SwiperSlide key={index}>
               <div className="relative h-screen min-h-[700px]">
                 {/* Desktop & Tablet */}
-                <Image
-                  src={slide.image}
-                  alt={slide.title}
-                  fill
-                  priority={index === 0}
-                  sizes="100vw"
-                  className="hidden md:block object-cover"
-                />
+                <div className="hidden md:block absolute inset-0 overflow-hidden">
+                  <Image
+                    src={slide.image}
+                    alt={slide.title}
+                    fill
+                    priority={index === 0}
+                    sizes="100vw"
+                    className="object-cover zoom-image"
+                  />
+                </div>
 
                 {/* Mobile */}
-                <Image
-                  src={slide.mobileImage}
-                  alt={slide.title}
-                  fill
-                  priority={index === 0}
-                  sizes="100vw"
-                  className="block md:hidden object-cover"
-                />
+                <div className="block md:hidden absolute inset-0 overflow-hidden">
+                  <Image
+                    src={slide.mobileImage}
+                    alt={slide.title}
+                    fill
+                    priority={index === 0}
+                    sizes="100vw"
+                    className="object-cover zoom-image"
+                  />
+                </div>
 
                 <div className="absolute inset-0 bg-[#000000]/40" />
               </div>
@@ -108,7 +110,7 @@ export default function HomePage() {
                   sm:text-[18px]
                   md:text-[42px]
                   lg:text-[52px]
-                  text:nowrap
+                  whitespace-nowrap
                   
                 
                 "

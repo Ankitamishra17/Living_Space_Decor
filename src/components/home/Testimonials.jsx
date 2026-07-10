@@ -2,7 +2,13 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Phone, MessageCircle, Clock } from "lucide-react";
+import {
+  ChevronLeft,
+  ChevronRight,
+  Phone,
+  MessageCircle,
+  Clock,
+} from "lucide-react";
 
 const testimonials = [
   {
@@ -68,24 +74,10 @@ const AUTOPLAY_MS = 5000;
 export default function Testimonials() {
   const [active, setActive] = useState(0);
   const [direction, setDirection] = useState(1);
-  const [googleData, setGoogleData] = useState(null);
   const [isPaused, setIsPaused] = useState(false);
 
   const dragStartX = useRef(0);
   const dragging = useRef(false);
-
-  useEffect(() => {
-    const fetchGoogleData = async () => {
-      try {
-        const res = await fetch("/api/google-reviews");
-        const data = await res.json();
-        setGoogleData(data);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-    fetchGoogleData();
-  }, []);
 
   useEffect(() => {
     if (isPaused) return;
@@ -126,6 +118,13 @@ export default function Testimonials() {
     else if (delta < -50) goNext();
   };
 
+  const handleMouseLeave = () => {
+    if (dragging.current) {
+      handleDragEnd({ clientX: dragStartX.current });
+    }
+    setIsPaused(false);
+  };
+
   const current = testimonials[active];
 
   const variants = {
@@ -147,27 +146,6 @@ export default function Testimonials() {
           Loved by Homeowners{" "}
           <em className="text-[#C8972B] not-italic">Across NCR</em>
         </h2>
-
-        {googleData ? (
-          <div className="mt-8 inline-flex items-center gap-3 bg-white border border-[#C8972B]/20 rounded-full px-6 py-3 shadow-sm">
-            <span className="text-[#C8972B] text-2xl font-bold">
-              {googleData.rating}
-            </span>
-            <div className="text-left">
-              <div className="text-[#C8972B] text-sm leading-none">★★★★★</div>
-              <p className="text-[11px] text-[#6E6258] mt-1">
-                {googleData.userRatingCount} Google Reviews
-              </p>
-            </div>
-          </div>
-        ) : (
-          <div className="mt-8 inline-flex items-center gap-2 text-[#C8972B]">
-            <span className="text-base">★★★★★</span>
-            <span className="text-[11px] tracking-[0.15em] uppercase text-[#6E6258]">
-              5-Star Rated Service
-            </span>
-          </div>
-        )}
       </div>
 
       {/* SINGLE BIG CARD */}
@@ -176,9 +154,7 @@ export default function Testimonials() {
           className="relative select-none"
           onMouseDown={handleDragStart}
           onMouseUp={handleDragEnd}
-          onMouseLeave={() =>
-            dragging.current && handleDragEnd({ clientX: dragStartX.current })
-          }
+          onMouseLeave={handleMouseLeave}
           onTouchStart={handleDragStart}
           onTouchEnd={handleDragEnd}
           onMouseEnter={() => setIsPaused(true)}

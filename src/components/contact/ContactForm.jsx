@@ -7,6 +7,9 @@ export default function ContactSection() {
   const [hoveredCard, setHoveredCard] = useState(null);
   const [focusedField, setFocusedField] = useState(null);
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+
   // Form values + validation state
   const [formData, setFormData] = useState({
     name: "",
@@ -32,8 +35,9 @@ export default function ContactSection() {
     formData.project.trim() &&
     formData.message.trim();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     setSubmitAttempted(true);
 
     const newErrors = {
@@ -43,13 +47,54 @@ export default function ContactSection() {
       project: !formData.project.trim(),
       message: !formData.message.trim(),
     };
+
     setErrors(newErrors);
 
     if (Object.values(newErrors).some(Boolean)) {
       return;
     }
 
-    // All fields filled — proceed with actual submission logic here
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch(
+        "https://livingspacedecor.in/send-contact.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: formData.name,
+            phone: formData.phone,
+            city: formData.city,
+            project: formData.project,
+            message: formData.message,
+          }),
+        },
+      );
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitSuccess(true);
+
+        setFormData({
+          name: "",
+          phone: "",
+          city: "",
+          project: "",
+          message: "",
+        });
+      } else {
+        alert(data.message || "Failed to submit enquiry");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Network error. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -82,6 +127,12 @@ export default function ContactSection() {
               </h2>
 
               {/* Form */}
+
+              {submitSuccess && (
+                <div className="mb-6 rounded-md border border-green-300 bg-green-50 p-4 text-green-700">
+                  Thank you! Your enquiry has been submitted successfully.
+                </div>
+              )}
               <form className="space-y-5" onSubmit={handleSubmit} noValidate>
                 {/* Name Input */}
                 <div className="relative group/input">
@@ -229,12 +280,12 @@ export default function ContactSection() {
                 {/* Premium Button */}
                 <button
                   type="submit"
-                  disabled={!isFormComplete}
+                  disabled={!isFormComplete || isSubmitting}
                   className="w-full relative group/btn mt-8 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-[#C8972B] to-[#A8752A] rounded-sm opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 blur-lg" />
                   <div className="relative bg-gradient-to-r from-[#C8972B] to-[#B38530] hover:from-[#3D1F0D] hover:to-[#2A1506] text-white px-2 py-4 uppercase tracking-[0.1em] text-xs sm:text-sm font-semibold transition-all duration-500 rounded-sm flex items-center justify-center gap-3 group/btn-inner">
-                    Book Consultation
+                    {isSubmitting ? "Submitting..." : "Book Consultation"}
                     <ArrowRight
                       size={16}
                       className="group-hover/btn-inner:translate-x-2 transition-transform duration-300"

@@ -1,143 +1,103 @@
-// components/calculator/ResultStep.jsx
-
 "use client";
 
-import {
-  CheckCircle,
-  Phone,
-  Mail,
-  MessageCircle,
-} from "lucide-react";
+import { CheckCircle2, Phone, Mail } from "lucide-react";
 
 export default function ResultStep({ formData }) {
-  
-  
-
-  // Finish Multiplier
-  const finishMultiplier = {
-    Laminate: 1,
-    Acrylic: 1.2,
-    "PU Finish": 1.4,
-    Veneer: 1.6,
-  };
-
-  
-
   return (
-    <section className="max-w-6xl mx-auto py-10">
-    
-     
-
-      {/* Heading */}
-      <div className="text-center mb-12">
-        <span className="inline-block bg-[#C8972B]/10 text-[#C8972B] px-4 py-2 rounded-full text-sm font-medium">
-          Cost Estimate Ready
-        </span>
-
-        <h1 className="text-4xl md:text-6xl font-bold text-[#3D1F0D] mt-4 mb-4">
-          Your Estimated Wardrobe Cost
-        </h1>
-
-        <p className="text-[#6B6B6B] max-w-xl mx-auto">
-          Based on your selections, here's an approximate
-          budget range for your wardrobe project.
-        </p>
-      </div>
-      {/* Summary */}
-      <div className="grid lg:grid-cols-2 gap-8">
-        {/* Left */}
-        <div className="bg-white rounded-[30px] border border-[#F0E6D8] p-8">
-          <h3 className="text-2xl font-bold text-[#3D1F0D] mb-6">
-            Project Summary
-          </h3>
-
-          <div className="space-y-5">
-            <div className="flex justify-between">
-              <span className="text-[#6B6B6B]">
-                Wardrobe Type
-              </span>
-
-              <span className="font-semibold text-[#3D1F0D] capitalize">
-                {formData.type}
-              </span>
-            </div>
-
-            <div className="flex justify-between">
-              <span className="text-[#6B6B6B]">
-                Dimension
-              </span>
-
-              <span className="font-semibold text-[#3D1F0D]">
-                {formData.dimension}
-              </span>
-            </div>
-
-            <div className="flex justify-between">
-              <span className="text-[#6B6B6B]">
-                Finish
-              </span>
-
-              <span className="font-semibold text-[#3D1F0D]">
-                {formData.finish}
-              </span>
-            </div>
-
-            
+    <section className="max-w-4xl mx-auto">
+      <div className="bg-white rounded-[32px] border border-[#F0E6D8] shadow-lg p-8 md:p-14 text-center">
+        
+        {/* Success Icon */}
+        <div className="flex justify-center mb-6">
+          <div className="w-24 h-24 rounded-full bg-green-100 flex items-center justify-center">
+            <CheckCircle2
+              size={50}
+              className="text-green-600"
+            />
           </div>
         </div>
 
-        {/* Right */}
-        <div className="bg-white rounded-[30px] border border-[#F0E6D8] p-8">
-          <h3 className="text-2xl font-bold text-[#3D1F0D] mb-6">
-            Contact Details
+        {/* Heading */}
+        <h1 className="text-4xl md:text-5xl font-bold text-[#3D1F0D] mb-4">
+          Thank You!
+        </h1>
+
+        <p className="text-lg text-[#6B6B6B] max-w-2xl mx-auto mb-8">
+          Your wardrobe enquiry has been submitted successfully.
+          Our design team will contact you shortly with a personalized
+          estimate and free consultation.
+        </p>
+
+        {/* Customer Details */}
+        <div className="bg-[#F5EBE0] rounded-3xl p-6 text-left max-w-2xl mx-auto mb-8">
+          <h3 className="text-xl font-semibold text-[#3D1F0D] mb-4">
+            Submitted Details
           </h3>
 
-          <div className="space-y-5">
-            <div className="flex items-center gap-3">
-              <Phone
-                size={18}
-                className="text-[#C8972B]"
-              />
+          <div className="space-y-3 text-[#6B6B6B]">
+            <p>
+              <span className="font-semibold text-[#3D1F0D]">
+                Wardrobe Type:
+              </span>{" "}
+              {formData.type}
+            </p>
 
-              <span>{formData.phone}</span>
-            </div>
+            <p>
+              <span className="font-semibold text-[#3D1F0D]">
+                Size:
+              </span>{" "}
+              {formData.dimension}
+            </p>
 
-            <div className="flex items-center gap-3">
-              <Mail
-                size={18}
-                className="text-[#C8972B]"
-              />
+            <p>
+              <span className="font-semibold text-[#3D1F0D]">
+                Finish:
+              </span>{" "}
+              {formData.finish}
+            </p>
 
-              <span>{formData.email}</span>
-            </div>
-          </div>
+            <p>
+              <span className="font-semibold text-[#3D1F0D]">
+                Name:
+              </span>{" "}
+              {formData.name}
+            </p>
 
-          <div className="mt-8 p-5 bg-[#F5EBE0] rounded-2xl">
-            <p className="text-[#6B6B6B]">
-              Our design expert will contact you within
-              24 hours to discuss your project.
+            <p>
+              <span className="font-semibold text-[#3D1F0D]">
+                Phone:
+              </span>{" "}
+              {formData.phone}
+            </p>
+
+            <p>
+              <span className="font-semibold text-[#3D1F0D]">
+                Email:
+              </span>{" "}
+              {formData.email}
             </p>
           </div>
         </div>
-      </div>
 
-      {/* CTA Buttons */}
-      <div className="flex flex-col md:flex-row gap-4 justify-center mt-12">
-        <a
-          href="tel:+918826606869"
-          className="bg-[#3D1F0D] hover:bg-[#C8972B] text-white px-8 py-4 rounded-md text-center transition-all"
-        >
-          Call Now
-        </a>
+        {/* Contact Info */}
+        <div className="flex flex-col md:flex-row justify-center gap-6 mb-8">
+          <div className="flex items-center justify-center gap-2 text-[#3D1F0D]">
+            <Phone size={18} />
+            <span>+91 XXXXX XXXXX</span>
+          </div>
 
+          <div className="flex items-center justify-center gap-2 text-[#3D1F0D]">
+            <Mail size={18} />
+            <span>info@livingspacedekor.com</span>
+          </div>
+        </div>
+
+        {/* CTA */}
         <a
-          href={`https://wa.me/918826606869?text=Hi, I received my wardrobe estimate and would like a consultation.`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-[#25D366] text-white px-8 py-4 rounded-md flex items-center justify-center gap-2"
+          href="/"
+          className="inline-flex items-center justify-center px-8 py-4 rounded-xl bg-[#3D1F0D] text-white font-semibold hover:bg-[#C8972B] transition-all duration-300"
         >
-          <MessageCircle size={18} />
-          Chat on WhatsApp
+          Back to Home
         </a>
       </div>
     </section>

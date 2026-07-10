@@ -1,7 +1,6 @@
-// components/calculator/ContactStep.jsx
-
 "use client";
 
+import { useState } from "react";
 import { ArrowLeft, ArrowRight, User, Phone, Mail } from "lucide-react";
 
 export default function ContactStep({
@@ -10,6 +9,8 @@ export default function ContactStep({
   nextStep,
   prevStep,
 }) {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -18,9 +19,60 @@ export default function ContactStep({
   };
 
   const isValid =
-    formData.name &&
-    formData.phone &&
-    formData.email;
+    formData.name?.trim() &&
+    formData.phone?.trim() &&
+    formData.email?.trim();
+
+  const handleSubmit = async () => {
+    if (!isValid) return;
+
+    // Phone Validation
+    if (!/^[6-9]\d{9}$/.test(formData.phone)) {
+      alert("Please enter a valid 10 digit mobile number");
+      return;
+    }
+
+    // Email Validation
+    if (!/\S+@\S+\.\S+/.test(formData.email)) {
+      alert("Please enter a valid email address");
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      const res = await fetch(
+        "https://livingspacedecor.in/send-wardrobe-quote.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            type: formData.type,
+            dimension: formData.dimension,
+            finish: formData.finish,
+            name: formData.name,
+            phone: formData.phone,
+            email: formData.email,
+          }),
+        }
+      );
+
+      const data = await res.json();
+
+      if (data.success) {
+        nextStep();
+      } else {
+        alert(data.message || "Something went wrong. Please try again.");
+      }
+    } catch (error) {
+      console.error("Wardrobe Quote Error:", error);
+      alert("Network error. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section className="max-w-4xl mx-auto">
@@ -40,7 +92,7 @@ export default function ContactStep({
         </p>
       </div>
 
-      {/* Form Card */}
+      {/* Form */}
       <div className="bg-white rounded-[32px] border border-[#F0E6D8] shadow-lg p-8 md:p-12">
         <div className="grid gap-6">
           {/* Name */}
@@ -58,7 +110,7 @@ export default function ContactStep({
               <input
                 type="text"
                 name="name"
-                value={formData.name}
+                value={formData.name || ""}
                 onChange={handleChange}
                 placeholder="Enter your full name"
                 className="w-full h-14 pl-12 pr-4 rounded-2xl border border-[#F0E6D8] focus:outline-none focus:border-[#C8972B]"
@@ -81,7 +133,8 @@ export default function ContactStep({
               <input
                 type="tel"
                 name="phone"
-                value={formData.phone}
+                maxLength={10}
+                value={formData.phone || ""}
                 onChange={handleChange}
                 placeholder="Enter your phone number"
                 className="w-full h-14 pl-12 pr-4 rounded-2xl border border-[#F0E6D8] focus:outline-none focus:border-[#C8972B]"
@@ -104,7 +157,7 @@ export default function ContactStep({
               <input
                 type="email"
                 name="email"
-                value={formData.email}
+                value={formData.email || ""}
                 onChange={handleChange}
                 placeholder="Enter your email address"
                 className="w-full h-14 pl-12 pr-4 rounded-2xl border border-[#F0E6D8] focus:outline-none focus:border-[#C8972B]"
@@ -112,7 +165,7 @@ export default function ContactStep({
             </div>
           </div>
 
-          {/* Summary */}
+          {/* Selection Summary */}
           <div className="bg-[#F5EBE0] rounded-3xl p-6 mt-4">
             <h3 className="text-xl font-semibold text-[#3D1F0D] mb-4">
               Your Selection
@@ -139,8 +192,6 @@ export default function ContactStep({
                 </span>{" "}
                 {formData.finish}
               </p>
-
-              
             </div>
           </div>
         </div>
@@ -150,25 +201,25 @@ export default function ContactStep({
       <div className="flex justify-between mt-10">
         <button
           onClick={prevStep}
-          className="flex items-center gap-2 border border-[#3D1F0D] text-[#3D1F0D] px-6 py-3 rounded-md hover:bg-[#3D1F0D] hover:text-white transition-all"
+          disabled={isSubmitting}
+          className="flex items-center gap-2 border border-[#3D1F0D] text-[#3D1F0D] px-6 py-3 rounded-md hover:bg-[#3D1F0D] hover:text-white transition-all disabled:opacity-50 disabled:cursor-not-allowed"
         >
           <ArrowLeft size={18} />
           Back
         </button>
 
         <button
-          disabled={!isValid}
-          onClick={nextStep}
-          className={`flex items-center gap-2 px-8 py-3 rounded-md transition-all duration-300
-          
-          ${
-            isValid
+          disabled={!isValid || isSubmitting}
+          onClick={handleSubmit}
+          className={`flex items-center gap-2 px-8 py-3 rounded-md transition-all duration-300 ${
+            isValid && !isSubmitting
               ? "bg-[#3D1F0D] text-white hover:bg-[#C8972B]"
               : "bg-gray-300 text-gray-500 cursor-not-allowed"
           }`}
         >
-          Get Estimate
-          <ArrowRight size={18} />
+          {isSubmitting ? "Submitting..." : "Get Estimate"}
+
+          {!isSubmitting && <ArrowRight size={18} />}
         </button>
       </div>
     </section>

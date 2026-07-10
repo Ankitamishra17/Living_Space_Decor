@@ -29,18 +29,15 @@ export const wardrobeData = [
       },
       {
         title: "Mirror Sliding",
-        image:
-          "/image/wardrobe_design10.jpeg",
+        image: "/image/wardrobe_design10.jpeg",
       },
       {
         title: "Fluted Panels",
-        image:
-          "/image/wardrobe_design6.png",
+        image: "/image/wardrobe_design6.png",
       },
       {
         title: "High Gloss",
-        image:
-          "/image/wardrobe_design.jpeg",
+        image: "/image/wardrobe_design.jpeg",
       },
       {
         title: "Matte Finish",
@@ -129,8 +126,7 @@ export const wardrobeData = [
           "https://images.pexels.com/photos/34964418/pexels-photo-34964418.jpeg",
       },
       {
-        image:
-          "/image/wardrobe_design8.png",
+        image: "/image/wardrobe_design8.png",
       },
       {
         image:
@@ -211,87 +207,114 @@ export const wardrobeTypes = [
 ];
 
 export const wardrobeDetails = {
-  title: "Wardrobe Interior Design in Noida",
+  title: "Wardrobe Designer in Noida",
+
   intro:
-    "A well-designed wardrobe enhances both the functionality and aesthetics of your bedroom. Modern wardrobe interior design in Noida focuses on maximizing storage, improving organization, and complementing the overall interior style of your home. Whether you need a space-saving wardrobe for a compact bedroom or a luxury storage solution for a master suite, customized wardrobes provide the perfect balance of practicality and elegance.",
+    "A well-designed wardrobe enhances both the functionality and aesthetics of your bedroom. As a trusted wardrobe designer in Noida, we create customized wardrobe solutions that maximize storage, improve organization, and complement your home's interior style. Whether you need a space-saving wardrobe for a compact bedroom or a luxury walk-in wardrobe for a master suite, our expert wardrobe designers deliver practical, stylish, and personalized storage solutions tailored to your lifestyle and space requirements.",
 
   sections: [
     {
-      heading: "Popular Wardrobe Design Types in Noida",
+      heading: "Popular Wardrobe Design Services in Noida",
       content: [
         {
           title: "Sliding Door Wardrobe Design",
           description:
-            "Sliding wardrobes are ideal for modern homes and compact bedrooms. Their space-saving doors glide smoothly without requiring additional clearance, making them perfect for apartments and contemporary interiors. They also offer a sleek and minimalist appearance.",
+            "Sliding wardrobes are among the most popular choices for modern homes and compact bedrooms. Their space-saving design allows doors to glide smoothly without requiring additional clearance, making them ideal for apartments and contemporary interiors. Our wardrobe designers create customized sliding wardrobes that combine functionality with a sleek and elegant appearance.",
         },
         {
           title: "Walk-In Wardrobe Design",
           description:
-            "Walk-in wardrobes provide a luxurious and organized dressing experience. Designed with dedicated sections for clothing, accessories, footwear, and storage, they create a premium lifestyle solution while maximizing convenience and accessibility.",
+            "Walk-in wardrobes offer a luxurious and highly organized dressing experience. Designed with dedicated sections for clothing, footwear, accessories, and storage, these premium wardrobe solutions maximize convenience while enhancing the overall lifestyle experience.",
         },
         {
           title: "Hinged Wardrobe Design",
           description:
-            "Hinged wardrobes are a timeless choice that offers full access to storage compartments. Available in a variety of styles, finishes, and materials, hinged wardrobes are highly versatile and suitable for both modern and traditional bedroom interiors.",
+            "Hinged wardrobes provide complete access to storage compartments and remain a timeless choice for homeowners. Available in various finishes, materials, and styles, they are suitable for both modern and traditional bedroom interiors.",
         },
       ],
     },
 
     {
-      heading: "Essential Features of Modern Wardrobe Design",
+      heading: "Why Choose Our Wardrobe Designers in Noida",
       content: [
         {
           title: "Smart Storage Solutions",
           description:
-            "Customized shelves, drawers, hanging sections, and accessory organizers help maximize storage efficiency while keeping belongings neatly arranged.",
+            "Customized shelves, drawers, hanging sections, pull-out accessories, and organizers help maximize storage capacity while keeping belongings neatly arranged.",
         },
         {
-          title: "Premium Finishes and Materials",
+          title: "Premium Materials and Finishes",
           description:
-            "High-quality laminates, glass panels, mirrors, and wooden finishes enhance durability and create an elegant appearance.",
+            "We use high-quality laminates, glass panels, mirrors, acrylic finishes, and engineered wood materials to create durable and visually appealing wardrobes.",
         },
         {
-          title: "Integrated Lighting",
+          title: "Integrated LED Lighting",
           description:
-            "LED wardrobe lighting improves visibility and adds a luxurious touch to modern wardrobe interiors.",
+            "Modern wardrobe designs feature built-in LED lighting that improves visibility and adds a premium, luxurious touch to the storage space.",
         },
         {
-          title: "Customized Layouts",
+          title: "Customized Wardrobe Layouts",
           description:
-            "Tailored wardrobe configurations ensure optimal storage based on individual lifestyle needs and bedroom space.",
+            "Our wardrobe designers create personalized internal layouts based on your storage needs, room dimensions, and lifestyle preferences.",
         },
       ],
     },
 
     {
-      heading: "Benefits of Professional Wardrobe Interior Design",
+      heading: "Trending Wardrobe Design Ideas",
+      content: [
+        {
+          title: "Mirror Wardrobe Designs",
+          description:
+            "Mirror-finish wardrobes enhance functionality while creating an illusion of larger and brighter bedroom spaces.",
+        },
+        {
+          title: "Floor-to-Ceiling Wardrobes",
+          description:
+            "Full-height wardrobes maximize storage capacity and create a seamless, sophisticated look in modern bedrooms.",
+        },
+        {
+          title: "Glass Wardrobe Designs",
+          description:
+            "Tinted and frosted glass wardrobes add elegance and contemporary style while maintaining a premium appearance.",
+        },
+        {
+          title: "Modular Wardrobe Systems",
+          description:
+            "Modular wardrobes offer flexibility, efficient organization, and customizable storage configurations for modern lifestyles.",
+        },
+      ],
+    },
+
+    {
+      heading: "Benefits of Hiring a Wardrobe Designer in Noida",
       content: [
         {
           title: "Maximum Space Utilization",
           description:
-            "Professionally designed wardrobes utilize every inch of available space while maintaining easy access and organization.",
+            "Professionally designed wardrobes utilize every inch of available space while maintaining easy accessibility and organization.",
         },
         {
-          title: "Improved Bedroom Aesthetics",
+          title: "Enhanced Bedroom Aesthetics",
           description:
-            "A customized wardrobe seamlessly integrates with the bedroom design and enhances the overall visual appeal.",
+            "A customized wardrobe integrates seamlessly with your bedroom interior and improves the overall visual appeal.",
         },
         {
           title: "Better Organization",
           description:
-            "Dedicated storage sections help keep clothing, accessories, and essentials organized and clutter-free.",
+            "Dedicated storage zones help keep clothes, accessories, footwear, and essentials neatly organized and clutter-free.",
         },
         {
           title: "Long-Term Durability",
           description:
-            "Quality materials and expert craftsmanship ensure long-lasting performance and value.",
+            "Quality materials, premium hardware, and expert craftsmanship ensure long-lasting performance and value.",
         },
       ],
     },
 
     {
-      heading: "Wardrobe Interior Design Cost in Noida",
-      text: "The cost of wardrobe interior design in Noida depends on factors such as wardrobe type, size, materials, finishes, internal storage requirements, and customization preferences. Whether you choose a sliding wardrobe, walk-in closet, or hinged wardrobe, professional designers can create solutions that suit different budgets and lifestyle needs.",
+      heading: "Wardrobe Design Cost in Noida",
+      text: "The cost of hiring a wardrobe designer in Noida depends on factors such as wardrobe type, dimensions, materials, finishes, hardware quality, storage requirements, and customization preferences. Whether you need a sliding wardrobe, walk-in wardrobe, hinged wardrobe, or a fully customized modular wardrobe, our expert designers provide solutions tailored to different budgets and lifestyle needs.",
     },
   ],
 };
@@ -310,28 +333,21 @@ export const wardrobeType = [
   {
     id: "sliding",
     title: "Sliding Wardrobe",
-    description:
-      "Space-saving modern wardrobe with elegant sliding shutters.",
+    description: "Space-saving modern wardrobe with elegant sliding shutters.",
     image: "/image/wardrobe_design17.png",
   },
 
   {
     id: "walkin",
     title: "Walk-In Wardrobe",
-    description:
-      "Luxury dressing area with premium storage and organization.",
+    description: "Luxury dressing area with premium storage and organization.",
     image: "/image/wardrobe_design5.jpeg",
   },
 ];
 
 // Wardrobe Sizes
 
-export const dimensions = [
-  "6 x 7 ft",
-  "7 x 7 ft",
-  "8 x 7 ft",
-  "12 x 8 ft",
-];
+export const dimensions = ["6 x 7 ft", "7 x 7 ft", "8 x 7 ft", "12 x 8 ft"];
 
 // Finish Options
 
@@ -339,17 +355,17 @@ export const finishes = [
   {
     title: "Laminate",
     category: "Economical",
-    description:
-      "Affordable and durable finish available in various textures.",
-    image: "https://i.pinimg.com/736x/70/4e/bc/704ebcb4c2b423df9de2c1d06b3af7d7.jpg",
+    description: "Affordable and durable finish available in various textures.",
+    image:
+      "https://i.pinimg.com/736x/70/4e/bc/704ebcb4c2b423df9de2c1d06b3af7d7.jpg",
   },
 
   {
     title: "Acrylic",
     category: "Premium",
-    description:
-      "High-gloss luxurious finish with modern aesthetics.",
-    image: "https://i.pinimg.com/736x/97/5a/f9/975af9b4671232b6d9704561022f7fbe.jpg",
+    description: "High-gloss luxurious finish with modern aesthetics.",
+    image:
+      "https://i.pinimg.com/736x/97/5a/f9/975af9b4671232b6d9704561022f7fbe.jpg",
   },
 
   {
@@ -357,18 +373,15 @@ export const finishes = [
     category: "Luxury",
     description:
       "Smooth painted finish offering a premium designer appearance.",
-    image: "https://i.pinimg.com/1200x/3e/49/12/3e491220f352a0fa2910cd8d6dbac73c.jpg",
+    image:
+      "https://i.pinimg.com/1200x/3e/49/12/3e491220f352a0fa2910cd8d6dbac73c.jpg",
   },
 
   {
     title: "Veneer",
     category: "Ultra Luxury",
-    description:
-      "Natural wood finish delivering timeless elegance.",
-    image: "https://i.pinimg.com/1200x/f7/26/5f/f7265f7359d681063a92bb4413848b36.jpg",
+    description: "Natural wood finish delivering timeless elegance.",
+    image:
+      "https://i.pinimg.com/1200x/f7/26/5f/f7265f7359d681063a92bb4413848b36.jpg",
   },
 ];
-
-
-
-

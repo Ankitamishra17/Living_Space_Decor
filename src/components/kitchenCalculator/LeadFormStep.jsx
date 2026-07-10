@@ -1,211 +1,17 @@
-// "use client";
-
-// export default function LeadFormStep({
-//   formData,
-//   setFormData,
-//   onBack,
-// }) {
-//   const handleChange = (e) => {
-//     setFormData((prev) => ({
-//       ...prev,
-//       [e.target.name]: e.target.value,
-//     }));
-//   };
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-
-//     console.log("Kitchen Lead:", formData);
-
-//     // API Call Here
-//     // await createLead(formData)
-
-//     alert("Thank you! Our team will contact you soon.");
-//   };
-
-//   return (
-//     <div>
-//       <div className="text-center mb-10">
-//         <p className="text-[#C8972B] font-medium mb-2">
-//           Step 4 of 4
-//         </p>
-
-//         <h2 className="text-3xl md:text-5xl font-bold text-[#3D1F0D]">
-//           Get Your Kitchen Estimate
-//         </h2>
-
-//         <p className="text-gray-600 mt-4">
-//           Fill in your details and our experts will contact you with
-//           the estimated kitchen cost.
-//         </p>
-//       </div>
-
-//       <form
-//         onSubmit={handleSubmit}
-//         className="max-w-4xl mx-auto"
-//       >
-//         <div className="grid md:grid-cols-2 gap-6">
-//           {/* Name */}
-//           <div>
-//             <label className="block mb-2 text-[#3D1F0D] font-medium">
-//               Full Name
-//             </label>
-
-//             <input
-//               type="text"
-//               name="name"
-//               value={formData.name}
-//               onChange={handleChange}
-//               placeholder="Enter Your Name"
-//               required
-//               className="w-full h-14 px-4 rounded-xl border border-gray-300 focus:outline-none focus:border-[#C8972B]"
-//             />
-//           </div>
-
-//           {/* Pincode */}
-//           <div>
-//             <label className="block mb-2 text-[#3D1F0D] font-medium">
-//               Pincode
-//             </label>
-
-//             <input
-//               type="text"
-//               name="pincode"
-//               value={formData.pincode}
-//               onChange={handleChange}
-//               placeholder="Enter Pincode"
-//               required
-//               className="w-full h-14 px-4 rounded-xl border border-gray-300 focus:outline-none focus:border-[#C8972B]"
-//             />
-//           </div>
-
-//           {/* Phone */}
-//           <div>
-//             <label className="block mb-2 text-[#3D1F0D] font-medium">
-//               Phone Number
-//             </label>
-
-//             <div className="flex">
-//               <div className="h-14 px-4 flex items-center border border-r-0 border-gray-300 rounded-l-xl bg-[#F5EBE0]">
-//                 +91
-//               </div>
-
-//               <input
-//                 type="tel"
-//                 name="phone"
-//                 value={formData.phone}
-//                 onChange={handleChange}
-//                 placeholder="Enter Phone Number"
-//                 required
-//                 className="flex-1 h-14 px-4 border border-gray-300 rounded-r-xl focus:outline-none focus:border-[#C8972B]"
-//               />
-//             </div>
-//           </div>
-
-//           {/* Email */}
-//           <div>
-//             <label className="block mb-2 text-[#3D1F0D] font-medium">
-//               Email Address
-//             </label>
-
-//             <input
-//               type="email"
-//               name="email"
-//               value={formData.email}
-//               onChange={handleChange}
-//               placeholder="Enter Email Address"
-//               required
-//               className="w-full h-14 px-4 rounded-xl border border-gray-300 focus:outline-none focus:border-[#C8972B]"
-//             />
-//           </div>
-//         </div>
-
-//         {/* Summary */}
-//         <div className="mt-8 p-6 rounded-2xl bg-[#F5EBE0] border border-[#C8972B]/20">
-//           <h3 className="font-semibold text-[#3D1F0D] mb-4">
-//             Selected Configuration
-//           </h3>
-
-//           <div className="grid md:grid-cols-3 gap-4 text-sm">
-//             <div>
-//               <span className="text-gray-500">
-//                 Dimension
-//               </span>
-//               <p className="font-medium text-[#3D1F0D]">
-//                 {formData.dimension || "-"}
-//               </p>
-//             </div>
-
-//             <div>
-//               <span className="text-gray-500">
-//                 Shape
-//               </span>
-//               <p className="font-medium text-[#3D1F0D]">
-//                 {formData.shape || "Custom Requirement"}
-//               </p>
-//             </div>
-
-//             <div>
-//               <span className="text-gray-500">
-//                 Package
-//               </span>
-//               <p className="font-medium text-[#3D1F0D]">
-//                 {formData.package || "Custom Package"}
-//               </p>
-//             </div>
-//           </div>
-//         </div>
-
-//         {/* WhatsApp */}
-//         <div className="flex items-start gap-3 mt-8">
-//           <input
-//             type="checkbox"
-//             id="whatsapp"
-//             defaultChecked
-//             className="mt-1 w-5 h-5 accent-[#C8972B]"
-//           />
-
-//           <label
-//             htmlFor="whatsapp"
-//             className="text-gray-700"
-//           >
-//             I would like to receive updates and offers on
-//             WhatsApp.
-//           </label>
-//         </div>
-
-//         {/* Buttons */}
-//         <div className="flex flex-col sm:flex-row justify-center gap-4 mt-10">
-//           <button
-//             type="button"
-//             onClick={onBack}
-//             className="px-8 py-4 rounded-full border border-[#3D1F0D] text-[#3D1F0D] font-medium"
-//           >
-//             Back
-//           </button>
-
-//           <button
-//             type="submit"
-//             className="px-12 py-4 rounded-full bg-[#3D1F0D] text-white font-semibold hover:bg-[#2A1408] transition"
-//           >
-//             Submit Request
-//           </button>
-//         </div>
-//       </form>
-//     </div>
-//   );
-// }
 "use client";
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { User, Phone, Mail, MapPin, CheckCircle2, AlertCircle } from "lucide-react";
+import {
+  User,
+  Phone,
+  Mail,
+  MapPin,
+  CheckCircle2,
+  AlertCircle,
+} from "lucide-react";
 
-export default function LeadFormStep({
-  formData,
-  setFormData,
-  onBack,
-}) {
+export default function LeadFormStep({ formData, setFormData, onBack }) {
   const [errors, setErrors] = useState({});
   const [touched, setTouched] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -294,7 +100,6 @@ export default function LeadFormStep({
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Mark all fields as touched
     setTouched({
       name: true,
       email: true,
@@ -302,27 +107,44 @@ export default function LeadFormStep({
       pincode: true,
     });
 
-    // Validate all fields
-    Object.keys(formData).forEach((key) => {
-      if (["name", "email", "phone", "pincode"].includes(key)) {
-        validateField(key, formData[key]);
-      }
-    });
-
     if (!isFormValid) return;
 
     setIsSubmitting(true);
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    try {
+      const response = await fetch(
+        "https://livingspacedecor.in/send-kitchen-quote.php",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            dimension: formData.dimension,
+            shape: formData.shape,
+            package: formData.package,
 
-    console.log("Kitchen Lead:", formData);
+            name: formData.name,
+            email: formData.email,
+            phone: formData.phone,
+            pincode: formData.pincode,
+          }),
+        },
+      );
 
-    // API Call Here
-    // await createLead(formData)
+      const result = await response.json();
 
-    setIsSubmitting(false);
-    setSubmitSuccess(true);
+      if (result.success) {
+        setSubmitSuccess(true);
+      } else {
+        alert(result.message || "Failed to submit enquiry");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("Network error. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -686,8 +508,8 @@ export default function LeadFormStep({
                 htmlFor="whatsapp"
                 className="text-gray-700 leading-relaxed cursor-pointer font-medium"
               >
-                Yes, send me kitchen updates, design tips, and exclusive offers on
-                WhatsApp
+                Yes, send me kitchen updates, design tips, and exclusive offers
+                on WhatsApp
               </label>
             </motion.div>
 
@@ -785,8 +607,8 @@ export default function LeadFormStep({
             className="p-6 rounded-2xl bg-blue-50 border border-blue-200 max-w-xl mx-auto mb-8"
           >
             <p className="text-sm text-blue-900">
-              Check your email ({formData.email}) for a confirmation. You can also
-              track your request on WhatsApp.
+              Check your email ({formData.email}) for a confirmation. You can
+              also track your request on WhatsApp.
             </p>
           </motion.div>
 

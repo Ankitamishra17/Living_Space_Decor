@@ -1,20 +1,20 @@
 export const locations = [
   {
     slug: "interior-designers-sector-62-noida",
-    title: "Living Room Design in Sector 62 Noida",
+    title: "Living Room Interior Designer in Sector 62 Noida",
     city: "Noida",
     image: "/image/living_room11.jpeg",
     description:
-      "Transform your living room in Sector 62 Noida with stylish interiors, premium furniture, and modern design solutions by Living Space Decor.",
-    service: "Living Room Design",
+      "Living Space Decor is a trusted living room interior designer in Sector 62, Noida, offering customized living room interiors, modern furniture layouts, and stylish décor solutions.",
+    service: "Living Room Interior Design",
     about:
-      "Living Space Decor creates elegant and modern living room interiors in Sector 62 Noida with customized furniture layouts, stylish décor, and premium finishes. Our expertise also includes modular kitchens, luxury bedrooms, wardrobes, false ceilings, and complete turnkey home interior solutions designed for contemporary lifestyles.",
+      "Living Space Decor specializes in living room interior design in Sector 62, Noida, creating elegant and functional spaces with customized furniture layouts, stylish décor, and premium finishes. We also offer modular kitchen design, bedroom interiors, wardrobe solutions, false ceiling designs, and complete turnkey home interior services tailored to modern lifestyles.",
     aboutImage: "/image/living_room12.jpeg",
   },
 
   {
     slug: "interior-designers-sector-75-noida",
-    title: "Bathroom Design in Sector 75 Noida",
+    title: "Bathroom Interior Designer in Sector 75 Noida",
     city: "Noida",
     image: "/image/bathroom3.png",
     description:
@@ -27,7 +27,7 @@ export const locations = [
 
   {
     slug: "interior-designers-ghaziabad",
-    title: "Dining Room Design in  Ghaziabad",
+    title: "Dining Room Interior Designer in Ghaziabad",
     city: "Ghaziabad",
     image: "/image/dining_room4.jpeg",
     description:
@@ -40,7 +40,7 @@ export const locations = [
 
   {
     slug: "interior-designers-sector-63-noida",
-    title: "Kitchen Design in Sector 63 Noida",
+    title: "Modular Kitchen Designer in Sector 63 Noida",
     city: "Noida",
     image: "/image/kitchen1.jpeg",
     description:
@@ -53,7 +53,7 @@ export const locations = [
 
   {
     slug: "interior-designers-sector-107-noida",
-    title: "BedRoom Design in Sector 107 Noida",
+    title: "Bedroom Interior Designer in Sector 107 Noida",
     city: "Noida",
     image: "/image/bedroom_design7.jpeg",
     description:
@@ -66,7 +66,7 @@ export const locations = [
 
   {
     slug: "interior-designers-sector-137-noida",
-    title: "Balcony Design in Sector 137 Noida",
+    title: "Balcony Interior Designer in Sector 137 Noida",
     city: "Noida",
     image: "/image/balcony_design.jpeg",
     description:
@@ -79,7 +79,7 @@ export const locations = [
 
   {
     slug: "interior-designers-sector-150-noida",
-    title: "Kids Room Design in Sector 150 Noida",
+    title: "Kids Room Interior Designer in Sector 150 Noida",
     city: "Noida",
     image: "/image/kids_room1.jpeg",
     description:
@@ -92,7 +92,7 @@ export const locations = [
 
   {
     slug: "interior-designers-gaur-city-greater-noida-west",
-    title: "Mandir Room Design in Gaur City Greater Noida West",
+    title: "Mandir Interior Designer in Gaur City, Greater Noida West",
     city: "Greater Noida West",
     image: "/image/mandir_design6.jpeg",
     description:
@@ -103,4 +103,3 @@ export const locations = [
     aboutImage: "/image/mandir_design2.webp",
   },
 ];
-

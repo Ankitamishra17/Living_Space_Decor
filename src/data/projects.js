@@ -2,7 +2,7 @@ const projects = [
   {
     slug: "living-room-modern",
     name: "The Oberoi Residence",
-    location: "New Delhi",
+    location: "Noida",
     bhk: "4 BHK",
     area: "3,200 sq ft",
     style: "Contemporary",

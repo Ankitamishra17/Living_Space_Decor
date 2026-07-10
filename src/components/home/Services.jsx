@@ -271,12 +271,7 @@ export default function ServicesSection() {
             </button>
           </div>
 
-          <Link
-            href="/portfolio"
-            className="inline-flex items-center gap-2 border border-[#3D1F0D]/30 text-[#3D1F0D] px-6 py-3 text-[11px] font-semibold uppercase tracking-[.12em] transition-all duration-300 hover:bg-[#3D1F0D] hover:text-white hover:-translate-y-0.5 hover:shadow-lg active:translate-y-0"
-          >
-            View Portfolio
-          </Link>
+          
         </div>
       </div>
 
