@@ -42,7 +42,7 @@ export default function DesignHero({ data }) {
 
           {/* Content */}
           <div className="absolute inset-0 flex items-center justify-center mt-34 lg:mt-6 text-center px-4">
-            <div>
+            <div className="-mt-28">
               {/* Breadcrumb */}
               <nav aria-label="Breadcrumb" className="mb-5">
                 <ol className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-1 text-[10px] md:text-xs tracking-[0.15em] uppercase">
