@@ -155,11 +155,11 @@ const kitchenTypes = [
   },
   {
     title: "U-Shaped Kitchen",
-    image: "https://images.pexels.com/photos/6782474/pexels-photo-6782474.jpeg",
+    image: "/image/u_shapkitchen.avif",
   },
   {
     title: "Island Kitchen",
-    image: "https://images.pexels.com/photos/4030908/pexels-photo-4030908.jpeg",
+    image: "/image/island_kitchen.avif",
   },
 ];
 

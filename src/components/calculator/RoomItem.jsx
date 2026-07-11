@@ -38,7 +38,7 @@ export default function RoomItem({ room, formData, setFormData }) {
 
         ${
           selected
-            ? "border-[#8B6B4A] bg-[#8B6B4A]/10 shadow-lg shadow-[#8B6B4A]/10"
+            ? "border-[#8B6B4A] bg-[#000000]/60 shadow-lg shadow-[#8B6B4A]/10"
             : "border-[#E5D8C7] bg-white hover:border-[#C8972B] hover:shadow-md"
         }
       `}

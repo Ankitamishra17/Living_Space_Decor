@@ -83,7 +83,7 @@ export default function RecentProjects() {
           <div className="grid lg:grid-cols-2">
             <div className="relative h-[400px] lg:h-auto">
               <Image
-                src="/image/kitchen_design9.jpeg"
+                src="/image/kitchen_design9.webp"
                 alt="Featured Kitchen"
                 fill
                 className="object-cover"

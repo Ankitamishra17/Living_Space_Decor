@@ -13,22 +13,22 @@ export const kitchenShapes = [
   {
     id: "l-shape",
     title: "L-Shaped Kitchen",
-    image: "/kitchen/l-shape.png",
+    image: "/kitchen/l-shape.webp",
   },
   {
     id: "u-shape",
     title: "U-Shaped Kitchen",
-    image: "/kitchen/u-shape.png",
+    image: "/kitchen/u-shape.webp",
   },
   {
     id: "parallel",
     title: "Parallel Kitchen",
-    image: "/kitchen/parallel.png",
+    image: "/kitchen/parallel.webp",
   },
   {
     id: "straight",
     title: "Straight Kitchen",
-    image: "/kitchen/straight.png",
+    image: "/kitchen/straight.webp",
   },
 ];
 

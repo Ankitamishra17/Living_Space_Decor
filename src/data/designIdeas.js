@@ -6,28 +6,28 @@ export const designIdeas = [
     title: "LIVING ROOM DESIGN",
     detailType: "livingRoom",
     subtitle: "Timeless Elegance",
-    heroImage: "/image/living_room8.jpeg",
+    heroImage: "/image/living_room8.webp",
     description: "Luxury living room interiors",
-    leftImage: "/image/living_room14.jpeg",
-    rightImage: "/image/living_room1.jpeg",
+    leftImage: "/image/living_room14.webp",
+    rightImage: "/image/living_room1.webp",
     galleryTitle:
       "Composed Meaningful Interiors To Elevated And Refined Spaces",
     galleryDescription:
       "Every great space begins with a vision. We create personalized interiors that reflect your style, personality, and lifestyle.",
     moodboard: [
-      "/image/living_room2.jpeg",
-      // "/image/living_room3.jpeg",
-      // "/image/living_room4.jpeg",
-      "/image/living_room5.jpeg",
-      // "/image/living_room6.jpeg",
+      "/image/living_room2.webp",
+      // "/image/living_room3.webp",
+      // "/image/living_room4.webp",
+      "/image/living_room5.webp",
+      // "/image/living_room6.webp",
 
-      "/image/living_room9.jpeg",
-      // "/image/living_room10.jpeg",
-      // "/image/living_room11.jpeg",
-      // "/image/living_room12.jpeg",
-      // "/image/living_room13.jpeg",
+      "/image/living_room9.webp",
+      // "/image/living_room10.webp",
+      // "/image/living_room11.webp",
+      // "/image/living_room12.webp",
+      // "/image/living_room13.webp",
 
-      "/image/living_room15.jpeg",
+      "/image/living_room15.webp",
     ],
     faq: [
       {
@@ -60,14 +60,14 @@ export const designIdeas = [
     detailType: "kidsRoom",
     subtitle: "Creative Spaces For Growing Minds",
 
-    heroImage: "/image/kids_room1.jpeg",
+    heroImage: "/image/kids_room1.webp",
 
     description:
       "Discover inspiring kids room interior design ideas that combine creativity, comfort, safety, and functionality. From playful themes to smart storage solutions, create a space where children can learn, play, and grow.",
 
-    leftImage: "/image/kids_room5.jpeg",
+    leftImage: "/image/kids_room5.webp",
 
-    rightImage: "/image/kids_room4.jpeg",
+    rightImage: "/image/kids_room4.webp",
 
     galleryTitle:
       "Thoughtfully Designed Kids Rooms That Inspire Learning And Creativity",
@@ -76,18 +76,18 @@ export const designIdeas = [
       "Our kids room interior designers create safe, functional, and personalized spaces that encourage learning, creativity, and everyday comfort.",
 
     moodboard: [
-      "/image/kids.jpeg",
-      "/image/kidss.jpeg",
-      "/image/kids_room_design.jpeg",
-      "/image/kids_room_design3.jpeg",
-      // "/image/kids_room_interior_design.jpeg",
-      "/image/kids_room_interior.jpeg",
+      "/image/kids.webp",
+      "/image/kidss.webp",
+      "/image/kids_room_design.webp",
+      "/image/kids_room_design3.webp",
+      // "/image/kids_room_interior_design.webp",
+      "/image/kids_room_interior.webp",
 
-      "/image/kids_room2.jpeg",
-      // "/image/kids_room3.jpeg",
+      "/image/kids_room2.webp",
+      // "/image/kids_room3.webp",
 
-      "/image/kids_room6.jpeg",
-      "/image/kids_room7.jpeg",
+      "/image/kids_room6.webp",
+      "/image/kids_room7.webp",
     ],
 
     faq: [
@@ -134,13 +134,13 @@ export const designIdeas = [
     detailType: "mandir",
     subtitle: "Sacred Spaces For Peace & Spirituality",
 
-    heroImage: "/image/mandir_design5.jpeg",
+    heroImage: "/image/mandir_design5.webp",
 
     description:
       "Explore elegant mandir design ideas for modern homes. From traditional wooden temples to contemporary pooja room interiors, create a peaceful and spiritual space that blends beautifully with your home décor.",
 
-    leftImage: "/image/mandir_interior_design.jpeg",
-    rightImage: "/image/mandir_design6.jpeg",
+    leftImage: "/image/mandir_interior_design.webp",
+    rightImage: "/image/mandir_design6.webp",
 
     galleryTitle:
       "Thoughtfully Crafted Pooja Rooms For Daily Worship And Serenity",
@@ -180,14 +180,14 @@ export const designIdeas = [
     },
     ctaVideo: "/mandir.mp4",
     moodboard: [
-      "/image/mandir_design1.webp",
-      "/image/mandir_design2.webp",
+      "/image_old/mandir_design1.webp",
+      "/image_old/mandir_design2.webp",
 
-      "/image/mandir_design4.jpeg",
-      "/image/mandir_design5.jpeg",
-      "/image/mandir_design7.jpeg",
-      "/image/mandir_design3.jpeg",
-      "/image/mandir_design.jpeg",
+      "/image/mandir_design4.webp",
+      "/image/mandir_design5.webp",
+      "/image/mandir_design7.webp",
+      "/image/mandir_design3.webp",
+      "/image/mandir_design.webp",
     ],
   },
   {
@@ -196,10 +196,10 @@ export const designIdeas = [
     title: "BEDROOM DESIGN",
     detailType: "bedroom",
     subtitle: "Comfort Meets Luxury",
-    heroImage: "/image/bedroom_design7.jpeg",
+    heroImage: "/image/bedroom_design7.webp",
 
-    leftImage: "/Design/bed_left.avif",
-    rightImage: "/image/bedroom_design2.jpeg",
+    leftImage: "/image/bedroom_interior_design.webp",
+    rightImage: "/image/bedroom_design2.webp",
 
     description:
       "Discover modern bedroom interior design ideas that combine comfort, elegance, and functionality. Create a relaxing retreat with customized wardrobes, stylish furniture, and smart storage solutions.",
@@ -243,12 +243,10 @@ export const designIdeas = [
       },
     ],
     moodboard: [
-      "/Design/bed1.avif",
-      "/Design/bed2.webp",
-      "/Design/bed3.webp",
-      "/Design/bed4.avif",
-      "/image/bedroom_design6.jpeg",
-      "/image/bedroom_design12.jpeg",
+      "/image/bedroom_design3.webp",
+      "/image/bedroom_design6.webp",
+      "/image/bedroom_design12.webp",
+      "/image/bedroom_design.jpeg",
     ],
 
     seo: {
@@ -268,20 +266,20 @@ export const designIdeas = [
     subtitle: "Modern Elegance In Every Detail",
     heroImage: "/Design/bathroom_banner.avif",
     moodboard: [
-      "/image/bathroom5.jpeg",
-      // "/image/bathroom6.jpeg",
-      // "/image/bathroom7.jpeg",
+      "/image/bathroom5.webp",
+      // "/image/bathroom6.webp",
+      // "/image/bathroom7.webp",
 
-      "/image/bathroom9.jpeg",
-      "/image/bathroom10.jpeg",
-      "/image/bathroom11.jpeg",
-      "/image/bathroom12.jpeg",
-      "/image/bathroom13.jpeg",
-      "/image/bathroom14.jpeg",
-      "/image/bathroom15.jpeg",
+      "/image/bathroom9.webp",
+      "/image/bathroom10.webp",
+      "/image/bathroom11.webp",
+      "/image/bathroom12.webp",
+      "/image/bathroom13.webp",
+      "/image/bathroom14.webp",
+      "/image/bathroom15.webp",
     ],
-    leftImage: "/image/bathroom3.png",
-    rightImage: "/image/bathroom8.jpeg",
+    leftImage: "/image/bathroom3.webp",
+    rightImage: "/image/bathroom8.webp",
 
     description:
       "Explore stylish bathroom interior design ideas featuring modern vanities, luxury fittings, smart storage, and elegant finishes for contemporary homes.",
@@ -340,25 +338,22 @@ export const designIdeas = [
     detailType: "homeOffice",
     subtitle: "Productive Spaces For Modern Professionals",
 
-    heroImage: "/image/office_design5.jpg",
+    heroImage: "/image/office_design5.webp",
 
-    leftImage: "/image/office_design2.png",
-    rightImage: "/image/office_design8.jpg",
-    // "/image/office_design3.jpeg",
+    leftImage: "/image/office_design2.webp",
+    rightImage: "/image/office_design8.webp",
+
     moodboard: [
-      "/image/office_design.jpg",
-      "/image/office_design1.jpg",
+      "/image/office_design.webp",
+      "/image/office_design1.webp",
 
-      "/image/office_design4.png",
-      "/image/office_interior1.jpg",
-      "/image/office_design8.jpg",
-      "/image/office_design7.jpg",
-      "/image/office_design5.jpg",
-      "/image/office_design6.png",
-      "/image/office_design10.png",
-      "/image/office_design11.png",
-      "/image/office_design12.jpeg",
-      // "/image/",
+      "/image/office_design4.webp",
+      "/image/office_interior1.webp",
+      "/image/office_design7.webp",
+      "/image/office_design5.webp",
+
+      "/image/office_design10.webp",
+      "/image/office_design11.webp",
     ],
     description:
       "Create a functional and inspiring home office with ergonomic furniture, smart storage, and modern workspace design solutions.",
@@ -414,21 +409,15 @@ export const designIdeas = [
     title: "BALCONY & TERRACE DESIGN",
     detailType: "balconyTerrace",
     subtitle: "Outdoor Spaces Designed To Inspire",
-    heroImage:
-      "https://images.pexels.com/photos/7587473/pexels-photo-7587473.jpeg",
+    heroImage: "/image/balcony_design1.webp",
     moodboard: [
-      "https://images.pexels.com/photos/7587473/pexels-photo-7587473.jpeg",
-      "/image/balcony_design.jpeg",
-      "/image/balcony_design1.jpeg",
-      "/image/balcony_interior_design2.jpeg",
-
+      "/image/balcony_design.webp",
+      "/image/balcony_design1.webp",
+      "/image/balcony_interior_design2.webp",
       "/Design/balcony3.avif",
-      "/Design/balcony4.avif",
-
-      "/Design/balcony6.avif",
     ],
-    leftImage: "/image/balcony_design.jpeg",
-    rightImage: "/image/balcony_design1.jpeg",
+    leftImage: "/image/balcony_design.webp",
+    rightImage: "/image/balcony_design1.webp",
 
     description:
       "Transform your balcony or terrace into a beautiful outdoor retreat with modern seating, greenery, lighting, and customized décor solutions.",
@@ -487,24 +476,25 @@ export const designIdeas = [
     detailType: "diningRoom",
     subtitle: "Where Style Meets Meaningful Gatherings",
 
-    heroImage: "/image/dining_room2.jpeg",
+    heroImage: "/image/dining_room2.webp",
 
     description:
       "Discover elegant dining room interior design ideas that bring families together. From modern dining spaces to luxury dining room interiors, create a welcoming atmosphere for everyday meals and special occasions.",
 
-    leftImage: "/image/dining_room1.jpeg",
+    leftImage: "/image/dining_room1.webp",
 
-    rightImage: "/image/dining_room4.jpeg",
+    rightImage: "/image/dining_room4.webp",
 
     galleryTitle: "Thoughtfully Designed Dining Spaces For Memorable Moments",
 
-    galleryDescription:"Our dining room interior designers create elegant and functional spaces with stylish furniture, ambient lighting, and thoughtful layouts for memorable dining experiences.",
+    galleryDescription:
+      "Our dining room interior designers create elegant and functional spaces with stylish furniture, ambient lighting, and thoughtful layouts for memorable dining experiences.",
 
     moodboard: [
-      "/image/dining_room1.jpeg",
-      "/image/dining_room2.jpeg",
-      "/image/dining_room3.jpeg",
-      "/image/dining_room5.jpeg",
+      "/image/dining_room1.webp",
+      "/image/dining_room2.webp",
+      "/image/dining_room3.webp",
+      "/image/dining_room5.webp",
     ],
 
     faq: [
@@ -557,14 +547,14 @@ export const designIdeas = [
 
     subtitle: "Stylish, Functional & Modern Kitchen Spaces",
 
-    heroImage: "/image/kitchen_design.jpeg",
+    heroImage: "/image/kitchen_design.webp",
 
     description:
       "Explore modern kitchen design ideas that combine functionality, elegance, and smart space planning. From modular kitchens to luxurious contemporary layouts, create a kitchen that enhances your cooking experience while complementing your home's interior style.",
 
-    leftImage: "/image/kitchen_design8.jpeg",
+    leftImage: "/image/kitchen_design8.webp",
 
-    rightImage: "/image/kitchen_design9.jpeg",
+    rightImage: "/image/kitchen_design9.webp",
 
     galleryTitle: "Beautifully Crafted Kitchens Designed For Everyday Living",
 
@@ -572,14 +562,14 @@ export const designIdeas = [
       "A well-designed kitchen is the heart of every home. Our kitchen interiors focus on efficient layouts, premium finishes, smart storage solutions, and ergonomic designs that make cooking, dining, and entertaining more enjoyable.",
 
     moodboard: [
-      "/image/kitchen_design2.jpeg",
-      "/image/kitchen_design13.jpeg",
-      "/image/kitchen_design3.jpeg",
-      "/image/kitchen_design4.jpeg",
-      "/image/kitchen_design5.jpeg",
-      "/image/kitchen_design6.jpeg",
-      "/image/kitchen_design11.jpeg",
-      "/image/kitchen_design15.jpeg",
+      "/image/kitchen_design2.webp",
+      "/image/kitchen_design13.webp",
+      "/image/kitchen_design3.webp",
+      "/image/kitchen_design4.webp",
+      "/image/kitchen_design5.webp",
+      "/image/kitchen_design6.webp",
+      "/image/kitchen_design11.webp",
+      "/image/kitchen_design15.webp",
     ],
 
     faq: [

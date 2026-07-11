@@ -19,25 +19,25 @@ const PROJECTS = [
   {
     id: "01",
     title: "Modular Kitchen Design",
-    img: "/image/kitchen_design12.jpeg",
+    img: "/image/kitchen_design12.webp",
     alt: "Premium modular kitchen with under-cabinet accent lighting",
   },
   {
     id: "02",
     title: "Kids Room Design",
-    img: "/image/kids_room4.jpeg",
+    img: "/image/kids_room4.webp",
     alt: "Warmly lit modern kids room interior",
   },
   {
     id: "03",
     title: "Dining Room Design",
-    img: "/image/dining_room1.jpeg",
+    img: "/image/dining_room1.webp",
     alt: "Elegant dining room with warm cove accent lighting",
   },
   {
     id: "04",
     title: "Wardrobe Design",
-    img: "/image/wardrobe_design.jpeg",
+    img: "/image/wardrobe_design.webp",
     alt: "Luxury wardrobe room with LED profile lighting",
   },
 ];

@@ -16,34 +16,34 @@ const projects = [
     title: " Bedroom",
     category: "Bedroom",
     image:
-      "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?q=80&w=1200",
+      "/image/bedroom_design3.webp",
     height: "h-[320px]",
   },
   {
     title: "Modern Kitchen",
     category: "Kitchen",
     image:
-      "https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=1200",
+      "/image/kitchen_design7.webp",
     height: "h-[420px]",
   },
   {
     title: "Living Lounge",
     category: "Interior",
     image:
-      "/lsd_images/33.jpg",
+      "/image/living_room10.webp",
     height: "h-[380px]",
   },
   {
     title: "Office Space",
     category: "Commercial",
     image:
-      "https://images.pexels.com/photos/9300768/pexels-photo-9300768.jpeg",
+      "/image/office_design11.webp",
     height: "h-[520px]",
   },
   {
     title: "Dining Area",
     category: "Luxury",
-    image:"https://images.pexels.com/photos/10148453/pexels-photo-10148453.jpeg",
+    image:"/image/dining_room2.webp",
     height: "h-[320px]",
   },
 ];

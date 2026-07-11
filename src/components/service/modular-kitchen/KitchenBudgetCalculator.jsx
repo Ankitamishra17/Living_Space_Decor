@@ -8,7 +8,7 @@ const cards = [
   {
     title: "Luxury",
     price: "Cost starting from ₹ 3 Lakhs",
-    image: "https://images.pexels.com/photos/9757618/pexels-photo-9757618.png",
+    image: "/image/kitchen_design11.webp",
     rotate: "lg:-rotate-12",
     bg: "bg-zinc-800",
     text: "text-white",
@@ -17,7 +17,7 @@ const cards = [
     title: "Premium",
     price: "Cost starting from ₹ 2 Lakhs",
     image:
-      "https://images.pexels.com/photos/13722891/pexels-photo-13722891.jpeg",
+      "/image/kitchen_design6.webp",
     rotate: "lg:-rotate-2",
     bg: "bg-[#b08d74]",
     text: "text-white",
@@ -26,7 +26,7 @@ const cards = [
     title: "Economy",
     price: "Cost starting from ₹ 1 Lakhs",
     image:
-      "/image/kitchen_design2.jpeg",
+      "/image/kitchen_design2.webp",
     rotate: "lg:rotate-12",
     bg: "bg-[#d7d1c8]",
     text: "text-zinc-700",

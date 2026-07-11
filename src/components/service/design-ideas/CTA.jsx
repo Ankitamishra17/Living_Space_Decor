@@ -128,7 +128,7 @@ export default function CTA() {
             {/* Image Side */}
             <div className="relative min-h-[320px] sm:min-h-[420px] md:min-h-[500px] lg:min-h-[700px] order-1 lg:order-2">
               <Image
-                src="/lsd_images/27.jpg"
+                src="/image/office_design6.webp"
                 alt="Luxury Interior"
                 fill
                 sizes="(max-width: 1024px) 100vw, 150vw"

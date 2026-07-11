@@ -15,89 +15,89 @@ const images = [
   {
     category: "Living Room",
     image:
-      "/image/living_room2.jpeg",
+      "/image/living_room2.webp",
   },
   {
     category: "Home Office",
     image:
-      "/image/office_design4.png",
+      "/image/office_design4.webp",
   },
 
   {
     category: "Bedroom",
     image:
-      "/image/bedroom_design2.jpeg",
+      "/image/bedroom_design2.webp",
   },
   {
     category: "Living Room",
     image:
-      "/image/living_room1.jpeg",
+      "/image/living_room1.webp",
   },
 
   {
     category: "Bedroom",
     image:
-      "/image/bedroom_design3.jpeg",
+      "/image/bedroom_design3.webp",
   },
 
   {
     category: "Dining Room",
     image:
-      "/image/dining_room2.jpeg",
+      "/image/dining_room2.webp",
   },
   {
     category: "Bedroom",
     image:
-      "/image/bedroom_design6.jpeg",
+      "/image/bedroom_design6.webp",
   },
 
   {
     category: "Dining Room",
     image:
-      "/image/dining_room3.jpeg",
+      "/image/dining_room3.webp",
   },
   {
     category: "Living Room",
     image:
-      "/image/living_room5.jpeg",
+      "/image/living_room5.webp",
   },
   {
     category: "Home Office",
     image:
-      "/image/office_design5.jpg",
+      "/image/office_design5.webp",
   },
 
   {
     category: "Dining Room",
     image:
-      "/image/dining_room5.jpeg",
+      "/image/dining_room5.webp",
   },
   {
     category: "Living Room",
     image:
-      "/image/living_room13.jpeg",
+      "/image/living_room13.webp",
   },
 
   {
     category: "Bedroom",
     image:
-      "/image/bedroom_design7.jpeg",
+      "/image/bedroom_design7.webp",
   },
   {
     category: "Home Office",
     image:
-      "/image/office_design6.png",
+      "/image/office_design6.webp",
   },
   {
     category: "Dining Room",
     image:
-      "/image/dining_room6.jpeg",
+      "/image/dining_room6.webp",
   },
 
   {
     category: "Home Office",
     image:
-      "/image/office_design8.jpg",
+      "/image/office_design8.webp",
   },
 ];
 

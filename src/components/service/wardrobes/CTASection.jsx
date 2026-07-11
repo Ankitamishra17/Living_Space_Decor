@@ -258,12 +258,12 @@ export default function CTASection({ data }) {
                 <ArrowRight size={16} />
               </Link>
 
-              <Link
+              {/* <Link
                 href="/portfolio"
                 className="border border-[#3D1F0D] text-[#3D1F0D] text-sm md:text-base px-7 py-3 hover:bg-white/10 transition duration-300"
               >
                 View Portfolio
-              </Link>
+              </Link> */}
             </div>
           </div>
 

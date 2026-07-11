@@ -13,22 +13,22 @@ import "swiper/css/pagination";
 const categories = [
   {
     title: "Living Room",
-    image: "/image/living_room8.jpeg",
-    mobileImage: "/image/living_room8.jpeg",
+    image: "/image/living_room8.webp",
+    mobileImage: "/image/living_room8.webp",
     href: "/services/design-ideas/living-room-design",
     desc: "Where Luxury Meet Life Style.",
   },
   {
     title: "Modular Kitchen",
-    image: "/image/9.png",
-    mobileImage: "/image/9.png",
+    image: "/image/9.webp",
+    mobileImage: "/image/9.webp",
     href: "/kitchen-design",
     desc: "Crafted For Modern Homes.",
   },
   {
     title: "Modular Wardrobes",
-    image: "/image/8.png",
-    mobileImage: "/image/8.png",
+    image: "/image/8.webp",
+    mobileImage: "/image/8.webp",
     href: "/services/wardrobes",
     desc: "Style Meets Smart Storage.",
   },

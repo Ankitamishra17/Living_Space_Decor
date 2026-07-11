@@ -10,7 +10,7 @@ const services = [
     id: "01",
     title: "Living Spaces",
     image:
-      "/lsd_images/31.jpg",
+      "/image/living_room1.webp",
     description:
       "Curated living rooms blending comfort with timeless elegance, tailored to your lifestyle.",
   },
@@ -18,7 +18,7 @@ const services = [
     id: "02",
     title: "Bedroom Sanctuaries",
     image:
-      "/image/bedroom_design7.jpeg",
+      "/image/bedroom_design7.webp",
     description:
       "Restful retreats designed with layered textures, ambient lighting, and bespoke furniture.",
   },
@@ -26,7 +26,7 @@ const services = [
     id: "03",
     title: "Kitchen & Dining",
     image:
-      "/image/kitchen_design13.jpeg",
+      "/image/kitchen_design13.webp",
     description:
       "Functional yet stunning culinary spaces that become the heart of your home.",
   },
@@ -64,7 +64,7 @@ const services = [
   {
     id: "08",
     title: "Color Consultation",
-    image: "https://images.pexels.com/photos/7490893/pexels-photo-7490893.jpeg",
+    image: "/image/color_consultation.webp",
     description:
       "Harmonious palettes that reflect your personality and enhance your space.",
   },

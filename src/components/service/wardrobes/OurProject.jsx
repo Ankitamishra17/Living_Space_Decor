@@ -7,27 +7,27 @@ const projects = [
   {
     title: "Sliding Wardrobe",
     image:
-      "/image/wardrobe_design9.png",
+      "/image/wardrobe_design9.webp",
   },
   {
     title: "Walk-in Closet",
     image:
-      "/image/wardrobe_design17.png",
+      "/image/wardrobe_design17.webp",
   },
   {
     title: "Luxury Bedroom Wardrobe",
     image:
-      "/image/wardrobe_design8.png",
+      "/image/wardrobe_design8.webp",
   },
   {
     title: "Glass Wardrobe",
     image:
-      "/image/wardrobe_design.jpeg",
+      "/image/wardrobe_design.webp",
   },
   {
     title: "Modern White Wardrobe",
     image:
-      "/image/wardrobe_design2.jpeg",
+      "/image/wardrobe_design2.webp",
   },
 ];
 

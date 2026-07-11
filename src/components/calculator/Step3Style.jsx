@@ -7,19 +7,19 @@ import Image from "next/image";
 const styles = [
   {
     name: "Modern",
-    image: "/lsd_images/40.jpg",
+    image: "/image/living_room10.webp",
   },
   {
     name: "Contemporary",
-    image: "/lsd_images/25.jpg",
+    image: "/image/office_design5.webp",
   },
   {
     name: "Traditional",
-    image: "/lsd_images/34.jpg",
+    image: "/image/mandir_design3.webp",
   },
   {
     name: "Luxury",
-    image: "/lsd_images/18.jpg",
+    image: "/image/office_design.webp",
   },
 ];
 

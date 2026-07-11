@@ -33,7 +33,7 @@ export default function InteriorHero() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.pexels.com/photos/20451396/pexels-photo-20451396.jpeg"
+          src="/image/living_room8.webp"
           alt="Luxury Interior Design"
           fill
           priority

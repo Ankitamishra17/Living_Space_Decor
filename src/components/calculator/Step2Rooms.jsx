@@ -26,7 +26,7 @@ export default function Step2Rooms({ formData, setFormData, next, back }) {
 
         
 
-        <p className="mt-3 text-sm md:text-base text-[#6E6258] max-w-xl mx-auto">
+        <p className="mt-3 text-sm md:text-base text-[#000000]/60 max-w-xl mx-auto">
           Choose the rooms you want to include in your interior project.
         </p>
       </div>
@@ -54,7 +54,7 @@ export default function Step2Rooms({ formData, setFormData, next, back }) {
       {/* Selected Count */}
       {selectedRooms.length > 0 && (
         <div className="mt-6 text-center">
-          <span className="text-sm text-[#6E6258]">Selected Rooms:</span>
+          <span className="text-sm text-[#000000]/60">Selected Rooms:</span>
 
           <span className="ml-2 font-semibold text-[#C8972B]">
             {selectedRooms.length}

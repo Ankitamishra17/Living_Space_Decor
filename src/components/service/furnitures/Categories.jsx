@@ -11,17 +11,14 @@ const categories = [
   },
   {
     title: "Bedroom",
-    image: "https://i.pinimg.com/736x/23/9c/1d/239c1d195f4388536fe5b68771c8c5b9.jpg",
+    image: "/image/bedroom_interior_design.webp",
   },
  
   {
     title: "Wardrobe",
-    image: "https://i.pinimg.com/736x/7e/ba/6e/7eba6e92534b492e41b987e5a15cb006.jpg",
+    image: "/image/wardrobe_design8.webp",
   },
-  {
-    title: "Study Table",
-    image: "https://i.pinimg.com/736x/74/94/8b/74948b3c6eeec8dd77b3836e1d3e3a8b.jpg",
-  },
+  
 ];
 
 export default function CategorySection() {
@@ -38,7 +35,7 @@ export default function CategorySection() {
         </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {categories.map((item, index) => (
             <div
               key={index}

@@ -10,45 +10,45 @@ export default function MaterialsAndFinishes() {
     {
       name: "Laminate",
       image:
-        "/wardrobe-material/Laminate.png",
+        "/wardrobe-material/Laminate.webp",
     },
     {
       name: "Mirror Finish",
       image:
-        "/wardrobe-material/Mirror.png",
+        "/wardrobe-material/Mirror.webp",
     },
     {
       name: "Acrylic",
       image:
-        "/wardrobe-material/Acrylic.png",
+        "/wardrobe-material/Acrylic.webp",
     },
     
     {
       name: "Fluted Panels",
       image:
-        "/wardrobe-material/Fluted.png",
+        "/wardrobe-material/Fluted.webp",
     },
     {
       name: "Veneer",
       image:
-        "/wardrobe-material/Veneer.png",
+        "/wardrobe-material/Veneer.webp",
     },
     {
       name: "PU Finish",
       image:
-        "/wardrobe-material/PU.png",
+        "/wardrobe-material/PU.webp",
     },
     
     
     {
       name: "Glass",
       image:
-        "/wardrobe-material/Glass.png",
+        "/wardrobe-material/Glass.webp",
     },
     {
       name: "Leather Panels",
       image:
-        "/wardrobe-material/Leather Panels.png",
+        "/wardrobe-material/Leather Panels.webp",
     },
   ];
 

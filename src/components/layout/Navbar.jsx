@@ -112,7 +112,7 @@
 //                 className="flex items-center gap-2  -mt-6 xs:gap-3 group flex-shrink-0 justify-center sm:justify-start hover:opacity-80 transition-opacity"
 //               >
 //                 <Image
-//                   src="/logo.png"
+//                   src="/logo.webp"
 //                   alt="Living Space Decor"
 //                   width={300}
 //                   height={80}
@@ -163,7 +163,7 @@
 //                 className="flex items-center gap-2 group flex-shrink-0 hover:opacity-80 transition-opacity"
 //               >
 //                 <Image
-//                   src="/logo.png"
+//                   src="/logo.webp"
 //                   alt="Living Space Decor"
 //                   width={300}
 //                   height={80}

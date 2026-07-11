@@ -11,7 +11,7 @@ const howWeHelp = [
     description:
       "Custom-designed homes that blend elegance, functionality, and comfort while reflecting your unique lifestyle.",
     image:
-    "/lsd_images/26.jpg",
+    "/image/office_design.webp",
   },
   {
     id: "02",
@@ -20,16 +20,16 @@ const howWeHelp = [
     description:
       "Innovative office spaces, retail environments, and business facilities designed to enhance productivity and brand identity.",
     image:
-    "https://images.pexels.com/photos/5068333/pexels-photo-5068333.jpeg",
+    "https://images.pexels.com/photos/13073718/pexels-photo-13073718.jpeg",
   },
   {
     id: "03",
     tag: "PLANNING",
-    title: "Urban & Master Planning",
+    title: "Master Planning",
     description:
       "Strategic planning solutions that create sustainable communities, public spaces, and future-ready developments.",
     image:
-      "/lsd_images/46.jpg",
+      "/image/living_room5.webp",
   },
 ];
 

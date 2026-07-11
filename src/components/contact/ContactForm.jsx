@@ -22,11 +22,16 @@ export default function ContactSection() {
   const [submitAttempted, setSubmitAttempted] = useState(false);
 
   const handleFieldChange = (field, value) => {
-    setFormData((prev) => ({ ...prev, [field]: value }));
-    if (errors[field] && value.trim()) {
-      setErrors((prev) => ({ ...prev, [field]: false }));
-    }
-  };
+  setFormData((prev) => ({ ...prev, [field]: value }));
+
+  if (submitSuccess) {
+    setSubmitSuccess(false);
+  }
+
+  if (errors[field] && value.trim()) {
+    setErrors((prev) => ({ ...prev, [field]: false }));
+  }
+};
 
   const isFormComplete =
     formData.name.trim() &&
@@ -271,16 +276,12 @@ export default function ContactSection() {
                   )}
                 </div>
 
-                {submitAttempted && !isFormComplete && (
-                  <p className="text-xs text-red-500 text-center -mb-1">
-                    Please fill all fields before submitting.
-                  </p>
-                )}
+               
 
                 {/* Premium Button */}
                 <button
                   type="submit"
-                  disabled={!isFormComplete || isSubmitting}
+                  disabled={ isSubmitting}
                   className="w-full relative group/btn mt-8 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-[#C8972B] to-[#A8752A] rounded-sm opacity-0 group-hover/btn:opacity-100 transition-opacity duration-500 blur-lg" />
@@ -302,7 +303,7 @@ export default function ContactSection() {
             <div className="group relative overflow-hidden rounded-lg">
               <div className="absolute inset-0 bg-gradient-to-b from-[#C8972B] via-transparent to-[#3D1F0D] opacity-20 z-10 group-hover:opacity-40 transition-all duration-500" />
               <img
-                src="/image/living_room9.jpeg"
+                src="/image/living_room9.webp"
                 alt="Interior Design Showcase"
                 className="w-full h-[230px] md:h-[260px] object-fit group-hover:scale-105 transition-transform duration-700"
               />

@@ -11,7 +11,7 @@ export default function HeroSection({
   title = "About",
   highlight = "Us",
   subtitle = "Creating timeless interiors that combine elegance, functionality, and exceptional craftsmanship since 2012.",
-  image = "/banner/3.png",
+  image = "/banner/3.webp",
   breadcrumbs = [
     { label: "Home", href: "/" },
     { label: "About Us", href: null },

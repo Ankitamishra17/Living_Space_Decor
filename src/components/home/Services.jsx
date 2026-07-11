@@ -10,7 +10,7 @@ const services = [
     title: "Living Room",
     description:
       "Transform your living room with luxury interior design solutions in Noida, Greater Noida, and Ghaziabad.",
-    image: "/image/living_room6.jpeg",
+    image: "/image/living_room6.webp",
     icon: Sofa,
     link: "/services/design-ideas/living-room-design",
   },
@@ -18,7 +18,7 @@ const services = [
     title: "Modular Kitchen",
     description:
       "Get stylish and functional kitchen interiors for homes in Noida, Greater Noida, and Ghaziabad.",
-    image: "/image/kitchen_design5.jpeg",
+    image: "/image/kitchen_design5.webp",
     icon: ChefHat,
     link: "/services/design-ideas/kitchen-design-ideas",
   },
@@ -26,7 +26,7 @@ const services = [
     title: "Bedroom Design",
     description:
       "Create a comfortable and luxurious bedroom with custom interior design solutions.",
-    image: "/image/bedroom_design6.jpeg",
+    image: "/image/bedroom_design6.webp",
     icon: Building2,
     link: "/services/design-ideas/bedroom-design",
   },
@@ -34,7 +34,7 @@ const services = [
     title: "Bathroom Design",
     description:
       "Modern bathroom interior designs featuring premium fittings, elegant layouts, and space-efficient solutions.",
-    image: "/image/bathroom_design.png",
+    image: "/image/bathroom_design.webp",
     icon: Building2,
     link: "/services/design-ideas/bathroom-design",
   },
@@ -50,7 +50,7 @@ const services = [
     title: "Dining Room Design",
     description:
       "Elegant dining room interior designs that enhance comfort, functionality, and style.",
-    image: "/image/dining_room5.jpeg",
+    image: "/image/dining_room5.webp",
     icon: Compass,
     link: "/services/design-ideas/dining-room-design",
   },
@@ -58,7 +58,7 @@ const services = [
     title: "Office Design",
     description:
       "Modern office interior design solutions that improve productivity, comfort, and brand identity.",
-    image: "/image/office_design8.jpg",
+    image: "/image/office_design8.webp",
     icon: Compass,
     link: "/services/design-ideas/home-office-design",
   },

@@ -14,30 +14,30 @@ export const wardrobeData = [
 
     buttonText: "View Designs",
 
-    image: "/image/wardrobe_design9.png",
+    image: "/image/wardrobe_design9.webp",
 
     sectionType: "variations",
 
     variations: [
       {
         title: "Glass Sliding",
-        image: "/image/wardrobe_design8.png",
+        image: "/image/wardrobe_design8.webp",
       },
       {
         title: "Wood Finish",
-        image: "/image/wardrobe_design11.jpeg",
+        image: "/image/wardrobe_design11.webp",
       },
       {
         title: "Mirror Sliding",
-        image: "/image/wardrobe_design10.jpeg",
+        image: "/image/wardrobe_design10.webp",
       },
       {
         title: "Fluted Panels",
-        image: "/image/wardrobe_design6.png",
+        image: "/image/wardrobe_design6.webp",
       },
       {
         title: "High Gloss",
-        image: "/image/wardrobe_design.jpeg",
+        image: "/image/wardrobe_design.webp",
       },
       {
         title: "Matte Finish",
@@ -116,7 +116,7 @@ export const wardrobeData = [
 
     buttonText: "View Designs",
 
-    image: "/image/wardrobe_design5.jpeg",
+    image: "/image/wardrobe_design5.webp",
 
     sectionType: "gallery",
 
@@ -126,7 +126,7 @@ export const wardrobeData = [
           "https://images.pexels.com/photos/34964418/pexels-photo-34964418.jpeg",
       },
       {
-        image: "/image/wardrobe_design8.png",
+        image: "/image/wardrobe_design8.webp",
       },
       {
         image:
@@ -192,7 +192,7 @@ export const wardrobeTypes = [
   {
     title: "Sliding Wardrobes",
     subtitle: "Elegant • Space Saving",
-    image: "/image/wardrobe_design17.png",
+    image: "/image/wardrobe_design17.webp",
   },
   {
     title: "Walk-in Wardrobes",
@@ -202,7 +202,7 @@ export const wardrobeTypes = [
   {
     title: "Hinged Wardrobes",
     subtitle: "Classic • Versatile",
-    image: "/image/wardrobe_design9.png",
+    image: "/image/wardrobe_design9.webp",
   },
 ];
 
@@ -327,21 +327,21 @@ export const wardrobeType = [
     title: "Hinged Wardrobe",
     description:
       "Classic wardrobe with shutter doors offering full accessibility.",
-    image: "/image/wardrobe_design6.png",
+    image: "/image/wardrobe_design6.webp",
   },
 
   {
     id: "sliding",
     title: "Sliding Wardrobe",
     description: "Space-saving modern wardrobe with elegant sliding shutters.",
-    image: "/image/wardrobe_design17.png",
+    image: "/image/wardrobe_design17.webp",
   },
 
   {
     id: "walkin",
     title: "Walk-In Wardrobe",
     description: "Luxury dressing area with premium storage and organization.",
-    image: "/image/wardrobe_design5.jpeg",
+    image: "/image/wardrobe_design5.webp",
   },
 ];
 

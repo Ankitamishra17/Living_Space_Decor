@@ -13,7 +13,7 @@ export default function HeroSection() {
       {/* Hero Banner */}
       <div className="  relative h-[750px] overflow-hidden">
         <Image
-          src="https://images.pexels.com/photos/30465909/pexels-photo-30465909.jpeg"
+          src="/image/wardrobeHero.avif"
           alt="Luxury Wardrobe"
           fill
           priority
