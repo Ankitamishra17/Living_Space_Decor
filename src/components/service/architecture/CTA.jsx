@@ -118,7 +118,7 @@ export default function CTA() {
                   </Link>
 
                   {/* Portfolio Button */}
-                  <Link
+                  {/* <Link
                     href="/portfolio"
                     className="
                     w-full sm:w-auto
@@ -136,7 +136,7 @@ export default function CTA() {
                   "
                   >
                     View Portfolio
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>

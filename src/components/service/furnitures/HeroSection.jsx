@@ -104,7 +104,7 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="https://images.pexels.com/photos/1648776/pexels-photo-1648776.webp"
+          src="/image/office_design10.webp"
           alt="Interior furniture"
           fill
           priority
@@ -179,7 +179,7 @@ export default function HeroSection() {
                   mt-2
                 "
               >
-               Thoughtfully Designed Lighting
+               Thoughtfully Crafted Furniture
               </motion.span>
             </h1>
           </motion.div>
