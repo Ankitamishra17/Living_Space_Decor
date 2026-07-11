@@ -155,7 +155,7 @@ const kitchenTypes = [
   },
   {
     title: "U-Shaped Kitchen",
-    image: "/image/u_shapkitchen.avif",
+    image: "/image/u-kitchenDesign.webp",
   },
   {
     title: "Island Kitchen",
@@ -169,7 +169,7 @@ export default function HeroSection() {
       {/* Hero Banner */}
       <div className="relative h-[750px] overflow-hidden">
         <Image
-          src="https://images.pexels.com/photos/32178150/pexels-photo-32178150.png"
+          src="/image/kitchen_banner.avif"
           alt="Luxury Modular Kitchen"
           fill
           priority
