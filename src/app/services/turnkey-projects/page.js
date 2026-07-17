@@ -8,7 +8,7 @@ import ServiceConsultation from "@/components/common/ServiceConsultation";
 
 
 export const metadata = {
-  title: "Turnkey Interior Design & Execution Services - Living Space Decor",
+  title: "Turnkey Interior Designer & Execution Services - Living Space Decor",
 
   description:
     "Get end-to-end turnkey interior solutions for homes, apartments, villas, and offices. From design and planning to execution, furniture, false ceilings, electrical work, and final handover, we manage everything under one roof.",
