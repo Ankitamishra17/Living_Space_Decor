@@ -8,6 +8,14 @@ import FinishStep from "@/components/wardrobeCalculator/FinishStep";
 import ContactStep from "@/components/wardrobeCalculator/ContactStep";
 import ResultStep from "@/components/wardrobeCalculator/ResultStep";
 
+// export const metadata = {
+//   title: "Wardrobe Cost Calculator - Living Space Decor",
+
+//   description:
+//     "Estimate the cost of your custom wardrobe instantly. Calculate wardrobe pricing based on wardrobe type, dimensions, finishes, materials, and storage requirements.",
+// }
+
+
 export default function WardrobeCalculatorPage() {
   const [step, setStep] = useState(1);
 
